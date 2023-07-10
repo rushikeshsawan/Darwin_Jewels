@@ -31,5 +31,9 @@ class AdminModel extends Model
         ];
         $this->update($adminId, $data);
     }
-   
+
+    public function updateAdmin($adminId, $data)
+    {
+        $this->update($adminId, $data);
+    }
 }

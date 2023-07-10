@@ -11,7 +11,7 @@ $routes = Services::routes();
  * --------------------------------------------------------------------
  */
 $routes->setDefaultNamespace('App\Controllers');
-$routes->setDefaultController('Home');
+$routes->setDefaultController('AdminController');
 $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
@@ -29,18 +29,21 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Home::index'); 
+$routes->get('/', 'AdminController::index'); 
 $routes->add('adminsignin', 'AdminController::login'); 
 $routes->add('adminsignup', 'AdminController::index');
 $routes->get('adminforgotpassword', 'AdminController::forgotPassword');
 $routes->post('adminforgotpassword', 'AdminController::forgotPassword');
 $routes->add('setnewpassword', 'AdminController::forgotPassword');
-$routes->add('dashboard', 'AdminController::list');
+$routes->add('dashboard', 'AdminController::list'); 
 $routes->get('admin/edit/(:num)', 'AdminController::edit/$1');
-$routes->post('admin/update', 'AdminController::update');
+$routes->post('admin/update', 'AdminController::update'); 
+$routes->get('admin/delete/(:num)', 'AdminController::delete/$1');
 
 
 
+
+ 
 
 /*
  * --------------------------------------------------------------------

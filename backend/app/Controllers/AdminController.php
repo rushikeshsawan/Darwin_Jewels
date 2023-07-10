@@ -101,7 +101,6 @@ class AdminController extends BaseController
                     $email->setMessage($message);
                     $email->send();
                     session()->setFlashdata('success', 'Email sent with OTP. Please check your email.');
-                    // return redirect()->to('setnewpassword');
                     return view('Admin/set_new_password');
                 } else {
                     if ($admin['otp'] == $otp) {
@@ -127,5 +126,57 @@ class AdminController extends BaseController
     {
         $data['admin'] = $this->adminModel->list();
         return view('Admin/dashboard', $data);
-    } 
+    }
+    public function edit($id = null)
+    {
+        $model = new AdminModel();
+        $data = $model->where('id', $id)->first();
+        if ($data) {
+            echo json_encode(array("status" => true, 'data' => $data));
+        } else {
+            echo json_encode(array("status" => false));
+        }
+    }
+
+    public function update()
+    {
+        if ($this->request->getMethod() === 'post') {
+            $rules = [
+                'username' => 'required|min_length[2]|max_length[50]|is_unique[admin.username]',
+                'email' => 'required|min_length[4]|max_length[100]|valid_email|is_unique[admin.email]',
+                'password' => 'required|min_length[4]|max_length[50]'
+            ];
+            if ($this->validate($rules)) {
+                $model = new AdminModel();
+                $id = $this->request->getVar('adminId');
+                $data = [
+                    'username' => $this->request->getVar('username'),
+                    'email'  => $this->request->getVar('email'),
+                    'password'  => $this->request->getVar('password'),
+                ];
+                $update = $model->update($id, $data);
+                if ($update != false) {
+                    $data = $model->where('id', $id)->first();
+                    echo json_encode(array("status" => true, 'data' => $data, 'message' => 'Admin record updated successfully'));
+                } else {
+                    echo json_encode(array("status" => false, 'data' => $data, 'message' => 'Failed to update admin record'));
+                }
+            } else {
+                $data['validation'] = $this->validator;
+                echo json_encode(array("status" => false, 'errors' => $this->validator->getErrors()));
+            }
+        }
+    }
+
+    public function delete($id = null)
+    {
+        $deleted = $this->adminModel->delete($id);
+
+        if ($deleted) {
+            $response = ['status' => true, 'message' => 'Admin record deleted successfully'];
+        } else {
+            $response = ['status' => false, 'message' => 'Failed to delete admin record'];
+        }
+        return $this->response->setJSON($response);
+    }
 }
