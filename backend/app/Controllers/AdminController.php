@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\AdminModel;
+use CodeIgniter\Email\Email;
 
 class AdminController extends BaseController
 {
@@ -12,6 +13,7 @@ class AdminController extends BaseController
     {
         $this->adminModel = new AdminModel();
         $this->session = \Config\Services::session();
+        
     }
     // public function index()
     // {
@@ -80,15 +82,15 @@ class AdminController extends BaseController
         }
     }
     public function forgotPassword()
-    {
+    {   
+        $email = new Email(); 
         if ($this->request->getMethod() === 'post') {
             $emailAddress = $this->request->getPost('email');
             $otp = $this->request->getPost('otp');
             $password = $this->request->getPost('password');
             $admin = $this->adminModel->where('email', $emailAddress)->first();
             if ($admin) {
-                if (empty($otp)) {
-                    // Generate OTP and send email
+                if (empty($otp)) { 
                     $otp = random_int(100000, 999999);
                     $this->adminModel->updateOTP($admin['id'], $otp);
                     $message = "Your OTP is: " . $otp . "\n\n";

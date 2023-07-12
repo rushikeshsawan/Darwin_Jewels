@@ -35,10 +35,10 @@ $routes->add('adminsignup', 'AdminController::index');
 $routes->get('adminforgotpassword', 'AdminController::forgotPassword');
 $routes->post('adminforgotpassword', 'AdminController::forgotPassword');
 $routes->add('setnewpassword', 'AdminController::forgotPassword');
-$routes->add('dashboard', 'AdminController::list'); 
-$routes->get('admin/edit/(:num)', 'AdminController::edit/$1');
-$routes->post('admin/update', 'AdminController::update'); 
-$routes->get('admin/delete/(:num)', 'AdminController::delete/$1');
+$routes->add('dashboard', 'AdminController::list',['filter' => 'authGuard']); 
+$routes->get('admin/edit/(:num)', 'AdminController::edit/$1',['filter' => 'authGuard']);
+$routes->post('admin/update', 'AdminController::update',['filter' => 'authGuard']); 
+$routes->get('admin/delete/(:num)', 'AdminController::delete/$1',['filter' => 'authGuard']);
 
 $routes->get('categorylist', 'CategoryController::index'); 
 $routes->post('categorystore', 'CategoryController::store'); 
