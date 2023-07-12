@@ -1,10 +1,7 @@
 <?= $this->extend('main') ?>
 <?= $this->section('content') ?>
 
-<body>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
+<body> 
     <div id="layout-wrapper">
         <div class="app-menu navbar-menu">
             <?php echo view('sidenavbar'); ?>
@@ -34,8 +31,8 @@
                                     <?php echo session()->getTempdata('success'); ?>
                                 </div>
                             <?php endif; ?>
-                            <div class="card-header">
-                                <h5 class="card-title mb-0 text-right"><a data-bs-toggle="modal" data-bs-target="#addModal">ADD</a></h5>
+                            <div class="card-header mt-5">
+                                <h2 class="card-title mb-0 text-right alert alert-primary">ADMIN LIST</h2>
                             </div>
                             <div class="card-body">
                                 <table class="table table-bordered table-striped" id="adminTable">
@@ -68,74 +65,73 @@
                                     </tbody>
                                 </table>
                             </div>
-                        </div>
-                    </div><!--end col-->
-                </div><!--end row-->
+                        </div><!--end col-->
+                    </div><!--end row-->
+                </div>
+                <?php echo view('footer'); ?>
             </div>
-            <?php echo view('footer'); ?>
-        </div>
-        <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="ModalLabel">Add New Admin</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="ModalLabel">Add New Admin</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <form id="addAdmin" name="addAdmin" action="<?php echo site_url('adminsignup'); ?>" method="post">
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label for="username">Username</label>
+                                    <input type="text" class="form-control" id="username" placeholder="Enter First Name" name="username">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="text" class="form-control" id="email" placeholder="Enter Last Name" name="email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">Password:</label>
+                                    <input class="form-control" id="password" name="password" rows="10" placeholder="Enter Address">
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </form>
                     </div>
-                    <form id="addAdmin" name="addAdmin" action="<?php echo site_url('adminsignup'); ?>" method="post">
-                        <div class="modal-body">
-                            <div class="form-group">
-                                <label for="username">Username</label>
-                                <input type="text" class="form-control" id="username" placeholder="Enter First Name" name="username">
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="text" class="form-control" id="email" placeholder="Enter Last Name" name="email">
-                            </div>
-                            <div class="form-group">
-                                <label for="password">Password:</label>
-                                <input class="form-control" id="password" name="password" rows="10" placeholder="Enter Address">
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                        </div>
-                    </form>
                 </div>
             </div>
-        </div>
 
-        <div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="ModalLabel">Update Admin</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="ModalLabel">Update Admin</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <form id="updateAdmin" name="updateAdmin" action="<?php echo site_url('admin/update'); ?>" method="post">
+                            <div class="modal-body">
+                                <input type="hidden" name="adminId" id="adminId" />
+                                <div class="form-group">
+                                    <label for="username">Username</label>
+                                    <input type="text" class="form-control" id="username" placeholder="Enter First Name" name="username">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="text" class="form-control" id="email" placeholder="Enter Last Name" name="email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">Password</label>
+                                    <textarea class="form-control" id="password" name="password" rows="10" placeholder="Enter Address"></textarea>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </form>
                     </div>
-                    <form id="updateAdmin" name="updateAdmin" action="<?php echo site_url('admin/update'); ?>" method="post">
-                        <div class="modal-body">
-                            <input type="hidden" name="adminId" id="adminId" />
-                            <div class="form-group">
-                                <label for="username">Username</label>
-                                <input type="text" class="form-control" id="username" placeholder="Enter First Name" name="username">
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="text" class="form-control" id="email" placeholder="Enter Last Name" name="email">
-                            </div>
-                            <div class="form-group">
-                                <label for="password">Password</label>
-                                <textarea class="form-control" id="password" name="password" rows="10" placeholder="Enter Address"></textarea>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                        </div>
-                    </form>
                 </div>
             </div>
-        </div>
 </body>
 <script>
     $(document).ready(function() {

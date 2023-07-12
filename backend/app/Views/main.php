@@ -27,6 +27,8 @@
 </head>
 
 <body>
+
+
     <?= $this->renderSection('content') ?>
     <script src="/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="/assets/libs/simplebar/simplebar.min.js"></script>
@@ -49,6 +51,8 @@
     <script src="assets/js/pages/datatables.init.js"></script>
     <!-- App js -->
     <script src="assets/js/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </body>
 

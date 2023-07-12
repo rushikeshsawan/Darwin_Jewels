@@ -40,6 +40,18 @@ $routes->get('admin/edit/(:num)', 'AdminController::edit/$1');
 $routes->post('admin/update', 'AdminController::update'); 
 $routes->get('admin/delete/(:num)', 'AdminController::delete/$1');
 
+$routes->get('categorylist', 'CategoryController::index'); 
+$routes->post('categorystore', 'CategoryController::store'); 
+$routes->get('category/edit/(:num)', 'CategoryController::edit/$1');
+$routes->post('category/update', 'CategoryController::update'); 
+$routes->get('category/delete/(:num)', 'CategoryController::delete/$1');
+
+
+$routes->get('productlist', 'ProductController::list'); 
+$routes->post('productstore', 'ProductController::store'); 
+$routes->get('productedit/(:num)', 'ProductController::edit/$1');
+$routes->post('productupdate', 'ProductController::update'); 
+$routes->get('productdelete/(:num)', 'ProductController::delete/$1');
 
 
 

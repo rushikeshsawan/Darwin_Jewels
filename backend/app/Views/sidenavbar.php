@@ -11,6 +11,21 @@
                 </a>
             </li> 
             <li class="nav-item">
+                <a class="nav-link menu-link" href="components.html">
+                    <i class="bi bi-command"></i> <span data-key="t-overview">Overview</span>
+                </a>
+            </li> 
+            <li class="nav-item">
+                <a class="nav-link menu-link" href="components.html">
+                    <i class="bi bi-command"></i> <span data-key="t-overview">Overview</span>
+                </a>
+            </li> 
+            <li class="nav-item">
+                <a class="nav-link menu-link" href="components.html">
+                    <i class="bi bi-command"></i> <span data-key="t-overview">Overview</span>
+                </a>
+            </li> 
+            <li class="nav-item">
                 <a class="nav-link menu-link" href="#sidebarUI" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarUI">
                     <i class="bi bi-radioactive"></i> <span data-key="t-bootstrap-ui">Bootstrap UI</span>
                 </a>

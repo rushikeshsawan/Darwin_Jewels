@@ -1,0 +1,1405 @@
+CRITICAL - 2023-07-11 05:18:31 --> Call to undefined method App\Models\CategoryModel::getUser
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\CategoryController.php(80): CodeIgniter\Model->__call('getUser', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->update('1')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-11 05:18:31 --> Call to undefined method App\Models\CategoryModel::getUser
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\CategoryController.php(80): CodeIgniter\Model->__call('getUser', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->update('1')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-11 06:01:34 --> Undefined variable $row
+in APPPATH\Views\Category\list.php on line 108.
+ 1 APPPATH\Views\Category\list.php(108): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $row', 'APPPATH\\Views\\Category\\list.php', 108)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Category\\list.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Category/list', [], true)
+ 5 APPPATH\Controllers\CategoryController.php(53): view('Category/list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-11 06:32:47 --> Call to a member function isValid() on null
+in APPPATH\Controllers\CategoryController.php on line 82.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->update()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-11 06:32:48 --> Call to a member function isValid() on null
+in APPPATH\Controllers\CategoryController.php on line 82.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->update()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-11 07:05:03 --> Undefined variable $admin
+in APPPATH\Views\Admin\dashboard.php on line 53.
+ 1 APPPATH\Views\Admin\dashboard.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $admin', 'APPPATH\\Views\\Admin\\dashboard.php', 53)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Admin/dashboard', [], true)
+ 5 APPPATH\Controllers\ProductController.php(44): view('Admin/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->list()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-11 07:05:37 --> Undefined variable $admin
+in APPPATH\Views\Admin\dashboard.php on line 53.
+ 1 APPPATH\Views\Admin\dashboard.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $admin', 'APPPATH\\Views\\Admin\\dashboard.php', 53)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Admin/dashboard', [], true)
+ 5 APPPATH\Controllers\ProductController.php(44): view('Admin/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->list()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-11 07:05:45 --> Undefined variable $admin
+in APPPATH\Views\Admin\dashboard.php on line 53.
+ 1 APPPATH\Views\Admin\dashboard.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $admin', 'APPPATH\\Views\\Admin\\dashboard.php', 53)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Admin/dashboard', [], true)
+ 5 APPPATH\Controllers\ProductController.php(44): view('Admin/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->list()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-11 07:05:46 --> Undefined variable $admin
+in APPPATH\Views\Admin\dashboard.php on line 53.
+ 1 APPPATH\Views\Admin\dashboard.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $admin', 'APPPATH\\Views\\Admin\\dashboard.php', 53)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Admin/dashboard', [], true)
+ 5 APPPATH\Controllers\ProductController.php(44): view('Admin/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->list()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-11 07:05:46 --> Undefined variable $admin
+in APPPATH\Views\Admin\dashboard.php on line 53.
+ 1 APPPATH\Views\Admin\dashboard.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $admin', 'APPPATH\\Views\\Admin\\dashboard.php', 53)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Admin/dashboard', [], true)
+ 5 APPPATH\Controllers\ProductController.php(44): view('Admin/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->list()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-11 07:10:36 --> Undefined array key "id"
+in APPPATH\Views\Product\list.php on line 159.
+ 1 APPPATH\Views\Product\list.php(159): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'APPPATH\\Views\\Product\\list.php', 159)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Product\\list.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Product/list', [], true)
+ 5 APPPATH\Controllers\ProductController.php(44): view('Product/list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->list()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-11 07:11:30 --> Undefined array key "id"
+in APPPATH\Views\Product\list.php on line 159.
+ 1 APPPATH\Views\Product\list.php(159): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'APPPATH\\Views\\Product\\list.php', 159)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Product\\list.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Product/list', [], true)
+ 5 APPPATH\Controllers\ProductController.php(44): view('Product/list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->list()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-07-11 08:45:05 --> mysqli_sql_exception: Unknown column 'products.CategoryId' in 'on clause' in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Models\ProductModel.php(28): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\ProductController.php(46): App\Models\ProductModel->list()
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\ProductController->list()
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-07-11 08:45:05 --> Unknown column 'products.CategoryId' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `products`
+JOIN `category` ON `category`.`id` = `products`.`CategoryId`', [], false)
+ 2 APPPATH\Models\ProductModel.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\ProductController.php(46): App\Models\ProductModel->list()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->list()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-11 08:45:40 --> Cannot use object of type stdClass as array
+in APPPATH\Views\Product\list.php on line 162.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Product/list', [], true)
+ 4 APPPATH\Controllers\ProductController.php(47): view('Product/list', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->list()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-11 08:46:19 --> Cannot use object of type stdClass as array
+in APPPATH\Views\Product\list.php on line 163.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Product/list', [], true)
+ 4 APPPATH\Controllers\ProductController.php(47): view('Product/list', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->list()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-11 08:48:25 --> Cannot use object of type stdClass as array
+in APPPATH\Views\Product\list.php on line 162.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Product/list', [], true)
+ 4 APPPATH\Controllers\ProductController.php(47): view('Product/list', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->list()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-11 08:51:11 --> Cannot use object of type stdClass as array
+in APPPATH\Views\Product\list.php on line 162.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Product/list', [], true)
+ 4 APPPATH\Controllers\ProductController.php(47): view('Product/list', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->list()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-11 08:51:44 --> Cannot use object of type stdClass as array
+in APPPATH\Views\Product\list.php on line 162.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Product/list', [], true)
+ 4 APPPATH\Controllers\ProductController.php(47): view('Product/list', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->list()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-11 08:54:48 --> Cannot use object of type stdClass as array
+in APPPATH\Views\Product\list.php on line 168.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Product/list', [], true)
+ 4 APPPATH\Controllers\ProductController.php(47): view('Product/list', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->list()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-07-11 08:59:32 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\ProductController.php(50): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\ProductController->edit('2')
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-07-11 08:59:32 --> Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `products`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\ProductController.php(50): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->edit('2')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-07-11 08:59:33 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\ProductController.php(50): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\ProductController->edit('2')
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-07-11 08:59:33 --> Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `products`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\ProductController.php(50): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->edit('2')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-07-11 08:59:49 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\ProductController.php(50): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\ProductController->edit('2')
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-07-11 08:59:49 --> Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `products`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\ProductController.php(50): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->edit('2')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-07-11 09:00:45 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\ProductController.php(50): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\ProductController->edit('1')
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-07-11 09:00:45 --> Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `products`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\ProductController.php(50): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->edit('1')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-07-11 09:04:54 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\ProductController.php(50): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\ProductController->edit('1')
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-07-11 09:04:54 --> Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `products`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\ProductController.php(50): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->edit('1')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-07-11 09:05:01 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\ProductController.php(50): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\ProductController->edit('1')
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-07-11 09:05:01 --> Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `products`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\ProductController.php(50): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->edit('1')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-07-11 09:06:19 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\ProductController.php(50): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\ProductController->edit('1')
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-07-11 09:06:19 --> Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `products`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\ProductController.php(50): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->edit('1')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-07-11 09:06:51 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\ProductController.php(50): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\ProductController->edit('1')
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-07-11 09:06:51 --> Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `products`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\ProductController.php(50): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->edit('1')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-07-11 09:08:18 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\ProductController.php(50): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\ProductController->edit('1')
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-07-11 09:08:18 --> Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `products`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\ProductController.php(50): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->edit('1')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-07-11 09:17:09 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\ProductController.php(50): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\ProductController->edit('1')
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-07-11 09:17:09 --> Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `products`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\ProductController.php(50): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->edit('1')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-07-11 09:17:19 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\ProductController.php(50): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\ProductController->edit('1')
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-07-11 09:17:19 --> Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `products`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\ProductController.php(50): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->edit('1')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-07-11 09:19:35 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\ProductController.php(50): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\ProductController->edit('2')
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-07-11 09:19:35 --> Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `products`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\ProductController.php(50): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->edit('2')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-11 09:38:16 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Controllers\ProductController.php(74): CodeIgniter\Model->update(null, [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->update()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-11 09:40:08 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Controllers\ProductController.php(74): CodeIgniter\Model->update(null, [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->update()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-11 09:43:35 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Controllers\ProductController.php(74): CodeIgniter\Model->update(null, [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->update()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-11 09:44:29 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Controllers\ProductController.php(74): CodeIgniter\Model->update(null, [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->update()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-07-11 09:50:04 --> mysqli_sql_exception: Unknown column 'products.id' in 'where clause' in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `product...', 0)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `product...')
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `product...')
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `product...', Array, false)
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\ProductController.php(76): CodeIgniter\Model->update('1', Array)
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\ProductController->update()
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-07-11 09:50:04 --> Unknown column 'products.id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `products` SET `product_name` = :product_name:, `category_id` = :category_id:, `description` = :description:
+WHERE `products`.`id` IN :products.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\ProductController.php(76): CodeIgniter\Model->update('1', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->update()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-07-11 09:51:19 --> mysqli_sql_exception: Unknown column 'products.id' in 'where clause' in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `product...', 0)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `product...')
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `product...')
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `product...', Array, false)
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\ProductController.php(77): CodeIgniter\Model->update('1', Array)
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\ProductController->update()
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-07-11 09:51:19 --> Unknown column 'products.id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `products` SET `product_name` = :product_name:, `category_id` = :category_id:, `description` = :description:
+WHERE `products`.`id` IN :products.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\ProductController.php(77): CodeIgniter\Model->update('1', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->update()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-07-11 09:51:23 --> mysqli_sql_exception: Unknown column 'products.id' in 'where clause' in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `product...', 0)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `product...')
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `product...')
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `product...', Array, false)
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\ProductController.php(77): CodeIgniter\Model->update('1', Array)
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\ProductController->update()
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-07-11 09:51:23 --> Unknown column 'products.id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `products` SET `product_name` = :product_name:, `category_id` = :category_id:, `description` = :description:
+WHERE `products`.`id` IN :products.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\ProductController.php(77): CodeIgniter\Model->update('1', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->update()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-07-11 09:51:30 --> mysqli_sql_exception: Unknown column 'products.id' in 'where clause' in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `product...', 0)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `product...')
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `product...')
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `product...', Array, false)
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\ProductController.php(77): CodeIgniter\Model->update('1', Array)
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\ProductController->update()
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-07-11 09:51:30 --> Unknown column 'products.id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `products` SET `product_name` = :product_name:, `category_id` = :category_id:, `description` = :description:
+WHERE `products`.`id` IN :products.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\ProductController.php(77): CodeIgniter\Model->update('1', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->update()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-07-11 09:53:05 --> mysqli_sql_exception: Unknown column 'products.id' in 'where clause' in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `product...', 0)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `product...')
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `product...')
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `product...', Array, false)
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\ProductController.php(77): CodeIgniter\Model->update('1', Array)
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\ProductController->update()
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-07-11 09:53:05 --> Unknown column 'products.id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `products` SET `product_name` = :product_name:, `category_id` = :category_id:, `description` = :description:
+WHERE `products`.`id` IN :products.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\ProductController.php(77): CodeIgniter\Model->update('1', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->update()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-07-11 09:56:28 --> mysqli_sql_exception: Unknown column 'products.id' in 'where clause' in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `product...', 0)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `product...')
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `product...')
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `product...', Array, false)
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\ProductController.php(76): CodeIgniter\Model->update('1', Array)
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\ProductController->update()
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-07-11 09:56:28 --> Unknown column 'products.id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `products` SET `product_name` = :product_name:, `category_id` = :category_id:, `description` = :description:
+WHERE `products`.`id` IN :products.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\ProductController.php(76): CodeIgniter\Model->update('1', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->update()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-07-11 09:57:07 --> mysqli_sql_exception: Unknown column 'products.id' in 'where clause' in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `product...', 0)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `product...')
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `product...')
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `product...', Array, false)
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\ProductController.php(76): CodeIgniter\Model->update('2', Array)
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\ProductController->update()
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-07-11 09:57:07 --> Unknown column 'products.id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `products` SET `product_name` = :product_name:, `category_id` = :category_id:, `description` = :description:
+WHERE `products`.`id` IN :products.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\ProductController.php(76): CodeIgniter\Model->update('2', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->update()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-07-11 10:00:10 --> mysqli_sql_exception: Unknown column 'products.id' in 'where clause' in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `product...', 0)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `product...')
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `product...')
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `product...', Array, false)
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\ProductController.php(77): CodeIgniter\Model->update('1', Array)
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\ProductController->update()
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-07-11 10:00:10 --> Unknown column 'products.id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `products` SET `product_name` = :product_name:, `category_id` = :category_id:, `description` = :description:
+WHERE `products`.`id` IN :products.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\ProductController.php(77): CodeIgniter\Model->update('1', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->update()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-07-11 10:02:35 --> mysqli_sql_exception: Unknown column 'products.id' in 'where clause' in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `product...', 0)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `product...')
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `product...')
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `product...', Array, false)
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\ProductController.php(77): CodeIgniter\Model->update('1', Array)
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\ProductController->update()
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-07-11 10:02:35 --> Unknown column 'products.id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `products` SET `product_name` = :product_name:, `category_id` = :category_id:, `description` = :description:
+WHERE `products`.`id` IN :products.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\ProductController.php(77): CodeIgniter\Model->update('1', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->update()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-07-11 10:02:43 --> mysqli_sql_exception: Unknown column 'products.id' in 'where clause' in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `product...', 0)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `product...')
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `product...')
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `product...', Array, false)
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\ProductController.php(77): CodeIgniter\Model->update('1', Array)
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\ProductController->update()
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-07-11 10:02:43 --> Unknown column 'products.id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `products` SET `product_name` = :product_name:, `category_id` = :category_id:, `description` = :description:
+WHERE `products`.`id` IN :products.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\ProductController.php(77): CodeIgniter\Model->update('1', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->update()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-07-11 10:03:00 --> mysqli_sql_exception: Unknown column 'products.id' in 'where clause' in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `product...', 0)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `product...')
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `product...')
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `product...', Array, false)
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\ProductController.php(77): CodeIgniter\Model->update('1', Array)
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\ProductController->update()
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-07-11 10:03:00 --> Unknown column 'products.id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `products` SET `product_name` = :product_name:, `category_id` = :category_id:, `description` = :description:
+WHERE `products`.`id` IN :products.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\ProductController.php(77): CodeIgniter\Model->update('1', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->update()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-07-11 10:03:07 --> mysqli_sql_exception: Unknown column 'products.id' in 'where clause' in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `product...', 0)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `product...')
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `product...')
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `product...', Array, false)
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\ProductController.php(77): CodeIgniter\Model->update('1', Array)
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\ProductController->update()
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-07-11 10:03:07 --> Unknown column 'products.id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `products` SET `product_name` = :product_name:, `category_id` = :category_id:, `description` = :description:
+WHERE `products`.`id` IN :products.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\ProductController.php(77): CodeIgniter\Model->update('1', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->update()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-07-11 10:03:33 --> mysqli_sql_exception: Unknown column 'products.id' in 'where clause' in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `product...', 0)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `product...')
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `product...')
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `product...', Array, false)
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\ProductController.php(77): CodeIgniter\Model->update('1', Array)
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\ProductController->update()
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-07-11 10:03:33 --> Unknown column 'products.id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `products` SET `product_name` = :product_name:, `category_id` = :category_id:, `description` = :description:
+WHERE `products`.`id` IN :products.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\ProductController.php(77): CodeIgniter\Model->update('1', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->update()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-07-11 10:03:41 --> mysqli_sql_exception: Unknown column 'products.id' in 'where clause' in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `product...', 0)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `product...')
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `product...')
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `product...', Array, false)
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\ProductController.php(77): CodeIgniter\Model->update('1', Array)
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\ProductController->update()
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-07-11 10:03:41 --> Unknown column 'products.id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `products` SET `product_name` = :product_name:, `category_id` = :category_id:, `description` = :description:
+WHERE `products`.`id` IN :products.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\ProductController.php(77): CodeIgniter\Model->update('1', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->update()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-07-11 10:04:50 --> mysqli_sql_exception: Unknown column 'products.id' in 'where clause' in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `product...', 0)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `product...')
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `product...')
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `product...', Array, false)
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\ProductController.php(77): CodeIgniter\Model->update('1', Array)
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\ProductController->update()
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-07-11 10:04:50 --> Unknown column 'products.id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `products` SET `product_name` = :product_name:, `category_id` = :category_id:, `description` = :description:
+WHERE `products`.`id` IN :products.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\ProductController.php(77): CodeIgniter\Model->update('1', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->update()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-07-11 10:04:57 --> mysqli_sql_exception: Unknown column 'products.id' in 'where clause' in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `product...', 0)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `product...')
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `product...')
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `product...', Array, false)
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\ProductController.php(77): CodeIgniter\Model->update('1', Array)
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\ProductController->update()
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-07-11 10:04:57 --> Unknown column 'products.id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `products` SET `product_name` = :product_name:, `category_id` = :category_id:, `description` = :description:
+WHERE `products`.`id` IN :products.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\ProductController.php(77): CodeIgniter\Model->update('1', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->update()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-07-11 10:08:49 --> mysqli_sql_exception: Unknown column 'products.id' in 'where clause' in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `product...', 0)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `product...')
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `product...')
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `product...', Array, false)
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\ProductController.php(77): CodeIgniter\Model->update('1', Array)
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\ProductController->update()
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-07-11 10:08:49 --> Unknown column 'products.id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `products` SET `product_name` = :product_name:, `category_id` = :category_id:, `description` = :description:
+WHERE `products`.`id` IN :products.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\ProductController.php(77): CodeIgniter\Model->update('1', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->update()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-07-11 10:09:40 --> mysqli_sql_exception: Unknown column 'products.id' in 'where clause' in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `product...', 0)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `product...')
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `product...')
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `product...', Array, false)
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\ProductController.php(77): CodeIgniter\Model->update('1', Array)
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\ProductController->update()
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-07-11 10:09:40 --> Unknown column 'products.id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `products` SET `product_name` = :product_name:, `category_id` = :category_id:, `description` = :description:
+WHERE `products`.`id` IN :products.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\ProductController.php(77): CodeIgniter\Model->update('1', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->update()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-07-11 10:09:48 --> mysqli_sql_exception: Unknown column 'products.id' in 'where clause' in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `product...', 0)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `product...')
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `product...')
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `product...', Array, false)
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\ProductController.php(77): CodeIgniter\Model->update('1', Array)
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\ProductController->update()
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-07-11 10:09:48 --> Unknown column 'products.id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `products` SET `product_name` = :product_name:, `category_id` = :category_id:, `description` = :description:
+WHERE `products`.`id` IN :products.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\ProductController.php(77): CodeIgniter\Model->update('1', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->update()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-07-11 10:17:08 --> mysqli_sql_exception: Unknown column 'products.id' in 'where clause' in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `product...', 0)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `product...')
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `product...')
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `product...', Array, false)
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\ProductController.php(77): CodeIgniter\Model->update('1', Array)
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\ProductController->update()
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-07-11 10:17:08 --> Unknown column 'products.id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `products` SET `product_name` = :product_name:, `category_id` = :category_id:, `description` = :description:
+WHERE `products`.`id` IN :products.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\ProductController.php(77): CodeIgniter\Model->update('1', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->update()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-07-11 10:20:25 --> mysqli_sql_exception: Unknown column 'products.id' in 'where clause' in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `product...', 0)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `product...')
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `product...')
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `product...', Array, false)
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\ProductController.php(77): CodeIgniter\Model->update('1', Array)
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\ProductController->update()
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-07-11 10:20:25 --> Unknown column 'products.id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `products` SET `product_name` = :product_name:, `category_id` = :category_id:, `description` = :description:
+WHERE `products`.`id` IN :products.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\ProductController.php(77): CodeIgniter\Model->update('1', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->update()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-11 10:26:31 --> Undefined property: stdClass::$PID
+in APPPATH\Views\Product\list.php on line 157.
+ 1 APPPATH\Views\Product\list.php(157): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$PID', 'APPPATH\\Views\\Product\\list.php', 157)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Product\\list.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Product/list', [], true)
+ 5 APPPATH\Controllers\ProductController.php(46): view('Product/list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->list()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-11 10:27:50 --> Undefined property: stdClass::$products
+in APPPATH\Views\Product\list.php on line 157.
+ 1 APPPATH\Views\Product\list.php(157): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$products', 'APPPATH\\Views\\Product\\list.php', 157)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Product\\list.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Product/list', [], true)
+ 5 APPPATH\Controllers\ProductController.php(46): view('Product/list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->list()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-11 10:38:48 --> Undefined property: stdClass::$PID
+in APPPATH\Views\Product\list.php on line 157.
+ 1 APPPATH\Views\Product\list.php(157): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$PID', 'APPPATH\\Views\\Product\\list.php', 157)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Product\\list.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Product/list', [], true)
+ 5 APPPATH\Controllers\ProductController.php(46): view('Product/list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->list()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-11 12:02:38 --> Invalid file: "category/add.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('category/add.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('category/add', [], true)
+ 3 APPPATH\Controllers\CategoryController.php(43): view('category/add', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->store()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-11 12:02:38 --> Invalid file: "category/add.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('category/add.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('category/add', [], true)
+ 3 APPPATH\Controllers\CategoryController.php(43): view('category/add', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->store()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-11 12:18:07 --> Invalid file: "category/add.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('category/add.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('category/add', [], true)
+ 3 APPPATH\Controllers\CategoryController.php(43): view('category/add', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->store()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-11 12:23:55 --> Call to a member function isValid() on null
+in APPPATH\Controllers\CategoryController.php on line 82.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->update()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-11 12:32:41 --> Call to a member function isValid() on null
+in APPPATH\Controllers\CategoryController.php on line 82.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->update()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-11 12:44:04 --> Call to undefined method App\Models\AdminModel::isUsernameUnique
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\AdminController.php(159): CodeIgniter\Model->__call('isUsernameUnique', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AdminController->update()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-11 12:44:08 --> Call to undefined method App\Models\AdminModel::isUsernameUnique
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\AdminController.php(159): CodeIgniter\Model->__call('isUsernameUnique', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AdminController->update()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-11 12:44:10 --> Call to undefined method App\Models\AdminModel::isUsernameUnique
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\AdminController.php(159): CodeIgniter\Model->__call('isUsernameUnique', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AdminController->update()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-11 12:44:16 --> Call to undefined method App\Models\AdminModel::isUsernameUnique
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\AdminController.php(159): CodeIgniter\Model->__call('isUsernameUnique', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AdminController->update()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-11 12:44:29 --> Call to undefined method App\Models\AdminModel::isUsernameUnique
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\AdminController.php(159): CodeIgniter\Model->__call('isUsernameUnique', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AdminController->update()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-11 12:44:32 --> Call to undefined method App\Models\AdminModel::isUsernameUnique
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\AdminController.php(159): CodeIgniter\Model->__call('isUsernameUnique', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AdminController->update()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-11 12:44:35 --> Call to undefined method App\Models\AdminModel::isUsernameUnique
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\AdminController.php(159): CodeIgniter\Model->__call('isUsernameUnique', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AdminController->update()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-11 12:44:39 --> Call to undefined method App\Models\AdminModel::isUsernameUnique
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\AdminController.php(159): CodeIgniter\Model->__call('isUsernameUnique', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AdminController->update()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-11 12:45:01 --> Call to undefined method App\Models\AdminModel::isUsernameUnique
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\AdminController.php(159): CodeIgniter\Model->__call('isUsernameUnique', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AdminController->update()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-11 12:45:06 --> Call to undefined method App\Models\AdminModel::isUsernameUnique
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\AdminController.php(159): CodeIgniter\Model->__call('isUsernameUnique', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AdminController->update()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-07-11 12:57:16 --> Email: sendWithMail throwed ErrorException: mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Email\Email.php:1735
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mail(): Failed ...', 'C:\\xampp\\htdocs...', 1735)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Email\Email.php(1735): mail('vishal75naik@gm...', '=?UTF-8?Q?Passw...', 'Your OTP is: 10...', 'Date: Tue, 11 J...', '-f your@example...')
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Email\Email.php(1667): CodeIgniter\Email\Email->sendWithMail()
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Email\Email.php(1565): CodeIgniter\Email\Email->spoolEmail()
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\AdminController.php(104): CodeIgniter\Email\Email->send()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\AdminController->forgotPassword()
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+ERROR - 2023-07-11 12:57:16 --> Email: Unable to send email using PHP mail(). Your server might not be configured to send mail using this method.
+ERROR - 2023-07-11 12:57:16 --> 
+ERROR - 2023-07-11 12:58:07 --> Email: sendWithMail throwed ErrorException: mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Email\Email.php:1735
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mail(): Failed ...', 'C:\\xampp\\htdocs...', 1735)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Email\Email.php(1735): mail('vishal75naik@gm...', '=?UTF-8?Q?Passw...', 'Your OTP is: 37...', 'Date: Tue, 11 J...', '-f your@example...')
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Email\Email.php(1667): CodeIgniter\Email\Email->sendWithMail()
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Email\Email.php(1565): CodeIgniter\Email\Email->spoolEmail()
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\AdminController.php(104): CodeIgniter\Email\Email->send()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\AdminController->forgotPassword()
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+ERROR - 2023-07-11 12:58:07 --> Email: Unable to send email using PHP mail(). Your server might not be configured to send mail using this method.
+ERROR - 2023-07-11 12:58:07 --> 
