@@ -24,21 +24,53 @@ class ProductController extends BaseController
                 'category_id' => 'required',
                 'description' => 'required|min_length[4]|max_length[50]'
             ];
+
             if ($this->validate($rules)) {
-                $product_name = $_POST['product_name'];
-                $category_id = $_POST['category_id'];
-                $description = $_POST['description'];
-                $this->productModel->store($product_name, $category_id, $description);
-                session()->setTempdata('success', 'Admin added successfully', 1);
-                return redirect()->to('/productlist');
+                $product_name = $this->request->getPost('product_name');
+                $category_id = $this->request->getPost('category_id');
+                $description = $this->request->getPost('description');
+
+                // Code to store the product data in the database
+                $productModel = new ProductModel();
+
+                $data = [
+                    'product_name' => $product_name,
+                    'category_id' => $category_id,
+                    'description' => $description
+                ];
+
+                $inserted = $productModel->insert($data);
+
+                if ($inserted) {
+                    $product = $productModel->find($productModel->insertID());
+                    $response = [
+                        'status' => true,
+                        'message' => 'Product added successfully',
+                        'data' => $product
+                    ];
+                } else {
+                    $response = [
+                        'status' => false,
+                        'message' => 'Failed to add product'
+                    ];
+                }
             } else {
-                $data['validation'] = $this->validator;
-                return redirect()->to('/productlist');
+                $response = [
+                    'status' => false,
+                    'message' => 'Validation failed',
+                    'errors' => $this->validator->getErrors()
+                ];
             }
         } else {
-            return redirect()->to('/productlist');
+            $response = [
+                'status' => false,
+                'message' => 'Invalid request method'
+            ];
         }
+
+        return $this->response->setJSON($response);
     }
+
     public function list()
     {
         $data['categories'] = $this->categoryModel->list();
@@ -63,7 +95,7 @@ class ProductController extends BaseController
                 'category_id' => 'required',
                 'description' => 'required|min_length[4]|max_length[50]'
             ];
-    
+
             if ($this->validate($rules)) {
                 $model = new ProductModel();
                 $id = $this->request->getVar('id');
@@ -72,9 +104,9 @@ class ProductController extends BaseController
                     'category_id'  => $this->request->getVar('category_id'),
                     'description'  => $this->request->getVar('description'),
                 ];
-    
+
                 $update = $model->update($id, $data);
-    
+
                 if ($update) {
                     $product = $model->find($id);
                     echo json_encode(array("status" => true, 'data' => $product, 'redirect' => site_url('productlist'), 'message' => 'Product record updated successfully'));
@@ -87,7 +119,7 @@ class ProductController extends BaseController
         }
     }
 
-    
+
     public function delete($id = null)
     {
         $deleted = $this->productModel->delete($id);
@@ -97,6 +129,7 @@ class ProductController extends BaseController
         } else {
             $response = ['status' => false, 'message' => 'Failed to delete product record'];
         }
+
         return $this->response->setJSON($response);
     }
 }

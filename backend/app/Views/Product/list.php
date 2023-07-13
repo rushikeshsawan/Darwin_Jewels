@@ -4,7 +4,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <div id="layout-wrapper">
-<?php echo view('header'); ?> 
+    <?php echo view('header'); ?>
     <div class="vertical-overlay"></div>
     <div class="main-content">
         <div class="page-content">
@@ -24,8 +24,7 @@
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
-                                            <form action="productstore" method="POST" enctype="multipart/form-data">
-
+                                            <form action="productstore" method="POST" id="productForm" enctype="multipart/form-data">
                                                 <div class="mb-3">
                                                     <label for="product_name" class="form-label">Product Name</label>
                                                     <input type="text" class="form-control" id="product_name" name="product_name" placeholder="Enter Your Product Name">
@@ -55,7 +54,7 @@
                                 <div class="modal-dialog modal-dialog-centered">
                                     <div class="modal-content border-0 overflow-hidden">
                                         <div class="modal-header p-3">
-                                            <h4 class="card-title mb-0">Sign Up</h4>
+                                            <h4 class="card-title mb-0">Update Product</h4>
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
@@ -109,7 +108,7 @@
                                             <th>Action</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody id="productTableBody">
                                         <?php
                                         foreach ($product as $row) {
                                         ?>
@@ -141,10 +140,10 @@
             </div>
         </div>
     </div>
+
     <script>
         $(document).ready(function() {
             $('#productTable').DataTable();
-
             $('body').on('click', '.btnEdit', function() {
                 var product_id = $(this).attr('data-id');
                 $.ajax({
@@ -163,49 +162,47 @@
                     }
                 });
             });
+            $("#updateProduct").submit(function(e) {
+                e.preventDefault();
+                var form = $(this);
+                var url = form.attr('action');
+                var formData = form.serialize();
 
-            $("#productTable").validate({
-                rules: {
-                    product_name: "required",
-                    category_id: "required",
-                    description: "required"
-                },
-                messages: {},
-                success: function(res) {
-                    if (res.status === true) {
-                        var product = '<td>' + res.data.id + '</td>';
-                        product += '<td>' + res.data.product_name + '</td>';
-                        product += '<td>' + res.data.category_id + '</td>';
-                        product += '<td>' + res.data.description + '</td>';
-                        product += '<td><a data-id="' + res.data.id + '" class="btn btn-primary btnEdit">Edit</a>  <a data-id="' + res.data.id + '" class="btn btn-danger btnDelete">Delete</a></td>';
-                        $('#productTable tbody #' + res.data.id).html(product);
-                        $('#productTable')[0].reset();
-                        $('#updateModal').modal('hide');
-                        Swal.fire({
-                            title: 'Success',
-                            text: 'Product record updated successfully',
-                            icon: 'success',
-                            onClose: () => {
-                                window.location.href = productlist;
+                $.ajax({
+                    url: url,
+                    type: "POST",
+                    data: formData,
+                    dataType: 'json',
+                    success: function(res) {
+                        if (res.status === true) {
+                            var productId = res.data.id;
+                            var tableRow = $('tr[data-product-id="' + productId + '"]');
+                            tableRow.find('td:nth-child(3)').text(res.data.product_name);
+                            tableRow.find('td:nth-child(4)').text(res.data.description);
+                            tableRow.find('td:nth-child(5)').text(res.data.category_id);
+                            $('#updateModal').modal('hide');
+                            Swal.fire('Success', 'Product record updated successfully', 'success');
+                        } else {
+                            if (res.errors) {
+                                var errorMessage = '';
+                                $.each(res.errors, function(field, error) {
+                                    errorMessage += error + '<br>';
+                                });
+                                Swal.fire('Validation Error', errorMessage, 'error');
+                            } else {
+                                Swal.fire('Error', 'Failed to update product record', 'error');
                             }
-                        });
-                    } else {
-                        var errors = res.errors;
-                        var errorMessage = '';
-                        for (var key in errors) {
-                            errorMessage += errors[key] + '<br>';
                         }
-                        Swal.fire('Error', errorMessage, 'error');
+                    },
+                    error: function() {
+                        Swal.fire('Error', 'Failed to update product record', 'error');
                     }
-                },
-
-
-                errorPlacement: function(error, element) {
-                    Swal.fire('Error', error.text(), 'error');
-                }
+                });
             });
             $('body').on('click', '.btnDelete', function() {
                 var product_id = $(this).attr('data-id');
+                var row = $(this).closest('tr');
+
                 $.ajax({
                     url: 'productdelete/' + product_id,
                     type: 'get',
@@ -213,16 +210,65 @@
                     success: function(response) {
                         if (response.status === true) {
                             Swal.fire('Success', response.message, 'success');
-                            $('#productTable tbody #' + product_id).remove();
+                            row.remove();
                         } else {
                             Swal.fire('Error', response.message, 'error');
                         }
                     },
                     error: function() {
-                        Swal.fire('Error', 'Failed to delete admin record', 'error');
+                        Swal.fire('Error', 'Failed to delete product record', 'error');
                     }
                 });
             });
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("#productForm").submit(function(e) {
+                e.preventDefault(); // Prevent form submission
+
+                var form = $(this);
+                var url = form.attr('action');
+                var formData = form.serialize();
+
+                $.ajax({
+                    url: url,
+                    type: "POST",
+                    data: formData,
+                    dataType: 'json',
+                    success: function(response) {
+                        if (response.status === true) {
+                            var product = response.data;
+                            $('#addCategory').modal('hide');
+                            form[0].reset();
+                            Swal.fire('Success', response.message, 'success');
+                            var newRow = '<tr>' +
+                                '<td><input class="form-check-input fs-15" type="checkbox" name="checkAll" value="option1">+</td>' +
+                                '<td>' + product.id + '</td>' +
+                                '<td>' + product.product_name + '</td>' +
+                                '<td>' + product.description + '</td>' +
+                                '<td>' + product.categoryname + '</td>' +
+                                '<td>' + product.created_at + '</td>' +
+                                '<td>' +
+                                '<a data-id="' + product.id + '" class="btn btn-primary btnEdit">Edit</a>' +
+                                '<a data-id="' + product.id + '" class="btn btn-danger btnDelete">Delete</a>' +
+                                '</td>' +
+                                '</tr>';
+                            $('#productTable tbody').append(newRow);
+                        } else if (response.status === false) {
+                            var errorMessage = response.message;
+                            if (response.errors) {
+                                errorMessage += '<br>' + Object.values(response.errors).join('<br>');
+                            }
+                            Swal.fire('Error', errorMessage, 'error');
+                        }
+                    },
+                    error: function() {
+                        Swal.fire('Error', 'Failed to add product', 'error');
+                    }
+                });
+            });
+
         });
     </script>
     <?php echo view('footer'); ?>
