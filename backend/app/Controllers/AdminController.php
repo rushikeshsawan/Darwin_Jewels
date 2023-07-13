@@ -3,22 +3,23 @@
 namespace App\Controllers;
 
 use App\Models\AdminModel;
+use App\Models\ProductModel;
+use App\Models\CategoryModel;
 use CodeIgniter\Email\Email;
 
 class AdminController extends BaseController
 {
     protected $adminModel;
+    protected $productModel;
+    protected $categoryModel;
     protected $session;
     public function __construct()
     {
         $this->adminModel = new AdminModel();
+        $this->productModel = new ProductModel();
+        $this->categoryModel = new CategoryModel();
         $this->session = \Config\Services::session();
-        
     }
-    // public function index()
-    // {
-    //     echo view('Admin/signup');
-    // }
     public function index()
     {
         if ($this->request->getMethod() == 'post') {
@@ -82,15 +83,15 @@ class AdminController extends BaseController
         }
     }
     public function forgotPassword()
-    {   
-        $email = new Email(); 
+    {
+        $email = new Email();
         if ($this->request->getMethod() === 'post') {
             $emailAddress = $this->request->getPost('email');
             $otp = $this->request->getPost('otp');
             $password = $this->request->getPost('password');
             $admin = $this->adminModel->where('email', $emailAddress)->first();
             if ($admin) {
-                if (empty($otp)) { 
+                if (empty($otp)) {
                     $otp = random_int(100000, 999999);
                     $this->adminModel->updateOTP($admin['id'], $otp);
                     $message = "Your OTP is: " . $otp . "\n\n";
@@ -124,7 +125,7 @@ class AdminController extends BaseController
             return view('Admin/forgot_password');
         }
     }
-    
+
     public function list()
     {
         $data['admin'] = $this->adminModel->list();
@@ -132,7 +133,7 @@ class AdminController extends BaseController
     }
     public function edit($id = null)
     {
-        $model = new AdminModel(); 
+        $model = new AdminModel();
         $data = $model->where('id', $id)->first();
         if ($data) {
             echo json_encode(array("status" => true, 'data' => $data));
@@ -145,11 +146,11 @@ class AdminController extends BaseController
     {
         if ($this->request->getMethod() === 'post') {
             $rules = [
-                'username' => 'required|min_length[2]|max_length[50]|is_unique[admin.username,id,'.$this->request->getVar('adminId').']',
-                'email' => 'required|min_length[4]|max_length[100]|valid_email|is_unique[admin.email,id,'.$this->request->getVar('adminId').']',
+                'username' => 'required|min_length[2]|max_length[50]|is_unique[admin.username,id,' . $this->request->getVar('adminId') . ']',
+                'email' => 'required|min_length[4]|max_length[100]|valid_email|is_unique[admin.email,id,' . $this->request->getVar('adminId') . ']',
                 'password' => 'required|min_length[4]'
             ];
-            
+
             if ($this->validate($rules)) {
                 $model = new AdminModel();
                 $id = $this->request->getVar('adminId');
@@ -158,9 +159,9 @@ class AdminController extends BaseController
                     'email'  => $this->request->getVar('email'),
                     'password'  => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT),
                 ];
-                
+
                 $update = $model->update($id, $data);
-                
+
                 if ($update != false) {
                     $updatedAdmin = $model->find($id);
                     echo json_encode(array("status" => true, 'data' => $updatedAdmin, 'message' => 'Admin record updated successfully'));
@@ -173,15 +174,76 @@ class AdminController extends BaseController
             }
         }
     }
-    
+    public function changePassword()
+    {
+        if ($this->request->getMethod() === 'post') {
+            $currentPassword = $this->request->getPost('current_password');
+            $newPassword = $this->request->getPost('new_password');
+            $confirmPassword = $this->request->getPost('confirm_password');
+            $adminId = $this->request->getPost('adminId');
+            $admin = $this->adminModel->find($adminId);
+
+            if ($admin && password_verify($currentPassword, $admin['password'])) {
+                if ($newPassword === $confirmPassword) {
+                    $hashedPassword = password_hash($newPassword, PASSWORD_DEFAULT);
+                    $updateData = ['password' => $hashedPassword];
+
+                    $updated = $this->adminModel->update($adminId, $updateData);
+
+                    if ($updated) {
+                        return $this->response->setJSON(['status' => true, 'message' => 'Password has been updated successfully.']);
+                    } else {
+                        return $this->response->setJSON(['status' => false, 'message' => 'Failed to update password.']);
+                    }
+                } else {
+                    return $this->response->setJSON(['status' => false, 'message' => 'New password and confirm password do not match.']);
+                }
+            } else {
+                return $this->response->setJSON(['status' => false, 'message' => 'Incorrect current password.']);
+            }
+        } else {
+            return $this->response->setJSON(['status' => false, 'message' => 'Invalid request method.']);
+        }
+    }
+
     public function delete($id = null)
     {
-        $deleted = $this->adminModel->delete($id);  
+        $deleted = $this->adminModel->delete($id);
         if ($deleted) {
             $response = ['status' => true, 'message' => 'Admin record deleted successfully'];
         } else {
             $response = ['status' => false, 'message' => 'Failed to delete admin record'];
         }
         return $this->response->setJSON($response);
+    }
+    public function logout()
+    {
+        $this->session->destroy();
+        return redirect()->to('/adminsignin');
+    }
+    public function dashboard()
+    {
+        $addedProductsCount = $this->productModel->getAddedProductsCountLast7Days();
+        $totalProductsCount = $this->productModel->getTotalProductsCount();
+        $productPercentage = ($addedProductsCount / $totalProductsCount) * 100;
+        $productCount = $this->productModel->getTotalProductsCount();
+
+        $addedAdminsCount = $this->adminModel->getAddedAdminsCountLast7Days();
+        $totalAdminsCount = $this->adminModel->getTotalAdminsCount();
+        $AdminsPercentage = ($addedAdminsCount / $totalAdminsCount) * 100;
+        $AdminsCount = $this->productModel->getTotalProductsCount();
+
+        $adminCount = $this->adminModel->getTotalAdminsCount();
+        $categoryCount = $this->categoryModel->getTotalCategoriesCount();
+        $categoryPercentage = ($categoryCount / $totalProductsCount) * 100;
+
+        return view('dashboard', [
+            'productCount' => $productCount,
+            'productPercentage' => $productPercentage,
+            'totalAdminsCount' => $totalAdminsCount,
+            'AdminsPercentage' => $AdminsPercentage,
+            'categoryCount' => $categoryCount,
+            'categoryPercentage' => $categoryPercentage,
+        ]);
     }
 }

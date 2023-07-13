@@ -27,5 +27,14 @@ class ProductModel extends Model
         $query->join('products', 'category.id = products.category_id');
         return $query->get()->getResult();    
     }
+    public function getAddedProductsCountLast7Days()
+    {
+        return $this->where('created_at >=', date('Y-m-d', strtotime('-7 days')))
+                    ->countAllResults();
+    }
+    public function getTotalProductsCount()
+    {
+        return $this->countAllResults();
+    }
 }
    

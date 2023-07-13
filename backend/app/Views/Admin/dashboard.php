@@ -1,38 +1,25 @@
 <?= $this->extend('main') ?>
 <?= $this->section('content') ?>
 
-<body> 
+<body>
     <div id="layout-wrapper">
-        <div class="app-menu navbar-menu">
-            <?php echo view('sidenavbar'); ?>
-            <div class="sidebar-background"></div>
-        </div>
+        <?php echo view('sidenavbar'); ?>
+        <?php echo view('header'); ?> 
         <div class="vertical-overlay"></div>
         <div class="main-content">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="card">
-                            <!-- Inside the main content section -->
-                            <?php if (session()->getFlashdata('success')) : ?>
-                                <div class="alert alert-success">
-                                    <?= session()->getFlashdata('success') ?>
+                        <div class="card"> 
+                            <div class="card-header">
+                                <div class="row">
+                                    <div class="col-10">
+                                        <h2 class="card-title mb-0 alert ">ADMIN LIST</h2>
+                                    </div>
+                                    <div class="col-2">
+                                        <h2 class="card-title mb-0 text-center alert "><a href="logout">Log out</a></h2>
+                                    </div>
                                 </div>
-                            <?php endif; ?>
-
-                            <?php if (session()->getFlashdata('error')) : ?>
-                                <div class="alert alert-danger">
-                                    <?= session()->getFlashdata('error') ?>
-                                </div>
-                            <?php endif; ?>
-
-                            <?php if (session()->getTempdata('success')) : ?>
-                                <div class="alert alert-success">
-                                    <?php echo session()->getTempdata('success'); ?>
-                                </div>
-                            <?php endif; ?>
-                            <div class="card-header mt-5">
-                                <h2 class="card-title mb-0 text-right alert alert-primary">ADMIN LIST</h2>
                             </div>
                             <div class="card-body">
                                 <table class="table table-bordered table-striped" id="adminTable">
@@ -57,6 +44,7 @@
                                                 <td>
                                                     <a data-id="<?php echo $row['id']; ?>" class="btn btn-primary btnEdit" id="">Edit</a>
                                                     <a data-id="<?php echo $row['id']; ?>" class="btn btn-danger btnDelete" id="">Delete</a>
+                                                    <a data-id="<?php echo $row['id']; ?>" class="btn btn-warning btnChangePassword" id="">Change Password</a>
                                                 </td>
                                             </tr>
                                         <?php
@@ -132,6 +120,48 @@
                     </div>
                 </div>
             </div>
+
+            <div class="modal fade" id="updatePasswordModal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="ModalLabel">Update Password</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <form id="updatePassword" name="updatePassword" action="<?php echo site_url('changepassword'); ?>" method="post">
+                            <div class="modal-body">
+                                <input type="hidden" name="adminId" id="adminId">
+                                <div class="form-group">
+                                    <label for="currentPassword">Old Password</label>
+                                    <input type="password" class="form-control" id="currentPassword" placeholder="Enter Old Password" name="current_password" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="newPassword">New Password</label>
+                                    <input type="password" class="form-control" id="newPassword" placeholder="Enter New Password" name="new_password">
+                                </div>
+                                <div class="form-group">
+                                    <label for="confirmPassword">Confirm Password</label>
+                                    <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm New Password" name="confirm_password" required>
+                                </div>
+                            </div>
+                            <div id="password-contain" class="p-3 bg-light mb-2 rounded">
+                                <h5 class="fs-13">Password must contain:</h5>
+                                <p id="pass-length" class="invalid fs-12 mb-2">Minimum <b>8 characters</b></p>
+                                <p id="pass-lower" class="invalid fs-12 mb-2">At <b>lowercase</b> letter (a-z)</p>
+                                <p id="pass-upper" class="invalid fs-12 mb-2">At least <b>uppercase</b> letter (A-Z)</p>
+                                <p id="pass-number" class="invalid fs-12 mb-0">A least <b>number</b> (0-9)</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary btnChangePassword">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+
 </body>
 <script>
     $(document).ready(function() {
@@ -231,9 +261,6 @@
             }
         });
 
-
-
-
         $('body').on('click', '.btnDelete', function() {
             var admin_id = $(this).attr('data-id');
             $.ajax({
@@ -252,6 +279,50 @@
                     Swal.fire('Error', 'Failed to delete admin record', 'error');
                 }
             });
+        });
+
+        $('body').on('click', '.btnChangePassword', function() {
+            var admin_id = $(this).attr('data-id');
+            $.ajax({
+                url: 'admin/edit/' + admin_id,
+                type: "GET",
+                dataType: 'json',
+                success: function(res) {
+                    $('#updatePasswordModal').modal('show');
+                    $('#updatePasswordModal #adminId').val(res.data.id);
+                },
+                error: function(data) {}
+            });
+        });
+
+        $("#updatePassword").validate({
+            rules: {
+                current_password: "required",
+                new_password: "required",
+            },
+            submitHandler: function(form) {
+                var form_action = $("#updatePassword").attr("action");
+                $.ajax({
+                    data: $('#updatePassword').serialize(),
+                    url: form_action,
+                    type: "POST",
+                    dataType: 'json',
+                    success: function(res) {
+                        if (res.status === true) {
+                            $('#updatePasswordModal').modal('hide');
+                            $('#updatePassword')[0].reset();
+                            Swal.fire('Success', 'Password has been updated successfully.', 'success');
+                        } else {
+                            var errors = res.message; // Access the error message
+                            Swal.fire('Error', errors, 'error');
+                        }
+                    },
+                    error: function(data) {
+                        Swal.fire('Error', 'Failed to update password.', 'error');
+                    }
+                });
+            }
+
         });
 
     });

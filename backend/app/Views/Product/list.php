@@ -4,45 +4,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <div id="layout-wrapper">
-    <header id="page-topbar">
-    </header>
-    <div class="app-menu navbar-menu">
-        <div class="navbar-brand-box">
-            <a href="index.html" class="logo logo-dark">
-                <span class="logo-sm">
-                    <img src="assets/images/logo-sm.png" alt="" height="26">
-                </span>
-                <span class="logo-lg">
-                    <img src="assets/images/logo-dark.png" alt="" height="26">
-                </span>
-            </a>
-            <a href="index.html" class="logo logo-light">
-                <span class="logo-sm">
-                    <img src="assets/images/logo-sm.png" alt="" height="24">
-                </span>
-                <span class="logo-lg">
-                    <img src="assets/images/logo-light.png" alt="" height="24">
-                </span>
-            </a>
-            <button type="button" class="btn btn-sm p-0 fs-20 header-item float-end btn-vertical-sm-hover" id="vertical-hover">
-                <i class="ri-record-circle-line"></i>
-            </button>
-        </div>
-
-        <div id="scrollbar">
-            <?php echo view('sidenavbar'); ?>
-        </div>
-
-        <div class="back-btn">
-            <a href="index.html" class="btn btn-primary p-0 avatar-sm rounded-circle" data-bs-toggle="tooltip" data-bs-title="Back to Dashboard">
-                <div class="avatar-title rounded-circle">
-                    <i class="bi bi-house-door-fill"></i>
-                </div>
-            </a>
-        </div>
-
-        <div class="sidebar-background"></div>
-    </div>
+<?php echo view('header'); ?> 
     <div class="vertical-overlay"></div>
     <div class="main-content">
         <div class="page-content">
@@ -131,7 +93,7 @@
                                 <h5 class="card-title mb-0">Basic Datatables</h5>
                             </div>
                             <div class="card-body">
-                                <table id="productTable" class="table table-bordered dt-responsive nowrap table-striped align-middle" style="width:100%"> 
+                                <table id="productTable" class="table table-bordered dt-responsive nowrap table-striped align-middle" style="width:100%">
                                     <thead>
                                         <tr>
                                             <th scope="col" style="width: 10px;">
@@ -179,43 +141,36 @@
             </div>
         </div>
     </div>
-  <script>
-    $(document).ready(function() {
-    $('#productTable').DataTable();
+    <script>
+        $(document).ready(function() {
+            $('#productTable').DataTable();
 
-    $('body').on('click', '.btnEdit', function() {
-        var product_id = $(this).attr('data-id');
-        $.ajax({
-            url: 'productedit/' + product_id,
-            type: "GET",
-            dataType: 'json',
-            success: function(res) {
-                $('#updateModal').modal('show');
-                $('#updateProduct #id').val(res.data.id);
-                $('#updateProduct #product_name').val(res.data.product_name);
-                $('#updateProduct #category_id').val(res.data.category_id);
-                $('#updateProduct #description').val(res.data.description);
-            },
-            error: function(data) {
-                alert("Error");
-            }
-        });
-    });
+            $('body').on('click', '.btnEdit', function() {
+                var product_id = $(this).attr('data-id');
+                $.ajax({
+                    url: 'productedit/' + product_id,
+                    type: "GET",
+                    dataType: 'json',
+                    success: function(res) {
+                        $('#updateModal').modal('show');
+                        $('#updateProduct #id').val(res.data.id);
+                        $('#updateProduct #product_name').val(res.data.product_name);
+                        $('#updateProduct #category_id').val(res.data.category_id);
+                        $('#updateProduct #description').val(res.data.description);
+                    },
+                    error: function(data) {
+                        alert("Error");
+                    }
+                });
+            });
 
-    $("#productTable").validate({
-        rules: {
-            product_name: "required",
-            category_id: "required",
-            description: "required"
-        },
-        messages: {},
-        submitHandler: function(form) {
-            var form_action = $("#productTable").attr("action");
-            $.ajax({
-                data: $('#productTable').serialize(),
-                url: form_action,
-                type: "POST",
-                dataType: 'json',
+            $("#productTable").validate({
+                rules: {
+                    product_name: "required",
+                    category_id: "required",
+                    description: "required"
+                },
+                messages: {},
                 success: function(res) {
                     if (res.status === true) {
                         var product = '<td>' + res.data.id + '</td>';
@@ -226,7 +181,14 @@
                         $('#productTable tbody #' + res.data.id).html(product);
                         $('#productTable')[0].reset();
                         $('#updateModal').modal('hide');
-                        Swal.fire('Success', 'Product record updated successfully', 'success');
+                        Swal.fire({
+                            title: 'Success',
+                            text: 'Product record updated successfully',
+                            icon: 'success',
+                            onClose: () => {
+                                window.location.href = productlist;
+                            }
+                        });
                     } else {
                         var errors = res.errors;
                         var errorMessage = '';
@@ -236,38 +198,32 @@
                         Swal.fire('Error', errorMessage, 'error');
                     }
                 },
-                error: function(data) {
-                    Swal.fire('Error', 'Failed to update product record', 'error');
+
+
+                errorPlacement: function(error, element) {
+                    Swal.fire('Error', error.text(), 'error');
                 }
             });
-        },
-        errorPlacement: function(error, element) {
-            // Show validation errors using SweetAlert
-            Swal.fire('Error', error.text(), 'error');
-        }
-    });
-
-    $('body').on('click', '.btnDelete', function() {
-        var product_id = $(this).attr('data-id');
-        $.ajax({
-            url: 'productdelete/' + product_id,
-            type: 'get',
-            dataType: 'json',
-            success: function(response) {
-                if (response.status === true) {
-                    Swal.fire('Success', response.message, 'success');
-                    $('#productTable tbody #' + product_id).remove();
-                } else {
-                    Swal.fire('Error', response.message, 'error');
-                }
-            },
-            error: function() {
-                Swal.fire('Error', 'Failed to delete admin record', 'error');
-            }
+            $('body').on('click', '.btnDelete', function() {
+                var product_id = $(this).attr('data-id');
+                $.ajax({
+                    url: 'productdelete/' + product_id,
+                    type: 'get',
+                    dataType: 'json',
+                    success: function(response) {
+                        if (response.status === true) {
+                            Swal.fire('Success', response.message, 'success');
+                            $('#productTable tbody #' + product_id).remove();
+                        } else {
+                            Swal.fire('Error', response.message, 'error');
+                        }
+                    },
+                    error: function() {
+                        Swal.fire('Error', 'Failed to delete admin record', 'error');
+                    }
+                });
+            });
         });
-    });
-});
-
-  </script>
+    </script>
     <?php echo view('footer'); ?>
     <?= $this->endSection() ?>

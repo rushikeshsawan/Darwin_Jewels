@@ -55,7 +55,6 @@ class ProductController extends BaseController
             echo json_encode(array("status" => false));
         }
     }
-    
     public function update()
     {
         if ($this->request->getMethod() === 'post') {
@@ -78,7 +77,7 @@ class ProductController extends BaseController
     
                 if ($update) {
                     $product = $model->find($id);
-                    echo json_encode(array("status" => true, 'data' => $product, 'message' => 'Product record updated successfully'));
+                    echo json_encode(array("status" => true, 'data' => $product, 'redirect' => site_url('productlist'), 'message' => 'Product record updated successfully'));
                 } else {
                     echo json_encode(array("status" => false, 'message' => 'Failed to update product record'));
                 }
@@ -87,15 +86,8 @@ class ProductController extends BaseController
             }
         }
     }
+
     
-    
-    
-
-  
-
-
-
-
     public function delete($id = null)
     {
         $deleted = $this->productModel->delete($id);

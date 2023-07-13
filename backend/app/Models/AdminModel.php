@@ -36,4 +36,15 @@ class AdminModel extends Model
     {
         $this->update($adminId, $data);
     }
+    public function getAddedAdminsCountLast7Days()
+    {
+        return $this->where('created_at >=', date('Y-m-d', strtotime('-7 days')))
+                    ->countAllResults();
+    }
+    public function getTotalAdminsCount()
+    {
+        return $this->countAllResults();
+    }
 }
+   
+ 
