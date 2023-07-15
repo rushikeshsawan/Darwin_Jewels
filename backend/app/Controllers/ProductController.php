@@ -132,4 +132,27 @@ class ProductController extends BaseController
 
         return $this->response->setJSON($response);
     }
+    public function storeRating()
+    {
+        $productId = $this->request->getPost('product_id');
+        $rating = $this->request->getPost('rating');
+        
+        $productModel = new ProductModel();
+        $product = $productModel->find($productId);
+        
+        if ($product) {
+            $product->rating = $rating;
+            $productModel->save($product);
+            
+            return $this->response->setJSON([
+                'status' => true,
+                'message' => 'Rating stored successfully'
+            ]);
+        } else {
+            return $this->response->setJSON([
+                'status' => false,
+                'message' => 'Product not found'
+            ]);
+        }
+    } 
 }

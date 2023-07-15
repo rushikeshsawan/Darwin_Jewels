@@ -14,9 +14,7 @@ class CategoryController extends Controller
     }
     public function store()
     {
-        $categoryModel = new CategoryModel();
-
-        if ($this->request->getMethod() == 'post') {
+        if ($this->request->getMethod() === 'post') {
             $rules = [
                 'categoryname' => 'required|min_length[2]|max_length[50]',
                 'description' => 'required|min_length[2]|max_length[50]',
@@ -30,22 +28,29 @@ class CategoryController extends Controller
                 $imageName = $image->getRandomName();
                 $image->move('./uploads', $imageName);
 
-                $categoryModel->insert([
+                $category = [
                     'categoryname' => $categoryname,
                     'description' => $description,
                     'image' => $imageName
-                ]);
+                ];
 
-                session()->setFlashdata('success', 'Category added successfully');
-                return redirect()->to('/categorylist');
+                $this->CategoryModel->insert($category);
+
+                return $this->response->setJSON([
+                    'status' => true,
+                    'message' => 'Category added successfully',
+                    'data' => $category
+                ]);
             } else {
-                $data['validation'] = $this->validator;
-                echo view('category/add', $data);
+                return $this->response->setJSON([
+                    'status' => false,
+                    'message' => 'Validation failed',
+                    'errors' => $this->validator->getErrors()
+                ]);
             }
-        } else {
-            return view('category/add');
         }
     }
+
 
     public function index()
     {
@@ -65,35 +70,44 @@ class CategoryController extends Controller
         }
     }
 
-    public function update($id = null)
+    public function update()
     {
         if ($this->request->getMethod() === 'post') {
             $rules = [
-                'categoryname' => 'required|min_length[2]|max_length[50]'
+                'id' => 'required',
+                'categoryname' => 'required|min_length[2]|max_length[50]',
+                'description' => 'required|min_length[2]|max_length[50]',
+                'image' => 'max_size[image,1024]|is_image[image]'
             ];
 
             if ($this->validate($rules)) {
                 $id = $this->request->getPost('id');
                 $categoryname = $this->request->getPost('categoryname');
+                $description = $this->request->getPost('description');
                 $image = $this->request->getFile('image');
-                $description = $this->request->getFile('description');
-                $star = $this->request->getFile('star');
 
                 if ($image->isValid() && !$image->hasMoved()) {
                     $imageName = $image->getRandomName();
                     $image->move('./uploads', $imageName);
-                    $this->CategoryModel->Uupdate($id, $categoryname, $imageName,$description,$star);
-                    session()->setTempdata('success', 'Category update successfully', 1);
-                    return redirect()->to('/categorylist');
+                } else {
+                    $imageName = $this->CategoryModel->getCategoryImage($id); // Retrieve the existing image name if no new image is uploaded
                 }
+
+                $this->CategoryModel->updateCategory($id, $categoryname, $description, $imageName);
+
+                // Return a JSON response indicating success
+                return $this->response->setJSON([
+                    'status' => true,
+                    'message' => 'Category updated successfully'
+                ]);
             } else {
-                $data['validation'] = $this->validator;
-                $data['Category'] = $this->CategoryModel->getUser($id);
-                return view('Category/edit', $data);
+                // Return a JSON response indicating validation failure and provide error messages
+                return $this->response->setJSON([
+                    'status' => false,
+                    'message' => 'Validation failed',
+                    'errors' => $this->validator->getErrors()
+                ]);
             }
-        } else {
-            $data['Category'] = $this->CategoryModel->getUser($id);
-            return view('Category/edit', $data);
         }
     }
     public function delete($id = null)
@@ -101,10 +115,22 @@ class CategoryController extends Controller
         $deleted = $this->CategoryModel->delete($id);
 
         if ($deleted) {
-            $response = ['status' => true, 'message' => 'Admin record deleted successfully'];
+            $response = ['status' => true, 'message' => 'Category record deleted successfully'];
         } else {
-            $response = ['status' => false, 'message' => 'Failed to delete admin record'];
+            $response = ['status' => false, 'message' => 'Failed to delete category record'];
         }
         return $this->response->setJSON($response);
+    }
+    public function updateRating()
+    {
+        $category_id = $this->request->getPost('category_id');
+        $rating = $this->request->getPost('rating'); 
+        $model = new CategoryModel();
+        $model->updateRating($category_id, $rating);
+
+        return $this->response->setJSON([
+            'status' => true,
+            'message' => 'Rating updated successfully'
+        ]);
     }
 }

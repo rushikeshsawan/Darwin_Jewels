@@ -91,8 +91,8 @@
                                             </form>
                                         </div>
                                         <div class="mt-4 text-center">
-                                            <p class="mb-0">Already have an account? 
-                                                    Sign in </p>
+                                            <p class="mb-0">Already have an account? <a href="adminsignin">
+                                                    Sign in </a></p>
                                         </div>
                                     </div><!-- end card body -->
                                 </div><!-- end card -->

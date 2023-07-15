@@ -61,7 +61,7 @@
 
                                                 <div class="mb-3">
                                                     <div class="float-end">
-                                                        <a href="auth-pass-reset-basic.html" class="text-muted">Forgot password?</a>
+                                                        <a href="adminforgotpassword" class="text-muted">Forgot password?</a>
                                                     </div>
                                                     <label class="form-label" for="password-input">Password</label>
                                                     <div class="position-relative auth-pass-inputgroup mb-3">
@@ -94,7 +94,7 @@
                                             </form>
 
                                             <div class="text-center mt-5">
-                                                <p class="mb-0">Don't have an account ? <a href="auth-signup-basic.html" class="fw-semibold text-secondary text-decoration-underline">
+                                                <p class="mb-0">Don't have an account ? <a href="adminsignup" class="fw-semibold text-secondary text-decoration-underline">
                                                         SignUp</a> </p>
                                             </div>
                                         </div>

@@ -3,6 +3,9 @@
 <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>  -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-bar-rating/1.2.2/jquery.barrating.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/jquery-bar-rating/1.2.2/themes/fontawesome-stars.min.css" rel="stylesheet">
+
 <div id="layout-wrapper">
     <?php echo view('header'); ?>
     <div class="vertical-overlay"></div>
@@ -105,13 +108,12 @@
                                             <th>Description</th>
                                             <th>Category</th>
                                             <th>Create Date</th>
+                                            <th>Rating</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody id="productTableBody">
-                                        <?php
-                                        foreach ($product as $row) {
-                                        ?>
+                                        <?php foreach ($product as $row) : ?>
                                             <tr>
                                                 <th scope="row">
                                                     <div class="form-check">
@@ -124,13 +126,26 @@
                                                 <td><?= $row->categoryname; ?></td>
                                                 <td><?= $row->created_at; ?></td>
                                                 <td>
+                                                    <div class="rating" data-product-id="<?= $row->id; ?>">
+                                                        <input type="radio" id="star5_<?= $row->id; ?>" name="rating<?= $row->id; ?>" value="5" />
+                                                        <label for="star5_<?= $row->id; ?>" title="5 stars"></label>
+                                                        <input type="radio" id="star4_<?= $row->id; ?>" name="rating<?= $row->id; ?>" value="4" />
+                                                        <label for="star4_<?= $row->id; ?>" title="4 stars"></label>
+                                                        <input type="radio" id="star3_<?= $row->id; ?>" name="rating<?= $row->id; ?>" value="3" />
+                                                        <label for="star3_<?= $row->id; ?>" title="3 stars"></label>
+                                                        <input type="radio" id="star2_<?= $row->id; ?>" name="rating<?= $row->id; ?>" value="2" />
+                                                        <label for="star2_<?= $row->id; ?>" title="2 stars"></label>
+                                                        <input type="radio" id="star1_<?= $row->id; ?>" name="rating<?= $row->id; ?>" value="1" />
+                                                        <label for="star1_<?= $row->id; ?>" title="1 star"></label>
+                                                    </div>
+                                                </td>
+
+                                                <td>
                                                     <a data-id="<?= $row->id; ?>" class="btn btn-primary btnEdit" id="">Edit</a>
                                                     <a data-id="<?= $row->id; ?>" class="btn btn-danger btnDelete" id="">Delete</a>
                                                 </td>
                                             </tr>
-                                        <?php
-                                        }
-                                        ?>
+                                        <?php endforeach; ?>
                                     </tbody>
                                 </table>
                             </div>
@@ -220,10 +235,6 @@
                     }
                 });
             });
-        });
-    </script>
-    <script>
-        $(document).ready(function() {
             $("#productForm").submit(function(e) {
                 e.preventDefault(); // Prevent form submission
 
@@ -265,6 +276,36 @@
                     },
                     error: function() {
                         Swal.fire('Error', 'Failed to add product', 'error');
+                    }
+                });
+            });
+            $('.rating').each(function() {
+                var productId = $(this).data('product-id');
+                var starRating = $(this);
+                
+                starRating.barrating({
+                    theme: 'fontawesome-stars',
+                    onSelect: function(value, text, event) {
+                        $.ajax({
+                            url: 'rating/store',
+                            type: 'POST',
+                            data: {
+                                product_id: productId,
+                                rating: value
+                            },
+                            dataType: 'json',
+                            success: function(response) {
+                                if (response.status === true) {
+                                    // Rating stored successfully
+                                    Swal.fire('Success', 'Rating stored successfully', 'success');
+                                } else {
+                                    Swal.fire('Error', 'Failed to store rating', 'error');
+                                }
+                            },
+                            error: function() {
+                                Swal.fire('Error', 'Failed to store rating', 'error');
+                            }
+                        });
                     }
                 });
             });

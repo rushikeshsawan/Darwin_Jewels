@@ -50,13 +50,18 @@ $routes->post('categorystore', 'CategoryController::store');
 $routes->get('category/edit/(:num)', 'CategoryController::edit/$1');
 $routes->post('category/update', 'CategoryController::update'); 
 $routes->get('category/delete/(:num)', 'CategoryController::delete/$1');
+$routes->post('/category/update-rating', 'CategoryController::updateRating');
 
 
 $routes->get('productlist', 'ProductController::list'); 
 $routes->post('productstore', 'ProductController::store'); 
 $routes->get('productedit/(:num)', 'ProductController::edit/$1');
-$routes->post('productupdate', 'ProductController::update'); 
+$routes->get('product/edit/(:num)', 'ProductController::edit/$1');
+$routes->post('product/update', 'ProductController::update');
 $routes->get('productdelete/(:num)', 'ProductController::delete/$1');
+$routes->post('rating/store', 'ProductController::storeRating');
+
+
 
 
 
