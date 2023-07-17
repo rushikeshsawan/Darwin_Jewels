@@ -37,12 +37,10 @@ class ProductModel extends Model
     public function getTotalProductsCount()
     {
         return $this->countAllResults();
-    }
-    public function storeRating($productId, $rating)
+    } 
+    public function saveRating($productId, $rating)
     {
-        $this->set('rating', $rating)
-            ->where('id', $productId)
-            ->update();
+        $this->update($productId, ['rating' => $rating]);
     }
     public function getCategoryImage($id)
     {

@@ -29,7 +29,7 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'AdminController::index'); 
+// $routes->get('/', 'AdminController::index'); 
 $routes->add('adminsignin', 'AdminController::login'); 
 $routes->add('adminsignup', 'AdminController::index');
 $routes->get('adminforgotpassword', 'AdminController::forgotPassword');
@@ -57,12 +57,13 @@ $routes->post('/category/update-rating', 'CategoryController::updateRating');
 // $routes->post('productupdate', 'ProductController::update');
 // $routes->get('productdelete/(:num)', 'ProductController::delete/$1');
 // $routes->post('rating/store', 'ProductController::storeRating');
+$routes->get('/product', 'ProductController::index');
+$routes->get('/product/getProductList', 'ProductController::getProductList');
+$routes->get('/product/getProduct/(:num)', 'ProductController::getProduct/$1');
+$routes->post('/product/saveProduct', 'ProductController::saveProduct');
+$routes->delete('/product/deleteProduct/(:num)', 'ProductController::deleteProduct/$1');
+$routes->add('product/saveRating/(:num)', 'ProductController::saveRating/$1');
 
-$routes->get('product', 'ProductController::index');
-$routes->get('product/getProductList', 'ProductController::getProductList');
-$routes->get('product/getProduct/(:num)', 'ProductController::getProduct/$1');
-$routes->post('product/saveProduct', 'ProductController::saveProduct');
-$routes->delete('product/deleteProduct/(:num)', 'ProductController::deleteProduct/$1');
 // $routes->get('/', 'SendMail::index');
 // $routes->match(['get', 'post'], 'SendMail/sendMail', 'SendMail::sendMail');
 

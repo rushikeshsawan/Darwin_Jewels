@@ -98,8 +98,7 @@
                             <th data-ordering="false">ID</th>
                             <th data-ordering="false">Name</th>
                             <th>Image</th>
-                            <th>Description</th>
-                            <th>Star</th>
+                            <th>Description</th> 
                             <th>Create Date</th>
                             <th>Action</th>
                         </tr>
@@ -115,16 +114,7 @@
                                 <td><?= $row['id']; ?></td>
                                 <td><?= $row['categoryname']; ?></td>
                                 <td><img src="<?= base_url('/uploads/' . $row['image']) ?>" alt="Category Image" width="100px" height="100px"></td>
-                                <td><?= $row['description']; ?></td>
-                                <td>
-                                    <div class="star-rating">
-                                        <input type="radio" name="rating" value="1" onchange="updateRating(<?= $row['id']; ?>, 1);" <?= ($row['rating'] == 1) ? 'checked' : ''; ?>>
-                                        <input type="radio" name="rating" value="2" onchange="updateRating(<?= $row['id']; ?>, 2);" <?= ($row['rating'] == 2) ? 'checked' : ''; ?>>
-                                        <input type="radio" name="rating" value="3" onchange="updateRating(<?= $row['id']; ?>, 3);" <?= ($row['rating'] == 3) ? 'checked' : ''; ?>>
-                                        <input type="radio" name="rating" value="4" onchange="updateRating(<?= $row['id']; ?>, 4);" <?= ($row['rating'] == 4) ? 'checked' : ''; ?>>
-                                        <input type="radio" name="rating" value="5" onchange="updateRating(<?= $row['id']; ?>, 5);" <?= ($row['rating'] == 5) ? 'checked' : ''; ?>>
-                                    </div>
-                                </td>
+                                <td><?= $row['description']; ?></td> 
                                 <td><?= $row['created_at']; ?></td>
                                 <td>
                                     <a data-id="<?php echo $row['id']; ?>" class="btn btn-primary btnEdit" id="">Edit</a>
