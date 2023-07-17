@@ -7,18 +7,20 @@ use CodeIgniter\Model;
 class ProductModel extends Model
 {
     protected $table = 'products';
-    protected $allowedFields = ['id', 'product_name', 'category_id', 'description', 'rating', 'created_at'];
+    protected $allowedFields = ['id', 'product_name', 'category_id', 'description', 'prize', 'image', 'rating', 'created_at'];
 
-    public function store($product_name, $category_id, $description)
+    public function store($product_name, $category_id, $description, $prize, $image)
     {
         $data = [
             'product_name' => $product_name,
             'category_id' => $category_id,
             'description' => $description,
+            'prize' => $prize,
+            'image' => $image
         ];
+
         $this->insert($data);
     }
-
     public function list()
     {
         $db = $this->db;
@@ -42,4 +44,13 @@ class ProductModel extends Model
             ->where('id', $productId)
             ->update();
     }
+    public function getCategoryImage($id)
+    {
+        return $this->db->table('product')
+            ->select('image')
+            ->where('id', $id)
+            ->get()
+            ->getRow('image');
+    }
+ 
 }

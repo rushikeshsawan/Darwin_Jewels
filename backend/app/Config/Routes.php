@@ -41,9 +41,7 @@ $routes->post('admin/update', 'AdminController::update',['filter' => 'authGuard'
 $routes->get('admin/delete/(:num)', 'AdminController::delete/$1',['filter' => 'authGuard']); 
 $routes->post('changepassword', 'AdminController::changePassword',['filter' => 'authGuard']); 
 $routes->get('logout', 'AdminController::logout');  
-$routes->get('dashboard', 'AdminController::dashboard');  
-
-
+$routes->get('dashboard', 'AdminController::dashboard'); 
 
 $routes->get('categorylist', 'CategoryController::index'); 
 $routes->post('categorystore', 'CategoryController::store'); 
@@ -52,16 +50,25 @@ $routes->post('category/update', 'CategoryController::update');
 $routes->get('category/delete/(:num)', 'CategoryController::delete/$1');
 $routes->post('/category/update-rating', 'CategoryController::updateRating');
 
+// $routes->get('productlist', 'ProductController::list'); 
+// $routes->post('productstore', 'ProductController::store'); 
+// $routes->get('productedit/(:num)', 'ProductController::edit/$1');
+// $routes->get('product/edit/(:num)', 'ProductController::edit/$1');
+// $routes->post('productupdate', 'ProductController::update');
+// $routes->get('productdelete/(:num)', 'ProductController::delete/$1');
+// $routes->post('rating/store', 'ProductController::storeRating');
 
-$routes->get('productlist', 'ProductController::list'); 
-$routes->post('productstore', 'ProductController::store'); 
-$routes->get('productedit/(:num)', 'ProductController::edit/$1');
-$routes->get('product/edit/(:num)', 'ProductController::edit/$1');
-$routes->post('product/update', 'ProductController::update');
-$routes->get('productdelete/(:num)', 'ProductController::delete/$1');
-$routes->post('rating/store', 'ProductController::storeRating');
+$routes->get('product', 'ProductController::index');
+$routes->get('product/getProductList', 'ProductController::getProductList');
+$routes->get('product/getProduct/(:num)', 'ProductController::getProduct/$1');
+$routes->post('product/saveProduct', 'ProductController::saveProduct');
+$routes->delete('product/deleteProduct/(:num)', 'ProductController::deleteProduct/$1');
+// $routes->get('/', 'SendMail::index');
+// $routes->match(['get', 'post'], 'SendMail/sendMail', 'SendMail::sendMail');
 
-
+$routes->set404Override(function(){
+    return view('404page'); // Replace 'index' with the desired view or controller method to handle the 404 redirect
+});
 
 
 

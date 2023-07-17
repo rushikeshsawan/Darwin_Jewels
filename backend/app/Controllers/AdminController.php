@@ -84,47 +84,49 @@ class AdminController extends BaseController
     }
     public function forgotPassword()
     {
-        $email = new Email();
+        $email = \Config\Services::email(); // Load the email service
+    
         if ($this->request->getMethod() === 'post') {
-            $emailAddress = $this->request->getPost('email');
-            $otp = $this->request->getPost('otp');
-            $password = $this->request->getPost('password');
-            $admin = $this->adminModel->where('email', $emailAddress)->first();
-            if ($admin) {
-                if (empty($otp)) {
-                    $otp = random_int(100000, 999999);
-                    $this->adminModel->updateOTP($admin['id'], $otp);
-                    $message = "Your OTP is: " . $otp . "\n\n";
-                    $message .= "Please use this OTP to reset your password.\n";
-                    $message .= "If you did not initiate this request, please disregard this email.\n\n";
-                    $message .= "Thank you.\n";
-                    $email = \Config\Services::email();
-                    $email->setTo($emailAddress);
-                    $email->setSubject('Password Reset Request');
-                    $email->setMessage($message);
-                    $email->send();
-                    session()->setFlashdata('success', 'Email sent with OTP. Please check your email.');
-                    return view('Admin/set_new_password');
-                } else {
-                    if ($admin['otp'] == $otp) {
-                        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-                        $this->adminModel->update($admin['id'], ['password' => $hashedPassword]);
-                        $this->adminModel->updateOTP($admin['id'], null);
-                        session()->setFlashdata('success', 'Password has been updated successfully.');
-                        return redirect()->to('/adminsignin');
-                    } else {
-                        session()->setFlashdata('error', 'Invalid OTP. Please try again.');
-                        return redirect()->back();
-                    }
-                }
+            $validationRules = [
+                'email' => 'required|valid_email',
+                'otp' => 'required',
+                'password' => 'required|min_length[6]'
+            ];
+    
+            $validationMessages = [
+                'email' => [
+                    'required' => 'Email is required.',
+                    'valid_email' => 'Please enter a valid email address.'
+                ],
+                'otp' => [
+                    'required' => 'OTP is required.'
+                ],
+                'password' => [
+                    'required' => 'Password is required.',
+                    'min_length' => 'Password must be at least 6 characters long.'
+                ]
+            ];
+    
+            $validation = \Config\Services::validation();
+            $validation->setRules($validationRules, $validationMessages);
+    
+            if ($validation->withRequest($this->request)->run()) {
+                $emailAddress = $this->request->getPost('email');
+                $otp = $this->request->getPost('otp');
+                $password = $this->request->getPost('password');
+                $admin = $this->adminModel->where('email', $emailAddress)->first(); 
+               
             } else {
-                session()->setFlashdata('error', 'Email not found. Please try again.');
+                session()->setFlashdata('error', $validation->getErrors());
                 return redirect()->back();
             }
         } else {
             return view('Admin/forgot_password');
         }
     }
+    
+    
+    
 
     public function list()
     {
@@ -147,8 +149,7 @@ class AdminController extends BaseController
         if ($this->request->getMethod() === 'post') {
             $rules = [
                 'username' => 'required|min_length[2]|max_length[50]|is_unique[admin.username,id,' . $this->request->getVar('adminId') . ']',
-                'email' => 'required|min_length[4]|max_length[100]|valid_email|is_unique[admin.email,id,' . $this->request->getVar('adminId') . ']',
-                'password' => 'required|min_length[4]'
+                'email' => 'required|min_length[4]|max_length[100]|valid_email|is_unique[admin.email,id,' . $this->request->getVar('adminId') . ']'
             ];
 
             if ($this->validate($rules)) {
@@ -157,7 +158,6 @@ class AdminController extends BaseController
                 $data = [
                     'username' => $this->request->getVar('username'),
                     'email'  => $this->request->getVar('email'),
-                    'password'  => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT),
                 ];
 
                 $update = $model->update($id, $data);

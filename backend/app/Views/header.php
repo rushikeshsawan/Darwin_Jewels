@@ -23,48 +23,48 @@
                     </button>
                     <div class="dropdown-menu dropdown-menu-end">
 
-                        
+
                         <a href="javascript:void(0);" class="dropdown-item notify-item language py-2" data-lang="en" title="English">
                             <img src="assets/images/flags/us.svg" alt="user-image" class="me-2 rounded-circle" height="18">
                             <span class="align-middle">English</span>
                         </a>
 
-                        
+
                         <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="sp" title="Spanish">
                             <img src="assets/images/flags/spain.svg" alt="user-image" class="me-2 rounded-circle" height="18">
                             <span class="align-middle">Española</span>
                         </a>
 
-                        
+
                         <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="gr" title="German">
                             <img src="assets/images/flags/germany.svg" alt="user-image" class="me-2 rounded-circle" height="18"> <span class="align-middle">Deutsche</span>
                         </a>
 
-                        
+
                         <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="it" title="Italian">
                             <img src="assets/images/flags/italy.svg" alt="user-image" class="me-2 rounded-circle" height="18">
                             <span class="align-middle">Italiana</span>
                         </a>
 
-                        
+
                         <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="ru" title="Russian">
                             <img src="assets/images/flags/russia.svg" alt="user-image" class="me-2 rounded-circle" height="18">
                             <span class="align-middle">русский</span>
                         </a>
 
-                        
+
                         <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="ch" title="Chinese">
                             <img src="assets/images/flags/china.svg" alt="user-image" class="me-2 rounded-circle" height="18">
                             <span class="align-middle">中国人</span>
                         </a>
 
-                        
+
                         <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="fr" title="French">
                             <img src="assets/images/flags/french.svg" alt="user-image" class="me-2 rounded-circle" height="18">
                             <span class="align-middle">français</span>
                         </a>
 
-                        
+
                         <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="ar" title="Arabic">
                             <img src="assets/images/flags/ae.svg" alt="user-image" class="me-2 rounded-circle" height="18">
                             <span class="align-middle">عربى</span>
@@ -565,7 +565,7 @@
                         </span>
                     </button>
                     <div class="dropdown-menu dropdown-menu-end">
-                        
+
                         <h6 class="dropdown-header">Welcome Diana!</h6>
                         <a class="dropdown-item" href="pages-profile.html"><i class="mdi mdi-account-circle text-muted fs-16 align-middle me-1"></i> <span class="align-middle">Profile</span></a>
                         <a class="dropdown-item" href="#!"><i class="mdi mdi-message-text-outline text-muted fs-16 align-middle me-1"></i>
