@@ -29,7 +29,7 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-// $routes->get('/', 'AdminController::index'); 
+$routes->get('/', 'AdminController::login'); 
 $routes->add('adminsignin', 'AdminController::login'); 
 $routes->add('adminsignup', 'AdminController::index');
 $routes->get('adminforgotpassword', 'AdminController::forgotPassword');

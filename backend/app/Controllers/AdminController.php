@@ -87,45 +87,46 @@ class AdminController extends BaseController
         $email = \Config\Services::email(); // Load the email service
     
         if ($this->request->getMethod() === 'post') {
-            $validationRules = [
-                'email' => 'required|valid_email',
-                'otp' => 'required',
-                'password' => 'required|min_length[6]'
-            ];
+            $emailAddress = $this->request->getPost('email');
+            $otp = $this->request->getPost('otp');
+            $password = $this->request->getPost('password');
+            $admin = $this->adminModel->where('email', $emailAddress)->first();
     
-            $validationMessages = [
-                'email' => [
-                    'required' => 'Email is required.',
-                    'valid_email' => 'Please enter a valid email address.'
-                ],
-                'otp' => [
-                    'required' => 'OTP is required.'
-                ],
-                'password' => [
-                    'required' => 'Password is required.',
-                    'min_length' => 'Password must be at least 6 characters long.'
-                ]
-            ];
+            if ($admin) {
+                if (empty($otp)) {
+                    $otp = random_int(100000, 999999);
+                    $this->adminModel->updateOTP($admin['id'], $otp);
     
-            $validation = \Config\Services::validation();
-            $validation->setRules($validationRules, $validationMessages);
+                    $message = "Your OTP is: " . $otp . "\n\n"; 
+                    $message .= "Thank you."; 
+                    $email->setTo($emailAddress);
+                    $email->setFrom('vishal.naik@darwinpgc.com', 'Password Reset Request'); 
+                    $email->setSubject('Password Reset Request');
+                    $email->setMessage($message);
+                    $email->send();  
+                    session()->setFlashdata('success', 'Email sent with OTP. Please check your email.');
+                    return view('Admin/set_new_password');
+                } else {
+                    if ($admin['otp'] == $otp) {
+                        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+                        $this->adminModel->update($admin['id'], ['password' => $hashedPassword]);
+                        $this->adminModel->updateOTP($admin['id'], null);
     
-            if ($validation->withRequest($this->request)->run()) {
-                $emailAddress = $this->request->getPost('email');
-                $otp = $this->request->getPost('otp');
-                $password = $this->request->getPost('password');
-                $admin = $this->adminModel->where('email', $emailAddress)->first(); 
-               
+                        session()->setFlashdata('success', 'Password has been updated successfully.');
+                        return redirect()->to('/adminsignin');
+                    } else {
+                        session()->setFlashdata('error', 'Invalid OTP. Please try again.');
+                        return redirect()->back();
+                    }
+                }
             } else {
-                session()->setFlashdata('error', $validation->getErrors());
+                session()->setFlashdata('error', 'Email not found. Please try again.');
                 return redirect()->back();
             }
         } else {
             return view('Admin/forgot_password');
         }
     }
-    
-    
     
 
     public function list()

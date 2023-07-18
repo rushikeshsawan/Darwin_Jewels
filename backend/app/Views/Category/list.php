@@ -1,8 +1,5 @@
 <?= $this->extend('main') ?>
-<?= $this->section('content') ?>
-
-
-
+<?= $this->section('content') ?> 
 
 <div class="col-12">
     <div class="page-title-box d-sm-flex align-items-center justify-content-between">
@@ -50,7 +47,7 @@
                     </div>
                     <div class="modal-body">
                         <form action="category/update" name="updateCategory" id="updateCategory" method="POST" enctype="multipart/form-data">
-                            <input type=" " name="id" id="id" />
+                            <input type="hidden" name="id" id="id" />
                             <div class="mb-3">
                                 <label for="categoryname" class="form-label">Category Name</label>
                                 <input type="text" class="form-control" id="categoryname" name="categoryname" placeholder="Enter your Category Name">
@@ -266,29 +263,5 @@
             });
         });
     });
-</script>
-<script>
-    function updateRating(categoryId, rating) {
-        $.ajax({
-            url: '/category/update-rating',
-            type: 'POST',
-            data: {
-                category_id: categoryId,
-                rating: rating
-            },
-            dataType: 'json',
-            success: function(response) {
-                if (response.status === true) {
-                    console.log('Rating updated successfully');
-                    // Handle any UI updates or refresh the page as needed
-                } else {
-                    console.log('Failed to update rating');
-                }
-            },
-            error: function() {
-                console.log('Failed to update rating');
-            }
-        });
-    }
 </script>
 <?= $this->endSection() ?>

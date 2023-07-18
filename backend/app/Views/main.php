@@ -848,15 +848,15 @@
                             <a class="nav-link menu-link" href="adminlist">
                                 <i class="bi bi-command"></i> <span data-key="t-overview">Admin</span>
                             </a>
+                        </li> 
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="product">
+                                <i class="bi bi-command"></i> <span data-key="t-overview">Product</span>
+                            </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link menu-link" href="categorylist">
                                 <i class="bi bi-command"></i> <span data-key="t-overview">Category</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link menu-link" href="product">
-                                <i class="bi bi-command"></i> <span data-key="t-overview">Product</span>
                             </a>
                         </li>
                         <li class="nav-item">
@@ -890,10 +890,8 @@
         <div class="main-content">
 
             <div class="page-content">
-                <div class="container-fluid">
-
-                <?= $this->renderSection('content') ?>
-
+                <div class="container-fluid">   
+                <?= $this->renderSection('content') ?> 
                 </div>
                 <!-- container-fluid -->
             </div>
@@ -1654,18 +1652,12 @@
         </div>
     </div>
 
-    <!-- JAVASCRIPT -->
     <script src="/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="/assets/libs/simplebar/simplebar.min.js"></script>
     <script src="/assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
-    <script src="/assets/js/plugins.js"></script>
-    <!-- sortablejs -->
-    <script src="/assets/libs/sortablejs/Sortable.min.js"></script>
-
-    <!-- nestable init js -->
-    <script src="/assets/js/pages/nestable.init.js"></script>
-
-    <!-- App js -->
+    <script src="/assets/js/plugins.js"></script> 
+    <script src="/assets/libs/sortablejs/Sortable.min.js"></script>  
+    <script src="/assets/js/pages/nestable.init.js"></script> 
     <script src="/assets/js/pages/modal.init.js"></script>
     <script src="/assets/js/app.js"></script>
     
