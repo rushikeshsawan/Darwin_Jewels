@@ -9,7 +9,7 @@
                         <h2 class="card-title mb-0 alert ">ADMIN LIST</h2>
                     </div>
                     <div class="col-2">
-                        <h2 class="card-title mb-0 text-center alert "><a href="logout">Log out</a></h2>
+                        <h2 class="card-title mb-0 text-center alert btnAdd">ADD ADMIN</h2>
                     </div>
                 </div>
             </div>
@@ -45,7 +45,7 @@
             </div>
         </div><!--end col-->
     </div><!--end row-->
-</div>
+</div> 
 <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -53,19 +53,19 @@
                 <h5 class="modal-title" id="ModalLabel">Add New Admin</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form id="addAdmin" name="addAdmin" action="<?php echo site_url('adminsignup'); ?>" method="post">
+            <form id="addAdminForm" name="addAdminForm" action="<?= site_url('adminsignup'); ?>" method="post">
                 <div class="modal-body">
                     <div class="form-group">
                         <label for="username">Username</label>
-                        <input type="text" class="form-control" id="username" placeholder="Enter First Name" name="username">
+                        <input type="text" class="form-control" id="username" placeholder="Enter First Name" name="username" required>
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="text" class="form-control" id="email" placeholder="Enter Last Name" name="email">
+                        <input type="text" class="form-control" id="email" placeholder="Enter Last Name" name="email" required>
                     </div>
                     <div class="form-group">
                         <label for="password">Password:</label>
-                        <input class="form-control" id="password" name="password" rows="10" placeholder="Enter Address">
+                        <input class="form-control" id="password" name="password" type="password" placeholder="Enter Password" required>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -76,7 +76,6 @@
         </div>
     </div>
 </div>
-
 <div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -152,37 +151,52 @@
 <script>
     $(document).ready(function() {
         $('#adminTable').DataTable();
-        $("#addAdmin").validate({
+        $('body').on('click', '.btnAdd', function() {
+            $('#addModal').modal('show');
+        });
+        $("#addAdminForm").validate({ 
             rules: {
                 username: "required",
-                email: "required",
+                email: {
+                    required: true,
+                    email: true
+                },
                 password: "required"
             },
             messages: {},
             submitHandler: function(form) {
-                var form_action = $("#addAdmin").attr("action");
                 $.ajax({
-                    data: $('#addAdmin').serialize(),
-                    url: form_action,
+                    url: $(form).attr("action"),
                     type: "POST",
+                    data: $(form).serialize(),
                     dataType: 'json',
                     success: function(res) {
-                        var admin = '<tr id="' + res.data.id + '">';
-                        admin += '<td>' + res.data.id + '</td>';
-                        admin += '<td>' + res.data.username + '</td>';
-                        admin += '<td>' + res.data.email + '</td>';
-                        admin += '<td><a data-id="' + res.data.id + '" class="btn btn-primary btnEdit">Edit</a>  <a data-id="' + res.data.id + '" class="btn btn-danger btnDelete">Delete</a></td>';
-                        admin += '</tr>';
-                        $('#adminTable tbody').prepend(admin);
-                        $('#adminTable tbody #' + res.data.id).html(admin);
-                        $('#addAdmin')[0].reset();
-                        $('#addModal').modal('hide');
+                        if (res.status === true) {
+                            var admin = '<tr id="' + res.data.id + '">';
+                            admin += '<td>' + res.data.id + '</td>';
+                            admin += '<td>' + res.data.username + '</td>';
+                            admin += '<td>' + res.data.email + '</td>';
+                            admin += '<td><a data-id="' + res.data.id + '" class="btn btn-primary btnEdit">Edit</a>  <a data-id="' + res.data.id + '" class="btn btn-danger btnDelete">Delete</a> <a data-id="' + res.data.id + '" class="btn btn-warning btnChangePassword">Change Password</a></td>';
+                            admin += '</tr>';
+                            $('#adminTable tbody').prepend(admin);
 
-                        // $('#adminTable tbody #'+ res.data.id).html(admin);
-                        // $('#updateAdmin')[0].reset();
-                        // $('#updateModal').modal('hide');
+                            $('#addAdminForm')[0].reset();
+                            $('#addModal').modal('hide');
+
+                            Swal.fire('Success', 'Admin record added successfully', 'success');
+                        } else {
+                            // Show error message using SweetAlert
+                            var errors = res.errors;
+                            var errorMessage = '';
+                            for (var key in errors) {
+                                errorMessage += errors[key] + '<br>';
+                            }
+                            Swal.fire('Error', errorMessage, 'error');
+                        }
                     },
-                    error: function(data) {}
+                    error: function(data) {
+                        Swal.fire('Error', 'Failed to add admin record', 'error');
+                    }
                 });
             }
         });

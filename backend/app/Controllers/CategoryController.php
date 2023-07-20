@@ -17,7 +17,7 @@ class CategoryController extends Controller
         if ($this->request->getMethod() === 'post') {
             $rules = [
                 'categoryname' => 'required|min_length[2]|max_length[50]',
-                'description' => 'required|min_length[2]|max_length[50]',
+                'description' => 'required|min_length[2]',
                 'image' => 'uploaded[image]|max_size[image,1024]|is_image[image]'
             ];
 
