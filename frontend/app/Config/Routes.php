@@ -36,7 +36,8 @@ $routes->post('quickview', 'HomeController::QuickView');// Config/Routes.php
 $routes->post('add-to-cart', 'HomeController::addToCart'); // Route to add a product to the cart
 $routes->get('cart-list', 'HomeController::cartList'); // Route to display the cart list
 $routes->post('getProductsByCategory', 'HomeController::getProductsByCategory');
-
+$routes->get('checkout', 'HomeController::checkout'); // Route for the checkout page
+$routes->post('checkout/addToSession', 'HomeController::addToSession');
 
 
 /*

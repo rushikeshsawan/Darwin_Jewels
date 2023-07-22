@@ -29,9 +29,17 @@ class HomeController extends BaseController
     public function product()
     {
         $data['Product'] = $this->ProductModel->list();
-        $data['Category'] = $this->CategoryModel->list(); 
-        return view('product', $data); 
+        $data['Category'] = $this->CategoryModel->list();
+        return view('product', $data);
     }
+    public function checkout()
+    {
+        $session = \Config\Services::session();
+        $cartItems = $session->get('cartItems') ?? [];
+        return view('checkout', ['cartItems' => $cartItems]);
+    }
+
+
     public function QuickView()
     {
         $productId = $this->request->getVar('product_id');
@@ -39,7 +47,13 @@ class HomeController extends BaseController
         $product = $productModel->find($productId);
         return $this->response->setJSON($product);
     }
-
+    public function addToSession()
+    {
+        $cartItems = $this->request->getPost('cartItems');
+        $session = \Config\Services::session();
+        $session->set('cartItems', $cartItems);
+        return $this->response->setJSON(['status' => 'success']);
+    }
 
     public function addToCart()
     {
@@ -61,15 +75,15 @@ class HomeController extends BaseController
         session()->set('cart_items', $cartItems);
     }
     public function cartList()
-    { 
+    {
         $cartItems = session()->get('cart_items') ?? [];
         return view('cart_list', ['cartItems' => $cartItems]);
     }
     public function getProductsByCategory()
     {
-        $category_id = $this->request->getVar('category_id'); 
+        $category_id = $this->request->getVar('category_id');
         $productModel = new ProductModel();
-        $products = $productModel->where('category_id', $category_id)->findAll(); 
+        $products = $productModel->where('category_id', $category_id)->findAll();
         echo json_encode($products);
     }
 }
