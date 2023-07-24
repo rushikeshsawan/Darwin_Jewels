@@ -36,8 +36,14 @@ $routes->post('quickview', 'HomeController::QuickView');// Config/Routes.php
 $routes->post('add-to-cart', 'HomeController::addToCart'); // Route to add a product to the cart
 $routes->get('cart-list', 'HomeController::cartList'); // Route to display the cart list
 $routes->post('getProductsByCategory', 'HomeController::getProductsByCategory');
-$routes->get('checkout', 'HomeController::checkout'); // Route for the checkout page
+$routes->get('checkout', 'HomeController::checkout',['AuthGuard' => 'auth']);  
 $routes->post('checkout/addToSession', 'HomeController::addToSession');
+
+
+$routes->post('checkout/addToSession', 'HomeController::addToSession');
+$routes->add('userlogin', 'UserController::login');
+$routes->post('remove-from-cart', 'HomeController::removeFromCart');
+$routes->get('cart-list', 'HomeController::cartList');
 
 
 /*

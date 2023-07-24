@@ -11,12 +11,15 @@ class HomeController extends BaseController
     protected $CategoryModel;
     protected $CollectionModel;
     protected $ProductModel;
+    protected $session;
+
 
     public function __construct()
     {
         $this->CategoryModel = new CategoryModel();
         $this->CollectionModel = new CollectionModel();
         $this->ProductModel = new ProductModel();
+        $this->session = \Config\Services::session();
     }
 
     public function index()
@@ -33,12 +36,22 @@ class HomeController extends BaseController
         return view('product', $data);
     }
     public function checkout()
-    {
-        $session = \Config\Services::session();
-        $cartItems = $session->get('cartItems') ?? [];
+{
+    $isLoggedIn = $this->session->get('admin');
+    if ($isLoggedIn) {
+        $cartItems = $this->session->get('cartItems') ?? [];
         return view('checkout', ['cartItems' => $cartItems]);
+    } else {
+        return redirect()->to('userlogin');
     }
+}
 
+    
+    public function fetchCartData()
+    {
+        $cartItems = $this->session->get('cartItems') ?? [];
+        return $this->response->setJSON($cartItems);
+    }
 
     public function QuickView()
     {
@@ -64,10 +77,23 @@ class HomeController extends BaseController
             if (!$product) {
                 return $this->response->setJSON(['status' => 'error', 'message' => 'Product not found.']);
             }
-            $this->addToCartSession($product);
+    
+            // Create a product array with the necessary details
+            $productData = [
+                'id' => $product['id'],
+                'name' => $product['product_name'],
+                'prize' => $product['prize'],
+                'image' => base_url('/uploads/FeatureProduct/' . $product['image']), // Assuming the image path is stored in the 'image' key
+                // ... other product details you want to include ...
+            ];
+    
+            // Add the product to the cart session
+            $this->addToCartSession($productData);
+    
             return $this->response->setJSON(['status' => 'success', 'message' => 'Product added to cart.']);
         }
     }
+    
     protected function addToCartSession($product)
     {
         $cartItems = session('cart_items') ?? [];

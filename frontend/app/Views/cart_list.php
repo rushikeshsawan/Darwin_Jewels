@@ -13,8 +13,8 @@
                         <th colspan="2" class="border-1x">Price</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <?php $totalProductPrice = 0; ?>
+                <tbody> 
+                     <?php $totalProductPrice = 0; ?>
                     <?php foreach ($cartItems as $product) : ?>
                         <?php
                         // Set a default quantity value if 'quantity' key is not available
@@ -27,14 +27,14 @@
                             <th scope="row" class="w-xl-695 pl-xl-5 py-4">
                                 <div class="media align-items-center">
                                     <input class="checkbox-primary w-15px h-15px" type="checkbox" name="check-product" value="checkbox">
-                                    <div class="ml-3 mr-4">
-                                        <img src="<?= base_url('/uploads/FeatureProduct/' . $product['image']) ?>" alt="Natural Coconut Cleansing Oil" class="mw-75px">
+                                    <div class="ml-3 mr-4  product-image img">
+                                        <img src="<?=  $product['image'] ;?>" alt="<?= $product['image'] ?>" class="mw-75px">
                                     </div>
                                     <div class="media-body w-128px">
-                                        <p class="font-weight-500 mb-1 text-secondary"><?= $product['product_name']; ?></p>
+                                        <p class="font-weight-500 mb-1 text-secondary product-name"><?= $product['name']; ?></p>
                                         <p class="card-text font-weight-bold fs-14 mb-1 text-secondary">
-                                            <span class="fs-13 font-weight-500 text-decoration-through text-body pr-1">$39.00</span>
-                                            <span class="product-price"><?= $product['prize']; ?></span>
+                                            <span class="fs-13 font-weight-500 text-decoration-through text-body pr-1"></span>
+                                            <span class="product-price  "><?= $product['prize']; ?></span>
                                         </p>
                                     </div>
                                 </div>
@@ -48,7 +48,7 @@
                                 </div>
                             </td>
                             <td class="align-middle">
-                                <p class="mb-0 text-secondary font-weight-bold mr-xl-11 subtotal-price"><?= $product['prize']; ?></p>
+                                <p class="mb-0 text-secondary font-weight-bold mr-xl-11 subtotal-price price"><?= $product['prize']; ?></p>
                             </td>
                             <td class="align-middle text-right pr-5"><a href="#" class="d-block"><i class="fal fa-times text-body"></i></a></td>
                         </tr>
@@ -90,57 +90,80 @@
     </div>
 </section>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-    $(document).ready(function() {
-        function updatePrices() {
-            var totalPrice = 0;
-            $('tbody tr').each(function() {
-                var quantity = parseInt($(this).find('.input-quality').val());
-                var price = parseFloat($(this).find('.product-price').text().replace('$', '').replace(',', ''));
-                var subTotal = quantity * price;
-                $(this).find('.subtotal-price').text('$' + subTotal.toFixed(1));
-                totalPrice += subTotal;
-            });
-            $('.total-price').text('$' + totalPrice.toFixed(1));
-        }
-
-        $('.up').on('click', function(e) {
-            e.preventDefault();
-            var input = $(this).parent().find('.input-quality');
-            var quantity = parseInt(input.val());
-            input.val(quantity + 0);
-            updatePrices();
-        });
-
-        $('.down').on('click', function(e) {
-            e.preventDefault();
-            var input = $(this).parent().find('.input-quality');
-            var quantity = parseInt(input.val());
-            if (quantity > 1) {
-                input.val(quantity - 1);
-                updatePrices();
+<!-- <script>
+    // Function to fetch cart data via AJAX
+    function fetchCartData() {
+        $.ajax({
+            url: '/checkout/fetchCartData', // URL to your AJAX function in HomeController
+            type: 'GET',
+            dataType: 'json',
+            success: function(response) {
+                // For now, let's just log the response to the console
+                console.log(response);
+            },
+            error: function(xhr, status, error) {
+                console.error(error);
             }
         });
+    }
 
-        // Input quantity change event
-        $('.input-quality').on('input', function() {
-            updatePrices();
+    // Function to add cart items to the session and redirect to checkout page
+    function addToSessionAndRedirectToCheckout(cartItems) {
+        $.ajax({
+            url: '/checkout/addToSession', // URL to your AJAX function in HomeController
+            type: 'POST',
+            data: {
+                cartItems: cartItems
+            },
+            dataType: 'json',
+            success: function(response) {
+                // Handle the response, for example, display a success message
+                alert(response.message);
+                // Redirect to the checkout page
+                window.location.href = '/checkout';
+            },
+            error: function(xhr, status, error) {
+                console.error(error);
+            }
+        });
+    }
+
+    $(document).ready(function() {
+        // Example usage of addToCart function
+        $('#addToCartBtn').on('click', function() {
+            var productId = 123; // Replace with the actual product ID
+            addToCart(productId);
         });
 
-        $('.update-cart-btn').on('click', function(e) {
-            e.preventDefault();
-            updatePrices();
+        // Example usage of addToSessionAndRedirectToCheckout function
+        $('.checkout-btn').on('click', function() {
+            var cartItems = [
+                // Replace with the actual array of cart items
+                {
+                    id: 1,
+                    name: 'Product 1',
+                    price: 10.99
+                },
+                {
+                    id: 2,
+                    name: 'Product 2',
+                    price: 15.99
+                },
+                // ...
+            ];
+            addToSessionAndRedirectToCheckout(cartItems);
         });
-
-        function moveToCheckout() {
+    });
+</script> -->
+<script>
+    function moveToCheckout() {
             var cartItems = [];
             $('tbody tr').each(function() {
                 var productName = $(this).find('.product-name').text();
                 var price = $(this).find('.price').text();
                 var quantity = parseInt($(this).find('.input-quality').val());
                 var image = $(this).find('.product-image img').attr('src'); // Assuming the product image is inside an element with class 'product-image'
-                alert(image)
-                cartItems.push({
+                 cartItems.push({
                     image: image,
                     name: productName,
                     quantity: quantity,
@@ -180,44 +203,59 @@
         $('.checkout-btn').on('click', function() {
             moveToCheckout();
         });
+</script>
+<script>
+    $(document).ready(function() {
+
+        $('.up').on('click', function(e) {
+            e.preventDefault();
+            var totalPrice = 0;
+            $('tbody tr').each(function() {
+                var quantity = parseInt($(this).find('.input-quality').val());
+                quantity += 1; // Increase quantity by 1 using the shorthand operator
+                var price = parseFloat($(this).find('.product-price').text().replace('$', '').replace(',', ''));
+                // alert(quantity)
+                // alert(price)
+                var subTotal = quantity * price;
+                // alert(subTotal)
+                $(this).find('.subtotal-price').text('$' + subTotal.toFixed(0));
+                totalPrice += subTotal;
+            });
+            $('.total-price').text('$' + totalPrice.toFixed(0));
+        });
+
+        $('.down').on('click', function(e) {
+            e.preventDefault();
+            var totalPrice = 0;
+            $('tbody tr').each(function() {
+                var input = $(this).parent().find('.input-quality');
+                var quantity = parseInt(input.val());
+                var price = parseFloat($(this).find('.product-price').text().replace('$', '').replace(',', ''));
+                quantity -= 1;
+                var subTotal = quantity * price;
+                alert(subTotal)
+                $(this).find('.subtotal-price').text('$' + subTotal.toFixed(0));
+                totalPrice += subTotal;
+            });
+            $('.total-price').text('$' + totalPrice.toFixed(0));
+        });
+
+        // function updatePrices() {
+        //     var totalPrice = 0;
+        //     $('tbody tr').each(function() {
+        //         var input = $(this).parent().find('.input-quality'); 
+        //         let quantity = parseInt(input.val());
+        //         var price = parseFloat($(this).find('.product-price').text().replace('$', '').replace(',', ''));
+        //         alert(quantity)
+        //         // alert(price)
+        //         var subTotal = quantity * price;
+        //         alert(subTotal)
+        //         $(this).find('.subtotal-price').text('$' + subTotal.toFixed(0));
+        //         totalPrice += subTotal;
+        //     });
+        //     $('.total-price').text('$' + totalPrice.toFixed(0));
+        // }  
     });
 </script>
-
- <script>
-    $(document).ready(function() {
-    function updatePrices() {
-        var totalPrice = 0;
-        $('tbody tr').each(function() {
-            var quantity = parseInt($(this).find('.input-quality').val());
-            var price = parseFloat($(this).find('.product-price').text().replace('$', '').replace(',', ''));
-            var subTotal = quantity * price;
-            $(this).find('.subtotal-price').text('$' + subTotal.toFixed(2));
-            totalPrice += subTotal;
-        });
-        $('.total-price').text('$' + totalPrice.toFixed(2));
-    }
-
-    $('.up').on('click', function(e) {
-        e.preventDefault();
-        var input = $(this).parent().find('.input-quality');
-        var quantity = parseInt(input.val());
-        input.val(quantity + 1);
-        updatePrices();
-    });
-
-    $('.down').on('click', function(e) {
-        e.preventDefault();
-        var input = $(this).parent().find('.input-quality');
-        var quantity = parseInt(input.val());
-        if (quantity > 1) {
-            input.val(quantity - 1);
-            updatePrices();
-        }
-    });
-
-    
-});
-
- </script>
-
+ 
 <?= $this->endSection() ?>

@@ -3,6 +3,9 @@
 <section class="pb-lg-13 pb-11">
     <div class="container">
         <h2 class="text-center my-9">Check Out</h2>
+
+        <?php // echo "<pre>"; print_r($cartItems);die; 
+        ?>
         <?php if (!empty($cartItems)) : ?>
             <form>
                 <div class="row">
@@ -15,9 +18,8 @@
                                         <div class="media w-100 mb-4">
                                             <div class="w-60px mr-3">
                                                 <?php if (array_key_exists('image', $product)) : ?>
-                                                    <img src="<?=  $product['image'] ?>" alt="<?= $product['name'] ?>">
-                                                <?php else : ?>
-                                                    <img src="<?= $product['image'] ?>" alt="<?= $product['name'] ?>"> <?php endif; ?>
+                                                    <img src="<?= $product['image'] ?>" alt=" a">
+                                                <?php endif; ?>
                                             </div>
                                             <div class="media-body d-flex">
                                                 <div class="cart-price pr-6">
@@ -25,18 +27,11 @@
                                                     <p class="fs-14 text-secondary mb-0 mt-1">Size:<span class="text-body"> Fullsize</span></p>
                                                 </div>
                                                 <div class="ml-auto">
-                                                    <?php if (array_key_exists('price', $product)) : ?>
-                                                        <p class="fs-14 text-secondary mb-0 font-weight-bold">$<?= $product['price'] ?></p>
-                                                    <?php else : ?>
-                                                        <!-- Provide a default price if 'price' key is not present -->
-                                                        <p class="fs-14 text-secondary mb-0 font-weight-bold">$0.00</p>
-                                                    <?php endif; ?>
+                                                    <p class="fs-14 text-secondary mb-0 font-weight-bold">₹<?= $product['price'] ?></p>
                                                 </div>
                                             </div>
                                         </div>
                                     <?php endforeach; ?>
-                                <?php else : ?>
-                                    <p class="text-center text-secondary mb-0">Your cart is empty.</p>
                                 <?php endif; ?>
                             </div>
                             <div class="card-body px-6 pt-5">
