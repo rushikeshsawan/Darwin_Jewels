@@ -5,12 +5,14 @@ namespace App\Controllers;
 use App\Models\CollectionModel;
 use App\Models\CategoryModel;
 use App\Models\ProductModel;
+use App\Models\AddressModel; 
 
 class HomeController extends BaseController
 {
     protected $CategoryModel;
     protected $CollectionModel;
     protected $ProductModel;
+    protected $addressModel; 
     protected $session;
 
 
@@ -19,6 +21,7 @@ class HomeController extends BaseController
         $this->CategoryModel = new CategoryModel();
         $this->CollectionModel = new CollectionModel();
         $this->ProductModel = new ProductModel();
+        $this->addressModel = new AddressModel();
         $this->session = \Config\Services::session();
     }
 
@@ -35,24 +38,42 @@ class HomeController extends BaseController
         $data['Category'] = $this->CategoryModel->list();
         return view('product', $data);
     }
-    public function checkout()
-{
-    $isLoggedIn = $this->session->get('admin');
-    if ($isLoggedIn) {
-        $cartItems = $this->session->get('cartItems') ?? [];
-        return view('checkout', ['cartItems' => $cartItems]);
-    } else {
-        return redirect()->to('userlogin');
-    }
-}
 
-    
+    public function checkout()
+    {
+        $isLoggedIn = $this->session->get('admin');
+        if ($isLoggedIn) {
+            $cartItems = $this->session->get('cartItems') ?? [];
+            $userId = $this->session->get('admin')['id']; 
+            $addressData = $this->addressModel->where('user_id', $userId)->findAll();
+            $data['address'] = $addressData;
+            $data['cartItems'] = $cartItems;
+            $data['id'] = $userId;
+            return view('checkout', $data); // Pass $data as the second parameter
+        } else {
+            return redirect()->to('userlogin');
+        }
+    } 
+
     public function fetchCartData()
     {
         $cartItems = $this->session->get('cartItems') ?? [];
         return $this->response->setJSON($cartItems);
     }
-
+    public function removeFromSession()
+    {
+        if ($this->request->isAJAX()) {
+            $key = $this->request->getVar('key');
+            $cartItems = $this->session->get('cartItems') ?? [];
+            if (isset($cartItems[$key])) {
+                unset($cartItems[$key]);
+                $this->session->set('cartItems', $cartItems);
+                return $this->response->setJSON(['status' => 'success', 'message' => 'Product removed from cart.']);
+            } else {
+                return $this->response->setJSON(['status' => 'error', 'message' => 'Invalid cart item key.']);
+            }
+        }
+    }
     public function QuickView()
     {
         $productId = $this->request->getVar('product_id');
@@ -77,23 +98,17 @@ class HomeController extends BaseController
             if (!$product) {
                 return $this->response->setJSON(['status' => 'error', 'message' => 'Product not found.']);
             }
-    
-            // Create a product array with the necessary details
             $productData = [
                 'id' => $product['id'],
                 'name' => $product['product_name'],
                 'prize' => $product['prize'],
-                'image' => base_url('/uploads/FeatureProduct/' . $product['image']), // Assuming the image path is stored in the 'image' key
-                // ... other product details you want to include ...
-            ];
-    
-            // Add the product to the cart session
-            $this->addToCartSession($productData);
-    
+                'image' => base_url('/uploads/FeatureProduct/' . $product['image']), 
+            ]; 
+            $this->addToCartSession($productData); 
             return $this->response->setJSON(['status' => 'success', 'message' => 'Product added to cart.']);
         }
     }
-    
+
     protected function addToCartSession($product)
     {
         $cartItems = session('cart_items') ?? [];

@@ -69,7 +69,7 @@
                         <div class="d-flex align-items-center flex-nowrap">
                             <div class="w-50">
                                 <div class="d-flex mt-3 mt-xl-0 align-items-center w-100 justify-content-start ml-xxl-12">
-                                    <a class="navbar-brand mw-184px d-inline-block py-0" href="index.html">
+                                    <a class="navbar-brand mw-184px d-inline-block py-0" href="home">
                                         <img src="images/logo/DP-Retail.png" alt="DP Jewels Logo">
                                     </a>
                                 </div>
@@ -77,13 +77,13 @@
                             <div class="mx-auto flex-shrink-0 px-10">
                                 <ul class="navbar-nav hover-menu main-menu px-0 mx-xl-n5">
                                     <li aria-haspopup="true" aria-expanded="false" class="nav-item  dropdown py-2 py-xl-7 sticky-py-xl-6 px-0 px-xl-5">
-                                        <a class="nav-link p-0" href="index.html">
+                                        <a class="nav-link p-0"  href="home" >
                                             Home
                                             <span class="caret"></span>
                                         </a>
                                     </li>
                                     <li aria-haspopup="true" aria-expanded="false" class="nav-item dropdown-item-shop dropdown py-2 py-xl-7 sticky-py-xl-6 px-0 px-xl-5">
-                                        <a class="nav-link p-0" href="product.html">
+                                        <a class="nav-link p-0" href="product">
                                             Product
                                             <span class="caret"></span>
                                         </a>

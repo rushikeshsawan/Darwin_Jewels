@@ -38,6 +38,10 @@ $routes->get('cart-list', 'HomeController::cartList'); // Route to display the c
 $routes->post('getProductsByCategory', 'HomeController::getProductsByCategory');
 $routes->get('checkout', 'HomeController::checkout',['AuthGuard' => 'auth']);  
 $routes->post('checkout/addToSession', 'HomeController::addToSession');
+$routes->post('checkout/removeFromSession', 'HomeController::removeFromSession'); 
+$routes->post('saveAddress', 'UserController::saveAddress');
+$routes->post('address', 'UserController::address');
+
 
 
 $routes->post('checkout/addToSession', 'HomeController::addToSession');

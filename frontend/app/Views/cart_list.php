@@ -13,13 +13,12 @@
                         <th colspan="2" class="border-1x">Price</th>
                     </tr>
                 </thead>
-                <tbody> 
-                     <?php $totalProductPrice = 0; ?>
-                    <?php foreach ($cartItems as $product) : ?>
+                <tbody>
+                    <?php $totalProductPrice = 0; ?>
+                    <?php foreach ($cartItems as $key => $product) : ?>
                         <?php
                         // Set a default quantity value if 'quantity' key is not available
                         $quantity = isset($product['quantity']) ? $product['quantity'] : 1;
-
                         $productPrice = str_replace(',', '', $product['prize']);
                         $totalProductPrice += floatval($productPrice);
                         ?>
@@ -28,7 +27,7 @@
                                 <div class="media align-items-center">
                                     <input class="checkbox-primary w-15px h-15px" type="checkbox" name="check-product" value="checkbox">
                                     <div class="ml-3 mr-4  product-image img">
-                                        <img src="<?=  $product['image'] ;?>" alt="<?= $product['image'] ?>" class="mw-75px">
+                                        <img src="<?= $product['image']; ?>" alt="<?= $product['image'] ?>" class="mw-75px">
                                     </div>
                                     <div class="media-body w-128px">
                                         <p class="font-weight-500 mb-1 text-secondary product-name"><?= $product['name']; ?></p>
@@ -50,9 +49,11 @@
                             <td class="align-middle">
                                 <p class="mb-0 text-secondary font-weight-bold mr-xl-11 subtotal-price price"><?= $product['prize']; ?></p>
                             </td>
-                            <td class="align-middle text-right pr-5"><a href="#" class="d-block"><i class="fal fa-times text-body"></i></a></td>
+                            <td class="align-middle text-right pr-5">
+                                <a href="#" class="d-block remove-item-btn" data-key="<?= $key ?>"><i class="fal fa-times text-body"></i></a>
+                            </td>
                         </tr>
-                    <?php endforeach; ?> 
+                    <?php endforeach; ?>
                 </tbody>
             </table>
         </form>
@@ -157,52 +158,81 @@
 </script> -->
 <script>
     function moveToCheckout() {
-            var cartItems = [];
-            $('tbody tr').each(function() {
-                var productName = $(this).find('.product-name').text();
-                var price = $(this).find('.price').text();
-                var quantity = parseInt($(this).find('.input-quality').val());
-                var image = $(this).find('.product-image img').attr('src'); // Assuming the product image is inside an element with class 'product-image'
-                 cartItems.push({
-                    image: image,
-                    name: productName,
-                    quantity: quantity,
-                    price: price
-                });
+        var cartItems = [];
+        $('tbody tr').each(function() {
+            var productName = $(this).find('.product-name').text();
+            var price = $(this).find('.price').text();
+            var quantity = parseInt($(this).find('.input-quality').val());
+            var image = $(this).find('.product-image img').attr('src'); // Assuming the product image is inside an element with class 'product-image'
+            cartItems.push({
+                image: image,
+                name: productName,
+                quantity: quantity,
+                price: price
             });
+        });
 
-            // Check if the cart is not empty
-            if (cartItems.length === 0) {
-                alert("Your cart is empty. Please add items to your cart before proceeding to checkout.");
-                return;
-            }
-
-            // Make the AJAX request to add cart items to the session
-            $.ajax({
-                type: "POST",
-                url: "/checkout/addToSession",
-                headers: {
-                    'X-Requested-With': 'XMLHttpRequest',
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                },
-                data: {
-                    cartItems: cartItems
-                },
-                success: function(response) {
-                    // Redirect to the checkout page after successfully adding cart items to the session
-                    window.location.href = "/checkout";
-                },
-                error: function(xhr, status, error) {
-                    console.error(error);
-                    alert("Failed to add cart items to the session. Please try again.");
-                }
-            });
+        // Check if the cart is not empty
+        if (cartItems.length === 0) {
+            alert("Your cart is empty. Please add items to your cart before proceeding to checkout.");
+            return;
         }
 
-        // Bind the `moveToCheckout()` function to the checkout button click event
-        $('.checkout-btn').on('click', function() {
-            moveToCheckout();
+        // Make the AJAX request to add cart items to the session
+        $.ajax({
+            type: "POST",
+            url: "/checkout/addToSession",
+            headers: {
+                'X-Requested-With': 'XMLHttpRequest',
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            data: {
+                cartItems: cartItems
+            },
+            success: function(response) {
+                // Redirect to the checkout page after successfully adding cart items to the session
+                window.location.href = "/checkout";
+            },
+            error: function(xhr, status, error) {
+                console.error(error);
+                alert("Failed to add cart items to the session. Please try again.");
+            }
         });
+    }
+
+    // Bind the `moveToCheckout()` function to the checkout button click event
+    $('.checkout-btn').on('click', function() {
+        moveToCheckout();
+    });
+
+    function removeFromSession(key) {
+        $.ajax({
+            type: "POST",
+            url: "checkout/removeFromSession",
+            headers: {
+                'X-Requested-With': 'XMLHttpRequest',
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            data: {
+                key: key
+            },
+            success: function(response) {
+                alert(response) 
+                window.location.reload();
+            },
+            error: function(xhr, status, error) {
+                console.error(error);
+                alert("Failed to remove the item from the cart. Please try again.");
+            }
+        });
+    }
+
+    // Bind the click event for the "Remove" buttons
+    $('.remove-item-btn').on('click', function(e) {
+        e.preventDefault();
+        var key = $(this).data('key');
+        removeFromSession(key);
+    });
 </script>
 <script>
     $(document).ready(function() {
@@ -257,5 +287,5 @@
         // }  
     });
 </script>
- 
+
 <?= $this->endSection() ?>

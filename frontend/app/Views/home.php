@@ -157,7 +157,7 @@
                                                                 </svg>
                                                             </span>
                                                         </a>
-                                                        <a href="" data-toggle="tooltip" data-placement="left" title="Add to wishlist" class="add-to-wishlist ml-auto d-flex align-items-center justify-content-center text-secondary bg-white hover-white bg-hover-secondary w-48px h-48px rounded-circle mb-2">
+                                                        <a href="" data-toggle="tooltip" data-placement="left" title="Add to wishlist" class="add-to-wishlist ml-auto d-flex align-items-center justify-content-center text-secondary bg-white hover-white bg-hover-secondary w-48px h-48px rounded-circle mb-2"  data-product-id="<?= $row->id; ?>">
                                                             <svg class="icon icon-star-light fs-24">
                                                                 <use xlink:href="#icon-star-light"></use>
                                                             </svg>
@@ -1472,7 +1472,7 @@
                                     </div>
                                 </div>
                                 <div class="col-sm-8 mb-6 w-100 px-2">
-                                <button type="button" class="btn btn-lg fs-18 btn-secondary btn-block h-60 bg-hover-primary border-0" onclick="addToCart()">Add To Bag</button> 
+                                <button type="button" class="btn btn-lg fs-18 btn-secondary btn-block h-60 bg-hover-primary border-0 add-to-wishlist" data-product-id="<?= $row->id; ?>">Add To Bag</button> 
                                 </div>
                             </div>
                         </form>
@@ -1539,9 +1539,10 @@
  
  // Your existing JavaScript code
 $(document).ready(function() {
-    $('.QuickView').on('click', function(e) {
+    $('.add-to-wishlist').on('click', function(e) {
         e.preventDefault();
         var productId = $(this).data('product-id'); 
+        alert(productId)
         $.ajax({
             url: 'add-to-cart', // Route to add a product to the cart
             method: 'POST',
