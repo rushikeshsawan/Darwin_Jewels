@@ -4,7 +4,7 @@
     <div class="container">
         <h2 class="text-center my-9">Check Out</h2>
 
-        <?php // echo "<pre>"; print_r($cartItems);die; 
+        <?php //echo "<pre>"; print_r($cartItems);die; 
         ?>
         <?php if (!empty($cartItems)) : ?>
             <form>
@@ -37,7 +37,7 @@
                             <div class="card-body px-6 pt-5">
                                 <div class="d-flex align-items-center mb-2">
                                     <span>Subtotal:</span>
-                                    <span class="d-block ml-auto text-secondary font-weight-bold">$99.00</span>
+                                    <span class="d-block ml-auto text-secondary font-weight-bold TotalPrice">₹<?= $product['TotalPrice'] ?></span>
                                 </div>
                                 <div class="d-flex align-items-center">
                                     <span>Shipping:</span>
@@ -47,7 +47,7 @@
                             <div class="card-footer bg-transparent px-0 pb-1 mx-6">
                                 <div class="d-flex align-items-center font-weight-bold mb-3">
                                     <span class="text-secondary">Total price:</span>
-                                    <span class="d-block ml-auto text-secondary fs-24 font-weight-bold">$99.00</span>
+                                    <span class="d-block ml-auto text-secondary fs-24 font-weight-bold">₹<?= $product['TotalPrice'] ?></span>
                                 </div>
                             </div>
                         </div>
@@ -192,7 +192,5 @@
             });
         });
     });
-</script>
-
-
+</script>  
 <?= $this->endSection() ?>

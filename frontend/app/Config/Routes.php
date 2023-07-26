@@ -41,7 +41,8 @@ $routes->post('checkout/addToSession', 'HomeController::addToSession');
 $routes->post('checkout/removeFromSession', 'HomeController::removeFromSession'); 
 $routes->post('saveAddress', 'UserController::saveAddress');
 $routes->post('address', 'UserController::address');  
-$routes->post('/cart/removeFromCart', 'HomeController::removeFromCart');
+$routes->post('storeaddress', 'HomeController::storeSelectedAddress');  
+$routes->post('/cart/removeFromCart', 'UserController::removeFromCart');
 
 
 

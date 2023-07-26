@@ -1507,7 +1507,9 @@
     </div>
 </div>
 <!-- Include jQuery library -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.css">
 
 <script>
     $(document).ready(function() {
@@ -1538,11 +1540,11 @@
     });
  
  // Your existing JavaScript code
-$(document).ready(function() {
+ $(document).ready(function() {
     $('.add-to-wishlist').on('click', function(e) {
         e.preventDefault();
-        var productId = $(this).data('product-id'); 
-        alert(productId)
+        var productId = $(this).data('product-id');
+        
         $.ajax({
             url: 'add-to-cart', // Route to add a product to the cart
             method: 'POST',
@@ -1552,20 +1554,45 @@ $(document).ready(function() {
             dataType: 'json',
             success: function(response) {
                 if (response.status === 'success') {
-                    alert('Product added to cart.'); // You can show a success message here if you want
-                    // Optional: Redirect to the cart list page after adding the product
-                    window.location.href = 'cart-list'; // Route to display the cart list
+                    var message = 'Product added to cart.';
+                    var redirectUrl = 'cart-list'; // Route to display the cart list
+
+                    if (response.alreadyAdded) {
+                        message = 'Product is already in the cart.';
+                        redirectUrl = 'cart-list'; // Route to display the cart list
+                    }
+
+                    // Show a SweetAlert with the appropriate message
+                    Swal.fire({
+                        icon: response.alreadyAdded ? 'info' : 'success',
+                        title: 'Cart',
+                        text: message,
+                        showConfirmButton: false,
+                        timer: 1500
+                    }).then(function () {
+                        // Redirect to the cart list page after adding the product
+                        window.location.href = redirectUrl;
+                    });
                 } else {
-                    alert('Error: ' + response.message);
+                    // Show an error SweetAlert if the response is not successful
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error',
+                        text: response.message
+                    });
                 }
             },
             error: function() {
-                alert('An error occurred while adding the product to the cart.');
+                // Show an error SweetAlert if an error occurs during the AJAX request
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'An error occurred while adding the product to the cart.'
+                });
             }
         });
     });
-});
-
+}); 
 </script>
 
 <?= $this->endSection() ?>

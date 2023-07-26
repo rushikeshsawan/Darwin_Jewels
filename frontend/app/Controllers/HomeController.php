@@ -97,19 +97,36 @@ class HomeController extends BaseController
             $productId = $this->request->getVar('product_id');
             $this->ProductModel = new ProductModel();
             $product = $this->ProductModel->find($productId);
+
             if (!$product) {
                 return $this->response->setJSON(['status' => 'error', 'message' => 'Product not found.']);
             }
+
             $productData = [
                 'id' => $product['id'],
                 'name' => $product['product_name'],
                 'prize' => $product['prize'],
                 'image' => base_url('/uploads/FeatureProduct/' . $product['image']),
             ];
-            $this->addToCartSession($productData);
-            return $this->response->setJSON(['status' => 'success', 'message' => 'Product added to cart.']);
+
+            // Check if the product is already in the cart
+            $cartItems = session('cart_items') ?? [];
+            $alreadyAdded = false;
+            foreach ($cartItems as $item) {
+                if ($item['id'] === $productData['id']) {
+                    $alreadyAdded = true;
+                    break;
+                }
+            }
+
+            if (!$alreadyAdded) {
+                $this->addToCartSession($productData);
+            }
+
+            return $this->response->setJSON(['status' => 'success', 'message' => 'Product added to cart.', 'alreadyAdded' => $alreadyAdded]);
         }
     }
+
 
     protected function addToCartSession($product)
     {
@@ -128,5 +145,5 @@ class HomeController extends BaseController
         $productModel = new ProductModel();
         $products = $productModel->where('category_id', $category_id)->findAll();
         echo json_encode($products);
-    }
+    }  
 }

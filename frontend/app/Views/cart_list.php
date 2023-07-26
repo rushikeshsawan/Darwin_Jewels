@@ -32,7 +32,7 @@
                                         <p class="font-weight-500 mb-1 text-secondary product-name"><?= $product['name']; ?></p>
                                         <p class="card-text font-weight-bold fs-14 mb-1 text-secondary">
                                             <span class="fs-13 font-weight-500 text-decoration-through text-body pr-1"></span>
-                                            <span class="product-price  "><?= $product['prize']; ?></span>
+                                            <span class="product-price  price"><?= $product['prize']; ?></span>
                                         </p>
                                     </div>
                                 </div>
@@ -46,7 +46,7 @@
                                 </div>
                             </td>
                             <td class="align-middle">
-                                <p class="mb-0 text-secondary font-weight-bold mr-xl-11 subtotal-price price"><?= $product['prize']; ?></p>
+                                <p class="mb-0 text-secondary font-weight-bold mr-xl-11 subtotal-price "><?= $product['prize']; ?></p>
                             </td>
 
                             <td class="align-middle text-right pr-5">
@@ -79,9 +79,8 @@
                     </div>
                     <div class="card-footer bg-transparent px-0 pb-4 mx-6">
                         <div class="d-flex align-items-center font-weight-bold mb-3">
-                            <span class="text-secondary">Total price:</span>
-                            <!-- Display the total product price -->
-                            <span class="d-block ml-auto text-secondary fs-24 font-weight-bold total-price">$<?= number_format($totalProductPrice, 2); ?></span>
+                            <span class="text-secondary">Total price:</span> 
+                            <span class="d-block ml-auto text-secondary fs-24 font-weight-bold total-price TotalPrice">₹<?= number_format($totalProductPrice, 2); ?></span>
                         </div>
                         <button type="button" class="btn btn-secondary btn-block bg-hover-primary border-hover-primary checkout-btn" onclick="moveToCheckout()">Check Out</button>
                     </div>
@@ -91,29 +90,30 @@
     </div>
 </section>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.17/dist/sweetalert2.all.min.js"></script> 
 <script>
     function moveToCheckout() {
         var cartItems = [];
-        $('tbody tr').each(function() {
+        $('body').each(function() {
             var productName = $(this).find('.product-name').text();
             var price = $(this).find('.price').text();
             var quantity = parseInt($(this).find('.input-quality').val());
-            var image = $(this).find('.product-image img').attr('src'); // Assuming the product image is inside an element with class 'product-image'
+            var image = $(this).find('.product-image img').attr('src');  
+            var TotalPrice = $(this).find('.TotalPrice').text();
             cartItems.push({
                 image: image,
                 name: productName,
                 quantity: quantity,
-                price: price
+                price: price,
+                TotalPrice:TotalPrice
             });
         });
 
-        // Check if the cart is not empty
         if (cartItems.length === 0) {
             alert("Your cart is empty. Please add items to your cart before proceeding to checkout.");
             return;
         }
 
-        // Make the AJAX request to add cart items to the session
         $.ajax({
             type: "POST",
             url: "/checkout/addToSession",
@@ -125,7 +125,6 @@
                 cartItems: cartItems
             },
             success: function(response) {
-                // Redirect to the checkout page after successfully adding cart items to the session
                 window.location.href = "/checkout";
             },
             error: function(xhr, status, error) {
@@ -135,8 +134,7 @@
         });
     }
 
-    // Bind the `moveToCheckout()` function to the checkout button click event
-    $('.checkout-btn').on('click', function() {
+     $('.checkout-btn').on('click', function() {
         moveToCheckout();
     }); 
   
@@ -178,13 +176,25 @@
             var $quantityInput = $row.find('.input-quality');
             var quantity = parseInt($quantityInput.val());
             if (quantity > 0) {
-                $quantityInput.val(quantity); // Decrease quantity by  
+                $quantityInput.val(quantity);
                 updateProductSubtotal($row);
                 updateTotalPrice();
-            }
-            else{
-                alert("hiii")
-                removeFromSession();
+            } else {
+                Swal.fire({
+                    title: 'Are you sure?',
+                    text: 'Do you want to remove this product from the cart?',
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes',
+                    cancelButtonText: 'Cancel'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        var key = $row.find('.remove-item-btn').data('key');
+                        removeFromSession(key);
+                    }
+                });
             }
         });
         $('.remove-item-btn').on('click', function(e) {
@@ -213,8 +223,7 @@
                     alert("Failed to remove the item from the cart. Please try again.");
                 }
             });
-        }
-
+        } 
     }); 
 </script>
 <?= $this->endSection() ?>

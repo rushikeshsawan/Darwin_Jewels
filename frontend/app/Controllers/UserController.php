@@ -91,17 +91,20 @@ class UserController extends BaseController
             'address' => $address,
             'mobile' => $mobile,
             'email' => $email,
-            'zip' => $zip,
-            // Add more fields if necessary
+            'zip' => $zip, 
         ];
 
-        $this->addressModel->insert($userData);
-
-        // Retrieve the newly inserted address from the database (using its ID or any unique identifier)
-        $newAddress = $this->addressModel->find($this->addressModel->insertID());
-
-        // For simplicity, we'll just return a success response with the new address data.
+        $this->addressModel->insert($userData); 
+        $newAddress = $this->addressModel->find($this->addressModel->insertID()); 
         return json_encode(['success' => true, 'message' => 'Address Added successfully!', 'address' => $newAddress]);
     }
+    public function storeSelectedAddress()
+{
+    $addressId = $this->input->post('addressId'); 
+    $this->session->set_userdata('selected_address_id', $addressId); 
+    $response['success'] = true;
+    $response['message'] = 'Address selected successfully.';
+    echo json_encode($response);
+}
 
 }
