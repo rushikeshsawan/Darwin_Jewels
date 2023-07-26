@@ -5,14 +5,14 @@ namespace App\Controllers;
 use App\Models\CollectionModel;
 use App\Models\CategoryModel;
 use App\Models\ProductModel;
-use App\Models\AddressModel; 
+use App\Models\AddressModel;
 
 class HomeController extends BaseController
 {
     protected $CategoryModel;
     protected $CollectionModel;
     protected $ProductModel;
-    protected $addressModel; 
+    protected $addressModel;
     protected $session;
 
 
@@ -44,7 +44,7 @@ class HomeController extends BaseController
         $isLoggedIn = $this->session->get('admin');
         if ($isLoggedIn) {
             $cartItems = $this->session->get('cartItems') ?? [];
-            $userId = $this->session->get('admin')['id']; 
+            $userId = $this->session->get('admin')['id'];
             $addressData = $this->addressModel->where('user_id', $userId)->findAll();
             $data['address'] = $addressData;
             $data['cartItems'] = $cartItems;
@@ -53,27 +53,29 @@ class HomeController extends BaseController
         } else {
             return redirect()->to('userlogin');
         }
-    } 
+    }
 
     public function fetchCartData()
     {
         $cartItems = $this->session->get('cartItems') ?? [];
         return $this->response->setJSON($cartItems);
     }
-    public function removeFromSession()
+    public function removeFromCart()
     {
         if ($this->request->isAJAX()) {
             $key = $this->request->getVar('key');
-            $cartItems = $this->session->get('cartItems') ?? [];
+            $cartItems = session('cart_items') ?? [];
+
             if (isset($cartItems[$key])) {
                 unset($cartItems[$key]);
-                $this->session->set('cartItems', $cartItems);
+                session()->set('cart_items', $cartItems);
                 return $this->response->setJSON(['status' => 'success', 'message' => 'Product removed from cart.']);
-            } else {
-                return $this->response->setJSON(['status' => 'error', 'message' => 'Invalid cart item key.']);
             }
+
+            return $this->response->setJSON(['status' => 'error', 'message' => 'Invalid cart item key.']);
         }
     }
+
     public function QuickView()
     {
         $productId = $this->request->getVar('product_id');
@@ -102,9 +104,9 @@ class HomeController extends BaseController
                 'id' => $product['id'],
                 'name' => $product['product_name'],
                 'prize' => $product['prize'],
-                'image' => base_url('/uploads/FeatureProduct/' . $product['image']), 
-            ]; 
-            $this->addToCartSession($productData); 
+                'image' => base_url('/uploads/FeatureProduct/' . $product['image']),
+            ];
+            $this->addToCartSession($productData);
             return $this->response->setJSON(['status' => 'success', 'message' => 'Product added to cart.']);
         }
     }

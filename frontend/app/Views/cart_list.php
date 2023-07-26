@@ -17,7 +17,6 @@
                     <?php $totalProductPrice = 0; ?>
                     <?php foreach ($cartItems as $key => $product) : ?>
                         <?php
-                        // Set a default quantity value if 'quantity' key is not available
                         $quantity = isset($product['quantity']) ? $product['quantity'] : 1;
                         $productPrice = str_replace(',', '', $product['prize']);
                         $totalProductPrice += floatval($productPrice);
@@ -41,14 +40,15 @@
                             <td class="align-middle">
                                 <div class="input-group position-relative w-128px">
                                     <a href="#" class="down position-absolute pos-fixed-left-center pl-2 z-index-2"><i class="far fa-minus"></i></a>
-                                    <!-- Dynamically set the initial quantity value from the server -->
-                                    <input name="number[]" type="number" class="form-control form-control-sm px-6 fs-16 text-center input-quality border-0 h-35px" value="<?= $quantity; ?>" min="1" required>
+                                    <!-- Set the data-initial-quantity attribute to store the initial quantity value -->
+                                    <input name="number[]" type="number" class="form-control form-control-sm px-6 fs-16 text-center input-quality border-0 h-35px" value="<?= $quantity; ?>" min="1" required data-initial-quantity="<?= $quantity; ?>">
                                     <a href="#" class="up position-absolute pos-fixed-right-center pr-2 z-index-2"><i class="far fa-plus"></i></a>
                                 </div>
                             </td>
                             <td class="align-middle">
                                 <p class="mb-0 text-secondary font-weight-bold mr-xl-11 subtotal-price price"><?= $product['prize']; ?></p>
                             </td>
+
                             <td class="align-middle text-right pr-5">
                                 <a href="#" class="d-block remove-item-btn" data-key="<?= $key ?>"><i class="fal fa-times text-body"></i></a>
                             </td>
@@ -91,71 +91,6 @@
     </div>
 </section>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<!-- <script>
-    // Function to fetch cart data via AJAX
-    function fetchCartData() {
-        $.ajax({
-            url: '/checkout/fetchCartData', // URL to your AJAX function in HomeController
-            type: 'GET',
-            dataType: 'json',
-            success: function(response) {
-                // For now, let's just log the response to the console
-                console.log(response);
-            },
-            error: function(xhr, status, error) {
-                console.error(error);
-            }
-        });
-    }
-
-    // Function to add cart items to the session and redirect to checkout page
-    function addToSessionAndRedirectToCheckout(cartItems) {
-        $.ajax({
-            url: '/checkout/addToSession', // URL to your AJAX function in HomeController
-            type: 'POST',
-            data: {
-                cartItems: cartItems
-            },
-            dataType: 'json',
-            success: function(response) {
-                // Handle the response, for example, display a success message
-                alert(response.message);
-                // Redirect to the checkout page
-                window.location.href = '/checkout';
-            },
-            error: function(xhr, status, error) {
-                console.error(error);
-            }
-        });
-    }
-
-    $(document).ready(function() {
-        // Example usage of addToCart function
-        $('#addToCartBtn').on('click', function() {
-            var productId = 123; // Replace with the actual product ID
-            addToCart(productId);
-        });
-
-        // Example usage of addToSessionAndRedirectToCheckout function
-        $('.checkout-btn').on('click', function() {
-            var cartItems = [
-                // Replace with the actual array of cart items
-                {
-                    id: 1,
-                    name: 'Product 1',
-                    price: 10.99
-                },
-                {
-                    id: 2,
-                    name: 'Product 2',
-                    price: 15.99
-                },
-                // ...
-            ];
-            addToSessionAndRedirectToCheckout(cartItems);
-        });
-    });
-</script> -->
 <script>
     function moveToCheckout() {
         var cartItems = [];
@@ -203,89 +138,83 @@
     // Bind the `moveToCheckout()` function to the checkout button click event
     $('.checkout-btn').on('click', function() {
         moveToCheckout();
-    });
-
-    function removeFromSession(key) {
-        $.ajax({
-            type: "POST",
-            url: "checkout/removeFromSession",
-            headers: {
-                'X-Requested-With': 'XMLHttpRequest',
-                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-            },
-            data: {
-                key: key
-            },
-            success: function(response) {
-                alert(response) 
-                window.location.reload();
-            },
-            error: function(xhr, status, error) {
-                console.error(error);
-                alert("Failed to remove the item from the cart. Please try again.");
-            }
-        });
-    }
-
-    // Bind the click event for the "Remove" buttons
-    $('.remove-item-btn').on('click', function(e) {
-        e.preventDefault();
-        var key = $(this).data('key');
-        removeFromSession(key);
-    });
+    }); 
+  
 </script>
+
+
 <script>
     $(document).ready(function() {
+        function updateProductSubtotal($row) {
+            var quantity = parseInt($row.find('.input-quality').val());
+            var price = parseFloat($row.find('.product-price').text().replace('$', '').replace(',', ''));
+            var subTotal = quantity * price;
+            $row.find('.subtotal-price').text('$' + subTotal.toFixed(0));
+            return subTotal;
+        }
 
-        $('.up').on('click', function(e) {
-            e.preventDefault();
+        function updateTotalPrice() {
             var totalPrice = 0;
             $('tbody tr').each(function() {
-                var quantity = parseInt($(this).find('.input-quality').val());
-                quantity += 1; // Increase quantity by 1 using the shorthand operator
-                var price = parseFloat($(this).find('.product-price').text().replace('$', '').replace(',', ''));
-                // alert(quantity)
-                // alert(price)
-                var subTotal = quantity * price;
-                // alert(subTotal)
-                $(this).find('.subtotal-price').text('$' + subTotal.toFixed(0));
+                var subTotal = updateProductSubtotal($(this));
                 totalPrice += subTotal;
             });
             $('.total-price').text('$' + totalPrice.toFixed(0));
-        });
+        }
 
-        $('.down').on('click', function(e) {
+        $('tbody').on('click', '.up', function(e) {
             e.preventDefault();
-            var totalPrice = 0;
-            $('tbody tr').each(function() {
-                var input = $(this).parent().find('.input-quality');
-                var quantity = parseInt(input.val());
-                var price = parseFloat($(this).find('.product-price').text().replace('$', '').replace(',', ''));
-                quantity -= 1;
-                var subTotal = quantity * price;
-                alert(subTotal)
-                $(this).find('.subtotal-price').text('$' + subTotal.toFixed(0));
-                totalPrice += subTotal;
-            });
-            $('.total-price').text('$' + totalPrice.toFixed(0));
+            var $row = $(this).closest('tr');
+            var $quantityInput = $row.find('.input-quality');
+            var quantity = parseInt($quantityInput.val());
+            $quantityInput.val(quantity); // Increase quantity by 1
+            updateProductSubtotal($row);
+            updateTotalPrice();
         });
 
-        // function updatePrices() {
-        //     var totalPrice = 0;
-        //     $('tbody tr').each(function() {
-        //         var input = $(this).parent().find('.input-quality'); 
-        //         let quantity = parseInt(input.val());
-        //         var price = parseFloat($(this).find('.product-price').text().replace('$', '').replace(',', ''));
-        //         alert(quantity)
-        //         // alert(price)
-        //         var subTotal = quantity * price;
-        //         alert(subTotal)
-        //         $(this).find('.subtotal-price').text('$' + subTotal.toFixed(0));
-        //         totalPrice += subTotal;
-        //     });
-        //     $('.total-price').text('$' + totalPrice.toFixed(0));
-        // }  
-    });
+        $('tbody').on('click', '.down', function(e) {
+            e.preventDefault();
+            var $row = $(this).closest('tr');
+            var $quantityInput = $row.find('.input-quality');
+            var quantity = parseInt($quantityInput.val());
+            if (quantity > 0) {
+                $quantityInput.val(quantity); // Decrease quantity by  
+                updateProductSubtotal($row);
+                updateTotalPrice();
+            }
+            else{
+                alert("hiii")
+                removeFromSession();
+            }
+        });
+        $('.remove-item-btn').on('click', function(e) {
+            e.preventDefault();
+            var key = $(this).data('key');
+            removeFromSession(key);
+        });
+
+        function removeFromSession(key) {
+            $.ajax({
+                type: "POST",
+                url: "/cart/removeFromCart", // Use the defined route to handle the AJAX request
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest',
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                data: {
+                    key: key
+                },
+                success: function(response) {
+                    alert(response.message);
+                    window.location.reload();
+                },
+                error: function(xhr, status, error) {
+                    console.error(error);
+                    alert("Failed to remove the item from the cart. Please try again.");
+                }
+            });
+        }
+
+    }); 
 </script>
-
 <?= $this->endSection() ?>
