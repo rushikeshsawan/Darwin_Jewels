@@ -68,9 +68,9 @@ class UserController extends BaseController
         }
     }
 
-   
+
     public function address()
-    { 
+    {
         $user_id = $this->request->getPost('user_id');
         $name = $this->request->getPost('name');
         $address = $this->request->getPost('address');
@@ -91,20 +91,34 @@ class UserController extends BaseController
             'address' => $address,
             'mobile' => $mobile,
             'email' => $email,
-            'zip' => $zip, 
+            'zip' => $zip,
         ];
 
-        $this->addressModel->insert($userData); 
-        $newAddress = $this->addressModel->find($this->addressModel->insertID()); 
+        $this->addressModel->insert($userData);
+        $newAddress = $this->addressModel->find($this->addressModel->insertID());
         return json_encode(['success' => true, 'message' => 'Address Added successfully!', 'address' => $newAddress]);
     }
     public function storeSelectedAddress()
-{
-    $addressId = $this->input->post('addressId'); 
-    $this->session->set_userdata('selected_address_id', $addressId); 
-    $response['success'] = true;
-    $response['message'] = 'Address selected successfully.';
-    echo json_encode($response);
-}
+    {
+        $addressId = $this->input->post('addressId');
+        $this->session->set_userdata('selected_address_id', $addressId);
+        $response['success'] = true;
+        $response['message'] = 'Address selected successfully.';
+        echo json_encode($response);
+    }
+    public function removeFromCart()
+    {
+        if ($this->request->isAJAX()) {
+            $key = $this->request->getVar('key');
+            $cartItems = session('cart_items') ?? [];
 
+            if (isset($cartItems[$key])) {
+                unset($cartItems[$key]);
+                session()->set('cart_items', $cartItems);
+                return $this->response->setJSON(['status' => 'success', 'message' => 'Product removed from cart.']);
+            }
+
+            return $this->response->setJSON(['status' => 'error', 'message' => 'Invalid cart item key.']);
+        }
+    }
 }

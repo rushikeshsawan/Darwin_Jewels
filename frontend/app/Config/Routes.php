@@ -43,9 +43,7 @@ $routes->post('saveAddress', 'UserController::saveAddress');
 $routes->post('address', 'UserController::address');  
 $routes->post('storeaddress', 'HomeController::storeSelectedAddress');  
 $routes->post('/cart/removeFromCart', 'UserController::removeFromCart');
-
-
-
+$routes->post('placeOrder', 'HomeController::placeOrder'); 
 $routes->post('checkout/addToSession', 'HomeController::addToSession');
 $routes->add('userlogin', 'UserController::login');
 $routes->post('remove-from-cart', 'HomeController::removeFromCart');

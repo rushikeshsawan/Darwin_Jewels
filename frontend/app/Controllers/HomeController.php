@@ -6,6 +6,7 @@ use App\Models\CollectionModel;
 use App\Models\CategoryModel;
 use App\Models\ProductModel;
 use App\Models\AddressModel;
+use App\Models\OrderDetailModel;
 
 class HomeController extends BaseController
 {
@@ -13,6 +14,7 @@ class HomeController extends BaseController
     protected $CollectionModel;
     protected $ProductModel;
     protected $addressModel;
+    protected $OrderDetailModel;
     protected $session;
 
 
@@ -22,6 +24,7 @@ class HomeController extends BaseController
         $this->CollectionModel = new CollectionModel();
         $this->ProductModel = new ProductModel();
         $this->addressModel = new AddressModel();
+        $this->OrderDetailModel = new OrderDetailModel();
         $this->session = \Config\Services::session();
     }
 
@@ -54,6 +57,7 @@ class HomeController extends BaseController
             return redirect()->to('userlogin');
         }
     }
+
 
     public function fetchCartData()
     {
@@ -145,5 +149,48 @@ class HomeController extends BaseController
         $productModel = new ProductModel();
         $products = $productModel->where('category_id', $category_id)->findAll();
         echo json_encode($products);
-    }  
+    }
+    public function storeSelectedAddress()
+    {
+        if ($this->request->isAJAX()) {
+            $addressId = $this->request->getPost('address_id');
+
+            // Retrieve the selected address details from the database
+            $address = $this->addressModel->find($addressId);
+
+            if (!$address) {
+                return $this->response->setJSON(['status' => 'error', 'message' => 'Address not found.']);
+            }
+
+            // Store the selected address details in the session
+            $session = \Config\Services::session();
+            $session->set('selected_address', $address);
+
+            return $this->response->setJSON(['status' => 'success', 'message' => 'Address stored in session.', 'address' => $address]);
+        }
+    }
+    public function placeOrder()
+    {
+        $addressId = $this->request->getPost('address_id');
+        $product_ids = $this->request->getPost('product_id');
+        $totalPrice = $this->request->getPost('total_price');
+    
+        $orderData = [];
+        foreach ($product_ids as $productId) {
+            $orderData[] = [
+                'address_id' => $addressId,
+                'product_id' => $productId,
+                'total_price' => $totalPrice
+            ];
+        }
+    
+        $inserted = $this->OrderDetailModel->insertBatch($orderData);
+        if ($inserted) {
+            // Return a JSON response to the client
+            return $this->response->setJSON(['success' => true, 'message' => 'Order placed successfully.']);
+        } else {
+            return $this->response->setJSON(['success' => false, 'message' => 'Failed to place order.']);
+        }
+    }
+    
 }

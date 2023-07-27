@@ -20,12 +20,15 @@
                         $quantity = isset($product['quantity']) ? $product['quantity'] : 1;
                         $productPrice = str_replace(',', '', $product['prize']);
                         $totalProductPrice += floatval($productPrice);
-                        ?>
+                        ?> 
                         <tr class="position-relative">
-                            <th scope="row" class="w-xl-695 pl-xl-5 py-4">
+                            <th class="d-none"> 
+                            <span class="d-block ml-auto text-secondary fs-24 font-weight-bold total-price TotalPrice">₹<?= number_format($totalProductPrice, 2); ?></span>  
+                            </th>
+                            <th scope="row" class="w-xl-695 pl-xl-5 py-4 " >
                                 <div class="media align-items-center">
                                     <input class="checkbox-primary w-15px h-15px" type="checkbox" name="check-product" value="checkbox">
-                                    <div class="ml-3 mr-4  product-image img">
+                                     <div class="ml-3 mr-4  product-image img">
                                         <img src="<?= $product['image']; ?>" alt="<?= $product['image'] ?>" class="mw-75px">
                                     </div>
                                     <div class="media-body w-128px">
@@ -35,12 +38,14 @@
                                             <span class="product-price  price"><?= $product['prize']; ?></span>
                                         </p>
                                     </div>
+                                    <div  class="d-none">
+                                    <p class="productid"><?= $product['id']; ?></p>
+                                    </div>
                                 </div>
                             </th>
                             <td class="align-middle">
                                 <div class="input-group position-relative w-128px">
                                     <a href="#" class="down position-absolute pos-fixed-left-center pl-2 z-index-2"><i class="far fa-minus"></i></a>
-                                    <!-- Set the data-initial-quantity attribute to store the initial quantity value -->
                                     <input name="number[]" type="number" class="form-control form-control-sm px-6 fs-16 text-center input-quality border-0 h-35px" value="<?= $quantity; ?>" min="1" required data-initial-quantity="<?= $quantity; ?>">
                                     <a href="#" class="up position-absolute pos-fixed-right-center pr-2 z-index-2"><i class="far fa-plus"></i></a>
                                 </div>
@@ -51,7 +56,7 @@
 
                             <td class="align-middle text-right pr-5">
                                 <a href="#" class="d-block remove-item-btn" data-key="<?= $key ?>"><i class="fal fa-times text-body"></i></a>
-                            </td>
+                            </td>  
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
@@ -94,18 +99,21 @@
 <script>
     function moveToCheckout() {
         var cartItems = [];
-        $('body').each(function() {
+        $('tbody tr').each(function() {
             var productName = $(this).find('.product-name').text();
             var price = $(this).find('.price').text();
             var quantity = parseInt($(this).find('.input-quality').val());
             var image = $(this).find('.product-image img').attr('src');  
-            var TotalPrice = $(this).find('.TotalPrice').text();
+            var TotalPrice = $(this).find('.TotalPrice').text(); 
+            var productid = $(this).find('.productid').text(); 
+            
             cartItems.push({
                 image: image,
                 name: productName,
                 quantity: quantity,
                 price: price,
-                TotalPrice:TotalPrice
+                TotalPrice:TotalPrice,
+                productid:productid
             });
         });
 
