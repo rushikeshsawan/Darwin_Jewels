@@ -52,7 +52,7 @@ class HomeController extends BaseController
             $data['address'] = $addressData;
             $data['cartItems'] = $cartItems;
             $data['id'] = $userId;
-            return view('checkout', $data); // Pass $data as the second parameter
+            return view('checkout', $data); 
         } else {
             return redirect()->to('userlogin');
         }
@@ -111,9 +111,7 @@ class HomeController extends BaseController
                 'name' => $product['product_name'],
                 'prize' => $product['prize'],
                 'image' => base_url('/uploads/FeatureProduct/' . $product['image']),
-            ];
-
-            // Check if the product is already in the cart
+            ]; 
             $cartItems = session('cart_items') ?? [];
             $alreadyAdded = false;
             foreach ($cartItems as $item) {
@@ -121,15 +119,13 @@ class HomeController extends BaseController
                     $alreadyAdded = true;
                     break;
                 }
-            } 
+            }
             if (!$alreadyAdded) {
                 $this->addToCartSession($productData);
-            } 
+            }
             return $this->response->setJSON(['status' => 'success', 'message' => 'Product added to cart.', 'alreadyAdded' => $alreadyAdded]);
         }
-    }
-
-
+    } 
     protected function addToCartSession($product)
     {
         $cartItems = session('cart_items') ?? [];
@@ -148,62 +144,59 @@ class HomeController extends BaseController
         $products = $productModel->where('category_id', $category_id)->findAll();
         echo json_encode($products);
     }
-    public function storeSelectedAddress()
-    {
-        if ($this->request->isAJAX()) {
-            $addressId = $this->request->getPost('address_id'); 
-            $address = $this->addressModel->find($addressId); 
-            if (!$address) {
-                return $this->response->setJSON(['status' => 'error', 'message' => 'Address not found.']);
-            } 
-            $session = \Config\Services::session();
-            $session->set('selected_address', $address);
+    // public function storeSelectedAddress()
+    // {
+    //     if ($this->request->isAJAX()) {
+    //         $addressId = $this->request->getPost('address_id');
+    //         $address = $this->addressModel->find($addressId);
+    //         if (!$address) {
+    //             return $this->response->setJSON(['status' => 'error', 'message' => 'Address not found.']);
+    //         }
+    //         $session = \Config\Services::session();
+    //         $session->set('selected_address', $address);
 
-            return $this->response->setJSON(['status' => 'success', 'message' => 'Address stored in session.', 'address' => $address]);
-        }
-    }  
-    
-     public function placeOrder()
-{
-    $loggedInUserId = $this->session->get('admin')['id'];
-    $lastOrder = $this->OrderDetailModel->selectMax('order_id')->first();
-    $lastOrderId = $lastOrder['order_id'];
-    $newOrderId = $lastOrderId + 1;
-    $addressId = $this->request->getPost('address_id');
-    $product_ids = $this->request->getPost('product_id');
-    $totalPrice = $this->request->getPost('total_price');
-    $quantity = $this->request->getPost('quantity');
-    $Qprice = $this->request->getPost('Qprice');
+    //         return $this->response->setJSON(['status' => 'success', 'message' => 'Address stored in session.', 'address' => $address]);
+    //     }
+    // }
 
-    // Sanitize Qprice values and keep only integers
-    $sanitizedQprice = array_map(function ($qprice) {
-        return filter_var($qprice, FILTER_SANITIZE_NUMBER_INT);
-    }, $Qprice);
+    // public function placeOrder()
+    // {
+    //     $loggedInUserId = $this->session->get('admin')['id'];
+    //     $lastOrder = $this->OrderDetailModel->selectMax('order_id')->first();
+    //     $lastOrderId = $lastOrder['order_id'];
+    //     $newOrderId = $lastOrderId + 1;
+    //     $addressId = $this->request->getPost('address_id');
+    //     $product_ids = $this->request->getPost('product_id');
+    //     $totalPrice = $this->request->getPost('total_price');
+    //     $quantity = $this->request->getPost('quantity');
+    //     $Qprice = $this->request->getPost('Qprice');
 
-    $orderData = [];
-    foreach ($product_ids as $index => $productId) {
-        $orderData[] = [
-            'order_id' => $newOrderId,
-            'user_id' => $loggedInUserId,
-            'address_id' => $addressId,
-            'product_id' => $productId,
-            'quantity' => $quantity[$index],
-            'Qprice' => $sanitizedQprice[$index], // Use the sanitized Qprice value for each product
-            'total_price' => $totalPrice
-        ];
-    }
+    //     // Sanitize Qprice values and keep only integers
+    //     $sanitizedQprice = array_map(function ($qprice) {
+    //         return filter_var($qprice, FILTER_SANITIZE_NUMBER_INT);
+    //     }, $Qprice);
 
-    // Insert the order details into the database
-    $inserted = $this->OrderDetailModel->insertBatch($orderData);
+    //     $orderData = [];
+    //     foreach ($product_ids as $index => $productId) {
+    //         $orderData[] = [
+    //             'order_id' => $newOrderId,
+    //             'user_id' => $loggedInUserId,
+    //             'address_id' => $addressId,
+    //             'product_id' => $productId,
+    //             'quantity' => $quantity[$index],
+    //             'Qprice' => $sanitizedQprice[$index], // Use the sanitized Qprice value for each product
+    //             'total_price' => $totalPrice
+    //         ];
+    //     }
 
-    if ($inserted) {
-        // Return a JSON response to the client
-        return $this->response->setJSON(['success' => true, 'message' => 'Order placed successfully.']);
-    } else {
-        return $this->response->setJSON(['success' => false, 'message' => 'Failed to place order.']);
-    }
-}
+    //     // Insert the order details into the database
+    //     $inserted = $this->OrderDetailModel->insertBatch($orderData);
 
-
-      
+    //     if ($inserted) {
+    //         // Return a JSON response to the client
+    //         return $this->response->setJSON(['success' => true, 'message' => 'Order placed successfully.']);
+    //     } else {
+    //         return $this->response->setJSON(['success' => false, 'message' => 'Failed to place order.']);
+    //     }
+    // }
 }

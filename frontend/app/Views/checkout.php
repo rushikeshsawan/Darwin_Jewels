@@ -154,8 +154,7 @@
                             title: 'Success!',
                             text: response.message
                         }).then(function() {
-                            // Add the new address card to the #addressData section
-                            var newAddressCard = '<div class="col-md-6 mb-6">' +
+                             var newAddressCard = '<div class="col-md-6 mb-6">' +
                                 '<div class="card">' +
                                 '<div class="card-body">' +
                                 '<h5 class="card-title">' + response.address.name + '</h5>' +
@@ -166,12 +165,11 @@
                                 '</div>' +
                                 '</div>';
 
-                            $('#addressData .alert-info').remove(); // Remove the "No addresses found" message if present
-                            $('#addressData .row').append(newAddressCard); // Append the new address card to the #addressData section
+                            $('#addressData .alert-info').remove();  
+                            $('#addressData .row').append(newAddressCard);  
                         });
                     } else {
-                        // Show SweetAlert error message
-                        Swal.fire({
+                         Swal.fire({
                             icon: 'error',
                             title: 'Error!',
                             text: 'There were errors in the form:\n' + JSON.stringify(response.errors, null, 2)
@@ -192,11 +190,11 @@
 <script>
     $(document).ready(function() {
         function selectAddress(addressId) {
-            $('.address-card').removeClass('highlighted'); // Remove highlight from other addresses
-            $('.address-card[data-address-id="' + addressId + '"]').addClass('highlighted'); // Add highlight to the selected address
+            $('.address-card').removeClass('highlighted');  
+            $('.address-card[data-address-id="' + addressId + '"]').addClass('highlighted'); 
             $.ajax({
                 type: 'POST',
-                url: '<?= base_url('storeaddress'); ?>', // Update the URL to match the correct route in AddressController
+                url: '<?= base_url('storeaddress'); ?>', 
                 data: {
                     address_id: addressId
                 },
@@ -207,7 +205,7 @@
         }
         $('.address-card').click(function() {
             var addressId = $(this).data('address-id');
-            selectAddress(addressId); // Pass the address ID to the selectAddress function
+            selectAddress(addressId); 
         });
     });
 </script>
@@ -220,9 +218,7 @@
     });
 
     function placeOrder() {
-        const selectedAddressId = document.querySelector('.address-card.highlighted').dataset.addressId;
-
-        // Collect product IDs and total price
+        const selectedAddressId = document.querySelector('.address-card.highlighted').dataset.addressId; 
         let product_id = [];
         let quantity=[];
         let Qprice=[];
@@ -250,12 +246,10 @@
             quantity: quantity,
             Qprice: Qprice,
             total_price: totalPrice
-        };
-
-        // Make sure you are using the correct URL to process the order in your PHP controller
-        $.ajax({
+        }; 
+         $.ajax({
             type: "POST",
-            url: "placeOrder", // Update this URL to the correct endpoint in your PHP controller
+            url: "placeOrder",  
             data: formData,
             dataType: "json",
             success: function(response) {
@@ -267,5 +261,6 @@
         });
     }
 </script>
+
 
 <?= $this->endSection() ?>

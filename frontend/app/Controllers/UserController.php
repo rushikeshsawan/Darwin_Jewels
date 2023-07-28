@@ -6,7 +6,9 @@ use App\Models\AdminModel;
 use App\Models\ProductModel;
 use App\Models\CategoryModel;
 use App\Models\AddressModel;
+use App\Models\OrderDetailModel;
 use CodeIgniter\Email\Email;
+
 
 class UserController extends BaseController
 {
@@ -14,6 +16,7 @@ class UserController extends BaseController
     protected $productModel;
     protected $categoryModel;
     protected $addressModel;
+    protected $OrderDetailModel;
     protected $session;
     public function __construct()
     {
@@ -21,6 +24,7 @@ class UserController extends BaseController
         $this->productModel = new ProductModel();
         $this->categoryModel = new CategoryModel();
         $this->addressModel = new AddressModel();
+        $this->OrderDetailModel = new OrderDetailModel();
         $this->session = \Config\Services::session();
     }
     public function login()
@@ -77,14 +81,10 @@ class UserController extends BaseController
         $mobile = $this->request->getPost('mobile');
         $email = $this->request->getPost('email');
         $zip = $this->request->getPost('zip');
-
-        // Validate form data using the AddressModel's validation rules
         if (!$this->validate($this->addressModel->getValidationRules())) {
             $validationErrors = $this->validator->getErrors();
             return json_encode(['success' => false, 'errors' => $validationErrors]);
         }
-
-        // Store the data in the database
         $userData = [
             'user_id' => $user_id,
             'name' => $name,
@@ -98,14 +98,7 @@ class UserController extends BaseController
         $newAddress = $this->addressModel->find($this->addressModel->insertID());
         return json_encode(['success' => true, 'message' => 'Address Added successfully!', 'address' => $newAddress]);
     }
-    public function storeSelectedAddress()
-    {
-        $addressId = $this->input->post('addressId');
-        $this->session->set_userdata('selected_address_id', $addressId);
-        $response['success'] = true;
-        $response['message'] = 'Address selected successfully.';
-        echo json_encode($response);
-    }
+ 
     public function removeFromCart()
     {
         if ($this->request->isAJAX()) {
@@ -119,6 +112,57 @@ class UserController extends BaseController
             }
 
             return $this->response->setJSON(['status' => 'error', 'message' => 'Invalid cart item key.']);
+        }
+    } 
+ 
+    public function storeSelectedAddress()
+    {
+        if ($this->request->isAJAX()) {
+            $addressId = $this->request->getPost('address_id');
+            $address = $this->addressModel->find($addressId);
+            if (!$address) {
+                return $this->response->setJSON(['status' => 'error', 'message' => 'Address not found.']);
+            }
+            $session = \Config\Services::session();
+            $session->set('selected_address', $address);
+
+            return $this->response->setJSON(['status' => 'success', 'message' => 'Address stored in session.', 'address' => $address]);
+        }
+    }
+
+    public function placeOrder()
+    {
+        $loggedInUserId = $this->session->get('admin')['id'];
+        $lastOrder = $this->OrderDetailModel->selectMax('order_id')->first();
+        $lastOrderId = $lastOrder['order_id'];
+        $newOrderId = $lastOrderId + 1;
+        $addressId = $this->request->getPost('address_id');
+        $product_ids = $this->request->getPost('product_id');
+        $totalPrice = $this->request->getPost('total_price');
+        $quantity = $this->request->getPost('quantity');
+        $Qprice = $this->request->getPost('Qprice');  
+         $sanitizedQprice = array_map(function ($qprice) {
+            return filter_var($qprice, FILTER_SANITIZE_NUMBER_INT);
+        }, $Qprice);
+
+        $orderData = [];
+        foreach ($product_ids as $index => $productId) {
+            $orderData[] = [
+                'order_id' => $newOrderId,
+                'user_id' => $loggedInUserId,
+                'address_id' => $addressId,
+                'product_id' => $productId,
+                'quantity' => $quantity[$index],
+                'Qprice' => $sanitizedQprice[$index],  
+                'total_price' => $totalPrice
+            ];
+        } 
+         $inserted = $this->OrderDetailModel->insertBatch($orderData);
+
+        if ($inserted) {
+            return $this->response->setJSON(['success' => true, 'message' => 'Order placed successfully.']);
+        } else {
+            return $this->response->setJSON(['success' => false, 'message' => 'Failed to place order.']);
         }
     }
 }

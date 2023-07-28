@@ -73,8 +73,7 @@
                 <div class="card border-0" style="box-shadow: 0 0 10px 0 rgba(0,0,0,0.1)">
                     <div class="card-body px-6 pt-5">
                         <div class="d-flex align-items-center mb-2">
-                            <span>Subtotal:</span>
-                            <!-- Display the total product price -->
+                            <span>Subtotal:</span> 
                             <span class="d-block ml-auto text-secondary font-weight-bold">$<?= number_format($totalProductPrice, 2); ?></span>
                         </div>
                         <div class="d-flex align-items-center">
@@ -216,7 +215,7 @@
         function removeFromSession(key) {
             $.ajax({
                 type: "POST",
-                url: "/cart/removeFromCart", // Use the defined route to handle the AJAX request
+                url: "/cart/removeFromCart",  
                 headers: {
                     'X-Requested-With': 'XMLHttpRequest',
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')

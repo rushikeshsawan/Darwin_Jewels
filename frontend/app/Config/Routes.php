@@ -32,22 +32,22 @@ $routes->set404Override();
 $routes->get('/', 'Home::index');
 $routes->get('home', 'HomeController::index');
 $routes->get('products', 'HomeController::product');
-$routes->post('quickview', 'HomeController::QuickView');// Config/Routes.php
-$routes->post('add-to-cart', 'HomeController::addToCart'); // Route to add a product to the cart
-$routes->get('cart-list', 'HomeController::cartList'); // Route to display the cart list
+$routes->post('quickview', 'HomeController::QuickView'); 
+$routes->post('add-to-cart', 'HomeController::addToCart');  
+$routes->get('cart-list', 'HomeController::cartList'); 
 $routes->post('getProductsByCategory', 'HomeController::getProductsByCategory');
 $routes->get('checkout', 'HomeController::checkout',['AuthGuard' => 'auth']);  
 $routes->post('checkout/addToSession', 'HomeController::addToSession');
 $routes->post('checkout/removeFromSession', 'HomeController::removeFromSession'); 
 $routes->post('saveAddress', 'UserController::saveAddress');
 $routes->post('address', 'UserController::address');  
-$routes->post('storeaddress', 'HomeController::storeSelectedAddress');  
+$routes->post('storeaddress', 'UserController ::storeSelectedAddress');  
 $routes->post('/cart/removeFromCart', 'UserController::removeFromCart');
-$routes->post('placeOrder', 'HomeController::placeOrder'); 
+
+$routes->post('placeOrder', 'UserController::placeOrder'); 
 $routes->post('checkout/addToSession', 'HomeController::addToSession');
 $routes->add('userlogin', 'UserController::login');
-$routes->post('remove-from-cart', 'HomeController::removeFromCart');
-$routes->get('cart-list', 'HomeController::cartList');
+ $routes->get('cart-list', 'HomeController::cartList');
 
 
 /*
