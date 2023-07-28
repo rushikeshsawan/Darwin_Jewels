@@ -35,7 +35,7 @@
                                         <p class="font-weight-500 mb-1 text-secondary product-name"><?= $product['name']; ?></p>
                                         <p class="card-text font-weight-bold fs-14 mb-1 text-secondary">
                                             <span class="fs-13 font-weight-500 text-decoration-through text-body pr-1"></span>
-                                            <span class="product-price  price"><?= $product['prize']; ?></span>
+                                            <span class="product-price price"><?= $product['prize']; ?></span>
                                         </p>
                                     </div>
                                     <div  class="d-none">
@@ -51,7 +51,7 @@
                                 </div>
                             </td>
                             <td class="align-middle">
-                                <p class="mb-0 text-secondary font-weight-bold mr-xl-11 subtotal-price "><?= $product['prize']; ?></p>
+                                <p class="mb-0 text-secondary font-weight-bold mr-xl-11 subtotal-price   Qprice">₹<?= $product['prize']; ?></p>
                             </td>
 
                             <td class="align-middle text-right pr-5">
@@ -101,6 +101,7 @@
         var cartItems = [];
         $('tbody tr').each(function() {
             var productName = $(this).find('.product-name').text();
+            var Qprice = $(this).find('.Qprice').text();
             var price = $(this).find('.price').text();
             var quantity = parseInt($(this).find('.input-quality').val());
             var image = $(this).find('.product-image img').attr('src');  
@@ -111,7 +112,8 @@
                 image: image,
                 name: productName,
                 quantity: quantity,
-                price: price,
+                Qprice: Qprice,
+                price: price, 
                 TotalPrice:TotalPrice,
                 productid:productid
             });
@@ -155,7 +157,7 @@
             var quantity = parseInt($row.find('.input-quality').val());
             var price = parseFloat($row.find('.product-price').text().replace('$', '').replace(',', ''));
             var subTotal = quantity * price;
-            $row.find('.subtotal-price').text('$' + subTotal.toFixed(0));
+            $row.find('.subtotal-price').text('₹' + subTotal.toFixed(0));
             return subTotal;
         }
 
@@ -165,7 +167,7 @@
                 var subTotal = updateProductSubtotal($(this));
                 totalPrice += subTotal;
             });
-            $('.total-price').text('$' + totalPrice.toFixed(0));
+            $('.total-price').text('₹' + totalPrice.toFixed(0));
         }
 
         $('tbody').on('click', '.up', function(e) {

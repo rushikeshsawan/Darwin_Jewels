@@ -4,8 +4,7 @@
     .highlighted {
         background-color: #f5f5f5;
     }
-</style>
-
+</style> 
 <section class="pb-lg-13 pb-11">
     <div class="container">
         <h2 class="text-center my-9">Check Out</h2>
@@ -30,7 +29,7 @@
                                                 <p class="fs-14 text-secondary mb-0 mt-1">Size:<span class="text-body"> Fullsize</span></p>
                                             </div>
                                             <div class="ml-auto">
-                                                <p class="fs-14 text-secondary mb-0 font-weight-bold">₹<?= $product['price'] ?></p>
+                                                <p class="fs-14 text-secondary mb-0 font-weight-bold"><?= $product['Qprice'] ?></p>
                                             </div>
                                         </div>
                                     </div>
@@ -221,44 +220,52 @@
     });
 
     function placeOrder() {
-    const selectedAddressId = document.querySelector('.address-card.highlighted').dataset.addressId;
+        const selectedAddressId = document.querySelector('.address-card.highlighted').dataset.addressId;
 
-    // Collect product IDs and total price
-    let product_id = [];
-    let totalPrice = 0;
+        // Collect product IDs and total price
+        let product_id = [];
+        let quantity=[];
+        let Qprice=[];
+        let totalPrice = 0;
 
-    const cartItems = <?= json_encode($cartItems) ?>;
-    console.log(cartItems)
-    if (cartItems && cartItems.length > 0) {
-        cartItems.forEach(product => {
-            product_id.push(product.productid); // Assuming 'product_id' is the correct key for product IDs
-            totalPrice += parseFloat(product.price) * parseInt(product.quantity);
+        const cartItems = <?= json_encode($cartItems) ?>;
+        console.log(cartItems)
+        if (cartItems && cartItems.length > 0) {
+            cartItems.forEach(product => {
+                product_id.push(product.productid);
+                quantity.push(product.quantity);
+                Qprice.push(product.Qprice);  
+                totalPrice += parseFloat(product.price) * parseInt(product.quantity);
+            });
+        }
+        console.log('Product IDs:', product_id);
+        console.log('Total Price:', totalPrice);
+        console.log('quantity:', quantity);
+        console.log('Qprice:', Qprice);
+
+
+        const formData = {
+            address_id: selectedAddressId,
+            product_id: product_id,
+            quantity: quantity,
+            Qprice: Qprice,
+            total_price: totalPrice
+        };
+
+        // Make sure you are using the correct URL to process the order in your PHP controller
+        $.ajax({
+            type: "POST",
+            url: "placeOrder", // Update this URL to the correct endpoint in your PHP controller
+            data: formData,
+            dataType: "json",
+            success: function(response) {
+                alert(response.message);
+            },
+            error: function(response) {
+                alert("An error occurred while placing the order.");
+            }
         });
     }
-    console.log('Product IDs:', product_id);
-    console.log('Total Price:', totalPrice);
-
-    const formData = {
-        address_id: selectedAddressId,
-        product_id: product_id,
-        total_price: totalPrice
-    };
-
-    // Make sure you are using the correct URL to process the order in your PHP controller
-    $.ajax({
-        type: "POST",
-        url: "placeOrder", // Update this URL to the correct endpoint in your PHP controller
-        data: formData,
-        dataType: "json",
-        success: function(response) {
-            alert(response.message);
-        },
-        error: function(response) {
-            alert(response.error)
-            alert("An error occurred while placing the order.");
-        }
-    });
-} 
 </script>
 
 <?= $this->endSection() ?>
