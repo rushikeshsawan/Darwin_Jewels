@@ -165,4 +165,17 @@ class UserController extends BaseController
             return $this->response->setJSON(['success' => false, 'message' => 'Failed to place order.']);
         }
     }
+    public function getUserOrders()
+    {
+         $loggedInUserId = $this->session->get('admin')['id']; 
+         $data['orders'] = $this->OrderDetailModel->getUserOrders($loggedInUserId);
+
+         return view('order_list', $data);
+    }
+
+    public function getOrderDetails($orderId)
+    {
+         $data['orders'] = $this->OrderDetailModel->getOrderDetailsById($orderId); 
+        return view('order_details', $data);
+    }
 }
