@@ -1,5 +1,5 @@
 <?= $this->extend('main') ?>
-<?= $this->section('content') ?> 
+<?= $this->section('content') ?>
 <main id="content">
     <section class="mx-0 slick-slider dots-inner-center custom-slider-02 slider" data-slick-options='{"slidesToShow": 1,"infinite":true,"autoplay":true,"dots":true,"arrows":false,"fade":true,"cssEase":"ease-in-out","speed":600}'>
         <div class="box px-0">
@@ -157,7 +157,7 @@
                                                                 </svg>
                                                             </span>
                                                         </a>
-                                                        <a href="" data-toggle="tooltip" data-placement="left" title="Add to wishlist" class="add-to-wishlist ml-auto d-flex align-items-center justify-content-center text-secondary bg-white hover-white bg-hover-secondary w-48px h-48px rounded-circle mb-2"  data-product-id="<?= $row->id; ?>">
+                                                        <a href="" data-toggle="tooltip" data-placement="left" title="Add to wishlist" class="add-to-wishlist ml-auto d-flex align-items-center justify-content-center text-secondary bg-white hover-white bg-hover-secondary w-48px h-48px rounded-circle mb-2" data-product-id="<?= $row->id; ?>">
                                                             <svg class="icon icon-star-light fs-24">
                                                                 <use xlink:href="#icon-star-light"></use>
                                                             </svg>
@@ -1420,6 +1420,7 @@
                             <span class="badge badge-primary fs-16 ml-4 font-weight-600 px-3">20%</span>
                         </p>
                         <h2 class="fs-24 mb-2 product-title">Geometric Fleur CZ Diamond Ring</h2>
+                        <p class="test"> 55</p>
                         <div class="d-flex align-items-center flex-wrap mb-3 lh-12">
                             <p class="mb-0 font-weight-600 text-secondary">4.86</p>
                             <ul class="list-inline d-flex mb-0 px-3 rating-result">
@@ -1472,7 +1473,9 @@
                                     </div>
                                 </div>
                                 <div class="col-sm-8 mb-6 w-100 px-2">
-                                <button type="button" class="btn btn-lg fs-18 btn-secondary btn-block h-60 bg-hover-primary border-0 add-to-wishlist" data-product-id="<?= $row->id; ?>">Add To Bag</button> 
+                                    <!-- Your HTML button -->
+                                    <button type="button" class="btn btn-lg fs-18 btn-secondary btn-block h-60 bg-hover-primary border-0 add-to-bag product-id">Add To Bag</button>
+
                                 </div>
                             </div>
                         </form>
@@ -1507,15 +1510,16 @@
     </div>
 </div>
 <!-- Include jQuery library -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.css">
 
 <script>
-    $(document).ready(function() {
+    $(document).ready(function() { 
         $('.QuickView').on('click', function(e) {
             e.preventDefault();
             var productId = $(this).data('product-id');
+            alert(productId)
             $.ajax({
                 url: 'quickview', // The URL mapped in the Routes.php file
                 method: 'POST',
@@ -1524,7 +1528,8 @@
                 }, // Send the product ID to the server
                 dataType: 'json',
                 success: function(response) {
-                    // Update the modal with the fetched product details
+                    console.log(response)
+                    $('#quick-view .test').text(response.id);
                     $('#quick-view .product-title').text(response.product_name);
                     $('#quick-view .product-image').attr('src', '/uploads/FeatureProduct/' + response.image);
                     $('#quick-view .view-slider-for img').each(function(index) {
@@ -1538,61 +1543,64 @@
             });
         });
     });
- 
- // Your existing JavaScript code
- $(document).ready(function() {
-    $('.add-to-wishlist').on('click', function(e) {
-        e.preventDefault();
-        var productId = $(this).data('product-id');
-        
-        $.ajax({
-            url: 'add-to-cart', // Route to add a product to the cart
-            method: 'POST',
-            data: {
-                product_id: productId
-            },
-            dataType: 'json',
-            success: function(response) {
-                if (response.status === 'success') {
-                    var message = 'Product added to cart.';
-                    var redirectUrl = 'cart-list'; // Route to display the cart list
+    $('.add-to-bag').on('click', function(e) {
+        var testElement = document.getElementsByClassName('test')[0]; // Assuming there is only one element with class "test"
+        var testValue = testElement ? testElement.textContent : 'No test element found';
+        console.log(testValue);
+    }); 
+    $(document).ready(function() {
+        $('.add-to-wishlist').on('click', function(e) {
+            e.preventDefault();
+            var productId = $(this).data('product-id');
+            alert(productId)
+            $.ajax({
+                url: 'add-to-cart', // Route to add a product to the cart
+                method: 'POST',
+                data: {
+                    product_id: productId
+                },
+                dataType: 'json',
+                success: function(response) {
+                    if (response.status === 'success') {
+                        var message = 'Product added to cart.';
+                        var redirectUrl = 'cart-list'; // Route to display the cart list
 
-                    if (response.alreadyAdded) {
-                        message = 'Product is already in the cart.';
-                        redirectUrl = 'cart-list'; // Route to display the cart list
+                        if (response.alreadyAdded) {
+                            message = 'Product is already in the cart.';
+                            redirectUrl = 'cart-list'; // Route to display the cart list
+                        }
+
+                        // Show a SweetAlert with the appropriate message
+                        Swal.fire({
+                            icon: response.alreadyAdded ? 'info' : 'success',
+                            title: 'Cart',
+                            text: message,
+                            showConfirmButton: false,
+                            timer: 1500
+                        }).then(function() {
+                            // Redirect to the cart list page after adding the product
+                            window.location.href = redirectUrl;
+                        });
+                    } else {
+                        // Show an error SweetAlert if the response is not successful
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Error',
+                            text: response.message
+                        });
                     }
-
-                    // Show a SweetAlert with the appropriate message
-                    Swal.fire({
-                        icon: response.alreadyAdded ? 'info' : 'success',
-                        title: 'Cart',
-                        text: message,
-                        showConfirmButton: false,
-                        timer: 1500
-                    }).then(function () {
-                        // Redirect to the cart list page after adding the product
-                        window.location.href = redirectUrl;
-                    });
-                } else {
-                    // Show an error SweetAlert if the response is not successful
+                },
+                error: function() {
+                    // Show an error SweetAlert if an error occurs during the AJAX request
                     Swal.fire({
                         icon: 'error',
                         title: 'Error',
-                        text: response.message
+                        text: 'An error occurred while adding the product to the cart.'
                     });
                 }
-            },
-            error: function() {
-                // Show an error SweetAlert if an error occurs during the AJAX request
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Error',
-                    text: 'An error occurred while adding the product to the cart.'
-                });
-            }
+            });
         });
     });
-}); 
 </script>
 
 <?= $this->endSection() ?>

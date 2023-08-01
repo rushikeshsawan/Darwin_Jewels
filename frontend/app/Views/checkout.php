@@ -4,7 +4,7 @@
     .highlighted {
         background-color: #f5f5f5;
     }
-</style> 
+</style>
 <section class="pb-lg-13 pb-11">
     <div class="container">
         <h2 class="text-center my-9">Check Out</h2>
@@ -47,8 +47,8 @@
                             </div>
                             <div class="card-footer bg-transparent px-0 pb-1 mx-6">
                                 <div class="d-flex align-items-center font-weight-bold mb-3">
-                                    <span class="text-secondary">Total price:</span>
-                                    <span class="d-block ml-auto text-secondary fs-24 font-weight-bold"><?= $product['TotalPrice'] ?></span>
+                                    <span class="text-secondary">Total price.:</span>
+                                    <span class="d-block ml-auto text-secondary fs-24 font-weight-bold FTotalPrice"><?= $product['TotalPrice'] ?></span>
                                 </div>
                             </div>
                             <div class="card text-center">
@@ -135,7 +135,7 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.5/dist/sweetalert2.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.5/dist/sweetalert2.min.css">
-
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 <script>
     $(document).ready(function() {
         $("#loginForm").submit(function(event) {
@@ -154,7 +154,7 @@
                             title: 'Success!',
                             text: response.message
                         }).then(function() {
-                             var newAddressCard = '<div class="col-md-6 mb-6">' +
+                            var newAddressCard = '<div class="col-md-6 mb-6">' +
                                 '<div class="card">' +
                                 '<div class="card-body">' +
                                 '<h5 class="card-title">' + response.address.name + '</h5>' +
@@ -165,11 +165,11 @@
                                 '</div>' +
                                 '</div>';
 
-                            $('#addressData .alert-info').remove();  
-                            $('#addressData .row').append(newAddressCard);  
+                            $('#addressData .alert-info').remove();
+                            $('#addressData .row').append(newAddressCard);
                         });
                     } else {
-                         Swal.fire({
+                        Swal.fire({
                             icon: 'error',
                             title: 'Error!',
                             text: 'There were errors in the form:\n' + JSON.stringify(response.errors, null, 2)
@@ -190,11 +190,11 @@
 <script>
     $(document).ready(function() {
         function selectAddress(addressId) {
-            $('.address-card').removeClass('highlighted');  
-            $('.address-card[data-address-id="' + addressId + '"]').addClass('highlighted'); 
+            $('.address-card').removeClass('highlighted');
+            $('.address-card[data-address-id="' + addressId + '"]').addClass('highlighted');
             $.ajax({
                 type: 'POST',
-                url: '<?= base_url('storeaddress'); ?>', 
+                url: '<?= base_url('storeaddress'); ?>',
                 data: {
                     address_id: addressId
                 },
@@ -205,23 +205,76 @@
         }
         $('.address-card').click(function() {
             var addressId = $(this).data('address-id');
-            selectAddress(addressId); 
+            selectAddress(addressId);
         });
     });
 </script>
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const checkoutBtn = document.querySelector('.checkout-btn');
-        checkoutBtn.addEventListener('click', function() {
-            placeOrder();
+    $(document).ready(function() {
+        function handlePayment(TotalPrice, selectedAddressId, cartItems) {
+            const amountInPaise = TotalPrice * 100;
+            const options = {
+                key: 'rzp_test_GGXHzqc5bmnUdI',
+                amount: amountInPaise,
+                currency: 'INR',
+                name: 'Your Company Name',
+                description: 'Payment for your order',
+                handler: function(response) {
+                    const payment_id = response.razorpay_payment_id;
+                    console.log(response);
+                    placeOrder(payment_id);
+                },
+            };
+
+            const rzp = new Razorpay(options);
+            rzp.open();
+        }
+
+        function selectAddress(addressId) {
+            $('.address-card').removeClass('highlighted');
+            $('.address-card[data-address-id="' + addressId + '"]').addClass('highlighted');
+            $.ajax({
+                type: 'POST',
+                url: '<?= base_url('storeaddress'); ?>',
+                data: {
+                    address_id: addressId
+                },
+                dataType: 'json',
+                success: function(response) {},
+                error: function() {}
+            });
+        }
+
+        $('.address-card').click(function() {
+            var addressId = $(this).data('address-id');
+            selectAddress(addressId);
+        });
+
+        $('.checkout-btn').click(function() {
+            const totalPrice = parseFloat($('.FTotalPrice').text().replace(/₹|[, ]/g, ''));
+            const selectedAddressId = $('.address-card.highlighted').data('address-id');
+            alert(totalPrice)
+            const cartItems = <?= json_encode($cartItems) ?>;
+            if (selectedAddressId) {
+                // Proceed with payment
+                handlePayment(totalPrice, selectedAddressId, cartItems);
+            } else {
+                Swal.fire({
+                    icon: 'info',
+                    title: 'Select Address',
+                    text: 'Please select an address before proceeding to checkout.',
+                });
+            }
         });
     });
 
-    function placeOrder() {
-        const selectedAddressId = document.querySelector('.address-card.highlighted').dataset.addressId; 
+ 
+ 
+    function placeOrder(payment_id) {
+        const selectedAddressId = document.querySelector('.address-card.highlighted').dataset.addressId;
         let product_id = [];
-        let quantity=[];
-        let Qprice=[];
+        let quantity = [];
+        let Qprice = [];
         let totalPrice = 0;
 
         const cartItems = <?= json_encode($cartItems) ?>;
@@ -230,7 +283,7 @@
             cartItems.forEach(product => {
                 product_id.push(product.productid);
                 quantity.push(product.quantity);
-                Qprice.push(product.Qprice);  
+                Qprice.push(product.Qprice);
                 totalPrice += parseFloat(product.price) * parseInt(product.quantity);
             });
         }
@@ -238,29 +291,50 @@
         console.log('Total Price:', totalPrice);
         console.log('quantity:', quantity);
         console.log('Qprice:', Qprice);
-
-
         const formData = {
             address_id: selectedAddressId,
             product_id: product_id,
             quantity: quantity,
             Qprice: Qprice,
-            total_price: totalPrice
-        }; 
-         $.ajax({
+            total_price: totalPrice,
+            payment_id: payment_id // Add the payment_id to the formData
+        };
+        $.ajax({
             type: "POST",
-            url: "placeOrder",  
+            url: "placeOrder",
             data: formData,
             dataType: "json",
             success: function(response) {
-                alert(response.message);
+                if (response.success) {
+                    // Show order successful message using SweetAlert
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Order Successful!',
+                        text: 'Your order has been placed successfully.',
+                    }).then(function() {
+                        // Clear cart items from session after successful order
+                        $.ajax({
+                            type: 'POST',
+                            url: 'clearCartItems',
+                            dataType: 'json',
+                            success: function(response) {
+                                // Redirect to the order page
+                                window.location.href = '/order_list';
+                            },
+                            error: function() {
+                                alert("An error occurred while clearing cart items.");
+                            }
+                        });
+                    });
+                } else {
+                    alert("Failed to place order. Please try again.");
+                }
             },
             error: function(response) {
                 alert("An error occurred while placing the order.");
             }
         });
     }
-</script>
-
+</script> 
 
 <?= $this->endSection() ?>

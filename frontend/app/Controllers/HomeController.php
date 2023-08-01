@@ -94,6 +94,7 @@ class HomeController extends BaseController
         $session->set('cartItems', $cartItems);
         return $this->response->setJSON(['status' => 'success']);
     }
+    
 
     public function addToCart()
     {

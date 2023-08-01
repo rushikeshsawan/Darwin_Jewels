@@ -44,10 +44,23 @@ $routes->post('address', 'UserController::address');
 $routes->post('storeaddress', 'UserController ::storeSelectedAddress');  
 $routes->post('/cart/removeFromCart', 'UserController::removeFromCart');
 $routes->get('order_list', 'UserController::getUserOrders');
-$routes->get('order-details/(:num)', 'UserController::getOrderDetails/$1');
+// $routes->get('order-details/(:num)', 'UserController::getOrderDetails/$1');
 
+
+
+$routes->add('verifyPayment', 'UserController::verifyPayment'); 
+$routes->post('initiatePayment', 'UserController::initiatePayment'); 
+$routes->post('create-order', 'PaymentController::createOrder'); 
+$routes->add('clearCartItems', 'UserController::clearCartItems');
+
+
+
+
+$routes->add('getOrderDetails', 'UserController::getOrderDetails');
 
 $routes->post('placeOrder', 'UserController::placeOrder'); 
+  
+
 $routes->post('checkout/addToSession', 'HomeController::addToSession');
 $routes->add('userlogin', 'UserController::login');
  $routes->get('cart-list', 'HomeController::cartList');
