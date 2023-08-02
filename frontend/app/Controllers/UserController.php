@@ -55,7 +55,7 @@ class UserController extends BaseController
                         ];
                         $this->session->set('admin', $adminData);
                         session()->setTempdata('success', 'Successfully logged in', 1);
-                        return redirect()->to('/dashboard');
+                        return redirect()->to('/checkout');
                     } else {
                         $data['validation'] = 'Please contact the admin for further assistance.';
                         return view('userLogin', $data);

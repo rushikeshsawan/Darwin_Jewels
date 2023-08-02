@@ -31,7 +31,7 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 $routes->get('home', 'HomeController::index');
-$routes->get('products', 'HomeController::product');
+$routes->get('products', 'HomeController::product');  
 $routes->post('quickview', 'HomeController::QuickView'); 
 $routes->post('add-to-cart', 'HomeController::addToCart');  
 $routes->get('cart-list', 'HomeController::cartList'); 
@@ -44,7 +44,8 @@ $routes->post('address', 'UserController::address');
 $routes->post('storeaddress', 'UserController ::storeSelectedAddress');  
 $routes->post('/cart/removeFromCart', 'UserController::removeFromCart');
 $routes->get('order_list', 'UserController::getUserOrders');
-// $routes->get('order-details/(:num)', 'UserController::getOrderDetails/$1');
+// $routes->get('order-details/(:num)', 'UserController::getOrderDetails/$1'); 
+$routes->get('price-filter', 'HomeController::priceFilter');
 
 
 

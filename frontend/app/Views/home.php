@@ -516,9 +516,7 @@
                 </div>
             </div>
         </div>
-    </section>
-
-
+    </section> 
 </main>
 
 
@@ -1513,9 +1511,9 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.css">
-
-<script>
-    $(document).ready(function() { 
+<script src="/js/home.js"></script> 
+<!-- <script>
+    $(document).ready(function() {
         $('.QuickView').on('click', function(e) {
             e.preventDefault();
             var productId = $(this).data('product-id');
@@ -1543,64 +1541,126 @@
             });
         });
     });
+    var productId;
     $('.add-to-bag').on('click', function(e) {
         var testElement = document.getElementsByClassName('test')[0]; // Assuming there is only one element with class "test"
-        var testValue = testElement ? testElement.textContent : 'No test element found';
-        console.log(testValue);
-    }); 
-    $(document).ready(function() {
-        $('.add-to-wishlist').on('click', function(e) {
-            e.preventDefault();
-            var productId = $(this).data('product-id');
-            alert(productId)
-            $.ajax({
-                url: 'add-to-cart', // Route to add a product to the cart
-                method: 'POST',
-                data: {
-                    product_id: productId
-                },
-                dataType: 'json',
-                success: function(response) {
-                    if (response.status === 'success') {
-                        var message = 'Product added to cart.';
-                        var redirectUrl = 'cart-list'; // Route to display the cart list
-
-                        if (response.alreadyAdded) {
-                            message = 'Product is already in the cart.';
-                            redirectUrl = 'cart-list'; // Route to display the cart list
-                        }
-
-                        // Show a SweetAlert with the appropriate message
-                        Swal.fire({
-                            icon: response.alreadyAdded ? 'info' : 'success',
-                            title: 'Cart',
-                            text: message,
-                            showConfirmButton: false,
-                            timer: 1500
-                        }).then(function() {
-                            // Redirect to the cart list page after adding the product
-                            window.location.href = redirectUrl;
-                        });
-                    } else {
-                        // Show an error SweetAlert if the response is not successful
-                        Swal.fire({
-                            icon: 'error',
-                            title: 'Error',
-                            text: response.message
-                        });
+        var productId = testElement ? testElement.textContent : 'No test element found';
+        $.ajax({
+            url: 'add-to-cart', // Route to add a product to the cart
+            method: 'POST',
+            data: {
+                product_id: productId
+            },
+            dataType: 'json',
+            success: function(response) {
+                if (response.status === 'success') {
+                    var message = 'Product added to cart.';
+                    var redirectUrl = 'cart-list';
+                    if (response.alreadyAdded) {
+                        message = 'Product is already in the cart.';
+                        redirectUrl = 'cart-list';
                     }
-                },
-                error: function() {
-                    // Show an error SweetAlert if an error occurs during the AJAX request
+                    Swal.fire({
+                        icon: response.alreadyAdded ? 'info' : 'success',
+                        title: 'Cart',
+                        text: message,
+                        showConfirmButton: false,
+                        timer: 1500
+                    }).then(function() {
+                        // Redirect to the cart list page after adding the product
+                        window.location.href = redirectUrl;
+                    });
+                } else {
+                    // Show an error SweetAlert if the response is not successful
                     Swal.fire({
                         icon: 'error',
                         title: 'Error',
-                        text: 'An error occurred while adding the product to the cart.'
+                        text: response.message
                     });
                 }
-            });
+            },
+            error: function() {
+                // Show an error SweetAlert if an error occurs during the AJAX request
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'An error occurred while adding the product to the cart.'
+                });
+            }
+        });
+        console.log(productId);
+    });
+
+    $('.add-to-wishlist').on('click', function(e) {
+        e.preventDefault();
+        var productId = $(this).data('product-id');
+        alert(productId)
+        $.ajax({
+            url: 'add-to-cart', // Route to add a product to the cart
+            method: 'POST',
+            data: {
+                product_id: productId
+            },
+            dataType: 'json',
+            success: function(response) {
+                if (response.status === 'success') {
+                    var message = 'Product added to cart.';
+                    var redirectUrl = 'cart-list';
+                    if (response.alreadyAdded) {
+                        message = 'Product is already in the cart.';
+                        redirectUrl = 'cart-list';
+                    }
+                    Swal.fire({
+                        icon: response.alreadyAdded ? 'info' : 'success',
+                        title: 'Cart',
+                        text: message,
+                        showConfirmButton: false,
+                        timer: 1500
+                    }).then(function() {
+                        // Redirect to the cart list page after adding the product
+                        window.location.href = redirectUrl;
+                    });
+                } else {
+                    // Show an error SweetAlert if the response is not successful
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error',
+                        text: response.message
+                    });
+                }
+            },
+            error: function() {
+                // Show an error SweetAlert if an error occurs during the AJAX request
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'An error occurred while adding the product to the cart.'
+                });
+            }
         });
     });
 </script>
+<script>
+    // Function to load data using AJAX
+    function loadData() {
+        $.ajax({
+            url: 'products', // Replace with the URL of your server-side code to fetch the data
+            method: 'GET', // Change the method if needed (GET, POST, etc.)
+            dataType: 'html', // The expected data type of the response
+            success: function(response) {
+                // Update the content of the id="content" element with the fetched data
+                $('#ajax').html(response);
+            },
+            error: function() {
+                console.error('An error occurred while loading data.');
+            }
+        });
+    }
+
+    // Call the function when the page loads or when the user performs a certain action
+    $(document).ready(function() {
+        loadData(); // Load data when the page loads
+    });
+</script> -->
 
 <?= $this->endSection() ?>

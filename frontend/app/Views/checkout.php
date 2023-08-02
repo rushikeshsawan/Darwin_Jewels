@@ -2,7 +2,8 @@
 <?= $this->section('content') ?>
 <style>
     .highlighted {
-        background-color: #f5f5f5;
+        background-color: #6676a2;
+        color: white;
     }
 </style>
 <section class="pb-lg-13 pb-11">
@@ -67,8 +68,8 @@
                             <?php if (!empty($address)) : ?>
                                 <div class="row">
                                     <?php foreach ($address as $addr) : ?>
-                                        <div class="col-md-6 mb-6 address-card" data-address-id="<?= $addr['id']; ?>">
-                                            <div class="card">
+                                        <div class="col-md-6 mb-6">
+                                            <div class="card  address-body  address-card" data-address-id="<?= $addr['id']; ?>">
                                                 <div class="card-body">
                                                     <h5 class="card-title"><?= $addr['name']; ?></h5>
                                                     <p class="card-text"><strong>Address:</strong> <?= $addr['address']; ?></p>
@@ -231,8 +232,8 @@
         }
 
         function selectAddress(addressId) {
-            $('.address-card').removeClass('highlighted');
-            $('.address-card[data-address-id="' + addressId + '"]').addClass('highlighted');
+            $('.address-body').removeClass('highlighted');
+            $('.address-body[data-address-id="' + addressId + '"]').addClass('highlighted');
             $.ajax({
                 type: 'POST',
                 url: '<?= base_url('storeaddress'); ?>',

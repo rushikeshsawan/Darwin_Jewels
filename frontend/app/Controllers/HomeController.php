@@ -7,8 +7,9 @@ use App\Models\CategoryModel;
 use App\Models\ProductModel;
 use App\Models\AddressModel;
 use App\Models\OrderDetailModel;
+use CodeIgniter\Controller; // Make sure to use the correct Controller namespace
 
-class HomeController extends BaseController
+class HomeController extends Controller
 {
     protected $CategoryModel;
     protected $CollectionModel;
@@ -16,7 +17,6 @@ class HomeController extends BaseController
     protected $addressModel;
     protected $OrderDetailModel;
     protected $session;
-
 
     public function __construct()
     {
@@ -35,12 +35,42 @@ class HomeController extends BaseController
         $data['Product'] = $this->ProductModel->list();
         return view('home', $data);
     }
+
     public function product()
     {
-        $data['Product'] = $this->ProductModel->list();
+        $sort = $this->request->getGet('sort');
         $data['Category'] = $this->CategoryModel->list();
+        $data['Collection'] = $this->CollectionModel->list();
+
+        if ($sort == 'high_to_low') {
+            $data['Product'] = $this->ProductModel->listOrderByPrice('desc');
+        } elseif ($sort == 'low_to_high') {
+            $data['Product'] = $this->ProductModel->listOrderByPrice('asc');
+        } else {
+            $data['Product'] = $this->ProductModel->list('asc');
+        }
+
         return view('product', $data);
     }
+// HomeController.php
+
+public function priceFilter()
+{
+    $sort = $this->request->getGet('sort');
+    $data['Category'] = $this->CategoryModel->list();
+    $data['Collection'] = $this->CollectionModel->list();
+
+    if ($sort == 'high_to_low') {
+        $data['Product'] = $this->ProductModel->listOrderByPrice('desc');
+    } elseif ($sort == 'low_to_high') {
+        $data['Product'] = $this->ProductModel->listOrderByPrice('asc');
+    } else {
+        $data['Product'] = $this->ProductModel->list();
+    }
+
+    return json_encode($data);
+}
+
 
     public function checkout()
     {
@@ -52,7 +82,7 @@ class HomeController extends BaseController
             $data['address'] = $addressData;
             $data['cartItems'] = $cartItems;
             $data['id'] = $userId;
-            return view('checkout', $data); 
+            return view('checkout', $data);
         } else {
             return redirect()->to('userlogin');
         }
@@ -94,7 +124,7 @@ class HomeController extends BaseController
         $session->set('cartItems', $cartItems);
         return $this->response->setJSON(['status' => 'success']);
     }
-    
+
 
     public function addToCart()
     {
@@ -112,7 +142,7 @@ class HomeController extends BaseController
                 'name' => $product['product_name'],
                 'prize' => $product['prize'],
                 'image' => base_url('/uploads/FeatureProduct/' . $product['image']),
-            ]; 
+            ];
             $cartItems = session('cart_items') ?? [];
             $alreadyAdded = false;
             foreach ($cartItems as $item) {
@@ -126,7 +156,7 @@ class HomeController extends BaseController
             }
             return $this->response->setJSON(['status' => 'success', 'message' => 'Product added to cart.', 'alreadyAdded' => $alreadyAdded]);
         }
-    } 
+    }
     protected function addToCartSession($product)
     {
         $cartItems = session('cart_items') ?? [];

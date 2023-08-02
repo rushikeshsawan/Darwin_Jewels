@@ -18,7 +18,6 @@ class ProductModel extends Model
             'prize' => $prize,
             'image' => $image
         ];
-
         $this->insert($data);
     }
     public function list()
@@ -27,7 +26,15 @@ class ProductModel extends Model
         $query = $db->table('category');
         $query->select('*');
         $query->join('products', 'category.id = products.category_id');
-        return $query->get()->getResult();
+        return $query->get()->getResultArray(); // Use getResultArray() instead of getResult()
     }
- 
+    
+    public function listOrderByPrice($order = 'asc')
+    {
+        if ($order === 'asc') {
+            return $this->orderBy('prize', 'asc')->findAll();
+        } else {
+            return $this->orderBy('prize', 'desc')->findAll();
+        }
+    }
 }
