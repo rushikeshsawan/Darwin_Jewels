@@ -30,51 +30,57 @@ class UserController extends BaseController
         $this->addressModel = new AddressModel();
         $this->OrderDetailModel = new OrderDetailModel();
         $this->session = \Config\Services::session();
-    }
+    } 
+
     public function login()
     {
+        // Check if the user is already logged in, redirect to home if logged in
         $isLoggedIn = $this->session->get('admin');
         if ($isLoggedIn) {
-            return redirect()->to('/dashboard');
+            return redirect()->to('home');
         }
 
         if ($this->request->getMethod() === 'post') {
-            $rules = [
-                'username' => 'required',
-                'password' => 'required'
-            ];
-            if ($this->validate($rules)) {
-                $username = $this->request->getPost('username');
-                $password = $this->request->getPost('password');
-                $admin = $this->adminModel->where('username', $username)->first();
-                if ($admin && password_verify($password, $admin['password'])) {
-                    if ($admin['active'] == 1) {
-                        $adminData = [
-                            'username' => $username,
-                            'id' => $admin['id'],
-                        ];
-                        $this->session->set('admin', $adminData);
-                        session()->setTempdata('success', 'Successfully logged in', 1);
-                        return redirect()->to('/checkout');
+            $response = $this->request->getPost('g-recaptcha-response');
+            $secretKey = '6Leud3gnAAAAANy_HGJn3y_ZHI5sjCgJrpk5v-oG';
+            $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret=' . $secretKey . '&response=' . $response);
+            $responseData = json_decode($verifyResponse);
+
+            if (!$responseData->success) {
+                $this->session->setFlashdata('error', 'reCAPTCHA verification failed');
+            } else {
+                $rules = [
+                    'username' => 'required',
+                    'password' => 'required'
+                ];
+
+                if ($this->validate($rules)) {
+                    $username = $this->request->getPost('username');
+                    $password = $this->request->getPost('password');
+                    $admin = $this->adminModel->where('username', $username)->first();
+
+                    if ($admin && password_verify($password, $admin['password'])) {
+                        if ($admin['active'] == 1) {
+                            $adminData = [
+                                'username' => $username,
+                                'id' => $admin['id'],
+                            ];
+                            $this->session->set('admin', $adminData);
+                            session()->setTempdata('success', 'Successfully logged in', 1);
+                            return redirect()->to('checkout');
+                        } else {
+                            $this->session->setFlashdata('error', 'Please contact the admin for further assistance.');
+                        }
                     } else {
-                        $data['validation'] = 'Please contact the admin for further assistance.';
-                        return view('userLogin', $data);
+                        $this->session->setFlashdata('error', 'Invalid Credentials');
                     }
                 } else {
-                    $data['validation'] = 'Invalid Credentials';
-                    return view('userLogin', $data);
+                    $this->session->setFlashdata('error', $this->validator->listErrors());
                 }
-            } else {
-                $data['validation'] = $this->validator;
-                return view('userLogin', $data);
             }
-        } else {
-            $data['validation'] = $this->validator;
-            return view('userLogin', $data);
         }
+        return view('userLogin');
     }
-
-
     public function address()
     {
         $user_id = $this->request->getPost('user_id');
@@ -136,11 +142,11 @@ class UserController extends BaseController
         $paymentId = $this->request->getPost('payment_id');
         $orderId = $this->request->getPost('order_id');
         $signature = $this->request->getPost('signature');
-        $amount = 0;  
+        $amount = 0;
         $paymentModel = new PaymentModel();
         $paymentModel->insert([
             'order_id' => $orderId,
-            'payment_id' => $paymentId, 
+            'payment_id' => $paymentId,
         ]);
 
         // Send a response indicating successful payment verification
@@ -246,52 +252,52 @@ class UserController extends BaseController
         }
     }
 
- // Controller method to handle AJAX request to clear cart items from session
-public function clearCartItems()
-{
-    $session = \Config\Services::session();
-    $session->remove('cart_items');
-    return $this->response->setJSON(['success' => true]);
-}
-
-// Controller method to handle AJAX request for placing the order
-public function placeOrder()
-{
-    $loggedInUserId = $this->session->get('admin')['id'];
-    $lastOrder = $this->OrderDetailModel->selectMax('order_id')->first();
-    $lastOrderId = $lastOrder['order_id'];
-    $newOrderId = $lastOrderId + 1;
-    $addressId = $this->request->getPost('address_id');
-    $product_ids = $this->request->getPost('product_id');
-    $totalPrice = $this->request->getPost('total_price');
-    $quantity = $this->request->getPost('quantity');
-    $Qprice = $this->request->getPost('Qprice');
-    $payment_id = $this->request->getPost('payment_id');
-    $sanitizedQprice = array_map(function ($qprice) {
-        return filter_var($qprice, FILTER_SANITIZE_NUMBER_INT);
-    }, $Qprice);
-
-    $orderData = [];
-    foreach ($product_ids as $index => $productId) {
-        $orderData[] = [
-            'order_id' => $newOrderId,
-            'user_id' => $loggedInUserId,
-            'address_id' => $addressId,
-            'product_id' => $productId,
-            'quantity' => $quantity[$index],
-            'Qprice' => $sanitizedQprice[$index],
-            'total_price' => $totalPrice,
-            'payment_id' => $payment_id
-        ];
+    // Controller method to handle AJAX request to clear cart items from session
+    public function clearCartItems()
+    {
+        $session = \Config\Services::session();
+        $session->remove('cart_items');
+        return $this->response->setJSON(['success' => true]);
     }
-    $inserted = $this->OrderDetailModel->insertBatch($orderData);
 
-    if ($inserted) {
-        return $this->response->setJSON(['success' => true, 'message' => 'Order placed successfully.']);
-    } else {
-        return $this->response->setJSON(['success' => false, 'message' => 'Failed to place order.']);
+    // Controller method to handle AJAX request for placing the order
+    public function placeOrder()
+    {
+        $loggedInUserId = $this->session->get('admin')['id'];
+        $lastOrder = $this->OrderDetailModel->selectMax('order_id')->first();
+        $lastOrderId = $lastOrder['order_id'];
+        $newOrderId = $lastOrderId + 1;
+        $addressId = $this->request->getPost('address_id');
+        $product_ids = $this->request->getPost('product_id');
+        $totalPrice = $this->request->getPost('total_price');
+        $quantity = $this->request->getPost('quantity');
+        $Qprice = $this->request->getPost('Qprice');
+        $payment_id = $this->request->getPost('payment_id');
+        $sanitizedQprice = array_map(function ($qprice) {
+            return filter_var($qprice, FILTER_SANITIZE_NUMBER_INT);
+        }, $Qprice);
+
+        $orderData = [];
+        foreach ($product_ids as $index => $productId) {
+            $orderData[] = [
+                'order_id' => $newOrderId,
+                'user_id' => $loggedInUserId,
+                'address_id' => $addressId,
+                'product_id' => $productId,
+                'quantity' => $quantity[$index],
+                'Qprice' => $sanitizedQprice[$index],
+                'total_price' => $totalPrice,
+                'payment_id' => $payment_id
+            ];
+        }
+        $inserted = $this->OrderDetailModel->insertBatch($orderData);
+
+        if ($inserted) {
+            return $this->response->setJSON(['success' => true, 'message' => 'Order placed successfully.']);
+        } else {
+            return $this->response->setJSON(['success' => false, 'message' => 'Failed to place order.']);
+        }
     }
-}
 
     // public function createOrder()
     // {

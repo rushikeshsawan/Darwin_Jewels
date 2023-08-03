@@ -139,63 +139,47 @@
                                     <div class="col-lg-3 col-sm-6 mb-5" data-animate="fadeInUp">
                                         <div class="card border-0 product">
                                             <div class="position-relative">
-                                                <img src="<?= base_url('/uploads/FeatureProduct/' . $row->image) ?>" alt="Facial cleanser">
+                                                <img src="<?= base_url('/uploads/FeatureProduct/' . $row['image']) ?>" alt="Facial cleanser">
                                                 <div class="card-img-overlay d-flex p-3">
-                                                    <!-- <div>
-                                                    <span class="badge badge-primary">-20%</span>
-                                                </div> -->
                                                     <div class="my-auto w-100 content-change-vertical">
                                                         <a href="product-detail.html" data-toggle="tooltip" data-placement="left" title="View products" class="add-to-cart ml-auto d-flex align-items-center justify-content-center text-secondary bg-white hover-white bg-hover-secondary w-48px h-48px rounded-circle mb-2">
                                                             <svg class="icon icon-shopping-bag-open-light fs-24">
                                                                 <use xlink:href="#icon-shopping-bag-open-light"></use>
                                                             </svg>
                                                         </a>
-                                                        <a href="#" data-toggle="tooltip" data-placement="left" title="Quick view" class="preview QuickView ml-auto d-md-flex align-items-center justify-content-center cursor-pointer text-secondary bg-white hover-white bg-hover-secondary w-48px h-48px rounded-circle mb-2 d-none" data-product-id="<?= $row->id; ?>">
+                                                        <a href="#" data-toggle="tooltip" data-placement="left" title="Quick view" class="preview QuickView ml-auto d-md-flex align-items-center justify-content-center cursor-pointer text-secondary bg-white hover-white bg-hover-secondary w-48px h-48px rounded-circle mb-2 d-none" data-product-id="<?= $row['id']; ?>">
                                                             <span data-toggle="modal" data-target="#quick-view">
                                                                 <svg class="icon icon-eye-light fs-24">
                                                                     <use xlink:href="#icon-eye-light"></use>
                                                                 </svg>
                                                             </span>
                                                         </a>
-                                                        <a href="" data-toggle="tooltip" data-placement="left" title="Add to wishlist" class="add-to-wishlist ml-auto d-flex align-items-center justify-content-center text-secondary bg-white hover-white bg-hover-secondary w-48px h-48px rounded-circle mb-2" data-product-id="<?= $row->id; ?>">
+                                                        <a href="" data-toggle="tooltip" data-placement="left" title="Add to wishlist" class="add-to-wishlist ml-auto d-flex align-items-center justify-content-center text-secondary bg-white hover-white bg-hover-secondary w-48px h-48px rounded-circle mb-2" data-product-id="<?= $row['id']; ?>">
                                                             <svg class="icon icon-star-light fs-24">
                                                                 <use xlink:href="#icon-star-light"></use>
                                                             </svg>
                                                         </a>
-                                                        <!-- <a href="" data-toggle="tooltip" data-placement="left"
-                                                            title="Compare"
-                                                            class="add-to-compare ml-auto d-flex align-items-center justify-content-center text-secondary bg-white hover-white bg-hover-secondary w-48px h-48px rounded-circle">
-                                                            <svg class="icon icon-arrows-left-right-light fs-24">
-                                                                <use xlink:href="#icon-arrows-left-right-light"></use>
-                                                            </svg>
-                                                        </a> -->
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="card-body px-0 pt-4 text-center">
                                                 <p class="card-text font-weight-bold fs-16 mb-1 text-secondary">
                                                     <span class="fs-13 font-weight-500 text-decoration-through text-body pr-1">$39.00</span>
-                                                    <span><?= $row->prize; ?></span>
+                                                    <span><?= $row['prize']; ?></span>
                                                 </p>
                                                 <h2 class="card-title fs-15 font-weight-500 mb-2"><a href="product-detail.html">
-                                                        <?= $row->product_name; ?>
+                                                        <?= $row['product_name']; ?>
                                                     </a>
                                                 </h2>
                                                 <div class="d-flex align-items-center justify-content-center flex-wrap">
                                                     <ul class="list-inline mb-0 lh-1">
-                                                        <li class="list-inline-item fs-12 text-primary mr-0"><i class="fas fa-star"></i>
-                                                        </li>
-                                                        <li class="list-inline-item fs-12 text-primary mr-0"><i class="fas fa-star"></i>
-                                                        </li>
-                                                        <li class="list-inline-item fs-12 text-primary mr-0"><i class="fas fa-star"></i>
-                                                        </li>
-                                                        <li class="list-inline-item fs-12 text-primary mr-0"><i class="fas fa-star"></i>
-                                                        </li>
-                                                        <li class="list-inline-item fs-12 text-primary mr-0"><i class="fas fa-star"></i>
-                                                        </li>
+                                                        <li class="list-inline-item fs-12 text-primary mr-0"><i class="fas fa-star"></i></li>
+                                                        <li class="list-inline-item fs-12 text-primary mr-0"><i class="fas fa-star"></i></li>
+                                                        <li class="list-inline-item fs-12 text-primary mr-0"><i class="fas fa-star"></i></li>
+                                                        <li class="list-inline-item fs-12 text-primary mr-0"><i class="fas fa-star"></i></li>
+                                                        <li class="list-inline-item fs-12 text-primary mr-0"><i class="fas fa-star"></i></li>
                                                     </ul>
-                                                    <span class="card-text fs-14 font-weight-400 pl-2 lh-1">2947
-                                                        reviews</span>
+                                                    <span class="card-text fs-14 font-weight-400 pl-2 lh-1">2947 reviews</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -516,7 +500,7 @@
                 </div>
             </div>
         </div>
-    </section> 
+    </section>
 </main>
 
 
@@ -1511,7 +1495,7 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.css">
-<script src="/js/home.js"></script> 
+<script src="/js/home.js"></script>
 <!-- <script>
     $(document).ready(function() {
         $('.QuickView').on('click', function(e) {

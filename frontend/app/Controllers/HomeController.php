@@ -52,26 +52,24 @@ class HomeController extends Controller
 
         return view('product', $data);
     }
-// HomeController.php
 
-public function priceFilter()
-{
-    $sort = $this->request->getGet('sort');
-    $data['Category'] = $this->CategoryModel->list();
-    $data['Collection'] = $this->CollectionModel->list();
-
-    if ($sort == 'high_to_low') {
-        $data['Product'] = $this->ProductModel->listOrderByPrice('desc');
-    } elseif ($sort == 'low_to_high') {
-        $data['Product'] = $this->ProductModel->listOrderByPrice('asc');
-    } else {
-        $data['Product'] = $this->ProductModel->list();
+    public function priceFilter()
+    {
+        $sort = $this->request->getGet('sort');
+        $data['Category'] = $this->CategoryModel->list();
+        $data['Collection'] = $this->CollectionModel->list();
+    
+        if ($sort == 'high_to_low') {
+            $data['Product'] = $this->ProductModel->listOrderByPrice('desc');
+        } elseif ($sort == 'low_to_high') {
+            $data['Product'] = $this->ProductModel->listOrderByPrice('asc');
+        } else {
+            $data['Product'] = $this->ProductModel->list();
+        }
+    
+        return $this->response->setJSON($data);
     }
-
-    return json_encode($data);
-}
-
-
+    
     public function checkout()
     {
         $isLoggedIn = $this->session->get('admin');

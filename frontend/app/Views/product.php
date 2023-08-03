@@ -28,8 +28,10 @@
                         </a>
                         <div class="dropdown-menu custom-dropdown-item" aria-labelledby="dropdownMenuButton">
                             <!-- Add the 'onclick' event to your price filter links -->
-                            <a class="dropdown-item" href="<?= base_url('/products?sort=high_to_low') ?>">Price high to low</a>
-                            <a class="dropdown-item" href="<?= base_url('/products?sort=low_to_high') ?>">Price low to high</a>
+                            <!-- Add the 'onclick' event to your price filter links -->
+                            <a class="dropdown-item" href="javascript:void(0)" onclick="applyPriceFilter('high_to_low')">Price high to low</a>
+                            <a class="dropdown-item" href="javascript:void(0)" onclick="applyPriceFilter('low_to_high')">Price low to high</a>
+
                             <a class="dropdown-item">Price low to high</a>
                         </div>
                     </div>
@@ -61,13 +63,6 @@
                                                 </li>
                                             <?php endforeach; ?>
                                         </ul>
-                                    </li>
-                                    <li class="mb-2">
-                                        <a href="#" class="text-uppercase fs-14 letter-spacing-005 font-weight-600 text-body hover-secondary text-decoration-none">Hair
-                                            CARE</a>
-                                    </li>
-                                    <li class="mb-2">
-                                        <a href="#" class="text-uppercase fs-14 letter-spacing-005 font-weight-600 text-body hover-secondary text-decoration-none">ACCESSORIES</a>
                                     </li>
                                 </ul>
                             </div>
@@ -136,72 +131,6 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="card border-0 mb-6">
-                            <div class="card-header bg-transparent border-0 p-0">
-                                <h4 class="card-title fs-20 mb-3">Size</h4>
-                            </div>
-                            <div class="card-body p-0">
-                                <ul class="list-unstyled mb-0">
-                                    <li class="mb-2">
-                                        <a href="#" class="text-body hover-secondary">Single</a>
-                                    </li>
-                                    <li class="mb-2">
-                                        <a href="#" class="text-body hover-secondary">5 Pack</a>
-                                    </li>
-                                    <li class="mb-2">
-                                        <a href="#" class="text-body hover-secondary">Full size</a>
-                                    </li>
-                                    <li class="mb-2">
-                                        <a href="#" class="text-body hover-secondary">Mini size</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="card border-0 mb-6">
-                            <div class="card-header bg-transparent border-0 p-0">
-                                <h4 class="card-title fs-20 mb-3">Color</h4>
-                            </div>
-                            <div class="card-body p-0">
-                                <ul class="list-unstyled mb-0 widget-color d-flex flex-column">
-                                    <li class="mb-1">
-                                        <a href="#" class="d-inline-flex align-items-center text-body text-decoration-none">
-                                            <span class="d-block item" style="background-color: #000;"></span>
-                                            <span class="ml-2">Black</span>
-                                        </a>
-                                    </li>
-                                    <li class="mb-1">
-                                        <a href="#" class="d-inline-flex align-items-center text-body text-decoration-none">
-                                            <span class="d-block item border" style="background-color: #FFFFFF;box-sizing: content-box;"></span>
-                                            <span class="ml-2">White</span>
-                                        </a>
-                                    </li>
-                                    <li class="mb-1">
-                                        <a href="#" class="d-inline-flex align-items-center text-body text-decoration-none">
-                                            <span class="d-block item" style="background-color: #0E328E;"></span>
-                                            <span class="ml-2">Pink</span>
-                                        </a>
-                                    </li>
-                                    <li class="mb-1">
-                                        <a href="#" class="d-inline-flex align-items-center text-body text-decoration-none">
-                                            <span class="d-block item" style="background-color: #672612;"></span>
-                                            <span class="ml-2">Maroon</span>
-                                        </a>
-                                    </li>
-                                    <li class="mb-1">
-                                        <a href="#" class="d-inline-flex align-items-center text-body text-decoration-none">
-                                            <span class="d-block item" style="background-color: #C71818;"></span>
-                                            <span class="ml-2">Red</span>
-                                        </a>
-                                    </li>
-                                    <li class="mb-1">
-                                        <a href="#" class="d-inline-flex align-items-center text-body text-decoration-none">
-                                            <span class="d-block item" style="background-color: #5E5E5E;"></span>
-                                            <span class="ml-2">Dark Heathe</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
                         <div class="card border-0" style="max-width:240px">
                             <div class="card-header bg-transparent border-0 p-0">
                                 <h3 class="card-title fs-20 mb-3">
@@ -246,8 +175,8 @@
                     </div>
                 </div>
                 <div class="col-lg-9">
-                <div id="productContainer" class="row">
-                        <div class="row">
+                    <div id="productContainer" class="row">
+                        <div class="row" id="Fproduct">
                             <?php foreach ($Product as $row) : ?>
                                 <div class="col-lg-3 col-sm-6 mb-5" data-animate="fadeInUp">
                                     <div class="card border-0 product">
@@ -298,8 +227,9 @@
                                     </div>
                                 </div>
                             <?php endforeach; ?>
-                        </div> 
-                    </div> 
+                        </div>
+                    </div>
+
                     <nav class="pt-3">
                         <ul class="pagination justify-content-center align-items-center mb-0 fs-16 font-weight-600">
                             <li class="page-item fs-18 d-none d-sm-block">
@@ -837,37 +767,55 @@
 </script>  -->
 <!-- Add this script to your view -->
 <script>
+    // JavaScript function to handle the AJAX request for filtering products
     function applyPriceFilter(sort) {
         $.ajax({
-            url: '<?= base_url('price-filter') ?>',
+            url: '/price-filter', // Modify this URL based on your application setup
             type: 'GET',
             data: {
                 sort: sort
             },
             dataType: 'json',
             success: function(data) {
-                var productList = '';  console.log(data.Product)
-                data.Product.forEach(function(row) 
-              
-                {
-                    productList += `
-                        <div class="col-lg-3 col-sm-6 mb-5" data-animate="fadeInUp">
+                $('#productContainer').empty();
+                $.each(data.Product, function(index, product) {
+                    var productHtml = `
+                        <!-- Code for a single product card -->
+                        <div class="col-lg-3 col-sm-6 mb-5" >
                             <div class="card border-0 product">
                                 <div class="position-relative">
-                                    <img src="<?= base_url('/uploads/FeatureProduct/') ?>` + row.image + `" alt="Facial cleanser">
+                                    <img src="/uploads/FeatureProduct/${product.image}" alt="${product.product_name}">
                                     <div class="card-img-overlay d-flex p-3">
                                         <div class="my-auto w-100 content-change-vertical">
-                                            <!-- Your other product card elements here -->
+                                            <!-- Add to cart, Quick view, Add to wishlist buttons -->
+                                            <a href="#" data-toggle="tooltip" data-placement="left" title="View products" class="add-to-cart ml-auto d-flex align-items-center justify-content-center text-secondary bg-white hover-white bg-hover-secondary w-48px h-48px rounded-circle mb-2">
+                                                <svg class="icon icon-shopping-bag-open-light fs-24">
+                                                    <use xlink:href="#icon-shopping-bag-open-light"></use>
+                                                </svg>
+                                            </a>
+                                            <a href="#" data-toggle="tooltip" data-placement="left" title="Quick view" class="preview QuickView ml-auto d-flex align-items-center justify-content-center cursor-pointer text-secondary bg-white hover-white bg-hover-secondary w-48px h-48px rounded-circle mb-2 d-none" data-product-id="${product.id}">
+                                                <span data-toggle="modal" data-target="#quick-view">
+                                                    <svg class="icon icon-eye-light fs-24">
+                                                        <use xlink:href="#icon-eye-light"></use>
+                                                    </svg>
+                                                </span>
+                                            </a>
+                                            <a href="#" data-toggle="tooltip" data-placement="left" title="Add to wishlist" class="add-to-wishlist ml-auto d-flex align-items-center justify-content-center text-secondary bg-white hover-white bg-hover-secondary w-48px h-48px rounded-circle mb-2" data-product-id="${product.id}">
+                                                <svg class="icon icon-star-light fs-24">
+                                                    <use xlink:href="#icon-star-light"></use>
+                                                </svg>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="card-body px-0 pt-4 text-center">
                                     <p class="card-text font-weight-bold fs-16 mb-1 text-secondary">
                                         <span class="fs-13 font-weight-500 text-decoration-through text-body pr-1">$39.00</span>
-                                        <span>` + row.prize + `</span>
+                                        <span>${product.prize}</span>
                                     </p>
-                                    <h2 class="card-title fs-15 font-weight-500 mb-2"><a href="product-detail.html">` + row.product_name + `</a></h2>
+                                    <!-- Rest of the product card content goes here -->
                                     <div class="d-flex align-items-center justify-content-center flex-wrap">
+                                        <!-- Rating stars and reviews count -->
                                         <ul class="list-inline mb-0 lh-1">
                                             <li class="list-inline-item fs-12 text-primary mr-0"><i class="fas fa-star"></i></li>
                                             <li class="list-inline-item fs-12 text-primary mr-0"><i class="fas fa-star"></i></li>
@@ -881,13 +829,103 @@
                             </div>
                         </div>
                     `;
+                    $('#productContainer').append(productHtml);
                 });
-
-                // Update the productContainer with the new product list
-                var productContainer = document.getElementById('productContainer');
-                if (productContainer) {
-                    productContainer.innerHTML = productList;
-                }
+                $('.add-to-wishlist').on('click', function(e) {
+                    e.preventDefault();
+                    var productId = $(this).data('product-id');
+                    $.ajax({
+                        url: 'add-to-cart',
+                        method: 'POST',
+                        data: {
+                            product_id: productId
+                        },
+                        dataType: 'json',
+                        success: function(response) {
+                            if (response.status === 'success') {
+                                var message = 'Product added to cart.';
+                                var redirectUrl = 'cart-list';
+                                if (response.alreadyAdded) {
+                                    message = 'Product is already in the cart.';
+                                    redirectUrl = 'cart-list';
+                                }
+                                Swal.fire({
+                                    icon: response.alreadyAdded ? 'info' : 'success',
+                                    title: 'Cart',
+                                    text: message,
+                                    showConfirmButton: false,
+                                    timer: 1500
+                                }).then(function() {
+                                    // Redirect to the cart list page after adding the product
+                                    window.location.href = redirectUrl;
+                                });
+                            } else {
+                                // Show an error SweetAlert if the response is not successful
+                                Swal.fire({
+                                    icon: 'error',
+                                    title: 'Error',
+                                    text: response.message
+                                });
+                            }
+                        },
+                        error: function() {
+                            // Show an error SweetAlert if an error occurs during the AJAX request
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Error',
+                                text: 'An error occurred while adding the product to the cart.'
+                            });
+                        }
+                    });
+                });
+                $('.add-to-bag').on('click', function(e) {
+                    var testElement = document.getElementsByClassName('test')[0];
+                    var productId = testElement ? testElement.textContent : 'No test element found';
+                    $.ajax({
+                        url: 'add-to-cart',
+                        method: 'POST',
+                        data: {
+                            product_id: productId
+                        },
+                        dataType: 'json',
+                        success: function(response) {
+                            if (response.status === 'success') {
+                                var message = 'Product added to cart.';
+                                var redirectUrl = 'cart-list';
+                                if (response.alreadyAdded) {
+                                    message = 'Product is already in the cart.';
+                                    redirectUrl = 'cart-list';
+                                }
+                                Swal.fire({
+                                    icon: response.alreadyAdded ? 'info' : 'success',
+                                    title: 'Cart',
+                                    text: message,
+                                    showConfirmButton: false,
+                                    timer: 1500
+                                }).then(function() {
+                                    // Redirect to the cart list page after adding the product
+                                    window.location.href = redirectUrl;
+                                });
+                            } else {
+                                // Show an error SweetAlert if the response is not successful
+                                Swal.fire({
+                                    icon: 'error',
+                                    title: 'Error',
+                                    text: response.message
+                                });
+                            }
+                        },
+                        error: function() {
+                            // Show an error SweetAlert if an error occurs during the AJAX request
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Error',
+                                text: 'An error occurred while adding the product to the cart.'
+                            });
+                        }
+                    });
+                    console.log(productId);
+                });
             },
             error: function(xhr, status, error) {
                 console.error('Error fetching data:', error);
