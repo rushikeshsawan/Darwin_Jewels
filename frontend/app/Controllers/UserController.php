@@ -8,6 +8,7 @@ use App\Models\CategoryModel;
 use App\Models\AddressModel;
 use App\Models\OrderDetailModel;
 use App\Models\PaymentModel;
+use App\Models\UserModel;
 use CodeIgniter\Email\Email;
 use Config\Razorpay;
 use Razorpay\Api\Api;
@@ -21,6 +22,7 @@ class UserController extends BaseController
     protected $categoryModel;
     protected $addressModel;
     protected $OrderDetailModel;
+    protected $userModel;
     protected $session;
     public function __construct()
     {
@@ -28,6 +30,7 @@ class UserController extends BaseController
         $this->productModel = new ProductModel();
         $this->categoryModel = new CategoryModel();
         $this->addressModel = new AddressModel();
+        $this->userModel = new UserModel(); 
         $this->OrderDetailModel = new OrderDetailModel();
         $this->session = \Config\Services::session();
     } 
@@ -35,7 +38,7 @@ class UserController extends BaseController
     public function login()
     {
         // Check if the user is already logged in, redirect to home if logged in
-        $isLoggedIn = $this->session->get('admin');
+        $isLoggedIn = $this->session->get('user');
         if ($isLoggedIn) {
             return redirect()->to('home');
         }
@@ -57,15 +60,15 @@ class UserController extends BaseController
                 if ($this->validate($rules)) {
                     $username = $this->request->getPost('username');
                     $password = $this->request->getPost('password');
-                    $admin = $this->adminModel->where('username', $username)->first();
+                    $user = $this->userModel->where('username', $username)->first();
 
-                    if ($admin && password_verify($password, $admin['password'])) {
-                        if ($admin['active'] == 1) {
-                            $adminData = [
+                    if ($user && password_verify($password, $user['password'])) {
+                        if ($user['active'] == 1) {
+                            $userData = [
                                 'username' => $username,
-                                'id' => $admin['id'],
+                                'id' => $user['id'],
                             ];
-                            $this->session->set('admin', $adminData);
+                            $this->session->set('user', $userData);
                             session()->setTempdata('success', 'Successfully logged in', 1);
                             return redirect()->to('checkout');
                         } else {
@@ -263,7 +266,7 @@ class UserController extends BaseController
     // Controller method to handle AJAX request for placing the order
     public function placeOrder()
     {
-        $loggedInUserId = $this->session->get('admin')['id'];
+        $loggedInUserId = $this->session->get('user')['id'];
         $lastOrder = $this->OrderDetailModel->selectMax('order_id')->first();
         $lastOrderId = $lastOrder['order_id'];
         $newOrderId = $lastOrderId + 1;
@@ -336,7 +339,7 @@ class UserController extends BaseController
 
     public function getUserOrders()
     {
-        $loggedInUserId = $this->session->get('admin')['id'];
+        $loggedInUserId = $this->session->get('user')['id'];
         $data['orders'] = $this->OrderDetailModel->getUserOrders($loggedInUserId);
         return view('order_list', $data);
     }

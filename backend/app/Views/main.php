@@ -850,6 +850,11 @@
                             </a>
                         </li> 
                         <li class="nav-item">
+                            <a class="nav-link menu-link" href="user">
+                                <i class="bi bi-command"></i> <span data-key="t-overview">User</span>
+                            </a>
+                        </li> 
+                        <li class="nav-item">
                             <a class="nav-link menu-link" href="product">
                                 <i class="bi bi-command"></i> <span data-key="t-overview">Product</span>
                             </a>
@@ -857,6 +862,11 @@
                         <li class="nav-item">
                             <a class="nav-link menu-link" href="categorylist">
                                 <i class="bi bi-command"></i> <span data-key="t-overview">Category</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="order">
+                                <i class="bi bi-command"></i> <span data-key="t-overview">Order</span>
                             </a>
                         </li>
                         <li class="nav-item">

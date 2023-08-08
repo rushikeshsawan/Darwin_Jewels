@@ -734,8 +734,9 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.css">
 <script src="js/theme.js"></script>
 <script src="/js/home.js"></script>
-<!-- <script>
+<script>
     function getProducts(category_id) {
+        alert("hii")
         $.ajax({
             url: "<?php echo base_url('getProductsByCategory'); ?>",
             type: "POST",
@@ -747,36 +748,68 @@
                 console.log(response);
                 var html = '';
                 $.each(response, function(index, item) {
-                    html += '<div class="col-xl-4 col-lg-4 col-md-6">';
-                    html += '    <div class="card border-0 product mb-6" data-animate="fadeInUp">';
-                    html += '        <div class="position-relative">';
-                    html += '            <img src="<?= base_url('uploads/FeatureProduct/'); ?>' + item.image + '" alt="' + item.product_name + '">';
-                    html += '            <div class="card-img-overlay d-flex p-3 flex-column">';
-                    html += '            </div>';
-                    html += '        </div>';
-                    html += '    </div>';
+                    html += '<div class="col-lg-3 col-sm-6 mb-5">';
+                    html += '<div class="card border-0 product">';
+                    html += '<div class="position-relative">';
+                    html += '<img src="<?= base_url('uploads/FeatureProduct/'); ?>' + item.image + '" alt="' + item.product_name + '">';
+                    html += '<div class="card-img-overlay d-flex p-3">';
+                    html += ' <div class="my-auto w-100 content-change-vertical">';
+                    html += '  <a href="product-detail.html" data-toggle="tooltip" data-placement="left" title="View products" class="add-to-cart ml-auto d-flex align-items-center justify-content-center text-secondary bg-white hover-white bg-hover-secondary w-48px h-48px rounded-circle mb-2">';
+                    html += '<svg class="icon icon-shopping-bag-open-light fs-24">';
+                    html += '<use xlink:href="#icon-shopping-bag-open-light"></use>';
+                    html += '</svg>';
+                    html += '</a>';
+                    html += '      <a href="#" data-toggle="tooltip" data-placement="left" title="Quick view" class="preview QuickView ml-auto d-md-flex align-items-center justify-content-center cursor-pointer text-secondary bg-white hover-white bg-hover-secondary w-48px h-48px rounded-circle mb-2 d-none" data-product-id=" ' + item.id + '">';
+                    html += '<span data-toggle="modal" data-target="#quick-view">';
+                    html += '<svg class="icon icon-eye-light fs-24">';
+                    html += ' <use xlink:href="#icon-eye-light"></use>';
+                    html += '</svg>';
+                    html += '</span>';
+                    html += '</a>';
+                    html += ' <a href="" data-toggle="tooltip" data-placement="left" title="Add to wishlist" class="add-to-wishlist ml-auto d-flex align-items-center justify-content-center text-secondary bg-white hover-white bg-hover-secondary w-48px h-48px rounded-circle mb-2" data-product-id=" ' + item.id + '">';
+                    html += '<svg class="icon icon-star-light fs-24">';
+                    html += '<use xlink:href="#icon-star-light"></use>';
+                    html += '</svg>';
+                    html += '</a>';
+
                     html += '</div>';
+                    html += ' </div>';
+                    html += '</div>';
+                    html += '</a>';
+                    html += '  <div class="card-body px-0 pt-4 text-center">';
+                    html += ' <span class="fs-13 font-weight-500 text-decoration-through text-body pr-1">$39.00</span>';
+                    html += '<span>' + item.prize + '</span>';
+                    html += '</p>';
+                    html += ' <h2 class="card-title fs-15 font-weight-500 mb-2"><a href="product-detail.html">';
+
+                    html += ' ' + item.product_name + '';
+                    html += '</a>';
+                    html += '</h2>';
+                    html += '</div>';
+                    html += '</div>';
+                    html += ' </div>';
+
+
                 });
                 $('#productContainer').html(html);
             },
             error: function(xhr, status, error) {
-                console.log(xhr.responseText); 
+                console.log(xhr.responseText);
             }
         });
     }
-</script>  -->
-<!-- Add this script to your view -->
+</script>
 <script>
-    // JavaScript function to handle the AJAX request for filtering products
     function applyPriceFilter(sort) {
         $.ajax({
-            url: '/price-filter', // Modify this URL based on your application setup
+            url: '/price-filter',
             type: 'GET',
             data: {
                 sort: sort
             },
             dataType: 'json',
             success: function(data) {
+                console.log(data)
                 $('#productContainer').empty();
                 $.each(data.Product, function(index, product) {
                     var productHtml = `

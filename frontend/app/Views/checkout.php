@@ -218,7 +218,7 @@
                 key: 'rzp_test_GGXHzqc5bmnUdI',
                 amount: amountInPaise,
                 currency: 'INR',
-                name: 'Your Company Name',
+                name: 'Retail',
                 description: 'Payment for your order',
                 handler: function(response) {
                     const payment_id = response.razorpay_payment_id;

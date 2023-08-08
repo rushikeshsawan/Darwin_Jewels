@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Models\AdminModel;
 use App\Models\ProductModel;
 use App\Models\CategoryModel;
+use App\Models\OrderDetailModel;
 use CodeIgniter\Email\Email;
 
 class AdminController extends BaseController
@@ -12,12 +13,14 @@ class AdminController extends BaseController
     protected $adminModel;
     protected $productModel;
     protected $categoryModel;
+    protected $orderModel;
     protected $session;
     public function __construct()
     {
         $this->adminModel = new AdminModel();
         $this->productModel = new ProductModel();
         $this->categoryModel = new CategoryModel();
+        $this->orderModel = new OrderDetailModel();
         $this->session = \Config\Services::session();
     }
     public function index()
@@ -238,6 +241,14 @@ class AdminController extends BaseController
         $categoryCount = $this->categoryModel->getTotalCategoriesCount();
         $categoryPercentage = ($categoryCount / $totalProductsCount) * 100;
 
+        $orderCount = $this->orderModel->getTotalOrderCount();
+        $countUniqueShippedOrders = $this->orderModel->countUniqueShippedOrders();
+        $countUniqueCanceledOrders = $this->orderModel->countUniqueCanceledOrders(); 
+        $countUniqueDeliveredOrders = $this->orderModel->countUniqueDeliveredOrders();
+        $countUniqueAcceptedOrders = $this->orderModel->countUniqueAcceptedOrders();   
+        
+   
+
         return view('dashboard', [
             'productCount' => $productCount,
             'productPercentage' => $productPercentage,
@@ -245,6 +256,11 @@ class AdminController extends BaseController
             'AdminsPercentage' => $AdminsPercentage,
             'categoryCount' => $categoryCount,
             'categoryPercentage' => $categoryPercentage,
+            'orderCount' => $orderCount,
+            'countUniqueShippedOrders' => $countUniqueShippedOrders,
+            'countUniqueCanceledOrders' => $countUniqueCanceledOrders,
+            'countUniqueDeliveredOrders' => $countUniqueDeliveredOrders,
+            'countUniqueAcceptedOrders' => $countUniqueAcceptedOrders,
         ]);
     }
 }

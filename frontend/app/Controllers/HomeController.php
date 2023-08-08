@@ -72,10 +72,10 @@ class HomeController extends Controller
     
     public function checkout()
     {
-        $isLoggedIn = $this->session->get('admin');
+        $isLoggedIn = $this->session->get('user');
         if ($isLoggedIn) {
             $cartItems = $this->session->get('cartItems') ?? [];
-            $userId = $this->session->get('admin')['id'];
+            $userId = $this->session->get('user')['id'];
             $addressData = $this->addressModel->where('user_id', $userId)->findAll();
             $data['address'] = $addressData;
             $data['cartItems'] = $cartItems;

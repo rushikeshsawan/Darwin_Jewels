@@ -50,19 +50,28 @@ $routes->post('category/update', 'CategoryController::update');
 $routes->get('category/delete/(:num)', 'CategoryController::delete/$1');
 $routes->post('/category/update-rating', 'CategoryController::updateRating');
 
-// $routes->get('productlist', 'ProductController::list'); 
-// $routes->post('productstore', 'ProductController::store'); 
-// $routes->get('productedit/(:num)', 'ProductController::edit/$1');
-// $routes->get('product/edit/(:num)', 'ProductController::edit/$1');
-// $routes->post('productupdate', 'ProductController::update');
-// $routes->get('productdelete/(:num)', 'ProductController::delete/$1');
-// $routes->post('rating/store', 'ProductController::storeRating');
+ 
 $routes->get('/product', 'ProductController::index');
 $routes->get('/product/getProductList', 'ProductController::getProductList');
 $routes->get('/product/getProduct/(:num)', 'ProductController::getProduct/$1');
 $routes->post('/product/saveProduct', 'ProductController::saveProduct');
 $routes->delete('/product/deleteProduct/(:num)', 'ProductController::deleteProduct/$1');
 $routes->add('product/saveRating/(:num)', 'ProductController::saveRating/$1');
+
+$routes->add('orderlist', 'OrderController::index');
+$routes->add('getOrderDetails', 'OrderController::getOrderDetails');
+$routes->post('update_order_status', 'OrderController::updateOrderStatus');
+$routes->post('increase_wallet', 'OrderController::increase_wallet');
+
+// $routes->post('fetch_invoice_data', 'OrderController::fetch_invoice_data');
+$routes->add('invoice/(:num)', 'OrderController::fetch_invoice_data/$1');
+$routes->get('user', 'UserController::index'); 
+$routes->add('userlogin', 'UserController::login_user'); 
+$routes->add('orders', 'UserController::getUserOrders');  
+
+
+
+
 
 // $routes->get('/', 'SendMail::index');
 // $routes->match(['get', 'post'], 'SendMail/sendMail', 'SendMail::sendMail');

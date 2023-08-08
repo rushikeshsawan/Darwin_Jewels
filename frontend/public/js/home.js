@@ -1,7 +1,7 @@
 $(document).ready(function() {
         $('.QuickView').on('click', function(e) {
             e.preventDefault();
-            var productId = $(this).data('product-id');
+            var productId = $(this).data('product-id'); 
             alert(productId)
             $.ajax({
                 url: 'quickview', // The URL mapped in the Routes.php file

@@ -8,7 +8,7 @@ class AuthGuard implements FilterInterface
 {
     public function before(RequestInterface $request, $arguments = null)
     {
-        if (!session()->get('admin'))
+        if (!session()->get('user'))
         {
             return redirect()
                 ->to('userlogin');
