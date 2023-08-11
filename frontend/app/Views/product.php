@@ -634,9 +634,8 @@
                         </div>
                     </div>
                     <div class="col-md-6 pl-xl-6 pr-xl-8">
-                        <p class="d-flex align-items-center mb-3">
-                            <span class="text-line-through">$39.00</span>
-                            <span class="fs-18 text-secondary font-weight-bold ml-3">₹ 3,58,755</span>
+                        <p class="d-flex align-items-center mb-3"> 
+                            <span class="fs-18 text-secondary font-weight-bold ml-3 ProductPrize">₹ 3,58,755</span>
                             <span class="badge badge-primary fs-16 ml-4 font-weight-600 px-3">20%</span>
                         </p>
                         <h2 class="fs-24 mb-2 product-title">Geometric Fleur CZ Diamond Ring</h2>
@@ -733,10 +732,9 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.css">
 <script src="js/theme.js"></script>
-<script src="/js/home.js"></script>
 <script>
     function getProducts(category_id) {
-        alert("hii")
+        alert("hii1")
         $.ajax({
             url: "<?php echo base_url('getProductsByCategory'); ?>",
             type: "POST",
@@ -759,12 +757,10 @@
                     html += '<use xlink:href="#icon-shopping-bag-open-light"></use>';
                     html += '</svg>';
                     html += '</a>';
-                    html += '      <a href="#" data-toggle="tooltip" data-placement="left" title="Quick view" class="preview QuickView ml-auto d-md-flex align-items-center justify-content-center cursor-pointer text-secondary bg-white hover-white bg-hover-secondary w-48px h-48px rounded-circle mb-2 d-none" data-product-id=" ' + item.id + '">';
-                    html += '<span data-toggle="modal" data-target="#quick-view">';
+                    html += '<a href="#" class="preview QuickView ml-auto d-md-flex align-items-center justify-content-center cursor-pointer text-secondary bg-white hover-white bg-hover-secondary w-48px h-48px rounded-circle mb-2" data-product-id="' + item.id + '">';
                     html += '<svg class="icon icon-eye-light fs-24">';
-                    html += ' <use xlink:href="#icon-eye-light"></use>';
+                    html += '<use xlink:href="#icon-eye-light"></use>';
                     html += '</svg>';
-                    html += '</span>';
                     html += '</a>';
                     html += ' <a href="" data-toggle="tooltip" data-placement="left" title="Add to wishlist" class="add-to-wishlist ml-auto d-flex align-items-center justify-content-center text-secondary bg-white hover-white bg-hover-secondary w-48px h-48px rounded-circle mb-2" data-product-id=" ' + item.id + '">';
                     html += '<svg class="icon icon-star-light fs-24">';
@@ -792,6 +788,82 @@
 
                 });
                 $('#productContainer').html(html);
+                $('.QuickView').on('click', function(e) {
+                    alert("product")
+                    e.preventDefault();
+                    var productId = $(this).data('product-id');
+                    alert(productId)
+                    $.ajax({
+                        url: 'quickview', // The URL mapped in the Routes.php file
+                        method: 'POST',
+                        data: {
+                            product_id: productId
+                        }, // Send the product ID to the server
+                        dataType: 'json',
+                        success: function(response) {
+                            console.log(response)
+                            $('#quick-view .test').text(response.id);
+                            $('#quick-view .ProductPrize').text(response.prize);
+                            $('#quick-view .product-title').text(response.product_name);
+                            $('#quick-view .product-image').attr('src', '/uploads/FeatureProduct/' + response.image);
+                            $('#quick-view .view-slider-for img').each(function(index) {
+                                $(this).attr('src', '/uploads/FeatureProduct/' + response.image);
+                            });
+                            $('#quick-view').modal('show');
+                        },
+                        error: function() {
+                            alert('An error occurred while fetching the product details.');
+                        }
+                    });
+                });
+                $('.add-to-bag').on('click', function(e) {
+        var testElement = document.getElementsByClassName('test')[0];  
+        var productId = testElement ? testElement.textContent : 'No test element found';
+        $.ajax({
+            url: 'add-to-cart',  
+            method: 'POST',
+            data: {
+                product_id: productId
+            },
+            dataType: 'json',
+            success: function(response) {
+                if (response.status === 'success') {
+                    var message = 'Product added to cart.';
+                    var redirectUrl = 'cart-list';
+                    if (response.alreadyAdded) {
+                        message = 'Product is already in the cart.';
+                        redirectUrl = 'cart-list';
+                    }
+                    Swal.fire({
+                        icon: response.alreadyAdded ? 'info' : 'success',
+                        title: 'Cart',
+                        text: message,
+                        showConfirmButton: false,
+                        timer: 1500
+                    }).then(function() {
+                        // Redirect to the cart list page after adding the product
+                        window.location.href = redirectUrl;
+                    });
+                } else {
+                    // Show an error SweetAlert if the response is not successful
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error',
+                        text: response.message
+                    });
+                }
+            },
+            error: function() {
+                // Show an error SweetAlert if an error occurs during the AJAX request
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'An error occurred while adding the product to the cart.'
+                });
+            }
+        });
+        console.log(productId);
+    });
             },
             error: function(xhr, status, error) {
                 console.log(xhr.responseText);
@@ -812,6 +884,7 @@
                 console.log(data)
                 $('#productContainer').empty();
                 $.each(data.Product, function(index, product) {
+                    console.log(data.Product)
                     var productHtml = `
                         <!-- Code for a single product card -->
                         <div class="col-lg-3 col-sm-6 mb-5" >
@@ -966,5 +1039,5 @@
         });
     }
 </script>
-
+<script src="/js/home.js"></script> 
 <?= $this->endSection() ?>

@@ -30,10 +30,10 @@ class UserController extends BaseController
         $this->productModel = new ProductModel();
         $this->categoryModel = new CategoryModel();
         $this->addressModel = new AddressModel();
-        $this->userModel = new UserModel(); 
+        $this->userModel = new UserModel();
         $this->OrderDetailModel = new OrderDetailModel();
         $this->session = \Config\Services::session();
-    } 
+    }
 
     public function login()
     {
@@ -155,98 +155,32 @@ class UserController extends BaseController
         // Send a response indicating successful payment verification
         return $this->response->setJSON(['success' => true, 'message' => 'Payment verified successfully']);
     }
-    // public function verifyPayment()
-    // {
-    //     try {
-    //         // Get the payment details from the AJAX request
-    //         $paymentId = $this->request->getPost('payment_id');
-    //         $orderId = $this->request->getPost('order_id');
-    //         $signature = $this->request->getPost('signature');
-
-    //         $razorpayKeyId = 'rzp_test_GGXHzqc5bmnUdI'; // Replace with your actual Razorpay Key ID
-    //         $razorpayKeySecret = '8kfCJqLqQVqPcMet5NKBqaB2'; // Replace with your actual Razorpay Key Secret
-
-    //         // Initialize the Razorpay API with your key ID and key secret
-    //         $razorpay = new Api($razorpayKeyId, $razorpayKeySecret);
-
-    //         // Verify the payment signature
-    //         $attributes = array(
-    //             'order_id' => $orderId,
-    //             'payment_id' => $paymentId,
-    //             'signature' => $signature,
-    //         );
-
-    //         $razorpay->utility->verifyPaymentSignature($attributes);
-
-    //         // Payment signature verification successful
-    //         $response = [
-    //             'success' => true,
-    //             'message' => 'Payment successful. Your order will be processed shortly.',
-    //         ];
-    //         return $this->response->setJSON($response); // Correct JSON response for successful payment
-
-    //     } catch (\Exception $e) {
-    //         // Log the error for debugging purposes
-    //         log_message('error', 'Payment verification error: ' . $e->getMessage());
-
-    //         // If there was an error, return an error response
-    //         $response = [
-    //             'success' => false,
-    //             'message' => 'Payment verification failed. Please try again later.',
-    //         ];
-    //         return $this->response->setJSON($response)->setStatusCode(ResponseInterface::HTTP_INTERNAL_SERVER_ERROR);
-    //     }
-    // }
-    // public function verifyPayment()
-    // {
-    //     // Load the Razorpay configuration
-    //     $razorpayConfig = new Razorpay();
-
-    //      $keyId = $razorpayConfig->keyId;
-    //     $keySecret = $razorpayConfig->keySecret;
-
-    //      if ($keyId === 'received_key_id' && $keySecret === 'received_key_secret') { 
-    //         header("Location: https://example.com/myOtherPage.php"); 
-    //     } else { 
-    //         header("Location: https://example.com/myOtherPage.php");
-    //     }
-    // }
     public function initiatePayment()
     {
         // Get the necessary data for payment initiation from the form
         $selectedAddressId = $this->request->getPost('address_id');
-        $totalPrice = $this->request->getPost('total_price');
-
-        // Create an order ID using your own logic (example below)
-        $orderId = uniqid(); // Generate a unique order ID (you can use your own logic)
-
-        // Initialize Razorpay API with your key ID and key secret
-        $razorpayKeyId = 'rzp_test_GGXHzqc5bmnUdI'; // Replace with your actual Razorpay Key ID
-        $razorpayKeySecret = '8kfCJqLqQVqPcMet5NKBqaB2'; // Replace with your actual Razorpay Key Secret
+        $totalPrice = $this->request->getPost('total_price'); 
+         $orderId = uniqid(); 
+        $razorpayKeyId = 'rzp_test_GGXHzqc5bmnUdI'; 
+        $razorpayKeySecret = '8kfCJqLqQVqPcMet5NKBqaB2'; 
         $razorpay = new Api($razorpayKeyId, $razorpayKeySecret);
 
         // Create an order
         try {
             $orderData = [
-                'amount' => $totalPrice * 100, // Amount in paise (Rupees * 100)
+                'amount' => $totalPrice * 100,  
                 'currency' => 'INR',
-                'receipt' => $orderId, // Your unique order ID
-                'payment_capture' => 1, // Auto-capture payment on success
-            ];
-
-            $order = $razorpay->order->create($orderData);
-
-            // The order ID will be used in the Razorpay checkout form
-            $orderId = $order['id'];
-
-            // Now return the order ID to the client-side for initiating payment
+                'receipt' => $orderId,  
+                'payment_capture' => 1,  
+            ]; 
+            $order = $razorpay->order->create($orderData); 
+            $orderId = $order['id']; 
             $response = [
                 'success' => true,
                 'order_id' => $orderId,
             ];
             return $this->response->setJSON($response);
-        } catch (\Exception $e) {
-            // Handle the error, show an error message, or log it
+        } catch (\Exception $e) { 
             $response = [
                 'success' => false,
                 'message' => 'Error creating Razorpay order.',
@@ -255,7 +189,6 @@ class UserController extends BaseController
         }
     }
 
-    // Controller method to handle AJAX request to clear cart items from session
     public function clearCartItems()
     {
         $session = \Config\Services::session();
@@ -263,7 +196,6 @@ class UserController extends BaseController
         return $this->response->setJSON(['success' => true]);
     }
 
-    // Controller method to handle AJAX request for placing the order
     public function placeOrder()
     {
         $loggedInUserId = $this->session->get('user')['id'];
@@ -276,6 +208,8 @@ class UserController extends BaseController
         $quantity = $this->request->getPost('quantity');
         $Qprice = $this->request->getPost('Qprice');
         $payment_id = $this->request->getPost('payment_id');
+        $useWallet = $this->request->getPost('useWallet');
+
         $sanitizedQprice = array_map(function ($qprice) {
             return filter_var($qprice, FILTER_SANITIZE_NUMBER_INT);
         }, $Qprice);
@@ -290,7 +224,8 @@ class UserController extends BaseController
                 'quantity' => $quantity[$index],
                 'Qprice' => $sanitizedQprice[$index],
                 'total_price' => $totalPrice,
-                'payment_id' => $payment_id
+                'payment_id' => $payment_id,
+                'useWallet' => $useWallet,
             ];
         }
         $inserted = $this->OrderDetailModel->insertBatch($orderData);
@@ -301,41 +236,18 @@ class UserController extends BaseController
             return $this->response->setJSON(['success' => false, 'message' => 'Failed to place order.']);
         }
     }
-
-    // public function createOrder()
-    // {
-    //     // Get the POST data sent from the AJAX request
-    //     $addressId = $this->request->getPost('address_id');
-    //     $productIds = $this->request->getPost('product_id');
-    //     $quantities = $this->request->getPost('quantity');
-    //     $qPrices = $this->request->getPost('Qprice');
-    //     $totalPrice = $this->request->getPost('total_price');
-
-    //     // Save the order details in the database
-    //     $OrderDetailModel = new OrderDetailModel();
-    //     $orderId = $OrderDetailModel->saveOrder($addressId, $productIds, $quantities, $qPrices, $totalPrice);
-
-    //     // Initialize Razorpay API with your API Key and API Secret
-    //     $api = new Api('rzp_test_VPRt7vsgU7Oaf2', 'x9R37MwwRSHEGtUI9XtzffhC');
-
-    //     // Create an order in Razorpay
-    //     $orderData = [
-    //         'receipt' => $orderId,
-    //         'amount' => $totalPrice * 100, // Amount must be in paise
-    //         'currency' => 'INR',
-    //         'payment_capture' => 1 // Auto capture the payment
-    //     ];
-
-    //     try {
-    //         $order = $api->order->create($orderData);
-    //     } catch (\Exception $e) {
-    //         return $this->respond(['error' => $e->getMessage()], 500);
-    //     }
-
-    //     // Return the order ID to the AJAX request
-    //     return $this->respond(['order_id' => $order->id]);
-    // }
-
+   
+    public function update_wallet() {
+        $wallet = $this->request->getPost('wallet');
+        $userId = $this->session->get('user')['id'];
+        
+        $userModel = new UserModel();
+        $userModel->update($userId, ['wallet' => $wallet]);
+        
+        // You might want to return a JSON response indicating success or failure.
+        return $this->response->setJSON(['message' => 'Wallet updated successfully']);
+    }    
+    
 
     public function getUserOrders()
     {
@@ -349,5 +261,16 @@ class UserController extends BaseController
         $orderDetailModel = new OrderDetailModel();
         $orderDetails = $orderDetailModel->getOrderDetailsById($orderId);
         return $this->response->setJSON($orderDetails);
+    }
+    public function get_payment_options()
+    {
+        $userModel = new UserModel();
+
+        $loggedInUserId = $this->session->get('user')['id'];
+        $walletBalance = $userModel->getWalletBalanceByUsername($loggedInUserId);
+        $response = array(
+            'walletBalance' => $walletBalance
+        );
+        return $this->response->setJSON($response);
     }
 }

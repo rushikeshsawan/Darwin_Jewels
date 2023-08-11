@@ -1,5 +1,6 @@
 $(document).ready(function() {
         $('.QuickView').on('click', function(e) {
+            alert('js')
             e.preventDefault();
             var productId = $(this).data('product-id'); 
             alert(productId)
@@ -13,6 +14,7 @@ $(document).ready(function() {
                 success: function(response) {
                     console.log(response)
                     $('#quick-view .test').text(response.id);
+                    $('#quick-view .ProductPrize').text(response.prize); 
                     $('#quick-view .product-title').text(response.product_name);
                     $('#quick-view .product-image').attr('src', '/uploads/FeatureProduct/' + response.image);
                     $('#quick-view .view-slider-for img').each(function(index) {

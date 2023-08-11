@@ -6,7 +6,7 @@ use CodeIgniter\Model;
 class OrderDetailModel extends Model
 {
     protected $table = 'order_details';
-    protected $allowedFields = ['id','order_id','user_id','product_id','signature','payment_id','quantity', 'Qprice', 'address_id', 'total_price','status', 'created_at'];  
+    protected $allowedFields = ['id','order_id','user_id','product_id','signature','payment_id','quantity', 'Qprice', 'address_id', 'total_price','useWallet','status', 'created_at'];  
     public function insertOrder($data)
     {
         return $this->insert($data);

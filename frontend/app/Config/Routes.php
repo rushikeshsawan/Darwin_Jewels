@@ -60,11 +60,15 @@ $routes->add('clearCartItems', 'UserController::clearCartItems');
 $routes->add('getOrderDetails', 'UserController::getOrderDetails');
 
 $routes->post('placeOrder', 'UserController::placeOrder'); 
+$routes->post('update_wallet','UserController::update_wallet'); 
+
   
 
 $routes->post('checkout/addToSession', 'HomeController::addToSession');
 $routes->add('userlogin', 'UserController::login');
 $routes->get('cart-list', 'HomeController::cartList');
+$routes->add('get_payment_options', 'UserController::get_payment_options');
+
 
 
 /*

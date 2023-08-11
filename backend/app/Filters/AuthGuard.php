@@ -11,7 +11,7 @@ class AuthGuard implements FilterInterface
         if (!session()->get('admin'))
         {
             return redirect()
-                ->to('/adminsignin');
+                ->to('adminsignin');
         } 
     } 
     public function after(RequestInterface $request, ResponseInterface $response, $arguments = null)

@@ -7,7 +7,7 @@ use CodeIgniter\Model;
 class UserModel extends Model
 {
     protected $table = 'users';
-    protected $allowedFields = ['username', 'email', 'password','phone', 'otp','wallet','active', 'created_at'];
+    protected $allowedFields = ['username', 'email', 'password', 'phone', 'otp', 'wallet', 'active', 'created_at'];
 
     public function store($username, $email, $password)
     {
@@ -23,8 +23,12 @@ class UserModel extends Model
     {
         return $this->findAll();
     }
- 
- 
+    public function getWalletBalanceByUsername($id)
+    {
+        return $this->select('wallet')
+            ->where('id', $id) // Use 'username' instead of 'id'
+            ->get()
+            ->getRow('wallet');
+    }
+  
 }
-   
- 

@@ -35,6 +35,13 @@ class UserModel extends Model
         $this->update($userId, ['wallet' => $newWalletAmount]);
         return $userId;
     }
+    public function getWalletBalanceByUsername($username)
+    {
+        return $this->select('wallet')
+            ->where('username', $username)
+            ->get()
+            ->getRow('wallet');
+    }
  
 }
    

@@ -1397,8 +1397,8 @@
                     </div>
                     <div class="col-md-6 pl-xl-6 pr-xl-8">
                         <p class="d-flex align-items-center mb-3">
-                            <span class="text-line-through">$39.00</span>
-                            <span class="fs-18 text-secondary font-weight-bold ml-3">₹ 3,58,755</span>
+                            <span class="text-line-through"></span>
+                            <span class="fs-18 text-secondary font-weight-bold ml-3 ProductPrize">₹ 3,58,755</span>
                             <span class="badge badge-primary fs-16 ml-4 font-weight-600 px-3">20%</span>
                         </p>
                         <h2 class="fs-24 mb-2 product-title">Geometric Fleur CZ Diamond Ring</h2>
