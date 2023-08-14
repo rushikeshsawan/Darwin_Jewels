@@ -1,0 +1,1041 @@
+CRITICAL - 2023-08-11 07:18:40 --> Undefined property: stdClass::$payment_id
+in APPPATH\Views\Order\bill.php on line 94.
+ 1 APPPATH\Views\Order\bill.php(94): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$payment_id', 'APPPATH\\Views\\Order\\bill.php', 94)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Order\\bill.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Order/bill', [], true)
+ 5 APPPATH\Controllers\OrderController.php(70): view('Order/bill', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->fetch_invoice_data('160')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-11 07:19:50 --> Undefined property: stdClass::$payment_id
+in APPPATH\Views\Order\bill.php on line 94.
+ 1 APPPATH\Views\Order\bill.php(94): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$payment_id', 'APPPATH\\Views\\Order\\bill.php', 94)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Order\\bill.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Order/bill', [], true)
+ 5 APPPATH\Controllers\OrderController.php(70): view('Order/bill', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->fetch_invoice_data('160')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-11 07:19:53 --> Undefined property: stdClass::$payment_id
+in APPPATH\Views\Order\bill.php on line 94.
+ 1 APPPATH\Views\Order\bill.php(94): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$payment_id', 'APPPATH\\Views\\Order\\bill.php', 94)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Order\\bill.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Order/bill', [], true)
+ 5 APPPATH\Controllers\OrderController.php(70): view('Order/bill', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->fetch_invoice_data('160')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-11 09:50:27 --> Undefined variable $useWallet
+in APPPATH\Views\Order\bill.php on line 113.
+ 1 APPPATH\Views\Order\bill.php(113): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $useWallet', 'APPPATH\\Views\\Order\\bill.php', 113)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Order\\bill.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Order/bill', [], true)
+ 5 APPPATH\Controllers\OrderController.php(70): view('Order/bill', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->fetch_invoice_data('152')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-11 10:45:53 --> Class "Dompdf\Dompdf\Options" not found
+in APPPATH\Controllers\OrderController.php on line 69.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->fetch_invoice_data('154')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-11 10:46:47 --> Class "Dompdf\Dompdf\Options" not found
+in APPPATH\Controllers\OrderController.php on line 69.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->fetch_invoice_data('154')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-11 10:48:57 --> Call to undefined method Dompdf\Dompdf::set()
+in APPPATH\Controllers\OrderController.php on line 70.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->fetch_invoice_data('154')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-08-11 11:49:07 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-10, 10' at line 7 in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `od`.`id...', 0)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `od`.`id...')
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `od`.`id...')
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `od`.`id...', Array, false)
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Models\OrderDetailModel.php(85): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\OrderController.php(37): App\Models\OrderDetailModel->getOrderDetailsByIdPaginated(NULL, NULL)
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\OrderController->index()
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-08-11 11:49:07 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-10, 10' at line 7
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `od`.`id` AS `order_detail_id`, `p`.`id` AS `product_id`, `p`.`prize`, `p`.`product_name`, `p`.`image`, `p`.`rating`, `a`.`id` AS `admin_id`, `a`.`email`, `a`.`username`, `od`.`order_id`, `od`.`quantity`, `od`.`payment_id`, `od`.`useWallet`, `od`.`Qprice`, `od`.`total_price`, `od`.`created_at`, `addr`.`id` AS `address_id`, `addr`.`address`
+FROM `order_details` `od`
+JOIN `products` `p` ON `od`.`product_id` = `p`.`id`
+JOIN `admin` `a` ON `od`.`user_id` = `a`.`id`
+JOIN `address` `addr` ON `od`.`address_id` = `addr`.`id`
+WHERE `od`.`order_id` IS NULL
+ LIMIT -10, 10', [], false)
+ 2 APPPATH\Models\OrderDetailModel.php(85): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\OrderController.php(37): App\Models\OrderDetailModel->getOrderDetailsByIdPaginated(null, null)
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-08-11 11:50:57 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-10, 10' at line 7 in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `od`.`id...', 0)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `od`.`id...')
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `od`.`id...')
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `od`.`id...', Array, false)
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Models\OrderDetailModel.php(85): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\OrderController.php(37): App\Models\OrderDetailModel->getOrderDetailsByIdPaginated(NULL, NULL)
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\OrderController->index()
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-08-11 11:50:57 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-10, 10' at line 7
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `od`.`id` AS `order_detail_id`, `p`.`id` AS `product_id`, `p`.`prize`, `p`.`product_name`, `p`.`image`, `p`.`rating`, `a`.`id` AS `admin_id`, `a`.`email`, `a`.`username`, `od`.`order_id`, `od`.`quantity`, `od`.`payment_id`, `od`.`useWallet`, `od`.`Qprice`, `od`.`total_price`, `od`.`created_at`, `addr`.`id` AS `address_id`, `addr`.`address`
+FROM `order_details` `od`
+JOIN `products` `p` ON `od`.`product_id` = `p`.`id`
+JOIN `admin` `a` ON `od`.`user_id` = `a`.`id`
+JOIN `address` `addr` ON `od`.`address_id` = `addr`.`id`
+WHERE `od`.`order_id` IS NULL
+ LIMIT -10, 10', [], false)
+ 2 APPPATH\Models\OrderDetailModel.php(85): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\OrderController.php(37): App\Models\OrderDetailModel->getOrderDetailsByIdPaginated(null, null)
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-08-11 11:50:58 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-10, 10' at line 7 in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `od`.`id...', 0)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `od`.`id...')
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `od`.`id...')
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `od`.`id...', Array, false)
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Models\OrderDetailModel.php(85): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\OrderController.php(37): App\Models\OrderDetailModel->getOrderDetailsByIdPaginated(NULL, NULL)
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\OrderController->index()
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-08-11 11:50:58 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-10, 10' at line 7
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `od`.`id` AS `order_detail_id`, `p`.`id` AS `product_id`, `p`.`prize`, `p`.`product_name`, `p`.`image`, `p`.`rating`, `a`.`id` AS `admin_id`, `a`.`email`, `a`.`username`, `od`.`order_id`, `od`.`quantity`, `od`.`payment_id`, `od`.`useWallet`, `od`.`Qprice`, `od`.`total_price`, `od`.`created_at`, `addr`.`id` AS `address_id`, `addr`.`address`
+FROM `order_details` `od`
+JOIN `products` `p` ON `od`.`product_id` = `p`.`id`
+JOIN `admin` `a` ON `od`.`user_id` = `a`.`id`
+JOIN `address` `addr` ON `od`.`address_id` = `addr`.`id`
+WHERE `od`.`order_id` IS NULL
+ LIMIT -10, 10', [], false)
+ 2 APPPATH\Models\OrderDetailModel.php(85): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\OrderController.php(37): App\Models\OrderDetailModel->getOrderDetailsByIdPaginated(null, null)
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-08-11 11:50:58 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-10, 10' at line 7 in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `od`.`id...', 0)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `od`.`id...')
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `od`.`id...')
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `od`.`id...', Array, false)
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Models\OrderDetailModel.php(85): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\OrderController.php(37): App\Models\OrderDetailModel->getOrderDetailsByIdPaginated(NULL, NULL)
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\OrderController->index()
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-08-11 11:50:58 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-10, 10' at line 7
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `od`.`id` AS `order_detail_id`, `p`.`id` AS `product_id`, `p`.`prize`, `p`.`product_name`, `p`.`image`, `p`.`rating`, `a`.`id` AS `admin_id`, `a`.`email`, `a`.`username`, `od`.`order_id`, `od`.`quantity`, `od`.`payment_id`, `od`.`useWallet`, `od`.`Qprice`, `od`.`total_price`, `od`.`created_at`, `addr`.`id` AS `address_id`, `addr`.`address`
+FROM `order_details` `od`
+JOIN `products` `p` ON `od`.`product_id` = `p`.`id`
+JOIN `admin` `a` ON `od`.`user_id` = `a`.`id`
+JOIN `address` `addr` ON `od`.`address_id` = `addr`.`id`
+WHERE `od`.`order_id` IS NULL
+ LIMIT -10, 10', [], false)
+ 2 APPPATH\Models\OrderDetailModel.php(85): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\OrderController.php(37): App\Models\OrderDetailModel->getOrderDetailsByIdPaginated(null, null)
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-08-11 11:50:58 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-10, 10' at line 7 in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `od`.`id...', 0)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `od`.`id...')
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `od`.`id...')
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `od`.`id...', Array, false)
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Models\OrderDetailModel.php(85): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\OrderController.php(37): App\Models\OrderDetailModel->getOrderDetailsByIdPaginated(NULL, NULL)
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\OrderController->index()
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-08-11 11:50:58 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-10, 10' at line 7
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `od`.`id` AS `order_detail_id`, `p`.`id` AS `product_id`, `p`.`prize`, `p`.`product_name`, `p`.`image`, `p`.`rating`, `a`.`id` AS `admin_id`, `a`.`email`, `a`.`username`, `od`.`order_id`, `od`.`quantity`, `od`.`payment_id`, `od`.`useWallet`, `od`.`Qprice`, `od`.`total_price`, `od`.`created_at`, `addr`.`id` AS `address_id`, `addr`.`address`
+FROM `order_details` `od`
+JOIN `products` `p` ON `od`.`product_id` = `p`.`id`
+JOIN `admin` `a` ON `od`.`user_id` = `a`.`id`
+JOIN `address` `addr` ON `od`.`address_id` = `addr`.`id`
+WHERE `od`.`order_id` IS NULL
+ LIMIT -10, 10', [], false)
+ 2 APPPATH\Models\OrderDetailModel.php(85): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\OrderController.php(37): App\Models\OrderDetailModel->getOrderDetailsByIdPaginated(null, null)
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-08-11 11:50:59 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-10, 10' at line 7 in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `od`.`id...', 0)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `od`.`id...')
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `od`.`id...')
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `od`.`id...', Array, false)
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Models\OrderDetailModel.php(85): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\OrderController.php(37): App\Models\OrderDetailModel->getOrderDetailsByIdPaginated(NULL, NULL)
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\OrderController->index()
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-08-11 11:50:59 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-10, 10' at line 7
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `od`.`id` AS `order_detail_id`, `p`.`id` AS `product_id`, `p`.`prize`, `p`.`product_name`, `p`.`image`, `p`.`rating`, `a`.`id` AS `admin_id`, `a`.`email`, `a`.`username`, `od`.`order_id`, `od`.`quantity`, `od`.`payment_id`, `od`.`useWallet`, `od`.`Qprice`, `od`.`total_price`, `od`.`created_at`, `addr`.`id` AS `address_id`, `addr`.`address`
+FROM `order_details` `od`
+JOIN `products` `p` ON `od`.`product_id` = `p`.`id`
+JOIN `admin` `a` ON `od`.`user_id` = `a`.`id`
+JOIN `address` `addr` ON `od`.`address_id` = `addr`.`id`
+WHERE `od`.`order_id` IS NULL
+ LIMIT -10, 10', [], false)
+ 2 APPPATH\Models\OrderDetailModel.php(85): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\OrderController.php(37): App\Models\OrderDetailModel->getOrderDetailsByIdPaginated(null, null)
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-08-11 11:50:59 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-10, 10' at line 7 in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `od`.`id...', 0)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `od`.`id...')
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `od`.`id...')
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `od`.`id...', Array, false)
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Models\OrderDetailModel.php(85): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\OrderController.php(37): App\Models\OrderDetailModel->getOrderDetailsByIdPaginated(NULL, NULL)
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\OrderController->index()
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-08-11 11:50:59 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-10, 10' at line 7
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `od`.`id` AS `order_detail_id`, `p`.`id` AS `product_id`, `p`.`prize`, `p`.`product_name`, `p`.`image`, `p`.`rating`, `a`.`id` AS `admin_id`, `a`.`email`, `a`.`username`, `od`.`order_id`, `od`.`quantity`, `od`.`payment_id`, `od`.`useWallet`, `od`.`Qprice`, `od`.`total_price`, `od`.`created_at`, `addr`.`id` AS `address_id`, `addr`.`address`
+FROM `order_details` `od`
+JOIN `products` `p` ON `od`.`product_id` = `p`.`id`
+JOIN `admin` `a` ON `od`.`user_id` = `a`.`id`
+JOIN `address` `addr` ON `od`.`address_id` = `addr`.`id`
+WHERE `od`.`order_id` IS NULL
+ LIMIT -10, 10', [], false)
+ 2 APPPATH\Models\OrderDetailModel.php(85): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\OrderController.php(37): App\Models\OrderDetailModel->getOrderDetailsByIdPaginated(null, null)
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-08-11 11:50:59 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-10, 10' at line 7 in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `od`.`id...', 0)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `od`.`id...')
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `od`.`id...')
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `od`.`id...', Array, false)
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Models\OrderDetailModel.php(85): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\OrderController.php(37): App\Models\OrderDetailModel->getOrderDetailsByIdPaginated(NULL, NULL)
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\OrderController->index()
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-08-11 11:50:59 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-10, 10' at line 7
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `od`.`id` AS `order_detail_id`, `p`.`id` AS `product_id`, `p`.`prize`, `p`.`product_name`, `p`.`image`, `p`.`rating`, `a`.`id` AS `admin_id`, `a`.`email`, `a`.`username`, `od`.`order_id`, `od`.`quantity`, `od`.`payment_id`, `od`.`useWallet`, `od`.`Qprice`, `od`.`total_price`, `od`.`created_at`, `addr`.`id` AS `address_id`, `addr`.`address`
+FROM `order_details` `od`
+JOIN `products` `p` ON `od`.`product_id` = `p`.`id`
+JOIN `admin` `a` ON `od`.`user_id` = `a`.`id`
+JOIN `address` `addr` ON `od`.`address_id` = `addr`.`id`
+WHERE `od`.`order_id` IS NULL
+ LIMIT -10, 10', [], false)
+ 2 APPPATH\Models\OrderDetailModel.php(85): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\OrderController.php(37): App\Models\OrderDetailModel->getOrderDetailsByIdPaginated(null, null)
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-08-11 11:52:15 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-10, 10' at line 7 in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `od`.`id...', 0)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `od`.`id...')
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `od`.`id...')
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `od`.`id...', Array, false)
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Models\OrderDetailModel.php(85): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\OrderController.php(37): App\Models\OrderDetailModel->getOrderDetailsByIdPaginated(NULL, NULL)
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\OrderController->index()
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-08-11 11:52:15 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-10, 10' at line 7
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `od`.`id` AS `order_detail_id`, `p`.`id` AS `product_id`, `p`.`prize`, `p`.`product_name`, `p`.`image`, `p`.`rating`, `a`.`id` AS `admin_id`, `a`.`email`, `a`.`username`, `od`.`order_id`, `od`.`quantity`, `od`.`payment_id`, `od`.`useWallet`, `od`.`Qprice`, `od`.`total_price`, `od`.`created_at`, `addr`.`id` AS `address_id`, `addr`.`address`
+FROM `order_details` `od`
+JOIN `products` `p` ON `od`.`product_id` = `p`.`id`
+JOIN `admin` `a` ON `od`.`user_id` = `a`.`id`
+JOIN `address` `addr` ON `od`.`address_id` = `addr`.`id`
+WHERE `od`.`order_id` IS NULL
+ LIMIT -10, 10', [], false)
+ 2 APPPATH\Models\OrderDetailModel.php(85): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\OrderController.php(37): App\Models\OrderDetailModel->getOrderDetailsByIdPaginated(null, null)
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-08-11 12:01:17 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-10, 10' at line 3 in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Models\OrderDetailModel.php(89): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\OrderController.php(37): App\Models\OrderDetailModel->getOrderDetailsByIdPaginated(NULL, NULL)
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\OrderController->index()
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-08-11 12:01:17 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-10, 10' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `order_details` `od`
+ LIMIT -10, 10', [], false)
+ 2 APPPATH\Models\OrderDetailModel.php(89): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\OrderController.php(37): App\Models\OrderDetailModel->getOrderDetailsByIdPaginated(null, null)
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-08-11 12:01:19 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-10, 10' at line 3 in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Models\OrderDetailModel.php(89): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\OrderController.php(37): App\Models\OrderDetailModel->getOrderDetailsByIdPaginated(NULL, NULL)
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\OrderController->index()
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-08-11 12:01:19 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-10, 10' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `order_details` `od`
+ LIMIT -10, 10', [], false)
+ 2 APPPATH\Models\OrderDetailModel.php(89): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\OrderController.php(37): App\Models\OrderDetailModel->getOrderDetailsByIdPaginated(null, null)
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-08-11 12:01:19 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-10, 10' at line 3 in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Models\OrderDetailModel.php(89): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\OrderController.php(37): App\Models\OrderDetailModel->getOrderDetailsByIdPaginated(NULL, NULL)
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\OrderController->index()
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-08-11 12:01:19 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-10, 10' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `order_details` `od`
+ LIMIT -10, 10', [], false)
+ 2 APPPATH\Models\OrderDetailModel.php(89): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\OrderController.php(37): App\Models\OrderDetailModel->getOrderDetailsByIdPaginated(null, null)
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-08-11 12:01:19 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-10, 10' at line 3 in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Models\OrderDetailModel.php(89): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\OrderController.php(37): App\Models\OrderDetailModel->getOrderDetailsByIdPaginated(NULL, NULL)
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\OrderController->index()
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-08-11 12:01:19 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-10, 10' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `order_details` `od`
+ LIMIT -10, 10', [], false)
+ 2 APPPATH\Models\OrderDetailModel.php(89): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\OrderController.php(37): App\Models\OrderDetailModel->getOrderDetailsByIdPaginated(null, null)
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-08-11 12:01:19 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-10, 10' at line 3 in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Models\OrderDetailModel.php(89): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\OrderController.php(37): App\Models\OrderDetailModel->getOrderDetailsByIdPaginated(NULL, NULL)
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\OrderController->index()
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-08-11 12:01:19 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-10, 10' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `order_details` `od`
+ LIMIT -10, 10', [], false)
+ 2 APPPATH\Models\OrderDetailModel.php(89): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\OrderController.php(37): App\Models\OrderDetailModel->getOrderDetailsByIdPaginated(null, null)
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-08-11 12:01:20 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-10, 10' at line 3 in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Models\OrderDetailModel.php(89): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\OrderController.php(37): App\Models\OrderDetailModel->getOrderDetailsByIdPaginated(NULL, NULL)
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\OrderController->index()
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-08-11 12:01:20 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-10, 10' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `order_details` `od`
+ LIMIT -10, 10', [], false)
+ 2 APPPATH\Models\OrderDetailModel.php(89): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\OrderController.php(37): App\Models\OrderDetailModel->getOrderDetailsByIdPaginated(null, null)
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-11 12:02:31 --> Undefined variable $order
+in APPPATH\Views\Order\order_details.php on line 17.
+ 1 APPPATH\Views\Order\order_details.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $order', 'APPPATH\\Views\\Order\\order_details.php', 17)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Order\\order_details.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Order/order_details', [], true)
+ 5 APPPATH\Controllers\OrderController.php(42): view('Order/order_details', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-11 12:11:28 --> Undefined variable $order
+in APPPATH\Views\Order\order_details.php on line 17.
+ 1 APPPATH\Views\Order\order_details.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $order', 'APPPATH\\Views\\Order\\order_details.php', 17)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Order\\order_details.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Order/order_details', [], true)
+ 5 APPPATH\Controllers\OrderController.php(42): view('Order/order_details', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-11 12:11:32 --> Undefined variable $order
+in APPPATH\Views\Order\order_details.php on line 17.
+ 1 APPPATH\Views\Order\order_details.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $order', 'APPPATH\\Views\\Order\\order_details.php', 17)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Order\\order_details.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Order/order_details', [], true)
+ 5 APPPATH\Controllers\OrderController.php(42): view('Order/order_details', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-11 12:11:32 --> Undefined variable $order
+in APPPATH\Views\Order\order_details.php on line 17.
+ 1 APPPATH\Views\Order\order_details.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $order', 'APPPATH\\Views\\Order\\order_details.php', 17)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Order\\order_details.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Order/order_details', [], true)
+ 5 APPPATH\Controllers\OrderController.php(42): view('Order/order_details', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-11 12:11:48 --> Undefined variable $order
+in APPPATH\Views\Order\order_details.php on line 17.
+ 1 APPPATH\Views\Order\order_details.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $order', 'APPPATH\\Views\\Order\\order_details.php', 17)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Order\\order_details.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Order/order_details', [], true)
+ 5 APPPATH\Controllers\OrderController.php(42): view('Order/order_details', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-11 12:12:09 --> Undefined variable $order
+in APPPATH\Views\Order\order_details.php on line 17.
+ 1 APPPATH\Views\Order\order_details.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $order', 'APPPATH\\Views\\Order\\order_details.php', 17)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Order\\order_details.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Order/order_details', [], true)
+ 5 APPPATH\Controllers\OrderController.php(42): view('Order/order_details', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-08-11 12:20:09 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-10, 10' at line 3 in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Models\OrderDetailModel.php(89): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\OrderController.php(38): App\Models\OrderDetailModel->getOrderDetailsByIdPaginated(NULL, NULL)
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\OrderController->index()
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-08-11 12:20:09 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-10, 10' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `order_details` `od`
+ LIMIT -10, 10', [], false)
+ 2 APPPATH\Models\OrderDetailModel.php(89): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\OrderController.php(38): App\Models\OrderDetailModel->getOrderDetailsByIdPaginated(null, null)
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-08-11 12:20:41 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-10, 10' at line 3 in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Models\OrderDetailModel.php(88): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\OrderController.php(38): App\Models\OrderDetailModel->getOrderDetailsByIdPaginated(NULL, NULL)
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\OrderController->index()
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-08-11 12:20:41 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-10, 10' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `order_details` `od`
+ LIMIT -10, 10', [], false)
+ 2 APPPATH\Models\OrderDetailModel.php(88): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\OrderController.php(38): App\Models\OrderDetailModel->getOrderDetailsByIdPaginated(null, null)
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-08-11 12:23:33 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-10, 10' at line 4 in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Models\OrderDetailModel.php(64): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\OrderController.php(37): App\Models\OrderDetailModel->listPaginated(NULL)
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\OrderController->index()
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-08-11 12:23:33 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-10, 10' at line 4
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `order_details`
+GROUP BY `order_id`
+ LIMIT -10, 10', [], false)
+ 2 APPPATH\Models\OrderDetailModel.php(64): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\OrderController.php(37): App\Models\OrderDetailModel->listPaginated(null)
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-11 12:24:00 --> Undefined variable $orderDetails
+in APPPATH\Views\Order\order_details.php on line 17.
+ 1 APPPATH\Views\Order\order_details.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $orderDetails', 'APPPATH\\Views\\Order\\order_details.php', 17)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Order\\order_details.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Order/order_details', [], true)
+ 5 APPPATH\Controllers\OrderController.php(35): view('Order/order_details', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-08-11 12:25:10 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-10, 10' at line 4 in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Models\OrderDetailModel.php(64): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\OrderController.php(36): App\Models\OrderDetailModel->listPaginated(NULL)
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\OrderController->index()
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-08-11 12:25:10 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-10, 10' at line 4
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `order_details`
+GROUP BY `order_id`
+ LIMIT -10, 10', [], false)
+ 2 APPPATH\Models\OrderDetailModel.php(64): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\OrderController.php(36): App\Models\OrderDetailModel->listPaginated(null)
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-08-11 12:29:36 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-10, 10' at line 4 in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Models\OrderDetailModel.php(64): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\OrderController.php(35): App\Models\OrderDetailModel->listPaginated(NULL)
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\OrderController->index()
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-08-11 12:29:36 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-10, 10' at line 4
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `order_details`
+GROUP BY `order_id`
+ LIMIT -10, 10', [], false)
+ 2 APPPATH\Models\OrderDetailModel.php(64): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\OrderController.php(35): App\Models\OrderDetailModel->listPaginated(null)
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-08-11 12:29:37 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-10, 10' at line 4 in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Models\OrderDetailModel.php(64): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\OrderController.php(35): App\Models\OrderDetailModel->listPaginated(NULL)
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\OrderController->index()
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-08-11 12:29:37 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-10, 10' at line 4
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `order_details`
+GROUP BY `order_id`
+ LIMIT -10, 10', [], false)
+ 2 APPPATH\Models\OrderDetailModel.php(64): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\OrderController.php(35): App\Models\OrderDetailModel->listPaginated(null)
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-08-11 12:29:38 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-10, 10' at line 4 in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Models\OrderDetailModel.php(64): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\OrderController.php(35): App\Models\OrderDetailModel->listPaginated(NULL)
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\OrderController->index()
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-08-11 12:29:38 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-10, 10' at line 4
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `order_details`
+GROUP BY `order_id`
+ LIMIT -10, 10', [], false)
+ 2 APPPATH\Models\OrderDetailModel.php(64): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\OrderController.php(35): App\Models\OrderDetailModel->listPaginated(null)
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-08-11 12:29:38 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-10, 10' at line 4 in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Models\OrderDetailModel.php(64): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\OrderController.php(35): App\Models\OrderDetailModel->listPaginated(NULL)
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\OrderController->index()
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-08-11 12:29:38 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-10, 10' at line 4
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `order_details`
+GROUP BY `order_id`
+ LIMIT -10, 10', [], false)
+ 2 APPPATH\Models\OrderDetailModel.php(64): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\OrderController.php(35): App\Models\OrderDetailModel->listPaginated(null)
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-08-11 12:29:39 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-10, 10' at line 4 in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Models\OrderDetailModel.php(64): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\OrderController.php(35): App\Models\OrderDetailModel->listPaginated(NULL)
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\OrderController->index()
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-08-11 12:29:39 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-10, 10' at line 4
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `order_details`
+GROUP BY `order_id`
+ LIMIT -10, 10', [], false)
+ 2 APPPATH\Models\OrderDetailModel.php(64): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\OrderController.php(35): App\Models\OrderDetailModel->listPaginated(null)
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-08-11 12:29:45 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-10, 10' at line 4 in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Models\OrderDetailModel.php(64): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\OrderController.php(35): App\Models\OrderDetailModel->listPaginated(NULL)
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\OrderController->index()
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-08-11 12:29:45 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-10, 10' at line 4
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `order_details`
+GROUP BY `order_id`
+ LIMIT -10, 10', [], false)
+ 2 APPPATH\Models\OrderDetailModel.php(64): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\OrderController.php(35): App\Models\OrderDetailModel->listPaginated(null)
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-11 12:34:59 --> Undefined variable $order
+in APPPATH\Views\Order\order_details.php on line 17.
+ 1 APPPATH\Views\Order\order_details.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $order', 'APPPATH\\Views\\Order\\order_details.php', 17)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Order\\order_details.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Order/order_details', [], true)
+ 5 APPPATH\Controllers\OrderController.php(40): view('Order/order_details', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-11 12:36:02 --> Undefined array key "per_page"
+in APPPATH\Views\Order\order_details.php on line 44.
+ 1 APPPATH\Views\Order\order_details.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "per_page"', 'APPPATH\\Views\\Order\\order_details.php', 44)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Order\\order_details.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Order/order_details', [], true)
+ 5 APPPATH\Controllers\OrderController.php(40): view('Order/order_details', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-11 12:36:42 --> Undefined array key "per_page"
+in APPPATH\Views\Order\order_details.php on line 44.
+ 1 APPPATH\Views\Order\order_details.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "per_page"', 'APPPATH\\Views\\Order\\order_details.php', 44)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Order\\order_details.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Order/order_details', [], true)
+ 5 APPPATH\Controllers\OrderController.php(40): view('Order/order_details', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-11 12:38:03 --> Undefined array key "per_page"
+in APPPATH\Views\Order\order_details.php on line 44.
+ 1 APPPATH\Views\Order\order_details.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "per_page"', 'APPPATH\\Views\\Order\\order_details.php', 44)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Order\\order_details.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Order/order_details', [], true)
+ 5 APPPATH\Controllers\OrderController.php(40): view('Order/order_details', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-11 12:39:01 --> Undefined variable $pager
+in APPPATH\Views\Order\order_details.php on line 45.
+ 1 APPPATH\Views\Order\order_details.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pager', 'APPPATH\\Views\\Order\\order_details.php', 45)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Order\\order_details.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Order/order_details', [], true)
+ 5 APPPATH\Controllers\OrderController.php(40): view('Order/order_details', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-11 12:39:52 --> Call to a member function links() on null
+in APPPATH\Views\Order\order_details.php on line 45.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Order/order_details', [], true)
+ 4 APPPATH\Controllers\OrderController.php(40): view('Order/order_details', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-11 12:40:42 --> Call to a member function links() on null
+in APPPATH\Views\Order\order_details.php on line 45.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Order/order_details', [], true)
+ 4 APPPATH\Controllers\OrderController.php(40): view('Order/order_details', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-11 12:40:43 --> Call to a member function links() on null
+in APPPATH\Views\Order\order_details.php on line 45.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Order/order_details', [], true)
+ 4 APPPATH\Controllers\OrderController.php(40): view('Order/order_details', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-11 12:40:44 --> Call to a member function links() on null
+in APPPATH\Views\Order\order_details.php on line 45.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Order/order_details', [], true)
+ 4 APPPATH\Controllers\OrderController.php(40): view('Order/order_details', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-11 12:40:44 --> Call to a member function links() on null
+in APPPATH\Views\Order\order_details.php on line 45.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Order/order_details', [], true)
+ 4 APPPATH\Controllers\OrderController.php(40): view('Order/order_details', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-11 12:40:44 --> Call to a member function links() on null
+in APPPATH\Views\Order\order_details.php on line 45.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Order/order_details', [], true)
+ 4 APPPATH\Controllers\OrderController.php(40): view('Order/order_details', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-11 12:41:46 --> Call to a member function links() on null
+in APPPATH\Views\Order\order_details.php on line 45.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Order/order_details', [], true)
+ 4 APPPATH\Controllers\OrderController.php(45): view('Order/order_details', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-11 12:41:47 --> Call to a member function links() on null
+in APPPATH\Views\Order\order_details.php on line 45.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Order/order_details', [], true)
+ 4 APPPATH\Controllers\OrderController.php(45): view('Order/order_details', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-11 12:41:47 --> Call to a member function links() on null
+in APPPATH\Views\Order\order_details.php on line 45.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Order/order_details', [], true)
+ 4 APPPATH\Controllers\OrderController.php(45): view('Order/order_details', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-11 12:42:11 --> Call to a member function links() on null
+in APPPATH\Views\Order\order_details.php on line 45.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Order/order_details', [], true)
+ 4 APPPATH\Controllers\OrderController.php(45): view('Order/order_details', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-11 12:54:49 --> Undefined array key 0
+in APPPATH\Views\Order\bill.php on line 67.
+ 1 APPPATH\Views\Order\bill.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Views\\Order\\bill.php', 67)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Order\\bill.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Order/bill', [], true)
+ 5 APPPATH\Controllers\OrderController.php(80): view('Order/bill', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->fetch_invoice_data('1')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-11 12:55:37 --> Undefined array key 0
+in APPPATH\Views\Order\bill.php on line 67.
+ 1 APPPATH\Views\Order\bill.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Views\\Order\\bill.php', 67)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Order\\bill.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Order/bill', [], true)
+ 5 APPPATH\Controllers\OrderController.php(80): view('Order/bill', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->fetch_invoice_data('1')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')

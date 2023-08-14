@@ -21,6 +21,7 @@
     <link href="/assets/css/app.min.css" rel="stylesheet" type="text/css" />
     <!-- custom Css-->
     <link href="/assets/css/custom.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="/assets/libs/gridjs/theme/mermaid.min.css">
 
 </head>
 
@@ -865,7 +866,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link menu-link" href="order">
+                            <a class="nav-link menu-link" href="orderlist">
                                 <i class="bi bi-command"></i> <span data-key="t-overview">Order</span>
                             </a>
                         </li>
@@ -1670,7 +1671,9 @@
     <script src="/assets/js/pages/nestable.init.js"></script> 
     <script src="/assets/js/pages/modal.init.js"></script>
     <script src="/assets/js/app.js"></script>
-    
+    <script src="/assets/libs/prismjs/prism.js"></script> 
+<script src="/assets/libs/gridjs/gridjs.umd.js"></script> 
+<script src="/assets/js/pages/gridjs.init.js"></script>
 </body>
 
 

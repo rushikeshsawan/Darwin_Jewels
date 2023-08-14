@@ -33,6 +33,8 @@ class OrderDetailModel extends Model
                           a.username,
                           od.order_id,
                           od.quantity,
+                          od.payment_id,
+                          od.useWallet,
                           od.Qprice,
                           od.total_price,
                           od.created_at,
@@ -47,6 +49,22 @@ class OrderDetailModel extends Model
         $query = $builder->get();
         return $query->getResult();
     }
+    public function listPaginated($page = 1, $perPage = 10)
+    {
+        $builder = $this->db->table($this->table);
+        $builder->groupBy('order_id'); 
+        $offset = max(($page - 1) * $perPage, 0);
+        $builder->limit($perPage, $offset);
+
+        $query = $builder->get();
+        $result['data'] = $query->getResultArray();
+        $totalResults = $this->db->table($this->table)->countAllResults();
+        $result['total_results'] = $totalResults;
+        $result['per_page'] = $perPage;
+        return $result;
+    }
+
+
     public function updateOrderStatus($orderId, $newStatus)
     {
         $this->set('status', $newStatus)
@@ -56,8 +74,8 @@ class OrderDetailModel extends Model
     public function getUserOrders($loggedInUserId)
     {
         return $this->where('user_id', $loggedInUserId)
-                    ->groupBy('order_id')   
-                    ->findAll();
+            ->groupBy('order_id')
+            ->findAll();
     }
     public function getTotalOrderCount()
     {
@@ -71,10 +89,10 @@ class OrderDetailModel extends Model
     public function countUniqueInProgressOrders()
     {
         $query = $this->db->table('order_details')
-                          ->select('COUNT(DISTINCT order_id) AS unique_in_progress_count')
-                          ->where('status', 'progress') // Add the WHERE condition for status
-                          ->groupBy('order_id')
-                          ->get();
+            ->select('COUNT(DISTINCT order_id) AS unique_in_progress_count')
+            ->where('status', 'progress') // Add the WHERE condition for status
+            ->groupBy('order_id')
+            ->get();
 
         $result = $query->getResult();
 
@@ -83,10 +101,10 @@ class OrderDetailModel extends Model
     public function countUniqueOrdersByStatus($status)
     {
         $query = $this->db->table('order_details')
-                          ->select('COUNT(DISTINCT order_id) AS unique_order_count')
-                          ->where('status', $status) // Add the WHERE condition for status
-                          ->groupBy('order_id')
-                          ->get();
+            ->select('COUNT(DISTINCT order_id) AS unique_order_count')
+            ->where('status', $status) // Add the WHERE condition for status
+            ->groupBy('order_id')
+            ->get();
 
         $result = $query->getResult();
 

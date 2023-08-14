@@ -68,6 +68,7 @@ $routes->add('invoice/(:num)', 'OrderController::fetch_invoice_data/$1');
 $routes->get('user', 'UserController::index'); 
 $routes->add('userlogin', 'UserController::login_user'); 
 $routes->add('orders', 'UserController::getUserOrders');  
+$routes->get('order/generateQrCode/(:num)', 'OrderController::generateQrCode/$1');
 
 
 

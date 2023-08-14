@@ -65,3 +65,4 @@ $app->setContext($context);
  */
 
 $app->run();
+// require_once FCPATH . 'vendor/autoload.php';

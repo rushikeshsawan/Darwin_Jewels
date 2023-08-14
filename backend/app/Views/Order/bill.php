@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html lang="en"> 
-    <?php // print_r($order);die; ?>
+<html lang="en">
+<?php // print_r($order);die; 
+?>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -90,7 +92,36 @@
             </tbody>
         </table>
         <div class="total">
-            <p>Total Amount:₹<?= $order[0]->total_price; ?></p>
+            <?php
+            $payment_id = $orderItem->payment_id;
+
+            switch ($payment_id) {
+                case "COD":
+                    echo "<p>Payment Mode: COD</p>";
+                    break;
+                case "COD/Wallet":
+                    echo "<p>Payment Mode: COD/Wallet</p>";
+                    echo "Wallet :RS " . $orderItem->useWallet . "/- </br>";
+                    $online = $order[0]->total_price - $orderItem->useWallet;
+                    echo "COD :RS " . $online . "/-";
+                    break;
+                case "Wallet":
+                    echo "<p>Payment Mode: Wallet</p>";
+                    echo "Wallet :" . $orderItem->useWallet;
+                    break;
+                default:
+                    if (strpos($payment_id, "/Wallet") !== false) {
+                        echo "<p>Payment Mode: Wallet/Online</p>";
+                        echo "Wallet :RS " . $orderItem->useWallet . "/- </br>";
+                        $online = $order[0]->total_price - $orderItem->useWallet;
+                        echo "Online :RS " . $online . "/-";
+                    } else {
+                        echo "<p>Payment Mode: Online</p>";
+                    }
+                    break;
+            }
+            ?>
+            <p>Total Amount: RS <?= $order[0]->total_price; echo "/-";?></p>
             <?php
             date_default_timezone_set('Asia/Kolkata');
             echo "Invoice created:" . date('Y-m-d H:i:s');
