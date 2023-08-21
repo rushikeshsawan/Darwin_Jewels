@@ -7,7 +7,8 @@ use App\Models\CategoryModel;
 use App\Models\ProductModel;
 use App\Models\AddressModel;
 use App\Models\OrderDetailModel;
-use CodeIgniter\Controller; // Make sure to use the correct Controller namespace
+use App\Models\SliderModel;
+use CodeIgniter\Controller; 
 
 class HomeController extends Controller
 {
@@ -16,6 +17,7 @@ class HomeController extends Controller
     protected $ProductModel;
     protected $addressModel;
     protected $OrderDetailModel;
+    protected $SliderModel;
     protected $session;
 
     public function __construct()
@@ -25,6 +27,7 @@ class HomeController extends Controller
         $this->ProductModel = new ProductModel();
         $this->addressModel = new AddressModel();
         $this->OrderDetailModel = new OrderDetailModel();
+        $this->SliderModel = new SliderModel();
         $this->session = \Config\Services::session();
     }
 
@@ -33,6 +36,7 @@ class HomeController extends Controller
         $data['Category'] = $this->CategoryModel->list();
         $data['Collection'] = $this->CollectionModel->list();
         $data['Product'] = $this->ProductModel->list();
+        $data['Slider'] = $this->SliderModel->list();
         return view('home', $data);
     }
 
@@ -173,6 +177,7 @@ class HomeController extends Controller
         $products = $productModel->where('category_id', $category_id)->findAll();
         echo json_encode($products);
     }
+
     // public function storeSelectedAddress()
     // {
     //     if ($this->request->isAJAX()) {

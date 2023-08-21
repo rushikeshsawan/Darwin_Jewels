@@ -26,7 +26,6 @@
 <section class="pb-lg-13 pb-11">
     <div class="container">
         <h2 class="text-center my-9">Check Out</h2>
-
         <?php if (!empty($cartItems)) : ?>
             <form>
                 <div class="row">
@@ -77,10 +76,8 @@
 
                     </div>
                     <div class="col-lg-8 pr-xl-15 order-lg-first form-control-01">
-                        <p class="mb-2">Returning customer? <a href="#" data-toggle="modal" data-target="#sign-in">Click
-                                here to login</a></p>
-                        <p>Have a coupon? <a data-toggle="collapse" href="#collapsecoupon" role="button" aria-expanded="false" aria-controls="collapsecoupon">Click here to enter your
-                                code</a></p>
+                        <p class="mb-2">Returning customer? <a href="#" data-toggle="modal" data-target="#sign-in">Update Address</a></p>
+                        <p>Have a coupon? <a href="#"  id="coupon">Click here to enter your code</a></p> 
                         <h4 class="fs-24 pt-1 mb-4">Shipping Information</h4>
                         <div id="addressData">
                             <?php if (!empty($address)) : ?>
@@ -150,6 +147,9 @@
             </div>
         </div>
     </div>
+</div>
+<div class="modal fade" id="coupon" tabindex="-1" aria-labelledby="couponLabel" aria-hidden="true" >
+  
 </div>
 <div class="modal fade" id="paymentModal" tabindex="-1" aria-labelledby="paymentModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -242,6 +242,60 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.5/dist/sweetalert2.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.5/dist/sweetalert2.min.css">
 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+    $(document).ready(function() {
+        $("#loginForm").submit(function(event) {
+            event.preventDefault();
+            var formData = $(this).serialize();
+            $.ajax({
+                type: "POST",
+                url: "<?php echo base_url('address'); ?>",
+                data: formData,
+                dataType: "json",
+                success: function(response) {
+                    if (response.success) {
+                        $('#sign-in').modal('hide');
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Success!',
+                            text: response.message
+                        }).then(function() {
+                            var newAddressCard = '<div class="col-md-6 mb-6">' +
+                                '<div class="card">' +
+                                '<div class="card-body">' +
+                                '<h5 class="card-title">' + response.address.name + '</h5>' +
+                                '<p class="card-text"><strong>Address:</strong> ' + response.address.address + '</p>' +
+                                '<p class="card-text"><strong>Mobile:</strong> ' + response.address.mobile + '</p>' +
+                                '<p class="card-text"><strong>Email:</strong> ' + response.address.email + '</p>' +
+                                '</div>' +
+                                '</div>' +
+                                '</div>';
+                            $('#addressData .alert-info').remove();
+                            $('#addressData .row').append(newAddressCard);
+                        });
+                    } else {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Error!',
+                            text: 'There were errors in the form:\n' + JSON.stringify(response.errors, null, 2)
+                        });
+                    }
+                },
+                error: function() {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error!',
+                        text: 'An error occurred during form submission.'
+                    });
+                }
+            });
+        });
+        $('#coupon').click(function() {
+            alert('coupon')
+            $('#coupon').modal('show'); 
+        });
+    });
+</script>
 <script>
     $(document).ready(function() {
         $("#loginForm").submit(function(event) {

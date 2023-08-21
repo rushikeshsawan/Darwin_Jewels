@@ -14,19 +14,19 @@
 
     <script src="../cdn-cgi/apps/head/2oc_RD5SS6wgN5SiQnSEnWVNHg8.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="vendors/fontawesome-pro-5/css/all.css">
-    <link rel="stylesheet" href="vendors/bootstrap-select/css/bootstrap-select.min.css">
-    <link rel="stylesheet" href="vendors/slick/slick.min.css">
-    <link rel="stylesheet" href="vendors/magnific-popup/magnific-popup.min.css">
-    <link rel="stylesheet" href="vendors/jquery-ui/jquery-ui.min.css">
-    <link rel="stylesheet" href="vendors/animate.css">
-    <link rel="stylesheet" href="vendors/mapbox-gl/mapbox-gl.min.css">
-    <link rel="stylesheet" href="vendors/fonts/font-phosphor/css/phosphor.min.css">
-    <link rel="stylesheet" href="vendors/fonts/tuesday-night/stylesheet.min.css">
-    <link rel="stylesheet" href="vendors/fonts/butler/stylesheet.min.css">
-    <link rel="stylesheet" href="vendors/fonts/a-antara-distance/stylesheet.min.css">
-    <link rel="stylesheet" href="css/themes.css">
-    <link rel="icon" href="images/logo/favicon.png">
+    <link rel="stylesheet" href="/vendors/fontawesome-pro-5/css/all.css">
+    <link rel="stylesheet" href="/vendors/bootstrap-select/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="/vendors/slick/slick.min.css">
+    <link rel="stylesheet" href="/vendors/magnific-popup/magnific-popup.min.css">
+    <link rel="stylesheet" href="/vendors/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="/vendors/animate.css">
+    <link rel="stylesheet" href="/vendors/mapbox-gl/mapbox-gl.min.css">
+    <link rel="stylesheet" href="/vendors/fonts/font-phosphor/css/phosphor.min.css">
+    <link rel="stylesheet" href="/vendors/fonts/tuesday-night/stylesheet.min.css">
+    <link rel="stylesheet" href="/vendors/fonts/butler/stylesheet.min.css">
+    <link rel="stylesheet" href="/vendors/fonts/a-antara-distance/stylesheet.min.css">
+    <link rel="stylesheet" href="/css/themes.css">
+    <link rel="icon" href="/images/logo/favicon.png">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@">
     <meta name="twitter:creator" content="@">
@@ -224,17 +224,9 @@
                                             <div class="dropdown-menu x-animated x-fadeInUp pt-3 pb-0 pb-xl-3 mw-260px">
                                                 <div class="row px-7">
                                                     <div class="col-6">
-                                                        <ul class="p-0">
+                                                        <ul class="p-0"> 
                                                             <li class="dropdown-item px-0">
-                                                                <a class="dropdown-link" href="">
-                                                                    <svg class="icon icon-user-light mr-2">
-                                                                        <use xlink:href="#icon-user-light"></use>
-                                                                    </svg>
-                                                                    <span> Profile </span>
-                                                                </a>
-                                                            </li>
-                                                            <li class="dropdown-item px-0">
-                                                                <a class="dropdown-link" href="">
+                                                                <a class="dropdown-link" href="logout">
                                                                     <i class="fa fa-sign-out mr-2"></i> <span>
                                                                         Logout</span>
                                                                 </a>
@@ -253,21 +245,12 @@
                                             </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link position-relative px-4 py-0" href="wishlist.html">
+                                            <a class="nav-link position-relative px-4 py-0" href="cart-list">
                                                 <svg class="icon icon-heart">
                                                     <use xlink:href="#icon-heart"></use>
                                                 </svg>
                                                 <span class="position-absolute number">0</span></a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link position-relative px-4 menu-cart py-0 d-inline-flex align-items-center mr-n2" href="#" data-canvas="true" data-canvas-options='{"container":".cart-canvas"}'>
-                                                <!-- <span class="mr-2 font-weight-bold fs-15">$0.00</span> -->
-                                                <svg class="icon icon-shopping-bag-open-light">
-                                                    <use xlink:href="#icon-shopping-bag-open-light"></use>
-                                                </svg>
-                                                <span class="position-absolute number">0</span>
-                                            </a>
-                                        </li>
+                                        </li> 
                                     </ul>
                                 </div>
                             </div>

@@ -143,7 +143,6 @@
                         Swal.fire('Success', 'Category added successfully', 'success').then(function() {
                             $('#addCategory').modal('hide');
                             $('#addCategoryForm')[0].reset();
-
                             var newRow = '<tr>' +
                                 '<th scope="row">' +
                                 '<div class="form-check">' +

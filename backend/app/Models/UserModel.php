@@ -7,7 +7,7 @@ use CodeIgniter\Model;
 class UserModel extends Model
 {
     protected $table = 'users';
-    protected $allowedFields = ['username', 'email', 'password','phone', 'wallet','otp','active', 'created_at'];
+    protected $allowedFields = ['username', 'email', 'password', 'phone', 'wallet', 'otp', 'active', 'created_at'];
 
     public function store($username, $email, $password)
     {
@@ -29,9 +29,9 @@ class UserModel extends Model
     }
     public function increaseWalletAmount($userId, $amount)
     {
-         $currentUser = $this->find($userId);
-        $currentWalletAmount = $currentUser['wallet']; 
-         $newWalletAmount = $currentWalletAmount + $amount; 
+        $currentUser = $this->find($userId);
+        $currentWalletAmount = $currentUser['wallet'];
+        $newWalletAmount = $currentWalletAmount + $amount;
         $this->update($userId, ['wallet' => $newWalletAmount]);
         return $userId;
     }
@@ -42,7 +42,15 @@ class UserModel extends Model
             ->get()
             ->getRow('wallet');
     }
- 
+    public function getUsersByFilter($filter)
+    {
+        if ($filter === 'all') {
+            return $this->findAll();
+        }  elseif ($filter === 'last30') {
+            // Modify this query to retrieve users based on your criteria
+            return $this->where('registration_date >', date('Y-m-d', strtotime('-30 days')))
+                        ->findAll();
+        }
+        return [];
+    }
 }
-   
- 

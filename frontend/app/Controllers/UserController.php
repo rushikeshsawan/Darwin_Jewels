@@ -273,4 +273,9 @@ class UserController extends BaseController
         );
         return $this->response->setJSON($response);
     }
+    public function logout()
+    {
+        $this->session->destroy();
+        return redirect()->to('');
+    }
 }

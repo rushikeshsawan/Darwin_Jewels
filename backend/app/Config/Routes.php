@@ -41,7 +41,17 @@ $routes->post('admin/update', 'AdminController::update',['filter' => 'authGuard'
 $routes->get('admin/delete/(:num)', 'AdminController::delete/$1',['filter' => 'authGuard']); 
 $routes->post('changepassword', 'AdminController::changePassword',['filter' => 'authGuard']); 
 $routes->get('logout', 'AdminController::logout');  
+// $routes->match(['get', 'post'], 'dashboard', 'AdminController::initChart');
 $routes->get('dashboard', 'AdminController::dashboard'); 
+
+$routes->get('slider', 'AdminController::slider'); 
+$routes->post('sliderstore', 'AdminController::sliderStore'); 
+$routes->get('slideredit/(:num)', 'AdminController::sliderEdit/$1');
+$routes->post('sliderupdate', 'AdminController::sliderUpdate'); 
+$routes->get('sliderdelete/(:num)', 'AdminController::sliderDelete/$1');
+$routes->get('exportorder', 'OrderController::exportToCSV');
+
+
 
 $routes->get('categorylist', 'CategoryController::index'); 
 $routes->post('categorystore', 'CategoryController::store'); 
@@ -68,17 +78,17 @@ $routes->add('invoice/(:num)', 'OrderController::fetch_invoice_data/$1');
 $routes->get('user', 'UserController::index'); 
 $routes->add('userlogin', 'UserController::login_user'); 
 $routes->add('orders', 'UserController::getUserOrders');  
-$routes->get('order/generateQrCode/(:num)', 'OrderController::generateQrCode/$1');
+$routes->get('order/generateQrCode/(:num)', 'OrderController::generateQrCodeUrl/$1');
 
-
-
-
+$routes->get('marketing', 'MarketingController::index'); 
+$routes->get('set_selected_filter/(:any)', 'MarketingController::setSelectedFilter/$1');
+$routes->post('send_email', 'MarketingController::sendEmail');
 
 // $routes->get('/', 'SendMail::index');
 // $routes->match(['get', 'post'], 'SendMail/sendMail', 'SendMail::sendMail');
 
 $routes->set404Override(function(){
-    return view('404page'); // Replace 'index' with the desired view or controller method to handle the 404 redirect
+    return view('404page');  
 });
 
 

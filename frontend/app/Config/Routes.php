@@ -46,7 +46,7 @@ $routes->post('/cart/removeFromCart', 'UserController::removeFromCart');
 $routes->get('order_list', 'UserController::getUserOrders');
 // $routes->get('order-details/(:num)', 'UserController::getOrderDetails/$1'); 
 $routes->get('price-filter', 'HomeController::priceFilter');
-
+$routes->get('logout', 'UserController::logout');  
 
 
 $routes->add('verifyPayment', 'UserController::verifyPayment'); 

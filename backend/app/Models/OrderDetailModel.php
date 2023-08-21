@@ -17,6 +17,12 @@ class OrderDetailModel extends Model
         return $this
             ->groupBy('order_id')
             ->findAll();
+    } 
+    public function listWithPagination($perPage)
+    {
+        return $this
+            ->groupBy('order_id')
+            ->paginate($perPage);
     }
     public function getOrderDetailsById($orderId)
     {

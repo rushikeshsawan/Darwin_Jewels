@@ -1,15 +1,14 @@
 <?= $this->extend('main') ?>
-<?= $this->section('content') ?>
+<?= $this->section('content') ?> 
 <main id="content">
     <section class="mx-0 slick-slider dots-inner-center custom-slider-02 slider" data-slick-options='{"slidesToShow": 1,"infinite":true,"autoplay":true,"dots":true,"arrows":false,"fade":true,"cssEase":"ease-in-out","speed":600}'>
+    <?php foreach ($Slider as $row) : ?>
         <div class="box px-0">
-            <div class="slider-responsive bg-img-cover-center  py-lg-17" style="background-image: url('images/banner/bg-slider-01.jpg');">
+            <div class="slider-responsive bg-img-cover-center  py-lg-17" style="background-image: url('<?= base_url('/images/banner/' . $row['image']) ?>');">
                 <div class="container container-xl pt-7 pb-9">
                     <div data-animate="fadeInDown">
-                        <p class="text-white margin-bottom-5 font-weight-600 fs-24 lh-15">Find Inspration</p>
-                        <h1 class="text-white font-weight-500 margin-bottom-10 fs-21  fs-md-68 lh-128">Scarlet Serie
-                            <br>
-                            Gold
+                        <p class="text-white margin-bottom-5 font-weight-600 fs-24 lh-15"><?= $row['main_heading']; ?></p>
+                        <h1 class="text-white font-weight-500 margin-bottom-10 fs-21  fs-md-68 lh-128"> <?= $row['sub_heading']; ?>
                         </h1>
                     </div>
                     <a href="" class="btn btn-link btn-light bg-transparent text-white border-bottom border-0 rounded-0 p-0 fs-16 font-weight-600 border-2x mobile-display" data-animate="fadeInUp">
@@ -21,43 +20,7 @@
                 </div>
             </div>
         </div>
-        <div class="box px-0">
-            <div class="slider-responsive bg-img-cover-center  py-lg-17" style="background-image: url('images/banner/bg-slider-02.jpg');">
-                <div class="container container-xl pt-7 pb-9">
-                    <div data-animate="fadeInDown">
-                        <p class="text-white margin-bottom-5 font-weight-600 fs-24 lh-15">Shop Our Set</p>
-                        <h1 class="text-white font-weight-500 margin-bottom-10 fs-21  fs-md-68 lh-128">
-                            Magnificent<br>
-                            Cz Diamond
-                        </h1>
-                    </div>
-                    <a href="" class="btn btn-link btn-light bg-transparent text-white border-bottom border-0 rounded-0 p-0 fs-16 font-weight-600 border-2x mobile-display" data-animate="fadeInUp">
-                        Discover Now
-                        <svg class="icon icon-arrow-right">
-                            <use xlink:href="#icon-arrow-right"></use>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="box px-0">
-            <div class="slider-responsive bg-img-cover-center  py-lg-17" style="background-image: url('images/banner/bg-slider-03.jpg');">
-                <div class="container container-xl pt-7 pb-9">
-                    <div data-animate="fadeInDown">
-                        <p class="text-white margin-bottom-5 font-weight-600 fs-24 lh-15">New Arrivals</p>
-                        <h1 class="text-white font-weight-500 margin-bottom-10 fs-21  fs-md-68 lh-128">Majestic
-                            Bloom <br>
-                            Gemstone</h1>
-                    </div>
-                    <a href="" class="btn btn-link btn-light bg-transparent text-white border-bottom border-0 rounded-0 p-0 fs-16 font-weight-600 border-2x mobile-display" data-animate="fadeInUp">
-                        Discover Now
-                        <svg class="icon icon-arrow-right">
-                            <use xlink:href="#icon-arrow-right"></use>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </div>
+        <?php endforeach; ?> 
     </section>
     <section class="pt-lg-13 pt-10">
         <div class="container container-xl">

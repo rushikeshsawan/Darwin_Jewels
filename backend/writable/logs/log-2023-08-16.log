@@ -1,0 +1,642 @@
+ERROR - 2023-08-16 04:43:28 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', 'root', '', 'ecom', 3306, '', 0)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\AdminController.php(63): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\AdminController->login()
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\AdminController.php(63): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\AdminController->login()
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-08-16 04:43:28 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `admin`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\AdminController.php(63): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AdminController->login()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-16 05:05:23 --> Undefined variable $pager
+in APPPATH\Views\Order\order_details.php on line 45.
+ 1 APPPATH\Views\Order\order_details.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pager', 'APPPATH\\Views\\Order\\order_details.php', 45)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Order\\order_details.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Order/order_details', [], true)
+ 5 APPPATH\Controllers\OrderController.php(35): view('Order/order_details', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-16 05:07:18 --> Undefined variable $pager
+in APPPATH\Views\Order\order_details.php on line 45.
+ 1 APPPATH\Views\Order\order_details.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pager', 'APPPATH\\Views\\Order\\order_details.php', 45)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Order\\order_details.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Order/order_details', [], true)
+ 5 APPPATH\Controllers\OrderController.php(39): view('Order/order_details', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-16 05:07:20 --> Undefined variable $pager
+in APPPATH\Views\Order\order_details.php on line 45.
+ 1 APPPATH\Views\Order\order_details.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pager', 'APPPATH\\Views\\Order\\order_details.php', 45)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Order\\order_details.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Order/order_details', [], true)
+ 5 APPPATH\Controllers\OrderController.php(39): view('Order/order_details', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-16 05:07:21 --> Undefined variable $pager
+in APPPATH\Views\Order\order_details.php on line 45.
+ 1 APPPATH\Views\Order\order_details.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pager', 'APPPATH\\Views\\Order\\order_details.php', 45)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Order\\order_details.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Order/order_details', [], true)
+ 5 APPPATH\Controllers\OrderController.php(39): view('Order/order_details', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-16 05:07:21 --> Undefined variable $pager
+in APPPATH\Views\Order\order_details.php on line 45.
+ 1 APPPATH\Views\Order\order_details.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pager', 'APPPATH\\Views\\Order\\order_details.php', 45)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Order\\order_details.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Order/order_details', [], true)
+ 5 APPPATH\Controllers\OrderController.php(39): view('Order/order_details', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-16 05:07:21 --> Undefined variable $pager
+in APPPATH\Views\Order\order_details.php on line 45.
+ 1 APPPATH\Views\Order\order_details.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pager', 'APPPATH\\Views\\Order\\order_details.php', 45)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Order\\order_details.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Order/order_details', [], true)
+ 5 APPPATH\Controllers\OrderController.php(39): view('Order/order_details', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-16 05:07:21 --> Undefined variable $pager
+in APPPATH\Views\Order\order_details.php on line 45.
+ 1 APPPATH\Views\Order\order_details.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pager', 'APPPATH\\Views\\Order\\order_details.php', 45)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Order\\order_details.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Order/order_details', [], true)
+ 5 APPPATH\Controllers\OrderController.php(39): view('Order/order_details', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-16 05:15:35 --> Undefined variable $order
+in APPPATH\Views\Order\order_details.php on line 17.
+ 1 APPPATH\Views\Order\order_details.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $order', 'APPPATH\\Views\\Order\\order_details.php', 17)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Order\\order_details.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('order/order_details', [], true)
+ 5 APPPATH\Controllers\OrderController.php(53): view('order/order_details', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-16 05:15:58 --> Undefined array key 0
+in APPPATH\Views\Order\bill.php on line 67.
+ 1 APPPATH\Views\Order\bill.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Views\\Order\\bill.php', 67)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Order\\bill.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Order/bill', [], true)
+ 5 APPPATH\Controllers\OrderController.php(79): view('Order/bill', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->updateOrderStatus()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-16 05:18:47 --> Call to a member function paginate() on array
+in APPPATH\Controllers\OrderController.php on line 41.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-16 05:19:38 --> Call to undefined method App\Models\OrderDetailModel::listOrders
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\OrderController.php(40): CodeIgniter\Model->__call('listOrders', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-16 05:22:19 --> Call to a member function result() on array
+in APPPATH\Controllers\OrderController.php on line 41.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-16 05:22:50 --> Call to undefined method App\Models\OrderDetailModel::listOrders
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\OrderController.php(40): CodeIgniter\Model->__call('listOrders', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-16 05:27:52 --> Call to a member function paginate() on null
+in APPPATH\Controllers\OrderController.php on line 41.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-16 05:31:31 --> Call to a member function getItems() on array
+in APPPATH\Controllers\OrderController.php on line 44.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-16 05:35:34 --> syntax error, unexpected single-quoted string "users", expecting "]"
+in APPPATH\Controllers\OrderController.php on line 47.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\OrderController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\OrderController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\OrderController')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\OrderController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-16 05:35:51 --> Call to a member function getItems() on array
+in APPPATH\Controllers\OrderController.php on line 45.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-16 05:36:08 --> Call to undefined method App\Models\OrderDetailModel::getItems
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\OrderController.php(45): CodeIgniter\Model->__call('getItems', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-16 05:36:51 --> Undefined variable $order
+in APPPATH\Views\Order\order_details.php on line 17.
+ 1 APPPATH\Views\Order\order_details.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $order', 'APPPATH\\Views\\Order\\order_details.php', 17)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Order\\order_details.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('order/order_details', [], true)
+ 5 APPPATH\Controllers\OrderController.php(49): view('order/order_details', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-16 05:37:11 --> Undefined variable $pager
+in APPPATH\Views\Order\order_details.php on line 45.
+ 1 APPPATH\Views\Order\order_details.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pager', 'APPPATH\\Views\\Order\\order_details.php', 45)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Order\\order_details.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('order/order_details', [], true)
+ 5 APPPATH\Controllers\OrderController.php(49): view('order/order_details', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-16 05:44:26 --> Attempt to read property "pager" on array
+in APPPATH\Controllers\OrderController.php on line 41.
+ 1 APPPATH\Controllers\OrderController.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "pager" on array', 'APPPATH\\Controllers\\OrderController.php', 41)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-16 05:45:19 --> Call to a member function getItems() on array
+in APPPATH\Controllers\OrderController.php on line 40.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-16 05:45:29 --> Call to a member function getItems() on array
+in APPPATH\Controllers\OrderController.php on line 40.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-16 05:45:45 --> Call to undefined method App\Models\OrderDetailModel::getItems
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\OrderController.php(40): CodeIgniter\Model->__call('getItems', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-16 05:46:02 --> Call to a member function getItems() on array
+in APPPATH\Controllers\OrderController.php on line 40.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-16 05:47:59 --> Undefined array key "items"
+in APPPATH\Controllers\OrderController.php on line 40.
+ 1 APPPATH\Controllers\OrderController.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "items"', 'APPPATH\\Controllers\\OrderController.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-16 05:48:25 --> Call to a member function setPath() on array
+in APPPATH\Views\Order\order_details.php on line 47.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('order/order_details', [], true)
+ 4 APPPATH\Controllers\OrderController.php(44): view('order/order_details', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-16 05:49:26 --> Call to a member function setPath() on array
+in APPPATH\Views\Order\order_details.php on line 47.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('order/order_details', [], true)
+ 4 APPPATH\Controllers\OrderController.php(44): view('order/order_details', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-16 05:49:28 --> Call to a member function setPath() on array
+in APPPATH\Views\Order\order_details.php on line 47.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('order/order_details', [], true)
+ 4 APPPATH\Controllers\OrderController.php(44): view('order/order_details', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-16 05:49:28 --> Call to a member function setPath() on array
+in APPPATH\Views\Order\order_details.php on line 47.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('order/order_details', [], true)
+ 4 APPPATH\Controllers\OrderController.php(44): view('order/order_details', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-16 05:49:28 --> Call to a member function setPath() on array
+in APPPATH\Views\Order\order_details.php on line 47.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('order/order_details', [], true)
+ 4 APPPATH\Controllers\OrderController.php(44): view('order/order_details', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-16 05:49:29 --> Call to a member function setPath() on array
+in APPPATH\Views\Order\order_details.php on line 47.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('order/order_details', [], true)
+ 4 APPPATH\Controllers\OrderController.php(44): view('order/order_details', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-16 05:50:25 --> Undefined array key "items"
+in APPPATH\Controllers\OrderController.php on line 40.
+ 1 APPPATH\Controllers\OrderController.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "items"', 'APPPATH\\Controllers\\OrderController.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-16 05:52:41 --> Undefined array key "pager"
+in APPPATH\Controllers\OrderController.php on line 41.
+ 1 APPPATH\Controllers\OrderController.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "pager"', 'APPPATH\\Controllers\\OrderController.php', 41)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-16 05:57:30 --> Undefined array key 0
+in APPPATH\Views\Order\bill.php on line 67.
+ 1 APPPATH\Views\Order\bill.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Views\\Order\\bill.php', 67)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Order\\bill.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Order/bill', [], true)
+ 5 APPPATH\Controllers\OrderController.php(122): view('Order/bill', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->fetch_invoice_data('34')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-16 05:58:58 --> Undefined array key 0
+in APPPATH\Views\Order\bill.php on line 67.
+ 1 APPPATH\Views\Order\bill.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Views\\Order\\bill.php', 67)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Order\\bill.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Order/bill', [], true)
+ 5 APPPATH\Controllers\OrderController.php(122): view('Order/bill', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->fetch_invoice_data('34')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-16 06:17:19 --> Trying to access array offset on value of type null
+in APPPATH\Models\UserModel.php on line 33.
+ 1 APPPATH\Models\UserModel.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Models\\UserModel.php', 33)
+ 2 APPPATH\Controllers\OrderController.php(73): App\Models\UserModel->increaseWalletAmount('30', 100)
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->increase_wallet()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-16 06:17:26 --> Trying to access array offset on value of type null
+in APPPATH\Models\UserModel.php on line 33.
+ 1 APPPATH\Models\UserModel.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Models\\UserModel.php', 33)
+ 2 APPPATH\Controllers\OrderController.php(73): App\Models\UserModel->increaseWalletAmount('30', 100)
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->increase_wallet()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-16 06:17:54 --> Trying to access array offset on value of type null
+in APPPATH\Models\UserModel.php on line 33.
+ 1 APPPATH\Models\UserModel.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Models\\UserModel.php', 33)
+ 2 APPPATH\Controllers\OrderController.php(73): App\Models\UserModel->increaseWalletAmount('30', 100)
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->increase_wallet()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-16 06:31:36 --> Undefined variable $pager
+in APPPATH\Views\Order\order_details.php on line 45.
+ 1 APPPATH\Views\Order\order_details.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pager', 'APPPATH\\Views\\Order\\order_details.php', 45)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Order\\order_details.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Order/order_details', [], true)
+ 5 APPPATH\Controllers\OrderController.php(35): view('Order/order_details', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-16 06:39:31 --> Call to undefined method App\Controllers\OrderController::generateInvoicePDF()
+in APPPATH\Controllers\OrderController.php on line 78.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->increase_wallet()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-16 06:39:36 --> Call to undefined method App\Controllers\OrderController::generateInvoicePDF()
+in APPPATH\Controllers\OrderController.php on line 78.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->increase_wallet()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-16 06:41:37 --> Undefined array key 0
+in APPPATH\Views\Order\bill.php on line 67.
+ 1 APPPATH\Views\Order\bill.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Views\\Order\\bill.php', 67)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Order\\bill.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Order/bill', [], true)
+ 5 APPPATH\Controllers\OrderController.php(80): view('Order/bill', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->increase_wallet()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-16 06:48:01 --> Undefined array key 0
+in APPPATH\Views\Order\bill.php on line 67.
+ 1 APPPATH\Views\Order\bill.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Views\\Order\\bill.php', 67)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Order\\bill.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Order/bill', [], true)
+ 5 APPPATH\Controllers\OrderController.php(78): view('Order/bill', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->increase_wallet()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-16 06:48:14 --> Undefined array key 0
+in APPPATH\Views\Order\bill.php on line 67.
+ 1 APPPATH\Views\Order\bill.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Views\\Order\\bill.php', 67)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Order\\bill.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Order/bill', [], true)
+ 5 APPPATH\Controllers\OrderController.php(78): view('Order/bill', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->increase_wallet()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-16 06:55:34 --> strpos(): Argument #1 ($haystack) must be of type string, Dompdf\Dompdf given
+in SYSTEMPATH\Email\Email.php on line 657.
+ 1 SYSTEMPATH\Email\Email.php(657): strpos(Object(Dompdf\Dompdf), '://')
+ 2 APPPATH\Controllers\OrderController.php(87): CodeIgniter\Email\Email->attach(Object(Dompdf\Dompdf), 'invoice.pdf', 'application/pdf')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->increase_wallet()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-16 06:58:49 --> strpos(): Argument #1 ($haystack) must be of type string, Dompdf\Dompdf given
+in SYSTEMPATH\Email\Email.php on line 657.
+ 1 SYSTEMPATH\Email\Email.php(657): strpos(Object(Dompdf\Dompdf), '://')
+ 2 APPPATH\Controllers\OrderController.php(91): CodeIgniter\Email\Email->attach(Object(Dompdf\Dompdf), 'invoice.pdf', 'application/pdf')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->increase_wallet()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-16 07:00:16 --> strpos(): Argument #1 ($haystack) must be of type string, Dompdf\Dompdf given
+in SYSTEMPATH\Email\Email.php on line 657.
+ 1 SYSTEMPATH\Email\Email.php(657): strpos(Object(Dompdf\Dompdf), '://')
+ 2 APPPATH\Controllers\OrderController.php(91): CodeIgniter\Email\Email->attach(Object(Dompdf\Dompdf), 'invoice.pdf', 'application/pdf')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->increase_wallet()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-16 07:00:34 --> strpos(): Argument #1 ($haystack) must be of type string, Dompdf\Dompdf given
+in SYSTEMPATH\Email\Email.php on line 657.
+ 1 SYSTEMPATH\Email\Email.php(657): strpos(Object(Dompdf\Dompdf), '://')
+ 2 APPPATH\Controllers\OrderController.php(91): CodeIgniter\Email\Email->attach(Object(Dompdf\Dompdf), 'application/pdf')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->increase_wallet()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-16 07:06:09 --> strpos(): Argument #1 ($haystack) must be of type string, Dompdf\Dompdf given
+in SYSTEMPATH\Email\Email.php on line 657.
+ 1 SYSTEMPATH\Email\Email.php(657): strpos(Object(Dompdf\Dompdf), '://')
+ 2 APPPATH\Controllers\OrderController.php(91): CodeIgniter\Email\Email->attach(Object(Dompdf\Dompdf), 'application/pdf')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->increase_wallet()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-16 07:08:45 --> Undefined variable $data
+in APPPATH\Controllers\OrderController.php on line 81.
+ 1 APPPATH\Controllers\OrderController.php(81): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Controllers\\OrderController.php', 81)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->increase_wallet()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-16 07:12:09 --> view(): Argument #2 ($data) must be of type array, Dompdf\Dompdf given, called in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\OrderController.php on line 81
+in SYSTEMPATH\Common.php on line 1172.
+ 1 APPPATH\Controllers\OrderController.php(81): view('path/to/your/pdf_view', Object(Dompdf\Dompdf), [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->increase_wallet()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-16 09:34:37 --> Undefined variable $orderItem
+in APPPATH\Views\Order\order_details.php on line 4.
+ 1 APPPATH\Views\Order\order_details.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $orderItem', 'APPPATH\\Views\\Order\\order_details.php', 4)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Order\\order_details.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('order/order_details', [], true)
+ 5 APPPATH\Controllers\OrderController.php(41): view('order/order_details', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-08-16 10:02:55 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-08-16 10:02:55 --> 220 smtp.googlemail.com ESMTP p13-20020aa7860d000000b006889348ba6dsm607959pfn.93 - gsmtp
+
+hello: 250-smtp.googlemail.com at your service, [114.143.182.34]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 250 2.1.0 OK p13-20020aa7860d000000b006889348ba6dsm607959pfn.93 - gsmtp
+
+to: 553-5.1.3 The recipient address <1> is not a valid RFC-5321 address. Learn more
+553-5.1.3 at
+553 5.1.3  https://support.google.com/mail/answer/6596 p13-20020aa7860d000000b006889348ba6dsm607959pfn.93 - gsmtp
+
+The following SMTP error was encountered: 553-5.1.3 The recipient address <1> is not a valid RFC-5321 address. Learn more
+553-5.1.3 at
+553 5.1.3  https://support.google.com/mail/answer/6596 p13-20020aa7860d000000b006889348ba6dsm607959pfn.93 - gsmtp
+
+quit: 221 2.0.0 closing connection p13-20020aa7860d000000b006889348ba6dsm607959pfn.93 - gsmtp
+
+ERROR - 2023-08-16 10:06:23 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-08-16 10:06:23 --> 220 smtp.googlemail.com ESMTP ja11-20020a170902efcb00b001b8a00d4f7asm12731532plb.9 - gsmtp
+
+hello: 250-smtp.googlemail.com at your service, [114.143.182.34]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 250 2.1.0 OK ja11-20020a170902efcb00b001b8a00d4f7asm12731532plb.9 - gsmtp
+
+to: 553-5.1.3 The recipient address <1> is not a valid RFC-5321 address. Learn more
+553-5.1.3 at
+553 5.1.3  https://support.google.com/mail/answer/6596 ja11-20020a170902efcb00b001b8a00d4f7asm12731532plb.9 - gsmtp
+
+The following SMTP error was encountered: 553-5.1.3 The recipient address <1> is not a valid RFC-5321 address. Learn more
+553-5.1.3 at
+553 5.1.3  https://support.google.com/mail/answer/6596 ja11-20020a170902efcb00b001b8a00d4f7asm12731532plb.9 - gsmtp
+
+quit: 221 2.0.0 closing connection ja11-20020a170902efcb00b001b8a00d4f7asm12731532plb.9 - gsmtp
+
+ERROR - 2023-08-16 10:07:30 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-08-16 10:07:30 --> 220 smtp.googlemail.com ESMTP p6-20020a17090a930600b0026309d57724sm7598124pjo.39 - gsmtp
+
+hello: 250-smtp.googlemail.com at your service, [114.143.182.34]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 250 2.1.0 OK p6-20020a17090a930600b0026309d57724sm7598124pjo.39 - gsmtp
+
+to: 553-5.1.3 The recipient address <1> is not a valid RFC-5321 address. Learn more
+553-5.1.3 at
+553 5.1.3  https://support.google.com/mail/answer/6596 p6-20020a17090a930600b0026309d57724sm7598124pjo.39 - gsmtp
+
+The following SMTP error was encountered: 553-5.1.3 The recipient address <1> is not a valid RFC-5321 address. Learn more
+553-5.1.3 at
+553 5.1.3  https://support.google.com/mail/answer/6596 p6-20020a17090a930600b0026309d57724sm7598124pjo.39 - gsmtp
+
+quit: 221 2.0.0 closing connection p6-20020a17090a930600b0026309d57724sm7598124pjo.39 - gsmtp
+
+CRITICAL - 2023-08-16 10:11:54 --> Invalid file: "path/to/your/email_content_view.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('path/to/your/email_content_view.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('path/to/your/email_content_view', [...], true)
+ 3 APPPATH\Controllers\OrderController.php(90): view('path/to/your/email_content_view', [...], [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\OrderController->increase_wallet()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')

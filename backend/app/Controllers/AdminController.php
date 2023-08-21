@@ -6,6 +6,7 @@ use App\Models\AdminModel;
 use App\Models\ProductModel;
 use App\Models\CategoryModel;
 use App\Models\OrderDetailModel;
+use App\Models\SliderModel;
 use CodeIgniter\Email\Email;
 
 class AdminController extends BaseController
@@ -14,6 +15,7 @@ class AdminController extends BaseController
     protected $productModel;
     protected $categoryModel;
     protected $orderModel;
+    protected $sliderModel;
     protected $session;
     public function __construct()
     {
@@ -21,6 +23,7 @@ class AdminController extends BaseController
         $this->productModel = new ProductModel();
         $this->categoryModel = new CategoryModel();
         $this->orderModel = new OrderDetailModel();
+        $this->sliderModel = new SliderModel();
         $this->session = \Config\Services::session();
     }
     public function index()
@@ -88,25 +91,25 @@ class AdminController extends BaseController
     public function forgotPassword()
     {
         $email = \Config\Services::email(); // Load the email service
-    
+
         if ($this->request->getMethod() === 'post') {
             $emailAddress = $this->request->getPost('email');
             $otp = $this->request->getPost('otp');
             $password = $this->request->getPost('password');
             $admin = $this->adminModel->where('email', $emailAddress)->first();
-    
+
             if ($admin) {
                 if (empty($otp)) {
                     $otp = random_int(100000, 999999);
                     $this->adminModel->updateOTP($admin['id'], $otp);
-    
-                    $message = "Your OTP is: " . $otp . "\n\n"; 
-                    $message .= "Thank you."; 
+
+                    $message = "Your OTP is: " . $otp . "\n\n";
+                    $message .= "Thank you.";
                     $email->setTo($emailAddress);
-                    $email->setFrom('vishal.naik@darwinpgc.com', 'Password Reset Request'); 
+                    $email->setFrom('vishal.naik@darwinpgc.com', 'Password Reset Request');
                     $email->setSubject('Password Reset Request');
                     $email->setMessage($message);
-                    $email->send();  
+                    $email->send();
                     session()->setFlashdata('success', 'Email sent with OTP. Please check your email.');
                     return view('Admin/set_new_password');
                 } else {
@@ -114,7 +117,7 @@ class AdminController extends BaseController
                         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
                         $this->adminModel->update($admin['id'], ['password' => $hashedPassword]);
                         $this->adminModel->updateOTP($admin['id'], null);
-    
+
                         session()->setFlashdata('success', 'Password has been updated successfully.');
                         return redirect()->to('/adminsignin');
                     } else {
@@ -130,7 +133,7 @@ class AdminController extends BaseController
             return view('Admin/forgot_password');
         }
     }
-    
+
 
     public function list()
     {
@@ -225,17 +228,169 @@ class AdminController extends BaseController
         $this->session->destroy();
         return redirect()->to('/adminsignin');
     }
+    public function slider()
+    {
+        $data['slider'] = $this->sliderModel->list();
+        return view('Admin/slider', $data);
+    }
+    public function sliderStore()
+    {
+        if ($this->request->getMethod() === 'post') {
+            $rules = [
+                'main_heading' => 'required|min_length[2]|max_length[50]',
+                'sub_heading' => 'required|min_length[2]',
+                'image' => 'uploaded[image]|max_size[image,1024]|is_image[image]'
+            ];
+            if ($this->validate($rules)) {
+                $main_heading = $this->request->getPost('main_heading');
+                $sub_heading = $this->request->getPost('sub_heading');
+                $image = $this->request->getFile('image');
+                $imageName = $image->getRandomName();
+                $image->move('./banner/', $imageName);
+
+                $slider = [
+                    'main_heading' => $main_heading,
+                    'sub_heading' => $sub_heading,
+                    'image' => $imageName
+                ];
+
+                $this->sliderModel->insert($slider);
+                $newlyInsertedId = $this->sliderModel->insertID();
+                return $this->response->setJSON([
+                    'status' => true,
+                    'message' => 'Slider added successfully',
+                    'data' => [
+                        'id' => $newlyInsertedId,
+                        'main_heading' => $main_heading,
+                        'sub_heading' => $sub_heading,
+                        'image' => $imageName
+                    ]
+                ]);
+            } else {
+                return $this->response->setJSON([
+                    'status' => false,
+                    'message' => 'Validation failed',
+                    'errors' => $this->validator->getErrors()
+                ]);
+            }
+        }
+    }
+
+    public function sliderEdit($id = null)
+    {
+        $model = new SliderModel();
+        $data = $model->where('id', $id)->first();
+        if ($data) {
+            echo json_encode(array("status" => true, 'data' => $data));
+        } else {
+            echo json_encode(array("status" => false));
+        }
+    }
+
+    public function sliderUpdate()
+    {
+        if ($this->request->getMethod() === 'post') {
+            $rules = [
+                'id' => 'required',
+                'main_heading' => 'required|min_length[2]|max_length[50]',
+                'sub_heading' => 'required|min_length[2]|max_length[50]',
+                'image' => 'max_size[image,1024]|is_image[image]'
+            ];
+
+            if ($this->validate($rules)) {
+                $id = $this->request->getPost('id');
+                $main_heading = $this->request->getPost('main_heading');
+                $sub_heading = $this->request->getPost('sub_heading');
+                $image = $this->request->getFile('image');
+
+                if ($image->isValid() && !$image->hasMoved()) {
+                    $imageName = $image->getRandomName();
+                    $image->move('./banner', $imageName);
+                } else {
+                    $imageName = $this->sliderModel->getSliderImage($id); // Retrieve the existing image name if no new image is uploaded
+                }
+
+                $this->sliderModel->updateSlider($id, $main_heading, $sub_heading, $imageName);
+
+                return $this->response->setJSON([
+                    'status' => true,
+                    'message' => 'Slider updated successfully'
+                ]);
+            } else {
+                return $this->response->setJSON([
+                    'status' => false,
+                    'message' => 'Validation failed',
+                    'errors' => $this->validator->getErrors()
+                ]);
+            }
+        }
+    }
+    public function sliderDelete($id = null)
+    {
+        $deleted = $this->sliderModel->delete($id);
+
+        if ($deleted) {
+            $response = ['status' => true, 'message' => 'Category record deleted successfully'];
+        } else {
+            $response = ['status' => false, 'message' => 'Failed to delete category record'];
+        }
+        return $this->response->setJSON($response);
+    }
+    public function initChart()
+    {
+        $db = \Config\Database::connect();
+        $builder = $db->table('order_details');
+
+        $query = $builder->select("COUNT(DISTINCT order_id) as count, DAY(created_at) as day, MONTH(created_at) as month");
+        $query = $builder->groupBy('DAY(created_at), MONTH(created_at)')->get();
+        $record = $query->getResult();
+
+        $orders = [];
+        foreach ($record as $row) {
+            $orders[] = [
+                'day'   => intval($row->day),
+                'month' => intval($row->month),
+                'count' => intval($row->count)
+            ];
+        }
+
+        $data['orders'] = $orders;
+
+        return view('dashboard', $data);
+    }
+
+
+
     public function dashboard()
     {
+        $db = \Config\Database::connect();
+        $builder = $db->table('order_details');
+
+        // Retrieve unique order count data
+        $query = $builder->select("COUNT(DISTINCT order_id) as count, DAY(created_at) as day, MONTH(created_at) as month");
+        $query = $builder->groupBy('DAY(created_at), MONTH(created_at)')->get();
+        $record = $query->getResult();
+
+        $orders = [];
+        foreach ($record as $row) {
+            $orders[] = [
+                'day'   => intval($row->day),
+                'month' => intval($row->month),
+                'count' => intval($row->count)
+            ];
+        }
+
+        $data['orders'] = $orders;
+
         $addedProductsCount = $this->productModel->getAddedProductsCountLast7Days();
         $totalProductsCount = $this->productModel->getTotalProductsCount();
         $productPercentage = ($addedProductsCount / $totalProductsCount) * 100;
         $productCount = $this->productModel->getTotalProductsCount();
 
+
         $addedAdminsCount = $this->adminModel->getAddedAdminsCountLast7Days();
         $totalAdminsCount = $this->adminModel->getTotalAdminsCount();
         $AdminsPercentage = ($addedAdminsCount / $totalAdminsCount) * 100;
-        $AdminsCount = $this->productModel->getTotalProductsCount();
 
         $adminCount = $this->adminModel->getTotalAdminsCount();
         $categoryCount = $this->categoryModel->getTotalCategoriesCount();
@@ -243,24 +398,23 @@ class AdminController extends BaseController
 
         $orderCount = $this->orderModel->getTotalOrderCount();
         $countUniqueShippedOrders = $this->orderModel->countUniqueShippedOrders();
-        $countUniqueCanceledOrders = $this->orderModel->countUniqueCanceledOrders(); 
+        $countUniqueCanceledOrders = $this->orderModel->countUniqueCanceledOrders();
         $countUniqueDeliveredOrders = $this->orderModel->countUniqueDeliveredOrders();
-        $countUniqueAcceptedOrders = $this->orderModel->countUniqueAcceptedOrders();   
-        
-   
+        $countUniqueAcceptedOrders = $this->orderModel->countUniqueAcceptedOrders();
 
-        return view('dashboard', [
-            'productCount' => $productCount,
-            'productPercentage' => $productPercentage,
-            'totalAdminsCount' => $totalAdminsCount,
-            'AdminsPercentage' => $AdminsPercentage,
-            'categoryCount' => $categoryCount,
-            'categoryPercentage' => $categoryPercentage,
-            'orderCount' => $orderCount,
-            'countUniqueShippedOrders' => $countUniqueShippedOrders,
-            'countUniqueCanceledOrders' => $countUniqueCanceledOrders,
-            'countUniqueDeliveredOrders' => $countUniqueDeliveredOrders,
-            'countUniqueAcceptedOrders' => $countUniqueAcceptedOrders,
-        ]);
+        // Pass all data to the view
+        $data['productCount'] = $productCount;
+        $data['productPercentage'] = $productPercentage;
+        $data['totalAdminsCount'] = $totalAdminsCount;
+        $data['AdminsPercentage'] = $AdminsPercentage;
+        $data['categoryCount'] = $categoryCount;
+        $data['categoryPercentage'] = $categoryPercentage;
+        $data['orderCount'] = $orderCount;
+        $data['countUniqueShippedOrders'] = $countUniqueShippedOrders;
+        $data['countUniqueCanceledOrders'] = $countUniqueCanceledOrders;
+        $data['countUniqueDeliveredOrders'] = $countUniqueDeliveredOrders;
+        $data['countUniqueAcceptedOrders'] = $countUniqueAcceptedOrders;
+
+        return view('dashboard', $data);
     }
 }

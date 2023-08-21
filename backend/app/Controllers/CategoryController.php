@@ -55,7 +55,7 @@ class CategoryController extends Controller
     public function index()
     {
         $data['Category'] = $this->CategoryModel->list();
-        echo view('Category/list', $data);
+        return view('Category/list', $data);
     }
 
 
