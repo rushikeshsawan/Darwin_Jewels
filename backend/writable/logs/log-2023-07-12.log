@@ -1,0 +1,476 @@
+ERROR - 2023-07-12 04:13:42 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', 'root', '', 'ecom', 3306, '', 0)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\AdminController.php(88): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\AdminController->forgotPassword()
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\AdminController.php(88): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\AdminController->forgotPassword()
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-07-12 04:13:42 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `admin`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\AdminController.php(88): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AdminController->forgotPassword()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-07-12 04:49:54 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-07-12 04:49:54 --> 220 smtp.googlemail.com ESMTP t9-20020a170902e84900b001b8b2bf3313sm2805110plg.217 - gsmtp
+
+hello: 250-smtp.googlemail.com at your service, [114.143.182.34]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 250 2.1.0 OK t9-20020a170902e84900b001b8b2bf3313sm2805110plg.217 - gsmtp
+
+to: 555 5.5.2 Syntax error. t9-20020a170902e84900b001b8b2bf3313sm2805110plg.217 - gsmtp
+
+The following SMTP error was encountered: 555 5.5.2 Syntax error. t9-20020a170902e84900b001b8b2bf3313sm2805110plg.217 - gsmtp
+
+quit: 221 2.0.0 closing connection t9-20020a170902e84900b001b8b2bf3313sm2805110plg.217 - gsmtp
+
+ERROR - 2023-07-12 04:53:15 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-07-12 04:53:15 --> 220 smtp.googlemail.com ESMTP l6-20020a637006000000b0055b07fcb6ddsm2467230pgc.72 - gsmtp
+
+hello: 250-smtp.googlemail.com at your service, [114.143.182.34]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 250 2.1.0 OK l6-20020a637006000000b0055b07fcb6ddsm2467230pgc.72 - gsmtp
+
+to: 555 5.5.2 Syntax error. l6-20020a637006000000b0055b07fcb6ddsm2467230pgc.72 - gsmtp
+
+The following SMTP error was encountered: 555 5.5.2 Syntax error. l6-20020a637006000000b0055b07fcb6ddsm2467230pgc.72 - gsmtp
+
+quit: 221 2.0.0 closing connection l6-20020a637006000000b0055b07fcb6ddsm2467230pgc.72 - gsmtp
+
+CRITICAL - 2023-07-12 04:58:27 --> syntax error, unexpected token "public", expecting end of file
+in APPPATH\Controllers\AdminController.php on line 139.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\AdminController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\AdminController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\AdminController')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\AdminController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-07-12 04:58:48 --> Email: sendWithMail throwed ErrorException: mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Email\Email.php:1730
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mail(): Failed ...', 'C:\\xampp\\htdocs...', 1730)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Email\Email.php(1730): mail('vishal75naik@gm...', '=?UTF-8?Q?Passw...', 'Your OTP is: 76...', 'Date: Wed, 12 J...')
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Email\Email.php(1667): CodeIgniter\Email\Email->sendWithMail()
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Email\Email.php(1565): CodeIgniter\Email\Email->spoolEmail()
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\AdminController.php(110): CodeIgniter\Email\Email->send()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\AdminController->forgotPassword()
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+ERROR - 2023-07-12 04:58:48 --> Email: Unable to send email using PHP mail(). Your server might not be configured to send mail using this method.
+ERROR - 2023-07-12 04:58:48 --> Invalid email address: ""
+Invalid email address: ""
+CRITICAL - 2023-07-12 05:15:02 --> Class "App\Filters\AuthGuard" not found
+in SYSTEMPATH\Filters\Filters.php on line 166.
+ 1 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('dashboard', 'before')
+ 2 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 3 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-12 05:15:02 --> Class "App\Filters\AuthGuard" not found
+in SYSTEMPATH\Filters\Filters.php on line 166.
+ 1 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('dashboard', 'before')
+ 2 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 3 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-12 06:25:37 --> Undefined array key "id"
+in APPPATH\Controllers\AdminController.php on line 182.
+ 1 APPPATH\Controllers\AdminController.php(182): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'APPPATH\\Controllers\\AdminController.php', 182)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AdminController->changePassword()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-12 06:55:58 --> Undefined array key "id"
+in APPPATH\Controllers\AdminController.php on line 182.
+ 1 APPPATH\Controllers\AdminController.php(182): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'APPPATH\\Controllers\\AdminController.php', 182)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AdminController->changePassword()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-12 06:56:01 --> Undefined array key "id"
+in APPPATH\Controllers\AdminController.php on line 182.
+ 1 APPPATH\Controllers\AdminController.php(182): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'APPPATH\\Controllers\\AdminController.php', 182)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AdminController->changePassword()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-12 06:57:45 --> Undefined array key "id"
+in APPPATH\Controllers\AdminController.php on line 182.
+ 1 APPPATH\Controllers\AdminController.php(182): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'APPPATH\\Controllers\\AdminController.php', 182)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AdminController->changePassword()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-12 07:06:05 --> Undefined array key "id"
+in APPPATH\Controllers\AdminController.php on line 182.
+ 1 APPPATH\Controllers\AdminController.php(182): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'APPPATH\\Controllers\\AdminController.php', 182)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AdminController->changePassword()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-12 07:06:09 --> Undefined array key "id"
+in APPPATH\Controllers\AdminController.php on line 182.
+ 1 APPPATH\Controllers\AdminController.php(182): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'APPPATH\\Controllers\\AdminController.php', 182)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AdminController->changePassword()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-12 07:08:04 --> Undefined array key "id"
+in APPPATH\Controllers\AdminController.php on line 182.
+ 1 APPPATH\Controllers\AdminController.php(182): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'APPPATH\\Controllers\\AdminController.php', 182)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AdminController->changePassword()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-12 07:08:13 --> Undefined array key "id"
+in APPPATH\Controllers\AdminController.php on line 182.
+ 1 APPPATH\Controllers\AdminController.php(182): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'APPPATH\\Controllers\\AdminController.php', 182)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AdminController->changePassword()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-12 07:17:51 --> Undefined array key "id"
+in APPPATH\Controllers\AdminController.php on line 182.
+ 1 APPPATH\Controllers\AdminController.php(182): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'APPPATH\\Controllers\\AdminController.php', 182)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AdminController->changePassword()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-12 07:18:35 --> Undefined array key "id"
+in APPPATH\Controllers\AdminController.php on line 182.
+ 1 APPPATH\Controllers\AdminController.php(182): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'APPPATH\\Controllers\\AdminController.php', 182)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AdminController->changePassword()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-12 07:19:21 --> Undefined array key "id"
+in APPPATH\Controllers\AdminController.php on line 182.
+ 1 APPPATH\Controllers\AdminController.php(182): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'APPPATH\\Controllers\\AdminController.php', 182)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AdminController->changePassword()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-12 07:20:31 --> Undefined array key "id"
+in APPPATH\Controllers\AdminController.php on line 182.
+ 1 APPPATH\Controllers\AdminController.php(182): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'APPPATH\\Controllers\\AdminController.php', 182)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AdminController->changePassword()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-12 08:40:20 --> Undefined variable $response
+in APPPATH\Controllers\AdminController.php on line 207.
+ 1 APPPATH\Controllers\AdminController.php(207): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $response', 'APPPATH\\Controllers\\AdminController.php', 207)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AdminController->changePassword()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-12 08:45:06 --> Undefined variable $response
+in APPPATH\Controllers\AdminController.php on line 209.
+ 1 APPPATH\Controllers\AdminController.php(209): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $response', 'APPPATH\\Controllers\\AdminController.php', 209)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AdminController->changePassword()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-12 09:48:54 --> Invalid file: "dashboard.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('dashboard.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard', [], true)
+ 3 APPPATH\Controllers\AdminController.php(224): view('dashboard')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AdminController->dashboard()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-12 09:49:07 --> Invalid file: "dashboard.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('dashboard.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard', [], true)
+ 3 APPPATH\Controllers\AdminController.php(223): view('dashboard')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AdminController->dashboard()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-12 09:49:18 --> Invalid file: "dashboard.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('dashboard.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard', [], true)
+ 3 APPPATH\Controllers\AdminController.php(223): view('dashboard')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AdminController->dashboard()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-12 09:49:20 --> Invalid file: "dashboard.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('dashboard.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard', [], true)
+ 3 APPPATH\Controllers\AdminController.php(223): view('dashboard')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AdminController->dashboard()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-12 09:49:29 --> Invalid file: "dashboard.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('dashboard.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard', [], true)
+ 3 APPPATH\Controllers\AdminController.php(223): view('dashboard')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AdminController->dashboard()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-12 09:49:29 --> Invalid file: "dashboard.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('dashboard.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard', [], true)
+ 3 APPPATH\Controllers\AdminController.php(223): view('dashboard')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AdminController->dashboard()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-12 09:50:07 --> Undefined variable $admin
+in APPPATH\Views\dashboard.php on line 57.
+ 1 APPPATH\Views\dashboard.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $admin', 'APPPATH\\Views\\dashboard.php', 57)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard', [], true)
+ 5 APPPATH\Controllers\AdminController.php(223): view('dashboard')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AdminController->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-12 10:28:36 --> Call to undefined method App\Models\ProductModel::getAddedProductsCountLast7Days
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\AdminController.php(227): CodeIgniter\Model->__call('getAddedProductsCountLast7Days', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AdminController->dashboard()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-12 10:29:03 --> Call to undefined method App\Models\ProductModel::getAddedProductsCountLast7Days
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\AdminController.php(228): CodeIgniter\Model->__call('getAddedProductsCountLast7Days', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AdminController->dashboard()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-12 10:29:20 --> Call to undefined method App\Models\ProductModel::getAddedProductsCountLast1Days
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\AdminController.php(228): CodeIgniter\Model->__call('getAddedProductsCountLast1Days', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AdminController->dashboard()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-12 10:30:23 --> Call to undefined method App\Models\ProductModel::getAddedProductsCountLast1Days
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\AdminController.php(228): CodeIgniter\Model->__call('getAddedProductsCountLast1Days', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AdminController->dashboard()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-12 10:30:25 --> Call to undefined method App\Models\ProductModel::getAddedProductsCountLast1Days
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\AdminController.php(228): CodeIgniter\Model->__call('getAddedProductsCountLast1Days', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AdminController->dashboard()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-12 10:32:06 --> Call to undefined method App\Models\ProductModel::getAddedProductsCountLast1Days
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\AdminController.php(228): CodeIgniter\Model->__call('getAddedProductsCountLast1Days', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AdminController->dashboard()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-12 10:32:46 --> Call to undefined method App\Models\ProductModel::getAddedProductsCountLast1Days
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\AdminController.php(228): CodeIgniter\Model->__call('getAddedProductsCountLast1Days', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AdminController->dashboard()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-12 10:36:12 --> Undefined variable $productCount
+in APPPATH\Views\dashboard.php on line 53.
+ 1 APPPATH\Views\dashboard.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $productCount', 'APPPATH\\Views\\dashboard.php', 53)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard', [], true)
+ 5 APPPATH\Controllers\AdminController.php(231): view('dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AdminController->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-12 11:08:36 --> Unmatched '}'
+in APPPATH\Models\AdminModel.php on line 50.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Models\\AdminModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\AdminModel')
+ 3 APPPATH\Controllers\AdminController.php(18): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\AdminModel')
+ 4 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\AdminController->__construct()
+ 5 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-12 11:08:50 --> Unmatched '}'
+in APPPATH\Models\AdminModel.php on line 50.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Models\\AdminModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\AdminModel')
+ 3 APPPATH\Controllers\AdminController.php(18): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\AdminModel')
+ 4 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\AdminController->__construct()
+ 5 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-12 11:09:12 --> Call to undefined method App\Models\AdminModel::getTotalAdminsCount
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\AdminController.php(230): CodeIgniter\Model->__call('getTotalAdminsCount', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AdminController->dashboard()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-12 11:41:10 --> Undefined variable $adminCount
+in APPPATH\Views\dashboard.php on line 94.
+ 1 APPPATH\Views\dashboard.php(94): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $adminCount', 'APPPATH\\Views\\dashboard.php', 94)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard', [], true)
+ 5 APPPATH\Controllers\AdminController.php(248): view('dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AdminController->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-12 12:39:14 --> Undefined variable $admin
+in APPPATH\Views\Admin\dashboard.php on line 57.
+ 1 APPPATH\Views\Admin\dashboard.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $admin', 'APPPATH\\Views\\Admin\\dashboard.php', 57)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Admin/dashboard', [], true)
+ 5 APPPATH\Controllers\AdminController.php(210): view('Admin/dashboard')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AdminController->changePassword()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-12 12:39:31 --> Undefined variable $admin
+in APPPATH\Views\Admin\dashboard.php on line 57.
+ 1 APPPATH\Views\Admin\dashboard.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $admin', 'APPPATH\\Views\\Admin\\dashboard.php', 57)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Admin/dashboard', [], true)
+ 5 APPPATH\Controllers\AdminController.php(210): view('Admin/dashboard')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AdminController->changePassword()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-12 12:40:53 --> Undefined variable $admin
+in APPPATH\Views\Admin\dashboard.php on line 57.
+ 1 APPPATH\Views\Admin\dashboard.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $admin', 'APPPATH\\Views\\Admin\\dashboard.php', 57)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Admin/dashboard', [], true)
+ 5 APPPATH\Controllers\AdminController.php(210): view('Admin/dashboard')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AdminController->changePassword()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-12 12:41:11 --> Undefined variable $admin
+in APPPATH\Views\Admin\dashboard.php on line 57.
+ 1 APPPATH\Views\Admin\dashboard.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $admin', 'APPPATH\\Views\\Admin\\dashboard.php', 57)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Admin/dashboard', [], true)
+ 5 APPPATH\Controllers\AdminController.php(210): view('Admin/dashboard')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AdminController->changePassword()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-12 12:41:42 --> Undefined variable $admin
+in APPPATH\Views\Admin\dashboard.php on line 57.
+ 1 APPPATH\Views\Admin\dashboard.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $admin', 'APPPATH\\Views\\Admin\\dashboard.php', 57)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Admin/dashboard', [], true)
+ 5 APPPATH\Controllers\AdminController.php(210): view('Admin/dashboard')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AdminController->changePassword()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')

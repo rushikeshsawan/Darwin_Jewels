@@ -1,0 +1,652 @@
+CRITICAL - 2023-07-17 04:39:09 --> Undefined variable $categories
+in APPPATH\Views\Product\list.php on line 45.
+ 1 APPPATH\Views\Product\list.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $categories', 'APPPATH\\Views\\Product\\list.php', 45)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Product\\list.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Product/list', [], true)
+ 5 APPPATH\Controllers\ProductController.php(290): view('Product/list')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-17 04:43:18 --> unlink(C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public/uploads/): Is a directory
+in APPPATH\Controllers\ProductController.php on line 370.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(C:\\xampp\\htdocs\\New folder\\Darwin_Jewels\\backend\\public/uploads/): Is a directory', 'APPPATH\\Controllers\\ProductController.php', 370)
+ 2 APPPATH\Controllers\ProductController.php(370): unlink('FCPATH\\uploads')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->saveProduct()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-17 04:43:19 --> unlink(C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public/uploads/): Is a directory
+in APPPATH\Controllers\ProductController.php on line 370.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(C:\\xampp\\htdocs\\New folder\\Darwin_Jewels\\backend\\public/uploads/): Is a directory', 'APPPATH\\Controllers\\ProductController.php', 370)
+ 2 APPPATH\Controllers\ProductController.php(370): unlink('FCPATH\\uploads')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->saveProduct()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-17 04:43:30 --> unlink(C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public/uploads/): Is a directory
+in APPPATH\Controllers\ProductController.php on line 370.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(C:\\xampp\\htdocs\\New folder\\Darwin_Jewels\\backend\\public/uploads/): Is a directory', 'APPPATH\\Controllers\\ProductController.php', 370)
+ 2 APPPATH\Controllers\ProductController.php(370): unlink('FCPATH\\uploads')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->saveProduct()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-17 04:44:00 --> unlink(C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public/uploads/): Is a directory
+in APPPATH\Controllers\ProductController.php on line 370.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(C:\\xampp\\htdocs\\New folder\\Darwin_Jewels\\backend\\public/uploads/): Is a directory', 'APPPATH\\Controllers\\ProductController.php', 370)
+ 2 APPPATH\Controllers\ProductController.php(370): unlink('FCPATH\\uploads')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->saveProduct()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-17 04:44:37 --> unlink(C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public/uploads/): Is a directory
+in APPPATH\Controllers\ProductController.php on line 370.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(C:\\xampp\\htdocs\\New folder\\Darwin_Jewels\\backend\\public/uploads/): Is a directory', 'APPPATH\\Controllers\\ProductController.php', 370)
+ 2 APPPATH\Controllers\ProductController.php(370): unlink('FCPATH\\uploads')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->saveProduct()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-17 04:44:39 --> unlink(C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public/uploads/): Is a directory
+in APPPATH\Controllers\ProductController.php on line 370.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(C:\\xampp\\htdocs\\New folder\\Darwin_Jewels\\backend\\public/uploads/): Is a directory', 'APPPATH\\Controllers\\ProductController.php', 370)
+ 2 APPPATH\Controllers\ProductController.php(370): unlink('FCPATH\\uploads')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->saveProduct()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-17 04:44:39 --> unlink(C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public/uploads/): Is a directory
+in APPPATH\Controllers\ProductController.php on line 370.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(C:\\xampp\\htdocs\\New folder\\Darwin_Jewels\\backend\\public/uploads/): Is a directory', 'APPPATH\\Controllers\\ProductController.php', 370)
+ 2 APPPATH\Controllers\ProductController.php(370): unlink('FCPATH\\uploads')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->saveProduct()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-17 04:44:39 --> unlink(C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public/uploads/): Is a directory
+in APPPATH\Controllers\ProductController.php on line 370.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(C:\\xampp\\htdocs\\New folder\\Darwin_Jewels\\backend\\public/uploads/): Is a directory', 'APPPATH\\Controllers\\ProductController.php', 370)
+ 2 APPPATH\Controllers\ProductController.php(370): unlink('FCPATH\\uploads')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->saveProduct()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-17 04:44:39 --> unlink(C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public/uploads/): Is a directory
+in APPPATH\Controllers\ProductController.php on line 370.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(C:\\xampp\\htdocs\\New folder\\Darwin_Jewels\\backend\\public/uploads/): Is a directory', 'APPPATH\\Controllers\\ProductController.php', 370)
+ 2 APPPATH\Controllers\ProductController.php(370): unlink('FCPATH\\uploads')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->saveProduct()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-17 04:44:39 --> unlink(C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public/uploads/): Is a directory
+in APPPATH\Controllers\ProductController.php on line 370.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(C:\\xampp\\htdocs\\New folder\\Darwin_Jewels\\backend\\public/uploads/): Is a directory', 'APPPATH\\Controllers\\ProductController.php', 370)
+ 2 APPPATH\Controllers\ProductController.php(370): unlink('FCPATH\\uploads')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->saveProduct()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-17 04:45:39 --> unlink(C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public/uploads/): Is a directory
+in APPPATH\Controllers\ProductController.php on line 367.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(C:\\xampp\\htdocs\\New folder\\Darwin_Jewels\\backend\\public/uploads/): Is a directory', 'APPPATH\\Controllers\\ProductController.php', 367)
+ 2 APPPATH\Controllers\ProductController.php(367): unlink('FCPATH\\uploads')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->saveProduct()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-17 04:45:40 --> unlink(C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public/uploads/): Is a directory
+in APPPATH\Controllers\ProductController.php on line 367.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(C:\\xampp\\htdocs\\New folder\\Darwin_Jewels\\backend\\public/uploads/): Is a directory', 'APPPATH\\Controllers\\ProductController.php', 367)
+ 2 APPPATH\Controllers\ProductController.php(367): unlink('FCPATH\\uploads')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->saveProduct()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-17 04:45:40 --> unlink(C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public/uploads/): Is a directory
+in APPPATH\Controllers\ProductController.php on line 367.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(C:\\xampp\\htdocs\\New folder\\Darwin_Jewels\\backend\\public/uploads/): Is a directory', 'APPPATH\\Controllers\\ProductController.php', 367)
+ 2 APPPATH\Controllers\ProductController.php(367): unlink('FCPATH\\uploads')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->saveProduct()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-17 04:45:41 --> unlink(C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public/uploads/): Is a directory
+in APPPATH\Controllers\ProductController.php on line 367.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(C:\\xampp\\htdocs\\New folder\\Darwin_Jewels\\backend\\public/uploads/): Is a directory', 'APPPATH\\Controllers\\ProductController.php', 367)
+ 2 APPPATH\Controllers\ProductController.php(367): unlink('FCPATH\\uploads')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->saveProduct()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-17 04:45:54 --> unlink(C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public/uploads/): Is a directory
+in APPPATH\Controllers\ProductController.php on line 367.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(C:\\xampp\\htdocs\\New folder\\Darwin_Jewels\\backend\\public/uploads/): Is a directory', 'APPPATH\\Controllers\\ProductController.php', 367)
+ 2 APPPATH\Controllers\ProductController.php(367): unlink('FCPATH\\uploads')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->saveProduct()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-17 05:28:52 --> Trait "App\Controllers\CodeIgniter\HTTP\Files\UploadedFile" not found
+in APPPATH\Controllers\ProductController.php on line 8.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-07-17 05:48:45 --> Trait "App\Controllers\CodeIgniter\HTTP\Files\UploadedFile" not found
+in APPPATH\Controllers\ProductController.php on line 8.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-07-17 07:14:48 --> Namespace declaration statement has to be the very first statement or after any declare call in the script
+in APPPATH\Controllers\ProductController.php on line 5.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-07-17 07:15:08 --> Call to undefined method App\Models\ProductModel::list
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\ProductController.php(291): CodeIgniter\Model->__call('list', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-17 07:23:00 --> Undefined variable $categories
+in APPPATH\Views\Product\list.php on line 51.
+ 1 APPPATH\Views\Product\list.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $categories', 'APPPATH\\Views\\Product\\list.php', 51)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Product\\list.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Product/list', [], true)
+ 5 APPPATH\Controllers\ProductController.php(12): view('Product/list')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-17 07:24:13 --> Call to undefined method App\Models\ProductModel::getProducts
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\ProductController.php(29): CodeIgniter\Model->__call('getProducts', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->getProductList()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-17 09:02:15 --> unlink(C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public/uploads/): Is a directory
+in APPPATH\Controllers\ProductController.php on line 364.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(C:\\xampp\\htdocs\\New folder\\Darwin_Jewels\\backend\\public/uploads/): Is a directory', 'APPPATH\\Controllers\\ProductController.php', 364)
+ 2 APPPATH\Controllers\ProductController.php(364): unlink('FCPATH\\uploads')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->saveProduct()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-17 09:02:16 --> unlink(C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public/uploads/): Is a directory
+in APPPATH\Controllers\ProductController.php on line 364.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(C:\\xampp\\htdocs\\New folder\\Darwin_Jewels\\backend\\public/uploads/): Is a directory', 'APPPATH\\Controllers\\ProductController.php', 364)
+ 2 APPPATH\Controllers\ProductController.php(364): unlink('FCPATH\\uploads')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->saveProduct()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-17 09:02:17 --> unlink(C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public/uploads/): Is a directory
+in APPPATH\Controllers\ProductController.php on line 364.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(C:\\xampp\\htdocs\\New folder\\Darwin_Jewels\\backend\\public/uploads/): Is a directory', 'APPPATH\\Controllers\\ProductController.php', 364)
+ 2 APPPATH\Controllers\ProductController.php(364): unlink('FCPATH\\uploads')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->saveProduct()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-17 09:30:18 --> Class "App\Controllers\RatingModel" not found
+in APPPATH\Controllers\ProductController.php on line 398.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->saveProduct()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-17 09:30:19 --> Class "App\Controllers\RatingModel" not found
+in APPPATH\Controllers\ProductController.php on line 398.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->saveProduct()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-17 09:30:19 --> Class "App\Controllers\RatingModel" not found
+in APPPATH\Controllers\ProductController.php on line 398.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->saveProduct()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-17 09:30:21 --> Class "App\Controllers\RatingModel" not found
+in APPPATH\Controllers\ProductController.php on line 398.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->saveProduct()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-17 09:59:42 --> Call to a member function getRandomName() on null
+in APPPATH\Controllers\ProductController.php on line 63.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->saveProduct()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-17 10:15:26 --> Cannot access offset of type string on string
+in APPPATH\Controllers\ProductController.php on line 159.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->rateProduct('10')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-17 11:21:26 --> Call to undefined method App\Models\ProductModel::saveRating
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\ProductController.php(180): CodeIgniter\Model->__call('saveRating', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->saveRating('33')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-17 11:21:26 --> Call to undefined method App\Models\ProductModel::saveRating
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\ProductController.php(180): CodeIgniter\Model->__call('saveRating', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->saveRating('33')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-17 11:21:26 --> Call to undefined method App\Models\ProductModel::saveRating
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\ProductController.php(180): CodeIgniter\Model->__call('saveRating', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->saveRating('33')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-17 11:21:33 --> Call to undefined method App\Models\ProductModel::saveRating
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\ProductController.php(180): CodeIgniter\Model->__call('saveRating', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->saveRating('48')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-17 11:23:44 --> Call to undefined method App\Models\ProductModel::saveRating
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\ProductController.php(180): CodeIgniter\Model->__call('saveRating', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->saveRating('9')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-17 11:24:25 --> Call to undefined method App\Models\ProductModel::saveRating
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\ProductController.php(180): CodeIgniter\Model->__call('saveRating', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->saveRating('9')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-17 11:31:51 --> Call to undefined method App\Models\ProductModel::saveRating
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\ProductController.php(180): CodeIgniter\Model->__call('saveRating', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->saveRating('33')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-17 11:31:51 --> Call to undefined method App\Models\ProductModel::saveRating
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\ProductController.php(180): CodeIgniter\Model->__call('saveRating', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->saveRating('33')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-17 11:31:52 --> Call to undefined method App\Models\ProductModel::saveRating
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\ProductController.php(180): CodeIgniter\Model->__call('saveRating', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->saveRating('33')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-17 11:31:52 --> Call to undefined method App\Models\ProductModel::saveRating
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\ProductController.php(180): CodeIgniter\Model->__call('saveRating', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->saveRating('33')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-17 11:31:52 --> Call to undefined method App\Models\ProductModel::saveRating
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\ProductController.php(180): CodeIgniter\Model->__call('saveRating', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->saveRating('33')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-17 11:31:55 --> Call to undefined method App\Models\ProductModel::saveRating
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\ProductController.php(180): CodeIgniter\Model->__call('saveRating', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->saveRating('45')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-17 11:32:36 --> Call to undefined method App\Models\ProductModel::saveRating
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\ProductController.php(180): CodeIgniter\Model->__call('saveRating', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->saveRating('33')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-17 11:32:54 --> Call to undefined method App\Models\ProductModel::saveRating
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\ProductController.php(180): CodeIgniter\Model->__call('saveRating', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->saveRating('33')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-17 11:37:28 --> Invalid file: "product.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('product.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('product', [], true)
+ 3 APPPATH\Controllers\ProductController.php(14): view('product')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-17 11:37:49 --> Undefined variable $categories
+in APPPATH\Views\Product\list.php on line 51.
+ 1 APPPATH\Views\Product\list.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $categories', 'APPPATH\\Views\\Product\\list.php', 51)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Product\\list.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Product/list', [], true)
+ 5 APPPATH\Controllers\ProductController.php(14): view('Product/list')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-17 11:39:02 --> Call to undefined method App\Models\ProductModel::saveRating
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\ProductController.php(180): CodeIgniter\Model->__call('saveRating', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->saveRating('9')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-17 11:40:04 --> Call to undefined method App\Models\ProductModel::saveRating
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\ProductController.php(180): CodeIgniter\Model->__call('saveRating', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->saveRating('45')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-17 11:41:19 --> Call to undefined method App\Models\ProductModel::saveRating
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\ProductController.php(180): CodeIgniter\Model->__call('saveRating', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->saveRating('10')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-17 11:41:24 --> Call to undefined method App\Models\ProductModel::saveRating
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\ProductController.php(180): CodeIgniter\Model->__call('saveRating', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->saveRating('9')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-17 11:41:26 --> Call to undefined method App\Models\ProductModel::saveRating
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\ProductController.php(180): CodeIgniter\Model->__call('saveRating', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->saveRating('9')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-17 11:41:56 --> Call to undefined method App\Models\ProductModel::saveRating
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\ProductController.php(180): CodeIgniter\Model->__call('saveRating', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->saveRating('9')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-17 11:46:02 --> Call to undefined method App\Models\ProductModel::saveRating
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\ProductController.php(180): CodeIgniter\Model->__call('saveRating', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->saveRating('33')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-17 11:47:20 --> Call to undefined method App\Models\ProductModel::saveRating
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\ProductController.php(179): CodeIgniter\Model->__call('saveRating', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->saveRating('10')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-17 11:47:50 --> Call to undefined method App\Models\ProductModel::saveRating
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\ProductController.php(179): CodeIgniter\Model->__call('saveRating', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->saveRating('9')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-17 11:50:01 --> Call to undefined method App\Models\ProductModel::saveRating
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\ProductController.php(179): CodeIgniter\Model->__call('saveRating', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->saveRating('9')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-17 11:54:04 --> Call to undefined method App\Models\ProductModel::saveRating
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\ProductController.php(182): CodeIgniter\Model->__call('saveRating', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->saveRating('9')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-17 12:13:17 --> "~u}u{{gd" is not a valid rule.
+in SYSTEMPATH\Validation\Validation.php on line 320.
+ 1 SYSTEMPATH\Validation\Validation.php(320): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('~u}u{{gd')
+ 2 SYSTEMPATH\Validation\Validation.php(170): CodeIgniter\Validation\Validation->processRules('prize', 'prize', 'pooooooooooo', [...], [...])
+ 3 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\ProductController.php(65): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->saveProduct()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-17 12:13:18 --> "~u}u{{gd" is not a valid rule.
+in SYSTEMPATH\Validation\Validation.php on line 320.
+ 1 SYSTEMPATH\Validation\Validation.php(320): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('~u}u{{gd')
+ 2 SYSTEMPATH\Validation\Validation.php(170): CodeIgniter\Validation\Validation->processRules('prize', 'prize', 'pooooooooooo', [...], [...])
+ 3 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\ProductController.php(65): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->saveProduct()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-17 12:13:19 --> "~u}u{{gd" is not a valid rule.
+in SYSTEMPATH\Validation\Validation.php on line 320.
+ 1 SYSTEMPATH\Validation\Validation.php(320): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('~u}u{{gd')
+ 2 SYSTEMPATH\Validation\Validation.php(170): CodeIgniter\Validation\Validation->processRules('prize', 'prize', 'pooooooooooo', [...], [...])
+ 3 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\ProductController.php(65): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->saveProduct()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-17 12:13:32 --> "~u}u{{gd" is not a valid rule.
+in SYSTEMPATH\Validation\Validation.php on line 320.
+ 1 SYSTEMPATH\Validation\Validation.php(320): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('~u}u{{gd')
+ 2 SYSTEMPATH\Validation\Validation.php(170): CodeIgniter\Validation\Validation->processRules('prize', 'prize', '22222', [...], [...])
+ 3 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\ProductController.php(65): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->saveProduct()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-17 12:13:34 --> "~u}u{{gd" is not a valid rule.
+in SYSTEMPATH\Validation\Validation.php on line 320.
+ 1 SYSTEMPATH\Validation\Validation.php(320): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('~u}u{{gd')
+ 2 SYSTEMPATH\Validation\Validation.php(170): CodeIgniter\Validation\Validation->processRules('prize', 'prize', '22222', [...], [...])
+ 3 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\ProductController.php(65): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->saveProduct()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-17 12:13:35 --> "~u}u{{gd" is not a valid rule.
+in SYSTEMPATH\Validation\Validation.php on line 320.
+ 1 SYSTEMPATH\Validation\Validation.php(320): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('~u}u{{gd')
+ 2 SYSTEMPATH\Validation\Validation.php(170): CodeIgniter\Validation\Validation->processRules('prize', 'prize', '22222', [...], [...])
+ 3 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\ProductController.php(65): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->saveProduct()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-17 12:13:35 --> "~u}u{{gd" is not a valid rule.
+in SYSTEMPATH\Validation\Validation.php on line 320.
+ 1 SYSTEMPATH\Validation\Validation.php(320): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('~u}u{{gd')
+ 2 SYSTEMPATH\Validation\Validation.php(170): CodeIgniter\Validation\Validation->processRules('prize', 'prize', '22222', [...], [...])
+ 3 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\ProductController.php(65): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->saveProduct()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-17 12:13:35 --> "~u}u{{gd" is not a valid rule.
+in SYSTEMPATH\Validation\Validation.php on line 320.
+ 1 SYSTEMPATH\Validation\Validation.php(320): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('~u}u{{gd')
+ 2 SYSTEMPATH\Validation\Validation.php(170): CodeIgniter\Validation\Validation->processRules('prize', 'prize', '22222', [...], [...])
+ 3 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\ProductController.php(65): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->saveProduct()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-17 12:13:35 --> "~u}u{{gd" is not a valid rule.
+in SYSTEMPATH\Validation\Validation.php on line 320.
+ 1 SYSTEMPATH\Validation\Validation.php(320): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('~u}u{{gd')
+ 2 SYSTEMPATH\Validation\Validation.php(170): CodeIgniter\Validation\Validation->processRules('prize', 'prize', '22222', [...], [...])
+ 3 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\ProductController.php(65): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->saveProduct()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-17 12:13:36 --> "~u}u{{gd" is not a valid rule.
+in SYSTEMPATH\Validation\Validation.php on line 320.
+ 1 SYSTEMPATH\Validation\Validation.php(320): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('~u}u{{gd')
+ 2 SYSTEMPATH\Validation\Validation.php(170): CodeIgniter\Validation\Validation->processRules('prize', 'prize', '22222', [...], [...])
+ 3 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\ProductController.php(65): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->saveProduct()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-17 12:14:41 --> "~u}u{{gd" is not a valid rule.
+in SYSTEMPATH\Validation\Validation.php on line 320.
+ 1 SYSTEMPATH\Validation\Validation.php(320): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('~u}u{{gd')
+ 2 SYSTEMPATH\Validation\Validation.php(170): CodeIgniter\Validation\Validation->processRules('prize', 'prize', '123', [...], [...])
+ 3 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\ProductController.php(65): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->saveProduct()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-17 12:14:43 --> "~u}u{{gd" is not a valid rule.
+in SYSTEMPATH\Validation\Validation.php on line 320.
+ 1 SYSTEMPATH\Validation\Validation.php(320): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('~u}u{{gd')
+ 2 SYSTEMPATH\Validation\Validation.php(170): CodeIgniter\Validation\Validation->processRules('prize', 'prize', '123', [...], [...])
+ 3 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\ProductController.php(65): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->saveProduct()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-17 12:14:43 --> "~u}u{{gd" is not a valid rule.
+in SYSTEMPATH\Validation\Validation.php on line 320.
+ 1 SYSTEMPATH\Validation\Validation.php(320): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('~u}u{{gd')
+ 2 SYSTEMPATH\Validation\Validation.php(170): CodeIgniter\Validation\Validation->processRules('prize', 'prize', '123', [...], [...])
+ 3 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\ProductController.php(65): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->saveProduct()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-17 12:14:43 --> "~u}u{{gd" is not a valid rule.
+in SYSTEMPATH\Validation\Validation.php on line 320.
+ 1 SYSTEMPATH\Validation\Validation.php(320): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('~u}u{{gd')
+ 2 SYSTEMPATH\Validation\Validation.php(170): CodeIgniter\Validation\Validation->processRules('prize', 'prize', '123', [...], [...])
+ 3 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\ProductController.php(65): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->saveProduct()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-17 12:14:43 --> "~u}u{{gd" is not a valid rule.
+in SYSTEMPATH\Validation\Validation.php on line 320.
+ 1 SYSTEMPATH\Validation\Validation.php(320): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('~u}u{{gd')
+ 2 SYSTEMPATH\Validation\Validation.php(170): CodeIgniter\Validation\Validation->processRules('prize', 'prize', '123', [...], [...])
+ 3 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\ProductController.php(65): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->saveProduct()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-17 12:27:08 --> Array to string conversion
+in APPPATH\Views\Admin\forgot_password.php on line 44.
+ 1 APPPATH\Views\Admin\forgot_password.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Views\\Admin\\forgot_password.php', 44)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\forgot_password.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Admin/forgot_password', [], true)
+ 5 APPPATH\Controllers\AdminController.php(124): view('Admin/forgot_password')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AdminController->forgotPassword()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')

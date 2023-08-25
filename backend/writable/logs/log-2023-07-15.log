@@ -1,0 +1,367 @@
+CRITICAL - 2023-07-15 04:40:45 --> Object of class CodeIgniter\Validation\Validation could not be converted to string
+in APPPATH\Views\Admin\signin.php on line 7.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Admin/signin', [], true)
+ 4 APPPATH\Controllers\AdminController.php(79): view('Admin/signin', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AdminController->login()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-15 04:41:04 --> Object of class CodeIgniter\Validation\Validation could not be converted to string
+in APPPATH\Views\Admin\signin.php on line 7.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Admin/signin', [], true)
+ 4 APPPATH\Controllers\AdminController.php(79): view('Admin/signin', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AdminController->login()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-15 05:17:13 --> Object of class CodeIgniter\Validation\Validation could not be converted to string
+in APPPATH\Views\Admin\signin.php on line 7.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Admin/signin', [], true)
+ 4 APPPATH\Controllers\AdminController.php(79): view('Admin/signin', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AdminController->login()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-15 10:13:41 --> Call to a member function getRandomName() on null
+in APPPATH\Controllers\ProductController.php on line 86.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->store()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-15 11:11:41 --> Cannot use object of type stdClass as array
+in APPPATH\Views\Product\list.php on line 144.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Product/list', [], true)
+ 4 APPPATH\Controllers\ProductController.php(121): view('Product/list', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->list()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-15 11:27:29 --> Call to a member function isValid() on null
+in APPPATH\Controllers\ProductController.php on line 204.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->update()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-15 11:31:26 --> Declaration of App\Models\ProductModel::update($id, $data) must be compatible with CodeIgniter\Model::update($id = null, $data = null): bool
+in APPPATH\Models\ProductModel.php on line 55.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-07-15 11:31:45 --> Call to a member function isValid() on null
+in APPPATH\Controllers\ProductController.php on line 204.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->update()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-15 11:31:51 --> Call to a member function isValid() on null
+in APPPATH\Controllers\ProductController.php on line 204.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->update()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-15 11:33:53 --> Call to a member function isValid() on null
+in APPPATH\Controllers\ProductController.php on line 204.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->update()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-15 11:41:04 --> Call to a member function isValid() on null
+in APPPATH\Controllers\ProductController.php on line 202.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->update()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-15 11:41:16 --> Call to a member function isValid() on null
+in APPPATH\Controllers\ProductController.php on line 202.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->update()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-15 11:44:03 --> Call to a member function isValid() on null
+in APPPATH\Controllers\ProductController.php on line 202.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->update()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-15 11:44:10 --> Call to a member function isValid() on null
+in APPPATH\Controllers\ProductController.php on line 202.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->update()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-15 11:44:16 --> Call to a member function isValid() on null
+in APPPATH\Controllers\ProductController.php on line 202.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->update()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-15 11:46:11 --> Call to a member function isValid() on null
+in APPPATH\Controllers\ProductController.php on line 202.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->update()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-15 11:47:00 --> Call to a member function isValid() on null
+in APPPATH\Controllers\ProductController.php on line 202.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->update()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-07-15 11:51:10 --> mysqli_sql_exception: Table 'ecom.product' doesn't exist in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `image`\n...', 0)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `image`\n...')
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `image`\n...')
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `image`\n...', Array, false)
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Models\ProductModel.php(52): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\ProductController.php(214): App\Models\ProductModel->getCategoryImage('9')
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\ProductController->update()
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-07-15 11:51:10 --> Table 'ecom.product' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `image`
+FROM `product`
+WHERE `id` = :id:', [...], false)
+ 2 APPPATH\Models\ProductModel.php(52): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\ProductController.php(214): App\Models\ProductModel->getCategoryImage('9')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->update()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-07-15 11:51:26 --> mysqli_sql_exception: Table 'ecom.product' doesn't exist in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `image`\n...', 0)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `image`\n...')
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `image`\n...')
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `image`\n...', Array, false)
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Models\ProductModel.php(52): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\ProductController.php(214): App\Models\ProductModel->getCategoryImage('9')
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\ProductController->update()
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-07-15 11:51:26 --> Table 'ecom.product' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `image`
+FROM `product`
+WHERE `id` = :id:', [...], false)
+ 2 APPPATH\Models\ProductModel.php(52): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\ProductController.php(214): App\Models\ProductModel->getCategoryImage('9')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->update()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-07-15 11:52:35 --> mysqli_sql_exception: Table 'ecom.product' doesn't exist in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `image`\n...', 0)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `image`\n...')
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `image`\n...')
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `image`\n...', Array, false)
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Models\ProductModel.php(52): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\ProductController.php(214): App\Models\ProductModel->getCategoryImage('1')
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\ProductController->update()
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-07-15 11:52:35 --> Table 'ecom.product' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `image`
+FROM `product`
+WHERE `id` = :id:', [...], false)
+ 2 APPPATH\Models\ProductModel.php(52): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\ProductController.php(214): App\Models\ProductModel->getCategoryImage('1')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->update()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-07-15 11:58:29 --> mysqli_sql_exception: Table 'ecom.product' doesn't exist in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `image`\n...', 0)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `image`\n...')
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `image`\n...')
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `image`\n...', Array, false)
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Models\ProductModel.php(52): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\ProductController.php(214): App\Models\ProductModel->getCategoryImage('1')
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\ProductController->update()
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-07-15 11:58:29 --> Table 'ecom.product' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `image`
+FROM `product`
+WHERE `id` = :id:', [...], false)
+ 2 APPPATH\Models\ProductModel.php(52): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\ProductController.php(214): App\Models\ProductModel->getCategoryImage('1')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->update()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-07-15 12:02:39 --> mysqli_sql_exception: Table 'ecom.product' doesn't exist in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `image`\n...', 0)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `image`\n...')
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `image`\n...')
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `image`\n...', Array, false)
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Models\ProductModel.php(52): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\ProductController.php(209): App\Models\ProductModel->getCategoryImage('')
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\ProductController->update()
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-07-15 12:02:39 --> Table 'ecom.product' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `image`
+FROM `product`
+WHERE `id` = :id:', [...], false)
+ 2 APPPATH\Models\ProductModel.php(52): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\ProductController.php(209): App\Models\ProductModel->getCategoryImage('ROOTPATH\\public')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->update()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-07-15 12:02:48 --> mysqli_sql_exception: Table 'ecom.product' doesn't exist in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `image`\n...', 0)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `image`\n...')
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `image`\n...')
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `image`\n...', Array, false)
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Models\ProductModel.php(52): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\ProductController.php(209): App\Models\ProductModel->getCategoryImage('')
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\ProductController->update()
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-07-15 12:02:48 --> Table 'ecom.product' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `image`
+FROM `product`
+WHERE `id` = :id:', [...], false)
+ 2 APPPATH\Models\ProductModel.php(52): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\ProductController.php(209): App\Models\ProductModel->getCategoryImage('ROOTPATH\\public')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->update()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-07-15 12:02:58 --> mysqli_sql_exception: Table 'ecom.product' doesn't exist in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `image`\n...', 0)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `image`\n...')
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `image`\n...')
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `image`\n...', Array, false)
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Models\ProductModel.php(52): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\ProductController.php(209): App\Models\ProductModel->getCategoryImage('')
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\ProductController->update()
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-07-15 12:02:58 --> Table 'ecom.product' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `image`
+FROM `product`
+WHERE `id` = :id:', [...], false)
+ 2 APPPATH\Models\ProductModel.php(52): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\ProductController.php(209): App\Models\ProductModel->getCategoryImage('ROOTPATH\\public')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->update()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-07-15 12:04:03 --> mysqli_sql_exception: Table 'ecom.product' doesn't exist in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `image`\n...', 0)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `image`\n...')
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `image`\n...')
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `image`\n...', Array, false)
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Models\ProductModel.php(52): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\ProductController.php(209): App\Models\ProductModel->getCategoryImage('')
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\ProductController->update()
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-07-15 12:04:03 --> Table 'ecom.product' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `image`
+FROM `product`
+WHERE `id` = :id:', [...], false)
+ 2 APPPATH\Models\ProductModel.php(52): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\ProductController.php(209): App\Models\ProductModel->getCategoryImage('ROOTPATH\\public')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->update()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-15 12:09:05 --> Invalid file: "index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('FCPATH\\index.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('index', [], true)
+ 3 APPPATH\Config\Routes.php(62): view('index')
+ 4 SYSTEMPATH\CodeIgniter.php(954): CodeIgniter\Router\RouteCollection->Config\{closure}('Can\'t find a route for \'get: productlist/sdd\'.')
+ 5 SYSTEMPATH\CodeIgniter.php(387): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-15 12:11:12 --> Undefined variable $admin
+in APPPATH\Views\Admin\dashboard.php on line 28.
+ 1 APPPATH\Views\Admin\dashboard.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $admin', 'APPPATH\\Views\\Admin\\dashboard.php', 28)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Admin/dashboard', [], true)
+ 5 APPPATH\Config\Routes.php(62): view('Admin/dashboard')
+ 6 SYSTEMPATH\CodeIgniter.php(954): CodeIgniter\Router\RouteCollection->Config\{closure}('Can\'t find a route for \'get: productlist/sdd\'.')
+ 7 SYSTEMPATH\CodeIgniter.php(387): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-15 12:47:11 --> Undefined variable $subject
+in APPPATH\Controllers\AdminController.php on line 116.
+ 1 APPPATH\Controllers\AdminController.php(116): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $subject', 'APPPATH\\Controllers\\AdminController.php', 116)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AdminController->forgotPassword()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')

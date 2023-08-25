@@ -4,6 +4,7 @@
         <div id="two-column-menu">
         </div>
         <ul class="navbar-nav" id="navbar-nav">
+<<<<<<< HEAD
             <li class="menu-title"><i class="ri-more-fill"></i> <span data-key="t-components">Components</span></li> 
             <li class="nav-item">
                 <a class="nav-link menu-link" href="components.html">
@@ -391,6 +392,10 @@
                 </div>
             </li>
 
+=======
+            <li class="menu-title"><i class="ri-more-fill"></i> <span data-key="t-components"> </span></li> 
+           
+>>>>>>> 29f8a3b4fa91203b78951bc36a687aad21b112b9
         </ul>
     </div>
 </div>

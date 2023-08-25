@@ -31,5 +31,25 @@ class AdminModel extends Model
         ];
         $this->update($adminId, $data);
     }
+<<<<<<< HEAD
    
 }
+=======
+
+    public function updateAdmin($adminId, $data)
+    {
+        $this->update($adminId, $data);
+    }
+    public function getAddedAdminsCountLast7Days()
+    {
+        return $this->where('created_at >=', date('Y-m-d', strtotime('-7 days')))
+                    ->countAllResults();
+    }
+    public function getTotalAdminsCount()
+    {
+        return $this->countAllResults();
+    }
+}
+   
+ 
+>>>>>>> 29f8a3b4fa91203b78951bc36a687aad21b112b9

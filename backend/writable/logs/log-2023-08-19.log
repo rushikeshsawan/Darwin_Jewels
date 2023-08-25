@@ -1,0 +1,528 @@
+CRITICAL - 2023-08-19 07:03:26 --> Call to undefined method App\Models\UserModel::getUsersByFilter
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\MarketingController.php(40): CodeIgniter\Model->__call('getUsersByFilter', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MarketingController->setSelectedFilter('all')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MarketingController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-19 07:04:15 --> Call to undefined method App\Models\UserModel::getUsersByFilter
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\MarketingController.php(40): CodeIgniter\Model->__call('getUsersByFilter', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MarketingController->setSelectedFilter('all')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MarketingController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-19 07:08:13 --> Call to undefined method App\Models\UserModel::getUsersByFilter
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\MarketingController.php(40): CodeIgniter\Model->__call('getUsersByFilter', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MarketingController->setSelectedFilter('all')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MarketingController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-19 07:22:22 --> Call to undefined method App\Models\UserModel::getUsersByFilter
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\MarketingController.php(38): CodeIgniter\Model->__call('getUsersByFilter', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MarketingController->setSelectedFilter('all')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MarketingController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-19 07:23:37 --> Call to undefined method App\Models\UserModel::getUsersByFilter
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\MarketingController.php(38): CodeIgniter\Model->__call('getUsersByFilter', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MarketingController->setSelectedFilter('all')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MarketingController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-19 07:24:51 --> Call to undefined method App\Models\UserModel::getUsersByFilter
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\MarketingController.php(38): CodeIgniter\Model->__call('getUsersByFilter', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MarketingController->setSelectedFilter('all')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MarketingController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-19 07:28:07 --> Call to undefined method App\Models\UserModel::getUsersByFilter
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\MarketingController.php(38): CodeIgniter\Model->__call('getUsersByFilter', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MarketingController->setSelectedFilter('all')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MarketingController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-08-19 09:22:47 --> mysqli_sql_exception: Unknown column 'registration_date' in 'where clause' in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Models\UserModel.php(52): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\MarketingController.php(40): App\Models\UserModel->getUsersByFilter('last30')
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\MarketingController->setSelectedFilter('last30')
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MarketingController))
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-08-19 09:22:47 --> Unknown column 'registration_date' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `registration_date` > :registration_date:', [...], false)
+ 2 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\UserModel.php(52): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\MarketingController.php(40): App\Models\UserModel->getUsersByFilter('last30')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MarketingController->setSelectedFilter('last30')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MarketingController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-08-19 09:25:53 --> mysqli_sql_exception: Unknown column 'registration_date' in 'where clause' in C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Models\UserModel.php(52): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\app\Controllers\MarketingController.php(40): App\Models\UserModel->getUsersByFilter('last30')
+#8 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(934): App\Controllers\MarketingController->setSelectedFilter('last30')
+#9 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MarketingController))
+#10 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\New folder\Darwin_Jewels\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-08-19 09:25:53 --> Unknown column 'registration_date' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `registration_date` > :registration_date:', [...], false)
+ 2 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\UserModel.php(52): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\MarketingController.php(40): App\Models\UserModel->getUsersByFilter('last30')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MarketingController->setSelectedFilter('last30')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MarketingController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-08-19 10:15:16 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-08-19 10:15:16 --> 220 smtp.googlemail.com ESMTP p9-20020a17090a74c900b002612150d958sm4595609pjl.16 - gsmtp
+
+hello: 250-smtp.googlemail.com at your service, [114.143.182.34]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 250 2.1.0 OK p9-20020a17090a74c900b002612150d958sm4595609pjl.16 - gsmtp
+
+to: 555 5.5.2 Syntax error. p9-20020a17090a74c900b002612150d958sm4595609pjl.16 - gsmtp
+
+The following SMTP error was encountered: 555 5.5.2 Syntax error. p9-20020a17090a74c900b002612150d958sm4595609pjl.16 - gsmtp
+
+quit: 221 2.0.0 closing connection p9-20020a17090a74c900b002612150d958sm4595609pjl.16 - gsmtp
+
+ERROR - 2023-08-19 10:15:20 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-08-19 10:15:20 --> 220 smtp.googlemail.com ESMTP 25-20020a17090a01d900b0026961746a8fsm3120291pjd.27 - gsmtp
+
+hello: 250-smtp.googlemail.com at your service, [114.143.182.34]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 250 2.1.0 OK 25-20020a17090a01d900b0026961746a8fsm3120291pjd.27 - gsmtp
+
+to: 555 5.5.2 Syntax error. 25-20020a17090a01d900b0026961746a8fsm3120291pjd.27 - gsmtp
+
+The following SMTP error was encountered: 555 5.5.2 Syntax error. 25-20020a17090a01d900b0026961746a8fsm3120291pjd.27 - gsmtp
+
+quit: 221 2.0.0 closing connection 25-20020a17090a01d900b0026961746a8fsm3120291pjd.27 - gsmtp
+
+ERROR - 2023-08-19 10:33:35 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-08-19 10:33:35 --> 220 smtp.googlemail.com ESMTP q11-20020a638c4b000000b005637030d00csm3028311pgn.30 - gsmtp
+
+hello: 250-smtp.googlemail.com at your service, [114.143.182.34]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 250 2.1.0 OK q11-20020a638c4b000000b005637030d00csm3028311pgn.30 - gsmtp
+
+to: 555 5.5.2 Syntax error. q11-20020a638c4b000000b005637030d00csm3028311pgn.30 - gsmtp
+
+The following SMTP error was encountered: 555 5.5.2 Syntax error. q11-20020a638c4b000000b005637030d00csm3028311pgn.30 - gsmtp
+
+quit: 221 2.0.0 closing connection q11-20020a638c4b000000b005637030d00csm3028311pgn.30 - gsmtp
+
+ERROR - 2023-08-19 10:33:45 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-08-19 10:33:45 --> 220 smtp.googlemail.com ESMTP y8-20020a63b508000000b0056a36ac322dsm277236pge.4 - gsmtp
+
+hello: 250-smtp.googlemail.com at your service, [114.143.182.34]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 250 2.1.0 OK y8-20020a63b508000000b0056a36ac322dsm277236pge.4 - gsmtp
+
+to: 555 5.5.2 Syntax error. y8-20020a63b508000000b0056a36ac322dsm277236pge.4 - gsmtp
+
+The following SMTP error was encountered: 555 5.5.2 Syntax error. y8-20020a63b508000000b0056a36ac322dsm277236pge.4 - gsmtp
+
+quit: 221 2.0.0 closing connection y8-20020a63b508000000b0056a36ac322dsm277236pge.4 - gsmtp
+
+ERROR - 2023-08-19 10:35:39 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-08-19 10:35:39 --> 220 smtp.googlemail.com ESMTP q11-20020a638c4b000000b005637030d00csm3031740pgn.30 - gsmtp
+
+hello: 250-smtp.googlemail.com at your service, [114.143.182.34]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 250 2.1.0 OK q11-20020a638c4b000000b005637030d00csm3031740pgn.30 - gsmtp
+
+to: 555 5.5.2 Syntax error. q11-20020a638c4b000000b005637030d00csm3031740pgn.30 - gsmtp
+
+The following SMTP error was encountered: 555 5.5.2 Syntax error. q11-20020a638c4b000000b005637030d00csm3031740pgn.30 - gsmtp
+
+quit: 221 2.0.0 closing connection q11-20020a638c4b000000b005637030d00csm3031740pgn.30 - gsmtp
+
+ERROR - 2023-08-19 10:41:03 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-08-19 10:41:03 --> 220 smtp.googlemail.com ESMTP g12-20020a1709026b4c00b001bdb167f6ebsm3360973plt.94 - gsmtp
+
+hello: 250-smtp.googlemail.com at your service, [114.143.182.34]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 250 2.1.0 OK g12-20020a1709026b4c00b001bdb167f6ebsm3360973plt.94 - gsmtp
+
+to: 555 5.5.2 Syntax error. g12-20020a1709026b4c00b001bdb167f6ebsm3360973plt.94 - gsmtp
+
+The following SMTP error was encountered: 555 5.5.2 Syntax error. g12-20020a1709026b4c00b001bdb167f6ebsm3360973plt.94 - gsmtp
+
+quit: 221 2.0.0 closing connection g12-20020a1709026b4c00b001bdb167f6ebsm3360973plt.94 - gsmtp
+
+ERROR - 2023-08-19 10:41:19 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-08-19 10:41:19 --> 220 smtp.googlemail.com ESMTP b3-20020a17090acc0300b00263dfe9b972sm4797437pju.0 - gsmtp
+
+hello: 250-smtp.googlemail.com at your service, [114.143.182.34]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 250 2.1.0 OK b3-20020a17090acc0300b00263dfe9b972sm4797437pju.0 - gsmtp
+
+to: 555 5.5.2 Syntax error. b3-20020a17090acc0300b00263dfe9b972sm4797437pju.0 - gsmtp
+
+The following SMTP error was encountered: 555 5.5.2 Syntax error. b3-20020a17090acc0300b00263dfe9b972sm4797437pju.0 - gsmtp
+
+quit: 221 2.0.0 closing connection b3-20020a17090acc0300b00263dfe9b972sm4797437pju.0 - gsmtp
+
+ERROR - 2023-08-19 10:42:14 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-08-19 10:42:14 --> 220 smtp.googlemail.com ESMTP e12-20020a170902d38c00b001bdf046ed71sm3338593pld.120 - gsmtp
+
+hello: 250-smtp.googlemail.com at your service, [114.143.182.34]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 250 2.1.0 OK e12-20020a170902d38c00b001bdf046ed71sm3338593pld.120 - gsmtp
+
+to: 555 5.5.2 Syntax error. e12-20020a170902d38c00b001bdf046ed71sm3338593pld.120 - gsmtp
+
+The following SMTP error was encountered: 555 5.5.2 Syntax error. e12-20020a170902d38c00b001bdf046ed71sm3338593pld.120 - gsmtp
+
+quit: 221 2.0.0 closing connection e12-20020a170902d38c00b001bdf046ed71sm3338593pld.120 - gsmtp
+
+ERROR - 2023-08-19 10:43:01 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-08-19 10:43:01 --> 220 smtp.googlemail.com ESMTP gm6-20020a17090b100600b002696aeb72e5sm4747991pjb.2 - gsmtp
+
+hello: 250-smtp.googlemail.com at your service, [114.143.182.34]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 250 2.1.0 OK gm6-20020a17090b100600b002696aeb72e5sm4747991pjb.2 - gsmtp
+
+to: 555 5.5.2 Syntax error. gm6-20020a17090b100600b002696aeb72e5sm4747991pjb.2 - gsmtp
+
+The following SMTP error was encountered: 555 5.5.2 Syntax error. gm6-20020a17090b100600b002696aeb72e5sm4747991pjb.2 - gsmtp
+
+quit: 221 2.0.0 closing connection gm6-20020a17090b100600b002696aeb72e5sm4747991pjb.2 - gsmtp
+
+ERROR - 2023-08-19 10:47:35 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-08-19 10:47:35 --> 220 smtp.googlemail.com ESMTP 25-20020a17090a01d900b0026961746a8fsm3179136pjd.27 - gsmtp
+
+hello: 250-smtp.googlemail.com at your service, [114.143.182.34]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 250 2.1.0 OK 25-20020a17090a01d900b0026961746a8fsm3179136pjd.27 - gsmtp
+
+to: 555 5.5.2 Syntax error. 25-20020a17090a01d900b0026961746a8fsm3179136pjd.27 - gsmtp
+
+The following SMTP error was encountered: 555 5.5.2 Syntax error. 25-20020a17090a01d900b0026961746a8fsm3179136pjd.27 - gsmtp
+
+quit: 221 2.0.0 closing connection 25-20020a17090a01d900b0026961746a8fsm3179136pjd.27 - gsmtp
+
+ERROR - 2023-08-19 10:49:39 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-08-19 10:49:39 --> 220 smtp.googlemail.com ESMTP o15-20020a637e4f000000b00565e96d9874sm3016400pgn.89 - gsmtp
+
+hello: 250-smtp.googlemail.com at your service, [114.143.182.34]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 250 2.1.0 OK o15-20020a637e4f000000b00565e96d9874sm3016400pgn.89 - gsmtp
+
+to: 555 5.5.2 Syntax error. o15-20020a637e4f000000b00565e96d9874sm3016400pgn.89 - gsmtp
+
+The following SMTP error was encountered: 555 5.5.2 Syntax error. o15-20020a637e4f000000b00565e96d9874sm3016400pgn.89 - gsmtp
+
+quit: 221 2.0.0 closing connection o15-20020a637e4f000000b00565e96d9874sm3016400pgn.89 - gsmtp
+
+CRITICAL - 2023-08-19 11:02:15 --> preg_match(): Argument #2 ($subject) must be of type string, array given
+in SYSTEMPATH\Email\Email.php on line 963.
+ 1 SYSTEMPATH\Email\Email.php(963): preg_match('/\\<(.*)\\>/', [...], null)
+ 2 SYSTEMPATH\Email\Email.php(551): CodeIgniter\Email\Email->cleanEmail([...])
+ 3 APPPATH\Controllers\MarketingController.php(52): CodeIgniter\Email\Email->setTo([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MarketingController->sendEmail()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MarketingController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-19 11:02:48 --> preg_match(): Argument #2 ($subject) must be of type string, array given
+in SYSTEMPATH\Email\Email.php on line 963.
+ 1 SYSTEMPATH\Email\Email.php(963): preg_match('/\\<(.*)\\>/', [...], null)
+ 2 SYSTEMPATH\Email\Email.php(551): CodeIgniter\Email\Email->cleanEmail([...])
+ 3 APPPATH\Controllers\MarketingController.php(52): CodeIgniter\Email\Email->setTo([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MarketingController->sendEmail()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MarketingController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-08-19 11:03:27 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-08-19 11:03:27 --> 220 smtp.googlemail.com ESMTP j6-20020aa78d06000000b0068991abe1desm3042676pfe.176 - gsmtp
+
+hello: 250-smtp.googlemail.com at your service, [114.143.182.34]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 250 2.1.0 OK j6-20020aa78d06000000b0068991abe1desm3042676pfe.176 - gsmtp
+
+to: 553-5.1.3 The recipient address <all> is not a valid RFC-5321 address. Learn
+553-5.1.3 more at
+553 5.1.3  https://support.google.com/mail/answer/6596 j6-20020aa78d06000000b0068991abe1desm3042676pfe.176 - gsmtp
+
+The following SMTP error was encountered: 553-5.1.3 The recipient address <all> is not a valid RFC-5321 address. Learn
+553-5.1.3 more at
+553 5.1.3  https://support.google.com/mail/answer/6596 j6-20020aa78d06000000b0068991abe1desm3042676pfe.176 - gsmtp
+
+quit: 221 2.0.0 closing connection j6-20020aa78d06000000b0068991abe1desm3042676pfe.176 - gsmtp
+
+ERROR - 2023-08-19 11:10:59 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-08-19 11:10:59 --> 220 smtp.googlemail.com ESMTP c19-20020aa78813000000b00689f1ce7dacsm2978101pfo.23 - gsmtp
+
+hello: 250-smtp.googlemail.com at your service, [114.143.182.34]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 250 2.1.0 OK c19-20020aa78813000000b00689f1ce7dacsm2978101pfo.23 - gsmtp
+
+to: 553-5.1.3 The recipient address <all> is not a valid RFC-5321 address. Learn
+553-5.1.3 more at
+553 5.1.3  https://support.google.com/mail/answer/6596 c19-20020aa78813000000b00689f1ce7dacsm2978101pfo.23 - gsmtp
+
+The following SMTP error was encountered: 553-5.1.3 The recipient address <all> is not a valid RFC-5321 address. Learn
+553-5.1.3 more at
+553 5.1.3  https://support.google.com/mail/answer/6596 c19-20020aa78813000000b00689f1ce7dacsm2978101pfo.23 - gsmtp
+
+quit: 221 2.0.0 closing connection c19-20020aa78813000000b00689f1ce7dacsm2978101pfo.23 - gsmtp
+
+CRITICAL - 2023-08-19 11:13:36 --> Cannot access offset of type string on string
+in APPPATH\Controllers\MarketingController.php on line 50.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MarketingController->sendEmail()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MarketingController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-19 11:14:12 --> Cannot access offset of type string on string
+in APPPATH\Controllers\MarketingController.php on line 50.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MarketingController->sendEmail()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MarketingController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-19 11:17:54 --> foreach() argument must be of type array|object, string given
+in APPPATH\Controllers\MarketingController.php on line 54.
+ 1 APPPATH\Controllers\MarketingController.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'APPPATH\\Controllers\\MarketingController.php', 54)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MarketingController->sendEmail()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MarketingController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-19 11:27:26 --> foreach() argument must be of type array|object, string given
+in APPPATH\Controllers\MarketingController.php on line 54.
+ 1 APPPATH\Controllers\MarketingController.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'APPPATH\\Controllers\\MarketingController.php', 54)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MarketingController->sendEmail()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MarketingController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-19 11:28:07 --> foreach() argument must be of type array|object, string given
+in APPPATH\Controllers\MarketingController.php on line 54.
+ 1 APPPATH\Controllers\MarketingController.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'APPPATH\\Controllers\\MarketingController.php', 54)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MarketingController->sendEmail()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MarketingController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-19 11:30:21 --> foreach() argument must be of type array|object, string given
+in APPPATH\Controllers\MarketingController.php on line 54.
+ 1 APPPATH\Controllers\MarketingController.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'APPPATH\\Controllers\\MarketingController.php', 54)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MarketingController->sendEmail()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MarketingController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-19 11:39:30 --> Cannot access offset of type string on string
+in APPPATH\Controllers\MarketingController.php on line 55.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MarketingController->sendEmail()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MarketingController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-19 11:40:16 --> Cannot access offset of type string on string
+in APPPATH\Controllers\MarketingController.php on line 55.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MarketingController->sendEmail()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MarketingController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-19 11:41:21 --> foreach() argument must be of type array|object, string given
+in APPPATH\Controllers\MarketingController.php on line 53.
+ 1 APPPATH\Controllers\MarketingController.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'APPPATH\\Controllers\\MarketingController.php', 53)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MarketingController->sendEmail()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MarketingController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-19 11:41:21 --> foreach() argument must be of type array|object, string given
+in APPPATH\Controllers\MarketingController.php on line 53.
+ 1 APPPATH\Controllers\MarketingController.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'APPPATH\\Controllers\\MarketingController.php', 53)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MarketingController->sendEmail()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MarketingController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-19 11:41:28 --> foreach() argument must be of type array|object, string given
+in APPPATH\Controllers\MarketingController.php on line 53.
+ 1 APPPATH\Controllers\MarketingController.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'APPPATH\\Controllers\\MarketingController.php', 53)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MarketingController->sendEmail()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MarketingController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-19 11:42:01 --> foreach() argument must be of type array|object, string given
+in APPPATH\Controllers\MarketingController.php on line 53.
+ 1 APPPATH\Controllers\MarketingController.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'APPPATH\\Controllers\\MarketingController.php', 53)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MarketingController->sendEmail()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MarketingController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-19 12:14:22 --> foreach() argument must be of type array|object, string given
+in APPPATH\Controllers\MarketingController.php on line 53.
+ 1 APPPATH\Controllers\MarketingController.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'APPPATH\\Controllers\\MarketingController.php', 53)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MarketingController->sendEmail()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MarketingController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-19 12:17:20 --> foreach() argument must be of type array|object, string given
+in APPPATH\Controllers\MarketingController.php on line 60.
+ 1 APPPATH\Controllers\MarketingController.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'APPPATH\\Controllers\\MarketingController.php', 60)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MarketingController->sendEmail()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MarketingController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-19 12:23:56 --> foreach() argument must be of type array|object, string given
+in APPPATH\Controllers\MarketingController.php on line 53.
+ 1 APPPATH\Controllers\MarketingController.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'APPPATH\\Controllers\\MarketingController.php', 53)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MarketingController->sendEmail()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MarketingController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-19 12:25:37 --> Undefined variable $to
+in APPPATH\Controllers\MarketingController.php on line 62.
+ 1 APPPATH\Controllers\MarketingController.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $to', 'APPPATH\\Controllers\\MarketingController.php', 62)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MarketingController->sendEmail()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MarketingController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
