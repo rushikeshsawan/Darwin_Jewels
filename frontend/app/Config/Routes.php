@@ -40,6 +40,7 @@ $routes->get('checkout', 'HomeController::checkout',['AuthGuard' => 'auth']);
 $routes->post('checkout/addToSession', 'HomeController::addToSession');
 $routes->post('checkout/removeFromSession', 'HomeController::removeFromSession'); 
 $routes->post('saveAddress', 'UserController::saveAddress');
+$routes->add('signup', 'UserController::index');
 $routes->post('address', 'UserController::address');  
 $routes->post('storeaddress', 'UserController ::storeSelectedAddress');  
 $routes->post('/cart/removeFromCart', 'UserController::removeFromCart');

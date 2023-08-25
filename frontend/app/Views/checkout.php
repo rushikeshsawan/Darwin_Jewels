@@ -242,60 +242,7 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.5/dist/sweetalert2.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.5/dist/sweetalert2.min.css">
 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
-<script>
-    $(document).ready(function() {
-        $("#loginForm").submit(function(event) {
-            event.preventDefault();
-            var formData = $(this).serialize();
-            $.ajax({
-                type: "POST",
-                url: "<?php echo base_url('address'); ?>",
-                data: formData,
-                dataType: "json",
-                success: function(response) {
-                    if (response.success) {
-                        $('#sign-in').modal('hide');
-                        Swal.fire({
-                            icon: 'success',
-                            title: 'Success!',
-                            text: response.message
-                        }).then(function() {
-                            var newAddressCard = '<div class="col-md-6 mb-6">' +
-                                '<div class="card">' +
-                                '<div class="card-body">' +
-                                '<h5 class="card-title">' + response.address.name + '</h5>' +
-                                '<p class="card-text"><strong>Address:</strong> ' + response.address.address + '</p>' +
-                                '<p class="card-text"><strong>Mobile:</strong> ' + response.address.mobile + '</p>' +
-                                '<p class="card-text"><strong>Email:</strong> ' + response.address.email + '</p>' +
-                                '</div>' +
-                                '</div>' +
-                                '</div>';
-                            $('#addressData .alert-info').remove();
-                            $('#addressData .row').append(newAddressCard);
-                        });
-                    } else {
-                        Swal.fire({
-                            icon: 'error',
-                            title: 'Error!',
-                            text: 'There were errors in the form:\n' + JSON.stringify(response.errors, null, 2)
-                        });
-                    }
-                },
-                error: function() {
-                    Swal.fire({
-                        icon: 'error',
-                        title: 'Error!',
-                        text: 'An error occurred during form submission.'
-                    });
-                }
-            });
-        });
-        $('#coupon').click(function() {
-            alert('coupon')
-            $('#coupon').modal('show'); 
-        });
-    });
-</script>
+ 
 <script>
     $(document).ready(function() {
         $("#loginForm").submit(function(event) {
@@ -387,7 +334,7 @@
                                 $('#paymentModal').modal('hide');
                                 $('#walletModal').modal('show');
                             } else {
-                                alert('1')
+                                // alert('1')
                                 placeOrder("COD");
                             }
                         },
@@ -398,7 +345,7 @@
                 });
                 $('#no').click(function() {
                     $('#walletModal').modal('hide');
-                    alert('2')
+                    // alert('2')
                     placeOrder("COD");
                 });
                 $('#yes').click(function() {
@@ -469,14 +416,14 @@
             if (walletBalance >= totalPrize) {
                 walletBalance -= totalPrize;
                 var useWallet = totalPrize
-                alert(useWallet)
-                alert("'#OYes useWallet")
+                // alert(useWallet)
+                // alert("'#OYes useWallet")
                 $('#walletBalance').text(walletBalance.toFixed(2));
                 $('#walletModal').modal('hide');
                 placeOrder("Wallet", useWallet, walletBalance);
             } else {
-                alert("#Oyes")
-                alert(walletBalance)
+                // alert("#Oyes")
+                // alert(walletBalance)
                 var totalPriceOnline = totalPrize - walletBalance
                 var totalPrice = totalPriceOnline;
                 const selectedAddressId = $('.address-card.highlighted').data('address-id');
@@ -486,8 +433,8 @@
         });
 
         function handlePayment(TotalPrice, selectedAddressId, cartItems, walletBalance) {
-            alert('handlePayment')
-            alert(walletBalance)
+            // alert('handlePayment')
+            // alert(walletBalance)
             var amountInPaise = TotalPrice * 100;
             var options = {
                 key: 'rzp_test_GGXHzqc5bmnUdI',
@@ -499,7 +446,7 @@
                     var payment_id = response.razorpay_payment_id;
                     console.log(response);
                     if (walletBalance > 0) {
-                        alert("iff handlepayment")
+                        // alert("iff handlepayment")
                         var walletBalance;
                         var payment_id = payment_id + "/Wallet";
                         placeOrder(payment_id, walletBalance);
@@ -558,8 +505,8 @@
 </script>
 <script>
     function placeOrder(payment_id = '', useWallet = '', walletBalance = '' ) {
-        alert('placeOrder')
-        alert(walletBalance)
+        // alert('placeOrder')
+        // alert(walletBalance)
         var selectedAddressId = document.querySelector('.address-card.highlighted').dataset.addressId;
         let product_id = [];
         let quantity = [];
@@ -607,18 +554,18 @@
                             url: 'clearCartItems',
                             dataType: 'json',
                             success: function(response) {
-                                alert(payment_id)
-                                alert('placeOrder')
-                                alert(walletBalance)
+                                // alert(payment_id)
+                                // alert('placeOrder')
+                                // alert(walletBalance)
                                 if (payment_id.includes('Wallet') || payment_id == 'Wallet') {
                                     updateWallet(useWallet, walletBalance, payment_id)
-                                }
-                                // window.location.href = '/order_list';
+                                } 
                             },
                             error: function() {
                                 alert("An error occurred while clearing cart items.");
                             }
                         });
+                        window.location.href = '/';  
                     });
                 } else {
                     alert("Failed to place order. Please try again.");
@@ -630,13 +577,13 @@
         });
 
     }
-
+ 
     function updateWallet(useWallet, walletBalance, payment_id) {
-        alert('payment_id.includes')
-        alert(walletBalance)
-        alert(useWallet)
+        // alert('payment_id.includes')
+        // alert(walletBalance)
+        // alert(useWallet)
         var wallet = walletBalance - useWallet;
-        alert(wallet)
+        // alert(wallet)
         var csrfToken = '<?= csrf_hash() ?>';
         $.ajax({
             type: 'POST',
@@ -646,7 +593,7 @@
                 csrf_token: csrfToken
             },
             success: function(response) {
-                alert('Wallet updated successfully.');
+                // alert('Wallet updated successfully.');
             },
             error: function(xhr, status, error) {
                 alert('Error updating wallet.');

@@ -1,0 +1,8 @@
+CRITICAL - 2023-08-24 05:43:07 --> Honeypot.theClientIsABot
+in SYSTEMPATH\Filters\Honeypot.php on line 40.
+ 1 SYSTEMPATH\Filters\Honeypot.php(40): CodeIgniter\Honeypot\Exceptions\HoneypotException::isBot()
+ 2 SYSTEMPATH\Filters\Filters.php(173): CodeIgniter\Filters\Honeypot->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('adminsignin', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')

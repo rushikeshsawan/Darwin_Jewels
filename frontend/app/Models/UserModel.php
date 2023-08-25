@@ -9,12 +9,13 @@ class UserModel extends Model
     protected $table = 'users';
     protected $allowedFields = ['username', 'email', 'password', 'phone', 'otp', 'wallet', 'active', 'created_at'];
 
-    public function store($username, $email, $password)
+    public function store($username, $email, $password,$phone)
     {
         $data = [
             'username' => $username,
             'email' => $email,
             'password' => $password,
+            'phone' => $phone,
         ];
         $this->insert($data);
     }

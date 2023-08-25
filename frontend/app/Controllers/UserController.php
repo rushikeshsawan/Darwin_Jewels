@@ -34,7 +34,50 @@ class UserController extends BaseController
         $this->OrderDetailModel = new OrderDetailModel();
         $this->session = \Config\Services::session();
     }
-
+    public function index() {
+        if ($this->request->getMethod() == 'post') {
+            //  if (! empty($this->request->getPost('honeypot'))) {  
+            //     $this->session->setFlashdata('error', 'Oops! Something went wrong. Please try again.');
+            //     return redirect()->to('/ '); // Redirect to signup page
+            // }
+    
+    
+            //  if (! $this->validate(['csrf' => 'required'])) {
+            //     session()->setFlashdata('error', 'Oops! Something went wrong. Please try again.');
+            //     $data['validation'] = $this->validator;
+            //     return view('signup', $data); 
+            // }
+    
+            // Other validation rules
+            $rules = [
+                'username' => 'required|min_length[2]|max_length[50]|is_unique[admin.username]',
+                'email' => 'required|min_length[4]|max_length[100]|valid_email|is_unique[users.email]',
+                'password' => 'required|min_length[4]|max_length[50]',
+                'phone' => 'required|exact_length[10]'
+            ];
+    
+            if ($this->validate($rules)) {
+                // Valid form submission
+                $email = $this->request->getPost('email');
+                $username = $this->request->getPost('username');
+                $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+                $phone = $this->request->getPost('phone');
+                $this->userModel->store($username, $email, $password, $phone);
+                session()->setFlashdata('success', 'Admin added successfully');
+                return redirect()->to('/userlogin');
+            } else {
+                $data['validation'] = $this->validator;
+                return view('signup', $data);
+            }
+        } else {
+            // Load the form view
+            $data['csrf'] = csrf_hash();
+            return view('signup', $data);
+        }
+    }
+    
+    
+    
     public function login()
     {
         // Check if the user is already logged in, redirect to home if logged in
@@ -191,8 +234,9 @@ class UserController extends BaseController
 
     public function clearCartItems()
     {
-        $session = \Config\Services::session();
-        $session->remove('cart_items');
+        // $session = \Config\Services::session();
+        $this->session->remove('cart_items');
+        $this->session->remove('cartItems');
         return $this->response->setJSON(['success' => true]);
     }
 
@@ -231,7 +275,8 @@ class UserController extends BaseController
         $inserted = $this->OrderDetailModel->insertBatch($orderData);
 
         if ($inserted) {
-            return $this->response->setJSON(['success' => true, 'message' => 'Order placed successfully.']);
+            $this->clearCartItems();
+            return $this->response->setJSON(['success' => true, 'message' => 'Order placed successfully..']);
         } else {
             return $this->response->setJSON(['success' => false, 'message' => 'Failed to place order.']);
         }

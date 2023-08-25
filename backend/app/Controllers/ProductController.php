@@ -57,58 +57,63 @@ class ProductController extends BaseController
         $categoryId = $this->request->getPost('category_id');
         $rating = $this->request->getPost('rating');
         $prize = $this->request->getPost('prize');
-        $image = $this->request->getFile('image');
-
+        $images = [
+            $this->request->getFile('image1'),
+            $this->request->getFile('image2'),
+            $this->request->getFile('image3')
+        ];
+    
         if (empty($productId)) {
-            $imageName = $image->getRandomName();
-            $image->move(ROOTPATH . 'public/uploads', $imageName);
-
             $data = [
                 'product_name' => $productName,
                 'category_id' => $categoryId,
                 'rating' => $rating,
-                'prize' => $prize,
-                'image' => $imageName
+                'prize' => $prize
             ];
-
+    
+            foreach ($images as $key => $image) {
+                if ($image->isValid()) {
+                    $imageName = $image->getRandomName();
+                    $image->move(ROOTPATH . 'public/uploads', $imageName);
+                    $data['image' . ($key + 1)] = $imageName;
+                }
+            }
+    
             $this->productModel->insert($data);
-
+    
             $response = [
                 'success' => true,
                 'message' => 'Product added successfully.'
             ];
         } else {
             $product = $this->productModel->find($productId);
-
+    
             if ($product) {
-                if (!empty($image->getName())) {
-                    $imageName = $image->getRandomName();
-                    $image->move(ROOTPATH . 'public/uploads', $imageName);
-
-                    // Delete the old image
-                    $oldImage = $product['image'];
-                    if ($oldImage && file_exists(ROOTPATH . 'public/uploads/' . $oldImage)) {
-                        unlink(ROOTPATH . 'public/uploads/' . $oldImage);
+                $data = [
+                    'product_name' => $productName,
+                    'category_id' => $categoryId,
+                    'rating' => $rating,
+                    'prize' => $prize
+                ];
+    
+                foreach ($images as $key => $image) {
+                    if ($image->isValid()) {
+                        $imageName = $image->getRandomName();
+                        $image->move(ROOTPATH . 'public/uploads', $imageName);
+    
+                        // Delete the old image if present
+                        $oldImageField = 'image' . ($key + 1);
+                        $oldImage = $product[$oldImageField];
+                        if ($oldImage && file_exists(ROOTPATH . 'public/uploads/' . $oldImage)) {
+                            unlink(ROOTPATH . 'public/uploads/' . $oldImage);
+                        }
+    
+                        $data[$oldImageField] = $imageName;
                     }
-
-                    $data = [
-                        'product_name' => $productName,
-                        'category_id' => $categoryId,
-                        'rating' => $rating,
-                        'prize' => $prize,
-                        'image' => $imageName
-                    ];
-                } else {
-                    $data = [
-                        'product_name' => $productName,
-                        'category_id' => $categoryId,
-                        'rating' => $rating,
-                        'prize' => $prize
-                    ];
                 }
-
+    
                 $this->productModel->update($productId, $data);
-
+    
                 $response = [
                     'success' => true,
                     'message' => 'Product updated successfully.'
@@ -120,9 +125,10 @@ class ProductController extends BaseController
                 ];
             }
         }
-
+    
         return $this->response->setJSON($response);
     }
+    
 
     public function deleteProduct($id)
     {

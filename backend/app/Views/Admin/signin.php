@@ -80,14 +80,14 @@
                                         </div>
                                         <div class="p-2 mt-5">
                                             <form class="needs-validation" novalidate action="adminsignin" id="signupForm" method="post"> 
+                                                <?= csrf_field() ?>
                                                 <div class="mb-3">
                                                     <label for="username" class="form-label">Username <span class="text-danger">*</span></label>
                                                     <input type="text" class="form-control" id="username" placeholder="Enter username" name="username" required>
                                                     <div class="invalid-feedback">
                                                         Please enter username
                                                     </div>
-                                                </div>
-
+                                                </div> 
                                                 <div class="mb-3">
                                                     <label class="form-label" for="password-input">Password</label>
                                                     <div class="position-relative auth-pass-inputgroup">

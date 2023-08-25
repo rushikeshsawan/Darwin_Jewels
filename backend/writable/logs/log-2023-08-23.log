@@ -1,0 +1,14 @@
+CRITICAL - 2023-08-23 10:04:50 --> Call to a member function getRandomName() on null
+in APPPATH\Controllers\ProductController.php on line 75.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->saveProduct()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-23 10:15:34 --> Call to a member function isValid() on null
+in APPPATH\Controllers\ProductController.php on line 75.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProductController->saveProduct()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')

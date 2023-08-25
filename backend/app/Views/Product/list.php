@@ -52,14 +52,22 @@
                                 <option value="<?= $category['id'] ?>"><?= $category['categoryname'] ?></option>
                             <?php endforeach; ?>
                         </select>
-                    </div> 
+                    </div>
                     <div class="mb-3">
                         <label for="prize" class="form-label">Prize</label>
                         <input type="text" class="form-control" id="prize" name="prize" required>
                     </div>
                     <div class="mb-3">
                         <label for="image" class="form-label">Image</label>
-                        <input type="file" class="form-control" id="image" name="image">
+                        <input type="file" class="form-control" id="image1" name="image1">
+                    </div>
+                    <div class="mb-3">
+                        <label for="image2" class="form-label">Image 2</label>
+                        <input type="file" class="form-control" id="image2" name="image2">
+                    </div>
+                    <div class="mb-3">
+                        <label for="image3" class="form-label">Image 3</label>
+                        <input type="file" class="form-control" id="image3" name="image3">
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -117,7 +125,7 @@
                         html += '<td><img src="<?= base_url('uploads/') ?>' + productList[i].image + '" width="100"></td>';
                         html += '<td>';
                         html += '<button type="button" class="btn btn-primary btn-sm edit-btn" data-bs-toggle="modal" data-bs-target="#addProductModal" data-product-id="' + productList[i].id + '">Edit</button>';
-                        html += ' <button type="button" class="btn btn-danger btn-sm delete-btn" data-bs-toggle="modal" data-bs-target="#deleteModal" data-product-id="' + productList[i].id + '">Delete</button>'; 
+                        html += ' <button type="button" class="btn btn-danger btn-sm delete-btn" data-bs-toggle="modal" data-bs-target="#deleteModal" data-product-id="' + productList[i].id + '">Delete</button>';
                         html += '</td>';
                         html += '</tr>';
                     }
@@ -251,7 +259,7 @@
 
         $(document).on('click', '.star-rating i', function() {
             var rating = $(this).index() + 1;
-            var productId = $(this).closest('tr').find('td:first-child').text(); 
+            var productId = $(this).closest('tr').find('td:first-child').text();
             $.ajax({
                 url: "product/saveRating/" + productId,
                 type: "POST",

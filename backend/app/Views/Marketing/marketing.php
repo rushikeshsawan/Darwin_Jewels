@@ -8,10 +8,9 @@
     </div>
     <div class="col-lg-2">
         <div class="card">
-            <button id="last30Button" type="button" class="btn btn-primary">Last 30Days</button>
+            <button id="last30Button" type="button" class="btn btn-primary">Last 30 Days</button>
         </div>
     </div>
-
     <div class="col-lg-2">
         <div class="card">
             <button type="button" class="btn btn-primary">Cancel</button>
@@ -42,11 +41,11 @@
     <div class="my-2">
         <label for="basiInput" class="form-label">Title</label>
         <input type="text" class="form-control" id="basiInput" name="title">
-    </div> 
+    </div>
     <div class="my-2">
         <label for="basiInput" class="form-label">Message</label>
         <input type="text" class="form-control" id="basiInput" name="message">
-    </div> 
+    </div>
     <button type="submit" class="btn btn-primary">Send</button>
 </form>
 <script src="/assets/libs/%40ckeditor/ckeditor5-build-classic/build/ckeditor.js"></script>
@@ -59,30 +58,26 @@
     allButton.addEventListener('click', function() {
         allButton.classList.add('btn-success');
         last30Button.classList.remove('btn-success');
-
         setSelectedFilterAndFetchData('all');
     });
 
     last30Button.addEventListener('click', function() {
         last30Button.classList.add('btn-success');
         allButton.classList.remove('btn-success');
-
         setSelectedFilterAndFetchData('last30');
     });
 
     function setSelectedFilterAndFetchData(filter) {
+        alert(filter);
         fetch('/set_selected_filter/' + filter)
-            .then(response => {
-                console.log(response);
-                return response.json();
-            })
+            .then(response => response.json())
             .then(data => {
                 console.log(data.message);
                 console.log('Users:', data.users);
 
                 if (data.users && data.users.length > 0) {
-                    const emails = data.users.map(user => user.email).join('; '); // Join emails with "; "
-                    document.getElementById('to').value = emails; // Update the input field
+                    const emails = data.users.map(user => user.email).join('; ');
+                    document.getElementById('to').value = emails;
                 }
             })
             .catch(error => {
@@ -92,9 +87,8 @@
 
     document.getElementById('emailForm').addEventListener('submit', function(event) {
         event.preventDefault();
-
+        alert("hii")
         const form = new FormData(this);
-
         fetch('send_email', {
                 method: 'POST',
                 body: form
@@ -115,6 +109,6 @@
 </script>
 
 <script src="/assets/libs/%40ckeditor/ckeditor5-build-classic/build/ckeditor.js"></script>
-<script src="/assets/js/pages/form-editor.init.js"></script> 
+<script src="/assets/js/pages/form-editor.init.js"></script>
 <script src="/assets/js/app.js"></script>
 <?= $this->endSection() ?>

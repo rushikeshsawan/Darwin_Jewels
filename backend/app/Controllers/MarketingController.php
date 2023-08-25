@@ -37,62 +37,43 @@ class MarketingController extends BaseController
     {
         $session = \Config\Services::session();
         $users = $this->userModel->getUsersByFilter($filter);
-        // $session->set('selected_filter', $filter);
+
         return $this->response->setJSON([
             'message' => 'Selected filter stored in session',
             'users' => $users
         ]);
     }
-    // public function sendEmail()
-    // {
-    //     $email = \Config\Services::email();
-    //     $userSessionData = $this->session->get('selected_filter');
-      
-    //     $to=$this->request->getPost('to');
-    //     $subject = $this->request->getPost('title');
-    //     $message = $this->request->getPost('message');
 
-    //     $email->setTo($to);
-    //     $email->setFrom('vishal.naik@darwinpgc.com', 'Password Reset Request');
-    //     $email->setSubject($subject);
-    //     $email->setMessage($message);
-    //     $email->send();
-    //     return $this->response->setJSON(['message' => $to]);
-
-    //     // if ($email->send()) {
-    //     //     return $this->response->setJSON(['message' => 'Email sent successfully']);
-    //     // } else {
-    //     //     $errorData = [
-    //     //         'to' => $to,
-    //     //         'subject' => $subject,
-    //     //         'message' => $message
-    //     //     ];
-    //     //     $data = $email->printDebugger(['headers']);
-    //     //     return $this->response->setJSON(['message' => $errorData]);
-    //     // }
-    // }
-
-    public function sendEmail()
-{
-    $email = \Config\Services::email();
-    $userSessionData = $this->session->get('selected_filter');
-
-    $to = $this->request->getPost('to');
-    $emailAddresses = explode(';', $to);
-
-    $subject = $this->request->getPost('title');
-    $message = $this->request->getPost('message');
-
-    foreach ($emailAddresses as $emailAddress) {
-        $email->clear(); // Clear any previous recipients/settings
-        $email->setTo(trim($emailAddress)); // Trim to remove spaces
-        $email->setFrom('vishal.naik@darwinpgc.com', 'Password Reset Request');
-        $email->setSubject($subject);
-        $email->setMessage($message);
-        $email->send();
+    public function getUsersByFilter($filter)
+    {
+        if ($filter === 'all') {
+            return $this->userModel->findAll();
+        } elseif($filter == 'last30')  {
+            return $this->userModel->where('created_at', date('Y-m-d', strtotime('-30 days')))
+            ->findAll();
+        } 
     }
 
-    return $this->response->setJSON(['message' => 'Emails sent successfully']);
-}
+    public function sendEmail()
+    {
+        $email = \Config\Services::email();
+        $userSessionData = $this->session->get('selected_filter');
 
+        $to = $this->request->getPost('to');
+        $emailAddresses = explode(';', $to);
+
+        $subject = $this->request->getPost('title');
+        $message = $this->request->getPost('message');
+
+        foreach ($emailAddresses as $emailAddress) {
+            $email->clear(); // Clear any previous recipients/settings
+            $email->setTo(trim($emailAddress)); // Trim to remove spaces
+            $email->setFrom('vishal.naik@darwinpgc.com', 'Password Reset Request');
+            $email->setSubject($subject);
+            $email->setMessage($message);
+            $email->send();
+        }
+    }
+    
+    
 }

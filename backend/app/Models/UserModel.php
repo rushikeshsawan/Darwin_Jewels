@@ -47,9 +47,12 @@ class UserModel extends Model
         if ($filter === 'all') {
             return $this->findAll();
         }  elseif ($filter === 'last30') {
-            // Modify this query to retrieve users based on your criteria
-            return $this->where('registration_date >', date('Y-m-d', strtotime('-30 days')))
-                        ->findAll();
+            $last30DaysAgo = date('Y-m-d', strtotime('-30 days'));
+
+            $query = $this->where('created_at >=', $last30DaysAgo)
+                          ->findAll(); 
+            $lastQuery = $this->db->getLastQuery();
+             return $query;
         }
         return [];
     }
