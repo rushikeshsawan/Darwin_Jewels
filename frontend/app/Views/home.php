@@ -35,6 +35,7 @@
             </div>
             <div class="slick-slider mx-n2" data-slick-options='{"slidesToShow": 5,"dots":false,"arrows":true,"responsive":[{"breakpoint": 1368,"settings": {"arrows":false,"dots":true}},{"breakpoint": 1200,"settings": {"slidesToShow":3,"arrows":false,"dots":true}},{"breakpoint": 992,"settings": {"slidesToShow":2,"arrows":false,"dots":true}},{"breakpoint": 768,"settings": {"slidesToShow": 2,"arrows":false,"dots":true}},{"breakpoint": 576,"settings": {"slidesToShow": 1,"arrows":false,"dots":true}}]}'>
                 <?php foreach ($Category as $row) : ?>
+                    <a href="<?php echo base_url('/categoryProduct/'.$row['id']);?>">
                     <div class="box">
                         <div class="card border-0 hover-shine hover-zoom-in banner banner-03">
                             <div class="card-img bg-img-cover-center" style="background-image: url('<?= base_url('/uploads/' . $row['image']) ?>');"></div>
@@ -45,6 +46,7 @@
                             </div>
                         </div>
                     </div>
+                    </a>
                 <?php endforeach; ?>
             </div>
         </div>
@@ -1231,7 +1233,7 @@
                         <h4 class="fs-34 text-center mb-6">Sign In</h4>
                         <p class="text-center fs-16 mb-7">Don’t have an account yet? <a href="" class="text-secondary border-bottom text-decoration-none">Sign up</a> for free</p>
                         <form>
-                            <input name="email" type="email" class="form-control border-0 mb-3" placeholder="Your email" required>
+                            <input name="username" type="text" class="form-control border-0 mb-3" placeholder="Your email" required>
                             <input name="password" type="password" class="form-control border-0" placeholder="Password" required>
                             <div class="d-flex align-items-center justify-content-between mt-5 mb-4">
                                 <div class="custom-control custom-checkbox">
@@ -1241,6 +1243,8 @@
                                 </div>
                                 <a href="" class="text-secondary">Forgot your password?</a>
                             </div>
+                            <div class="g-recaptcha" data-sitekey="6Leud3gnAAAAACKlRbRCmwa1-qYZh7xXJeNMwUT8"></div>  
+
                             <button type="submit" value="Login" class="btn btn-secondary btn-block bg-hover-primary border-hover-primary">Log
                                 In</button>
                             <div class="border-bottom mt-6"></div>
@@ -1361,7 +1365,7 @@
                     <div class="col-md-6 pl-xl-6 pr-xl-8">
                         <p class="d-flex align-items-center mb-3">
                             <span class="text-line-through"></span>
-                            <span class="fs-18 text-secondary font-weight-bold ml-3 ProductPrize">₹ 3,58,755</span>
+                            <span class="fs-18 text-secondary font-weight-bold ml-3 ProductPrize" id="PPrize">₹ 3,58,755</span>
                             <span class="badge badge-primary fs-16 ml-4 font-weight-600 px-3">20%</span>
                         </p>
                         <h2 class="fs-24 mb-2 product-title">Geometric Fleur CZ Diamond Ring</h2>
@@ -1458,7 +1462,34 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.css">
-<script src="/js/home.js"></script>
+<script src="<?= base_url('/js/home.js') ?>"></script>  
+<script>
+    $(document).ready(function() {
+        $('#loginForm').submit(function(event) {
+            event.preventDefault();
+
+            var formData = $(this).serialize();
+
+            $.ajax({
+                type: 'POST',
+                url: 'userlogin',
+                data: formData,
+                dataType: 'json',
+                success: function(response) {
+                    if (response.success) {
+                        window.location.href = response.redirect;
+                    } else {
+                        alert(response.message);
+                    }
+                },
+                error: function(error) {
+                    console.log('Error:', error);
+                }
+            });
+        });
+    });
+</script>
+
 <!-- <script>
     $(document).ready(function() {
         $('.QuickView').on('click', function(e) {

@@ -31,52 +31,32 @@ $(document).ready(function() {
     var productId;
     $('.add-to-bag').on('click', function(e) {
         var testElement = document.getElementsByClassName('test')[0];  
+        var ProductPrizeElement=document.getElementsByClassName('ProductPrize')[0];   
         var productId = testElement ? testElement.textContent : 'No test element found';
+        var ProductPrize = ProductPrizeElement ? ProductPrizeElement.textContent : 'No test element found';
+        console.log(productId) 
+        console.log(ProductPrize)  
+        var quantity = parseInt($('#quickview-number').val()); // Get the quantity value
+        var totalprize=ProductPrize*quantity
+        alert(totalprize)
         $.ajax({
             url: 'add-to-cart',  
             method: 'POST',
             data: {
-                product_id: productId
+                product_id: productId,
+                quantity: quantity,
+                totalprize: totalprize
             },
             dataType: 'json',
             success: function(response) {
-                if (response.status === 'success') {
-                    var message = 'Product added to cart.';
-                    var redirectUrl = 'cart-list';
-                    if (response.alreadyAdded) {
-                        message = 'Product is already in the cart.';
-                        redirectUrl = 'cart-list';
-                    }
-                    Swal.fire({
-                        icon: response.alreadyAdded ? 'info' : 'success',
-                        title: 'Cart',
-                        text: message,
-                        showConfirmButton: false,
-                        timer: 1500
-                    }).then(function() {
-                        // Redirect to the cart list page after adding the product
-                        window.location.href = redirectUrl;
-                    });
-                } else {
-                    // Show an error SweetAlert if the response is not successful
-                    Swal.fire({
-                        icon: 'error',
-                        title: 'Error',
-                        text: response.message
-                    });
-                }
+                // Handle the success response
             },
             error: function() {
-                // Show an error SweetAlert if an error occurs during the AJAX request
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Error',
-                    text: 'An error occurred while adding the product to the cart.'
-                });
+                // Handle the error response
             }
         });
-        console.log(productId);
     });
+    
 
     $('.add-to-wishlist').on('click', function(e) {
         e.preventDefault();
@@ -95,7 +75,7 @@ $(document).ready(function() {
                     var redirectUrl = 'cart-list';
                     if (response.alreadyAdded) {
                         message = 'Product is already in the cart.';
-                        redirectUrl = 'cart-list';
+                        // redirectUrl = 'cart-list';
                     }
                     Swal.fire({
                         icon: response.alreadyAdded ? 'info' : 'success',
@@ -105,7 +85,7 @@ $(document).ready(function() {
                         timer: 1500
                     }).then(function() {
                         // Redirect to the cart list page after adding the product
-                        window.location.href = redirectUrl;
+                        // window.location.href = redirectUrl;
                     });
                 } else {
                     // Show an error SweetAlert if the response is not successful

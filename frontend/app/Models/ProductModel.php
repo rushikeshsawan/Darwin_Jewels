@@ -28,6 +28,14 @@ class ProductModel extends Model
         $query->join('products', 'category.id = products.category_id');
         return $query->get()->getResultArray(); // Use getResultArray() instead of getResult()
     }
+    public function categoryProduct($id)
+    {
+        $db = $this->db;
+        $query = $db->table('products');
+        $query->select('*');
+        $query->where('category_id', $id); 
+        return $query->get()->getResultArray();
+    }
     
     public function listOrderByPrice($order = 'asc')
     {

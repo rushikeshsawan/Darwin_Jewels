@@ -10,6 +10,7 @@ use App\Models\OrderDetailModel;
 use App\Models\PaymentModel;
 use App\Models\UserModel;
 use CodeIgniter\Email\Email;
+use CodeIgniter\Pager\Pager;
 use Config\Razorpay;
 use Razorpay\Api\Api;
 use CodeIgniter\HTTP\ResponseInterface;
@@ -294,12 +295,26 @@ class UserController extends BaseController
     }    
     
 
+    // public function getUserOrders()
+    // {
+    //     $loggedInUserId = $this->session->get('user')['id'];
+    //     $data['orders'] = $this->OrderDetailModel->getUserOrders($loggedInUserId);
+    //     return view('order_list', $data);
+    // }
+
     public function getUserOrders()
-    {
-        $loggedInUserId = $this->session->get('user')['id'];
-        $data['orders'] = $this->OrderDetailModel->getUserOrders($loggedInUserId);
+    { 
+        $loggedInUserId = $this->session->get('user')['id']; 
+        $perPage = 10; // Number of orders per page
+        $orderList = $this->OrderDetailModel->getUserOrders($loggedInUserId, $perPage);
+        
+        $data = [
+            'orders' => $orderList, // Directly use the paginated result
+            'pager' => $this->OrderDetailModel->pager, // Access pager information
+        ];
         return view('order_list', $data);
     }
+    
     public function getOrderDetails()
     {
         $orderId = $this->request->getVar('order_id');

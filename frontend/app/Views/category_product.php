@@ -1,346 +1,330 @@
-<!doctype html>
-<html lang="en">
-
-<!-- Added by HTTrack -->
-<meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Glowing Shop Html Template">
-    <meta name="author" content="">
-    <meta name="generator" content="Jekyll">
-    <title>Dp Jewels</title>
-
-    <script src="../cdn-cgi/apps/head/2oc_RD5SS6wgN5SiQnSEnWVNHg8.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/vendors/fontawesome-pro-5/css/all.css">
-    <link rel="stylesheet" href="/vendors/bootstrap-select/css/bootstrap-select.min.css">
-    <link rel="stylesheet" href="/vendors/slick/slick.min.css">
-    <link rel="stylesheet" href="/vendors/magnific-popup/magnific-popup.min.css">
-    <link rel="stylesheet" href="/vendors/jquery-ui/jquery-ui.min.css">
-    <link rel="stylesheet" href="/vendors/animate.css">
-    <link rel="stylesheet" href="/vendors/mapbox-gl/mapbox-gl.min.css">
-    <link rel="stylesheet" href="/vendors/fonts/font-phosphor/css/phosphor.min.css">
-    <link rel="stylesheet" href="/vendors/fonts/tuesday-night/stylesheet.min.css">
-    <link rel="stylesheet" href="/vendors/fonts/butler/stylesheet.min.css">
-    <link rel="stylesheet" href="/vendors/fonts/a-antara-distance/stylesheet.min.css">
-    <link rel="stylesheet" href="/css/themes.css">
-    <link rel="icon" href="/images/logo/favicon.png">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@">
-    <meta name="twitter:creator" content="@">
-    <meta name="twitter:title" content="Home 02">
-    <meta name="twitter:description" content="Glowing Shop Html Template">
-    <meta name="twitter:image" content="images/logo_01.png">
-
-    <meta property="og:url" content="home-02.html">
-    <meta property="og:title" content="Home 02">
-    <meta property="og:description" content="Glowing Shop Html Template">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="images/logo_01.png">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-</head>
-<body>
-    <header class="main-header navbar-light header-sticky header-sticky-smart">
-        <div class="topbar d-none d-xl-block" style="background-color:#EDF1F0;">
-            <div class="container container-xl d-flex justify-content-between">
-                <ul class="list-inline d-flex align-items-center mb-0">
-                    <li class="list-inline-item mr-5"><a href="" class="fs-14 lh-1"><i class="fab fa-twitter"></i></a>
-                    </li>
-                    <li class="list-inline-item mr-5"><a href="" class="fs-14 lh-1"><i class="fab fa-facebook-f"></i></a></li>
-                    <li class="list-inline-item mr-5"><a href="" class="fs-14 lh-1"><i class="fab fa-instagram"></i></a>
-                    </li>
-                    <li class="list-inline-item mr-5"><a href="" class="fs-14 lh-1"><i class="fab fa-youtube"></i></a>
-                    </li>
-                </ul>
-                <p class="mb-0 fs-13 font-weight-bold text-primary letter-spacing-01 text-uppercase">Free shipping on
-                    all India.
-                    orders ₹50+</p>
-            </div>
-        </div>
-        <div class="sticky-area bg-white">
-            <div class="container container-xxl">
-                <nav class="navbar navbar-expand-xl px-0 d-block">
-                    <div class="d-none d-xl-block">
-                        <div class="d-flex align-items-center flex-nowrap">
-                            <div class="w-50">
-                                <div class="d-flex mt-3 mt-xl-0 align-items-center w-100 justify-content-start ml-xxl-12">
-                                    <a class="navbar-brand mw-184px d-inline-block py-0" href="home">
-                                        <img src="<?= base_url('images/logo/DP-Retail.png') ?>" alt="DP Jewels Logo">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="mx-auto flex-shrink-0 px-10">
-                                <ul class="navbar-nav hover-menu main-menu px-0 mx-xl-n5">
-                                    <li aria-haspopup="true" aria-expanded="false" class="nav-item  dropdown py-2 py-xl-7 sticky-py-xl-6 px-0 px-xl-5">
-                                        <a class="nav-link p-0"  href="<?= base_url('home') ?>" >
-                                            Home
-                                            <span class="caret"></span>
-                                        </a>
-                                    </li>
-                                    <li aria-haspopup="true" aria-expanded="false" class="nav-item dropdown-item-shop dropdown py-2 py-xl-7 sticky-py-xl-6 px-0 px-xl-5">
-                                        <a class="nav-link p-0" href="products">
-                                            Product
-                                            <span class="caret"></span>
-                                        </a>
-
-                                    </li>
-                                    <li aria-haspopup="true" aria-expanded="false" class="nav-item dropdown-item-pages py-2 py-xl-7 sticky-py-xl-6 px-0 px-xl-5">
-                                        <a class="nav-link p-0" href="benifit.html">
-                                            Benifits
-                                            <span class="caret"></span>
-                                        </a>
-                                    </li>
-                                    <li aria-haspopup="true" aria-expanded="false" class="nav-item  dropdown py-2 py-xl-7 sticky-py-xl-6 px-0 px-xl-4">
-                                        <a class="nav-link p-0" href="contact-us.html">
-                                            Contact
-                                            <span class="caret"></span>
-                                        </a>
-                                    </li>
-                                    <li aria-haspopup="true" aria-expanded="false" class="nav-item dropdown-item-blog dropdown py-2 py-xl-7 sticky-py-xl-6 px-0 px-xl-4">
-                                        <a class="nav-link dropdown-toggle p-0" href="#" data-toggle="dropdown">
-                                            Blog
-                                            <span class="caret"></span>
-                                        </a>
-                                        <ul class="dropdown-menu pt-3 pb-0 pb-xl-3 x-animated x-fadeInUp">
-                                            <li class="dropdown-item dropdown dropright">
-                                                <a class="dropdown-link dropdown-toggle" href="#" data-toggle="dropdown">
-                                                    Blog Listing
-                                                </a>
-                                                <ul class="dropdown-menu dropdown-submenu pt-3 pb-0 pb-xl-3 x-animated x-fadeInLeft">
-                                                    <li class="dropdown-item">
-                                                        <a class="dropdown-link" href="blog-grid.html">Blog Grid</a>
-                                                    </li>
-                                                    <li class="dropdown-item">
-                                                        <a class="dropdown-link" href="blog-grid-sidebar.html">Blog Grid
-                                                            Sidebar</a>
-                                                    </li>
-                                                    <li class="dropdown-item">
-                                                        <a class="dropdown-link" href="blog-masonry.html">Blog
-                                                            Masonsy</a>
-                                                    </li>
-                                                    <li class="dropdown-item">
-                                                        <a class="dropdown-link" href="blog-list.html">Blog List</a>
-                                                    </li>
-                                                    <li class="dropdown-item">
-                                                        <a class="dropdown-link" href="blog-classic.html">Blog
-                                                            Classic</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="dropdown-item dropdown dropright">
-                                                <a class="dropdown-link dropdown-toggle" href="#" data-toggle="dropdown">
-                                                    Blog Detail
-                                                </a>
-                                                <ul class="dropdown-menu dropdown-submenu pt-3 pb-0 pb-xl-3 x-animated x-fadeInLeft">
-                                                    <li class="dropdown-item">
-                                                        <a class="dropdown-link" href="blog-detail-2.html">Blog Detail
-                                                            01</a>
-                                                    </li>
-                                                    <li class="dropdown-item">
-                                                        <a class="dropdown-link" href="blog-detail-3.html">Blog Detail
-                                                            02</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li aria-haspopup="true" aria-expanded="false" class="nav-item dropdown-item-docs dropdown py-2 py-xl-7 sticky-py-xl-6 px-0 px-xl-4">
-                                        <a class="nav-link dropdown-toggle p-0" href="#" data-toggle="dropdown">
-                                            Docs
-                                            <span class="caret"></span>
-                                        </a>
-                                        <div class="dropdown-menu px-0 pt-3 dropdown-menu-docs x-animated x-fadeInUp">
-                                            <div class="dropdown-body">
-                                                <a class="dropdown-item py-1" href="docs/getting-started/dev-environment-setup.html">
-                                                    <div class="media">
-                                                        <div class="fs-20 mr-3">
-                                                            <i class="fal fa-file-alt"></i>
-                                                        </div>
-                                                        <div class="media-body">
-                                                            <span class="d-block lh-15">Documentation</span>
-                                                            <small class="d-block">Kick-start customization</small>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                                <div class="dropdown-divider m-0"></div>
-                                                <a class="dropdown-item py-1" href="docs/content/typography.html">
-                                                    <div class="media">
-                                                        <div class="fs-20 mr-3">
-                                                            <i class="fal fa-layer-group"></i>
-                                                        </div>
-                                                        <div class="media-body">
-                                                            <span class="d-block lh-15">UI Kit<span class="badge badge-danger ml-2">50+</span></span>
-                                                            <small class="d-block">Flexible components</small>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                                <div class="dropdown-divider m-0"></div>
-                                                <a class="dropdown-item py-1" href="docs/getting-started/changelog.html">
-                                                    <div class="media">
-                                                        <div class="fs-20 mr-3">
-                                                            <i class="fal fa-edit"></i>
-                                                        </div>
-                                                        <div class="media-body">
-                                                            <span class="d-block lh-15">Changelog<span class="badge badge-success ml-2">v1.1.0</span></span>
-                                                            <small class="d-block">Regular updates</small>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                                <div class="dropdown-divider m-0"></div>
-                                                <a class="dropdown-item py-1" href="https://sp.g5plus.net/" target="_blank">
-                                                    <div class="media">
-                                                        <div class="fs-20 mr-3">
-                                                            <i class="fal fa-life-ring"></i>
-                                                        </div>
-                                                        <div class="media-body">
-                                                            <span class="d-block lh-15">Support</span>
-                                                            <small class="d-block">https://sp.g5plus.net/</small>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="w-50">
-                                <div class="d-flex align-items-center justify-content-end">
-                                    <a href="#search-popup" data-gtf-mfp="true" data-mfp-options='{"type":"inline","focus": "#keyword","mainClass": "mfp-search-form mfp-move-from-top mfp-align-top"}' class="nav-search d-flex align-items-center pr-3">
-                                        <svg class="icon icon-magnifying-glass-light fs-28">
-                                            <use xlink:href="#icon-magnifying-glass-light"></use>
-                                        </svg>
-                                    </a>
-                                    <ul class="navbar-nav flex-row justify-content-xl-end d-flex flex-wrap text-body py-0 navbar-right">
-                                        <li aria-haspopup="true" aria-expanded="false" class="nav-item dropdown-item-home dropdown">
-                                            <a class="nav-link dropdown-toggle p-0" href="index.html" data-toggle="dropdown">
-                                                Login
-                                                <span class="caret"></span>
-                                            </a>
-                                            <div class="dropdown-menu x-animated x-fadeInUp pt-3 pb-0 pb-xl-3 mw-260px">
-                                                <div class="row px-7">
-                                                    <div class="col-6">
-                                                        <ul class="p-0"> 
-                                                            <li class="dropdown-item px-0">
-                                                                <a class="dropdown-link" href="logout">
-                                                                    <i class="fa fa-sign-out mr-2"></i> <span>
-                                                                        Logout</span>
-                                                                </a>
-                                                            </li>
-
-                                                        </ul>
+<?= $this->extend('main') ?>
+<?= $this->section('content') ?> 
+<main id="content">
+    <section class="pt-lg-13 pb-lg-10 pt-11" style="background: #f8f8f8;">
+        <div class="container container-xl">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="text-heading text-center mb-6" data-animate="fadeInUp">Feature Products</h2>
+                    <div class="tab-content p-0 shadow-none" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="pills-Skincare" role="tabpanel" aria-labelledby="pills-Skincare-tab">
+                            <div class="row">
+                                <?php foreach ($product as $row) : ?>
+                                    <div class="col-lg-3 col-sm-6 mb-5">
+                                        <div class="card border-0 product">
+                                            <div class="position-relative">
+                                                <img src="<?= base_url('/uploads/FeatureProduct/' . $row['image']) ?>" alt="Facial cleanser">
+                                                <div class="card-img-overlay d-flex p-3">
+                                                    <div class="my-auto w-100 content-change-vertical">
+                                                        <a href="product-detail.html" data-toggle="tooltip" data-placement="left" title="View products" class="add-to-cart ml-auto d-flex align-items-center justify-content-center text-secondary bg-white hover-white bg-hover-secondary w-48px h-48px rounded-circle mb-2">
+                                                            <svg class="icon icon-shopping-bag-open-light fs-24">
+                                                                <use xlink:href="#icon-shopping-bag-open-light"></use>
+                                                            </svg>
+                                                        </a>
+                                                        <a href="#" data-toggle="tooltip" data-placement="left" title="Quick view" class="preview QuickView ml-auto d-md-flex align-items-center justify-content-center cursor-pointer text-secondary bg-white hover-white bg-hover-secondary w-48px h-48px rounded-circle mb-2 d-none" data-product-id="<?= $row['id']; ?>">
+                                                            <span data-toggle="modal" data-target="#quick-view">
+                                                                <svg class="icon icon-eye-light fs-24">
+                                                                    <use xlink:href="#icon-eye-light"></use>
+                                                                </svg>
+                                                            </span>
+                                                        </a>
+                                                        <a href="" data-toggle="tooltip" data-placement="left" title="Add to wishlist" class="add-to-wishlist ml-auto d-flex align-items-center justify-content-center text-secondary bg-white hover-white bg-hover-secondary w-48px h-48px rounded-circle mb-2" data-product-id="<?= $row['id']; ?>">
+                                                            <svg class="icon icon-star-light fs-24">
+                                                                <use xlink:href="#icon-star-light"></use>
+                                                            </svg>
+                                                        </a>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link pr-3 py-0" href="" data-toggle="modal" data-target="#sign-in">
-                                                <svg class="icon icon-user-light">
-                                                    <use xlink:href="#icon-user-light"></use>
-                                                </svg>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link position-relative px-4 py-0" href="cart-list">
-                                                <svg class="icon icon-heart">
-                                                    <use xlink:href="#icon-heart"></use>
-                                                </svg>
-                                                <span class="position-absolute number">0</span></a>
-                                        </li> 
-                                    </ul>
+                                            <div class="card-body px-0 pt-4 text-center">
+                                                <p class="card-text font-weight-bold fs-16 mb-1 text-secondary">
+                                                    <span class="fs-13 font-weight-500 text-decoration-through text-body pr-1">$39.00</span>
+                                                    <span><?= $row['prize']; ?></span>
+                                                </p>
+                                                <h2 class="card-title fs-15 font-weight-500 mb-2"><a href="product-detail.html">
+                                                        <?= $row['product_name']; ?>
+                                                    </a>
+                                                </h2>
+                                                <div class="d-flex align-items-center justify-content-center flex-wrap">
+                                                    <ul class="list-inline mb-0 lh-1">
+                                                        <li class="list-inline-item fs-12 text-primary mr-0"><i class="fas fa-star"></i></li>
+                                                        <li class="list-inline-item fs-12 text-primary mr-0"><i class="fas fa-star"></i></li>
+                                                        <li class="list-inline-item fs-12 text-primary mr-0"><i class="fas fa-star"></i></li>
+                                                        <li class="list-inline-item fs-12 text-primary mr-0"><i class="fas fa-star"></i></li>
+                                                        <li class="list-inline-item fs-12 text-primary mr-0"><i class="fas fa-star"></i></li>
+                                                    </ul>
+                                                    <span class="card-text fs-14 font-weight-400 pl-2 lh-1">2947 reviews</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <?php endforeach; ?>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade " id="pills-Bodycare" role="tabpanel" aria-labelledby="pills-Bodycare-tab">
+                            <div class="row">
+                                <div class="col-lg-3 col-sm-6 mb-5" data-animate="fadeInUp">
+                                    <div class="card border-0 product">
+                                        <div class="position-relative">
+                                            <img src="<?= base_url('images/earing/01/1.jpg')?>" alt="Coffee Bean Caffeine Eye Cream">
+                                            <div class="card-img-overlay d-flex p-3">
+                                                <div>
+                                                </div>
+                                                <div class="my-auto w-100 content-change-vertical">
+                                                    <a href="product-detail.html" data-toggle="tooltip" data-placement="left" title="View products" class="add-to-cart ml-auto d-flex align-items-center justify-content-center text-secondary bg-white hover-white bg-hover-secondary w-48px h-48px rounded-circle mb-2">
+                                                        <svg class="icon icon-shopping-bag-open-light fs-24">
+                                                            <use xlink:href="#icon-shopping-bag-open-light"></use>
+                                                        </svg>
+                                                    </a>
+                                                    <a href="" data-toggle="tooltip" data-placement="left" title="Quick view" class="preview ml-auto d-md-flex align-items-center justify-content-center cursor-pointer text-secondary bg-white hover-white bg-hover-secondary w-48px h-48px rounded-circle mb-2 d-none">
+                                                        <span data-toggle="modal" data-target="#quick-view">
+                                                            <svg class="icon icon-eye-light fs-24">
+                                                                <use xlink:href="#icon-eye-light"></use>
+                                                            </svg>
+                                                        </span>
+                                                    </a>
+                                                    <a href="" data-toggle="tooltip" data-placement="left" title="Add to wishlist" class="add-to-wishlist ml-auto d-flex align-items-center justify-content-center text-secondary bg-white hover-white bg-hover-secondary w-48px h-48px rounded-circle mb-2">
+                                                        <svg class="icon icon-star-light fs-24">
+                                                            <use xlink:href="#icon-star-light"></use>
+                                                        </svg>
+                                                    </a>
+                                                    <!-- <a href="" data-toggle="tooltip" data-placement="left"
+                                                            title="Compare"
+                                                            class="add-to-compare ml-auto d-flex align-items-center justify-content-center text-secondary bg-white hover-white bg-hover-secondary w-48px h-48px rounded-circle">
+                                                            <svg class="icon icon-arrows-left-right-light fs-24">
+                                                                <use xlink:href="#icon-arrows-left-right-light"></use>
+                                                            </svg>
+                                                        </a> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-body px-0 pt-4 text-center">
+                                            <p class="card-text font-weight-bold fs-16 mb-1 text-secondary">
+                                                <span class="fs-13 font-weight-500 text-decoration-through text-body pr-1">$39.00</span>
+                                                <span>₹ 3,58,755</span>
+                                            </p>
+                                            <h2 class="card-title fs-15 font-weight-500 mb-2"><a href="product-detail.html">Hollis
+                                                    Gorgeous Cubic Zirconia</a>
+                                            </h2>
+                                            <div class="d-flex align-items-center justify-content-center flex-wrap">
+                                                <ul class="list-inline mb-0 lh-1">
+                                                    <li class="list-inline-item fs-12 text-primary mr-0"><i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="list-inline-item fs-12 text-primary mr-0"><i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="list-inline-item fs-12 text-primary mr-0"><i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="list-inline-item fs-12 text-primary mr-0"><i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="list-inline-item fs-12 text-primary mr-0"><i class="fas fa-star"></i>
+                                                    </li>
+                                                </ul>
+                                                <span class="card-text fs-14 font-weight-400 pl-2 lh-1">2947
+                                                    reviews</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 mb-5" data-animate="fadeInUp">
+                                    <div class="card border-0 product">
+                                        <div class="position-relative">
+                                            <img src="<?= base_url('images/Necklaces/1/Necklaces_1_500x500.jpg') ?>" alt="Bio-shroom Rejuvenating Serum">
+                                            <div class="card-img-overlay d-flex p-3">
+                                                <div>
+                                                </div>
+                                                <div class="my-auto w-100 content-change-vertical">
+                                                    <a href="product-detail.html" data-toggle="tooltip" data-placement="left" title="View products" class="add-to-cart ml-auto d-flex align-items-center justify-content-center text-secondary bg-white hover-white bg-hover-secondary w-48px h-48px rounded-circle mb-2">
+                                                        <svg class="icon icon-shopping-bag-open-light fs-24">
+                                                            <use xlink:href="#icon-shopping-bag-open-light"></use>
+                                                        </svg>
+                                                    </a>
+                                                    <a href="" data-toggle="tooltip" data-placement="left" title="Quick view" class="preview ml-auto d-md-flex align-items-center justify-content-center cursor-pointer text-secondary bg-white hover-white bg-hover-secondary w-48px h-48px rounded-circle mb-2 d-none">
+                                                        <span data-toggle="modal" data-target="#quick-view">
+                                                            <svg class="icon icon-eye-light fs-24">
+                                                                <use xlink:href="#icon-eye-light"></use>
+                                                            </svg>
+                                                        </span>
+                                                    </a>
+                                                    <a href="" data-toggle="tooltip" data-placement="left" title="Add to wishlist" class="add-to-wishlist ml-auto d-flex align-items-center justify-content-center text-secondary bg-white hover-white bg-hover-secondary w-48px h-48px rounded-circle mb-2">
+                                                        <svg class="icon icon-star-light fs-24">
+                                                            <use xlink:href="#icon-star-light"></use>
+                                                        </svg>
+                                                    </a>
+                                                    <!-- <a href="" data-toggle="tooltip" data-placement="left"
+                                                            title="Compare"
+                                                            class="add-to-compare ml-auto d-flex align-items-center justify-content-center text-secondary bg-white hover-white bg-hover-secondary w-48px h-48px rounded-circle">
+                                                            <svg class="icon icon-arrows-left-right-light fs-24">
+                                                                <use xlink:href="#icon-arrows-left-right-light"></use>
+                                                            </svg>
+                                                        </a> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-body px-0 pt-4 text-center">
+                                            <p class="card-text font-weight-bold fs-16 mb-1 text-secondary">
+                                                <span>₹ 3,58,755</span>
+                                            </p>
+                                            <h2 class="card-title fs-15 font-weight-500 mb-2"><a href="product-detail.html">Bio-shroom
+                                                    Rejuvenating Serum</a>
+                                            </h2>
+                                            <div class="d-flex align-items-center justify-content-center flex-wrap">
+                                                <ul class="list-inline mb-0 lh-1">
+                                                    <li class="list-inline-item fs-12 text-primary mr-0"><i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="list-inline-item fs-12 text-primary mr-0"><i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="list-inline-item fs-12 text-primary mr-0"><i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="list-inline-item fs-12 text-primary mr-0"><i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="list-inline-item fs-12 text-primary mr-0"><i class="fas fa-star"></i>
+                                                    </li>
+                                                </ul>
+                                                <span class="card-text fs-14 font-weight-400 pl-2 lh-1">2947
+                                                    reviews</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 mb-5" data-animate="fadeInUp">
+                                    <div class="card border-0 product">
+                                        <div class="position-relative">
+                                            <img src="<?= base_url('images/rings/IMG_20230220_151153.jpg') ?>" alt="Coffee Bean Caffeine Eye Cream">
+                                            <div class="card-img-overlay d-flex p-3">
+                                                <div>
+                                                </div>
+                                                <div class="my-auto w-100 content-change-vertical">
+                                                    <a href="product-detail.html" data-toggle="tooltip" data-placement="left" title="View products" class="add-to-cart ml-auto d-flex align-items-center justify-content-center text-secondary bg-white hover-white bg-hover-secondary w-48px h-48px rounded-circle mb-2">
+                                                        <svg class="icon icon-shopping-bag-open-light fs-24">
+                                                            <use xlink:href="#icon-shopping-bag-open-light"></use>
+                                                        </svg>
+                                                    </a>
+                                                    <a href="" data-toggle="tooltip" data-placement="left" title="Quick view" class="preview ml-auto d-md-flex align-items-center justify-content-center cursor-pointer text-secondary bg-white hover-white bg-hover-secondary w-48px h-48px rounded-circle mb-2 d-none">
+                                                        <span data-toggle="modal" data-target="#quick-view">
+                                                            <svg class="icon icon-eye-light fs-24">
+                                                                <use xlink:href="#icon-eye-light"></use>
+                                                            </svg>
+                                                        </span>
+                                                    </a>
+                                                    <a href="" data-toggle="tooltip" data-placement="left" title="Add to wishlist" class="add-to-wishlist ml-auto d-flex align-items-center justify-content-center text-secondary bg-white hover-white bg-hover-secondary w-48px h-48px rounded-circle mb-2">
+                                                        <svg class="icon icon-star-light fs-24">
+                                                            <use xlink:href="#icon-star-light"></use>
+                                                        </svg>
+                                                    </a>
+                                                    <!-- <a href="" data-toggle="tooltip" data-placement="left"
+                                                            title="Compare"
+                                                            class="add-to-compare ml-auto d-flex align-items-center justify-content-center text-secondary bg-white hover-white bg-hover-secondary w-48px h-48px rounded-circle">
+                                                            <svg class="icon icon-arrows-left-right-light fs-24">
+                                                                <use xlink:href="#icon-arrows-left-right-light"></use>
+                                                            </svg>
+                                                        </a> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-body px-0 pt-4 text-center">
+                                            <p class="card-text font-weight-bold fs-16 mb-1 text-secondary">
+                                                <span>₹ 3,58,755</span>
+                                            </p>
+                                            <h2 class="card-title fs-15 font-weight-500 mb-2"><a href="product-detail.html">Glinting
+                                                    Glorious Cubic Zirconia</a>
+                                            </h2>
+                                            <div class="d-flex align-items-center justify-content-center flex-wrap">
+                                                <ul class="list-inline mb-0 lh-1">
+                                                    <li class="list-inline-item fs-12 text-primary mr-0"><i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="list-inline-item fs-12 text-primary mr-0"><i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="list-inline-item fs-12 text-primary mr-0"><i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="list-inline-item fs-12 text-primary mr-0"><i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="list-inline-item fs-12 text-primary mr-0"><i class="fas fa-star"></i>
+                                                    </li>
+                                                </ul>
+                                                <span class="card-text fs-14 font-weight-400 pl-2 lh-1">2947
+                                                    reviews</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 mb-5" data-animate="fadeInUp">
+                                    <div class="card border-0 product">
+                                        <div class="position-relative">
+                                            <img src="<?= base_url('images/product-06.jpg') ?>" alt="Coffee Bean Caffeine Eye Cream">
+                                            <div class="card-img-overlay d-flex p-3">
+                                                <div>
+                                                    <span class="badge badge-primary">-20%</span>
+                                                </div>
+                                                <div class="my-auto w-100 content-change-vertical">
+                                                    <a href="product-detail.html" data-toggle="tooltip" data-placement="left" title="View products" class="add-to-cart ml-auto d-flex align-items-center justify-content-center text-secondary bg-white hover-white bg-hover-secondary w-48px h-48px rounded-circle mb-2">
+                                                        <svg class="icon icon-shopping-bag-open-light fs-24">
+                                                            <use xlink:href="#icon-shopping-bag-open-light"></use>
+                                                        </svg>
+                                                    </a>
+                                                    <a href="" data-toggle="tooltip" data-placement="left" title="Quick view" class="preview ml-auto d-md-flex align-items-center justify-content-center cursor-pointer text-secondary bg-white hover-white bg-hover-secondary w-48px h-48px rounded-circle mb-2 d-none">
+                                                        <span data-toggle="modal" data-target="#quick-view">
+                                                            <svg class="icon icon-eye-light fs-24">
+                                                                <use xlink:href="#icon-eye-light"></use>
+                                                            </svg>
+                                                        </span>
+                                                    </a>
+                                                    <a href="" data-toggle="tooltip" data-placement="left" title="Add to wishlist" class="add-to-wishlist ml-auto d-flex align-items-center justify-content-center text-secondary bg-white hover-white bg-hover-secondary w-48px h-48px rounded-circle mb-2">
+                                                        <svg class="icon icon-star-light fs-24">
+                                                            <use xlink:href="#icon-star-light"></use>
+                                                        </svg>
+                                                    </a>
+                                                    <!-- <a href="" data-toggle="tooltip" data-placement="left"
+                                                            title="Compare"
+                                                            class="add-to-compare ml-auto d-flex align-items-center justify-content-center text-secondary bg-white hover-white bg-hover-secondary w-48px h-48px rounded-circle">
+                                                            <svg class="icon icon-arrows-left-right-light fs-24">
+                                                                <use xlink:href="#icon-arrows-left-right-light"></use>
+                                                            </svg>
+                                                        </a> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-body px-0 pt-4 text-center">
+                                            <p class="card-text font-weight-bold fs-16 mb-1 text-secondary">
+                                                <span>₹ 3,58,755</span>
+                                            </p>
+                                            <h2 class="card-title fs-15 font-weight-500 mb-2"><a href="product-detail.html">Delicate
+                                                    Geometric CZ Diamond</a>
+                                            </h2>
+                                            <div class="d-flex align-items-center justify-content-center flex-wrap">
+                                                <ul class="list-inline mb-0 lh-1">
+                                                    <li class="list-inline-item fs-12 text-primary mr-0"><i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="list-inline-item fs-12 text-primary mr-0"><i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="list-inline-item fs-12 text-primary mr-0"><i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="list-inline-item fs-12 text-primary mr-0"><i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="list-inline-item fs-12 text-primary mr-0"><i class="fas fa-star"></i>
+                                                    </li>
+                                                </ul>
+                                                <span class="card-text fs-14 font-weight-400 pl-2 lh-1">2947
+                                                    reviews</span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="d-flex align-items-center d-xl-none">
-                        <button class="navbar-toggler border-0 px-0 canvas-toggle" type="button" data-canvas="true" data-canvas-options='{"width":"250px","container":".sidenav"}'>
-                            <span class="fs-24 toggle-icon"></span>
-                        </button>
-                        <div class="mx-auto"><a class="navbar-brand mw-184px d-inline-block mr-0 py-5" href="index.html">
-                                <img src="<?= base_url('images/logo/DP-Retail.png') ?>" alt="Glowing">
-                            </a></div>
-                        <a href="#search-popup" data-gtf-mfp="true" data-mfp-options='{"type":"inline","focus": "#keyword","mainClass": "mfp-search-form mfp-move-from-top mfp-align-top"}' class="nav-search d-flex align-items-center">
-                            <svg class="icon icon-magnifying-glass-light fs-28">
-                                <use xlink:href="#icon-magnifying-glass-light"></use>
-                            </svg>
-                            <span class="d-none d-xl-inline-block ml-2 font-weight-500">Search</span></a>
-                    </div>
-                </nav>
-            </div>
-        </div>
-    </header>
-    <?= $this->renderSection('content') ?>
-    <footer class="pt-10 pt-lg-13 pb-8 footer text-light bg-cover" style="background-image: url('<?= base_url('images/bg-footer-01.jpg') ?>')">
-        <div class="container container-xl">
-            <div class="row">
-                <div class="col-lg-5 col-12 mb-8 mb-lg-0">
-                    <h3 class="mb-4 text-light">Good emails.</h3>
-                    <p class="mr-xl-17 mb-6 mb-lg-7">Enter your email below to be the first to know about new
-                        collections and
-                        product
-                        launches.</p>
-                    <form class="pr-xl-15">
-                        <div class="input-group position-relative">
-                            <input type="email" class="form-control rounded border-0 pr-10" placeholder="Enter your email address">
-                            <button type="submit" class="btn fs-29 text-secondary position-absolute pos-fixed-right-center px-4 py-0 h-100 lh-1 z-index-10">
-                                <svg class="icon icon-long-arrow-right">
-                                    <use xlink:href="#icon-long-arrow-right"></use>
-                                </svg>
-                            </button>
-                        </div>
-                    </form>
-                </div>
-                <div class="col-lg col-md-4 col-12 mb-7 mb-md-8 mb-lg-0">
-                    <h3 class="fs-20 mb-3 text-light">Company</h3>
-                    <p class="fs-14 lh-185 pr-xl-12">
-                        Find a location nearest you. See <a class="text-light font-weight-600" href=""><u>Our
-                                Stores</u></a>
-                    </p>
-                    <p class="fs-14 lh-185 mb-0"><strong>+391 (0)35 2568 4593</strong>
-                        <br>
-                        hello@domain.com
-                    </p>
-                </div>
-                <div class="col-lg col-md-4  col-12 mb-7 mb-md-8 mb-lg-0">
-                    <h3 class="fs-20 mb-3 text-light">Useful links</h3>
-                    <ul class="list-unstyled mb-0">
-                        <li class="pb-1"><a href="" class="text-light lh-175">New Products</a></li>
-                        <li class="py-1"><a href="" class="text-light lh-175">Best Sellers</a></li>
-                        <li class="py-1"><a href="" class="text-light lh-175">Bundle &amp; Save</a></li>
-                        <li class="pt-1"><a href="" class="text-light lh-175">Online Gift Card</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg col-md-4 col-12 mb-7 mb-md-8 mb-lg-0">
-                    <h3 class="fs-20 mb-3 text-light">Social Media</h3>
-                    <ul class="list-inline fs-20 mb-0">
-                        <li class="list-inline-item mr-5">
-                            <a class="text-light" href=""><i class="fab fa-pinterest-p"></i></a>
-                        </li>
-                        <li class="list-inline-item mr-5">
-                            <a class="text-light" href=""><i class="fab fa-facebook-f"></i></a>
-                        </li>
-                        <li class="list-inline-item mr-5">
-                            <a class="text-light" href=""><i class="fab fa-instagram"></i></a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a class="text-light" href=""><i class="fab fa-twitter"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row mt-0 mt-lg-14 align-items-center">
-                <div class="col-12 col-md-6 col-lg-4">
-                    <p class="mb-0">Copyright © 2023 DP Jewels. All Rights Reserved</p>
-                </div>
 
+                </div>
             </div>
         </div>
-    </footer> 
-    <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    </section>
+  
+</main>
+
+
+
+
+
+<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <defs>
         <symbol id="icon-bedroom" viewBox="0 0 46 32">
             <path d="M44.421 15.217v-9.803c0-2.985-2.428-5.414-5.414-5.414h-31.82c-2.985 0-5.414 2.428-5.414 5.414v9.803c-1.080 0.86-1.775 2.185-1.775 3.67v4.872c0 2.587 2.105 4.692 4.692 4.692h2.406v1.744c0 0.997 0.808 1.805 1.805 1.805s1.805-0.808 1.805-1.805v-1.744h24.782v1.744c0 0.997 0.808 1.805 1.805 1.805s1.805-0.808 1.805-1.805v-1.744h2.406c2.587 0 4.692-2.104 4.692-4.692v-4.872c0-1.485-0.694-2.81-1.775-3.67zM7.188 3.609h31.82c0.995 0 1.805 0.81 1.805 1.805v8.782h-3.489v-3.489c0-1.99-1.619-3.609-3.609-3.609h-5.304c-1.99 0-3.609 1.619-3.609 3.609v3.489h-3.407v-3.489c0-1.99-1.619-3.609-3.609-3.609h-5.304c-1.99 0-3.609 1.619-3.609 3.609v3.489h-3.489v-8.782c0-0.995 0.81-1.805 1.805-1.805zM28.41 14.195v-3.489h5.304v3.489h-5.304zM12.481 14.195v-3.489h5.304v3.489h-5.304zM42.587 23.759c0 0.597-0.486 1.083-1.083 1.083h-36.812c-0.597 0-1.083-0.486-1.083-1.083v-4.872c0-0.597 0.486-1.083 1.083-1.083h36.812c0.597 0 1.083 0.486 1.083 1.083 0 0 0 4.872 0 4.872z">
@@ -751,7 +735,8 @@
             </path>
         </symbol>
         <symbol id="icon-box-06" viewBox="0 0 32 32">
-            <path fill="none" stroke="currentColor" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="10" stroke-width="1.6" d="M16 28c6.627 0 12-5.373 12-12s-5.373-12-12-12c-6.627 0-12 5.373-12 12s5.373 12 12 12z"></path>
+            <path fill="none" stroke="currentColor" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="10" stroke-width="1.6" d="M16 28c6.627 0 12-5.373 12-12s-5.373-12-12-12c-6.627 0-12 5.373-12 12s5.373 12 12 12z">
+            </path>
             <path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="1.6" d="M16 9v7h7"></path>
         </symbol>
         <symbol id="icon-box-07" viewBox="0 0 32 32">
@@ -888,21 +873,573 @@
         </symbol>
     </defs>
 </svg>
-    <script src="/vendors/jquery.min.js"></script>
-    <script src="/vendors/jquery-ui/jquery-ui.min.js"></script>
-    <script src="/vendors/bootstrap/bootstrap.bundle.js"></script>
-    <script src="/vendors/bootstrap-select/js/bootstrap-select.min.js"></script>
-    <script src="/vendors/slick/slick.min.js"></script>
-    <script src="/vendors/waypoints/jquery.waypoints.min.js"></script>
-    <script src="/vendors/counter/countUp.js"></script>
-    <script src="/vendors/magnific-popup/jquery.magnific-popup.min.js"></script>
-    <script src="/vendors/hc-sticky/hc-sticky.min.js"></script>
-    <script src="/vendors/jparallax/TweenMax.min.js"></script>
-    <script src="/vendors/mapbox-gl/mapbox-gl.js"></script>
-    <script src="/vendors/isotope/isotope.js"></script>
-    <script src="/vendors/chartjs/chart.min.js"></script>
+<div class="position-fixed pos-fixed-bottom-right p-6 z-index-10">
+    <a href="" class="gtf-back-to-top text-decoration-none bg-white text-primary hover-white bg-hover-primary shadow p-0 w-48px h-48px rounded-circle fs-20 d-flex align-items-center justify-content-center" title="Back To Top"><i class="fal fa-arrow-up"></i></a>
+</div>
+<div class="canvas-sidebar cart-canvas">
+    <div class="canvas-overlay">
+    </div>
+    <div class="card border-0 pt-4 pb-7 h-100">
+        <div class="px-6 text-right">
+            <span class="canvas-close d-inline-block fs-24 mb-1 ml-auto lh-1 text-primary"><i class="fal fa-times"></i></span>
+        </div>
+        <div class="card-header bg-transparent p-0 mx-6">
+            <h3 class="fs-24 mb-5">
+                Shopping bag
+            </h3>
+            <p class="fs-15 font-weight-500 text-body mb-5"><span class="d-inline-block mr-2 fs-15 text-secondary"><i class="far fa-check-circle"></i></span>
+                Your cart is saved for the next <span class="text-secondary">4m34s</span></p>
+        </div>
+        <div class="card-body px-6 pt-7 overflow-y-auto">
+            <div class="mb-4 d-flex">
+                <a href="" class="d-flex align-items-center mr-2 text-muted"><i class="fal fa-times"></i></a>
+                <div class="media w-100">
+                    <div class="w-60px mr-3">
+                        <img src="<?= base_url('images/product/product-01.jpg') ?>" alt="atural Coconut Cleansing Oil">
+                    </div>
+                    <div class="media-body d-flex">
+                        <div class="cart-price pr-6">
+                            <p class="fs-14 font-weight-bold text-secondary mb-1"><span class="font-weight-500 fs-13 text-line-t    hrough text-body mr-1">$39.00</span>₹
+                                3,58,755
+                            </p>
+                            <a href="product-detail.html" class="text-secondary">Geometric Fleur CZ Diamond Ring</a>
+                        </div>
+                        <div class="position-relative ml-auto">
+                            <div class="input-group">
+                                <a href="" class="down position-absolute pos-fixed-left-center pl-2"><i class="far fa-minus"></i></a>
+                                <input type="number" class="number-cart w-90px px-6 text-center h-40px bg-input border-0" value="1">
+                                <a href="" class="up position-absolute pos-fixed-right-center pr-2"><i class="far fa-plus"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-4 d-flex">
+                <a href="" class="d-flex align-items-center mr-2 text-muted"><i class="fal fa-times"></i></a>
+                <div class="media w-100">
+                    <div class="w-60px mr-3">
+                        <img src="<?= base_url('images/product/product-02.jpg') ?>" alt="Super Pure">
+                    </div>
+                    <div class="media-body d-flex">
+                        <div class="cart-price pr-6">
+                            <p class="fs-14 font-weight-bold text-secondary mb-1"><span class="font-weight-500 fs-13 text-line-through text-body mr-1">$39.00</span>₹
+                                3,58,755
+                            </p>
+                            <a href="" class="text-secondary">Super Pure</a>
+                        </div>
+                        <div class="position-relative ml-auto">
+                            <div class="input-group">
+                                <a href="" class="down position-absolute pos-fixed-left-center pl-2"><i class="far fa-minus"></i></a>
+                                <input type="number" class="number-cart w-90px px-6 text-center h-40px bg-input border-0" value="1">
+                                <a href="" class="up position-absolute pos-fixed-right-center pr-2"><i class="far fa-plus"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-4 d-flex">
+                <a href="" class="d-flex align-items-center mr-2 text-muted"><i class="fal fa-times"></i></a>
+                <div class="media w-100">
+                    <div class="w-60px mr-3">
+                        <img src="<?= base_url('images/product/product-03.jpg') ?>" alt="Cleansing Balm">
+                    </div>
+                    <div class="media-body d-flex">
+                        <div class="cart-price pr-6">
+                            <p class="fs-14 font-weight-bold text-secondary mb-1"><span class="font-weight-500 fs-13 text-line-through text-body mr-1">$39.00</span>₹
+                                3,58,755
+                            </p>
+                            <a href="product-detail.html" class="text-secondary">Cleansing Balm</a>
+                        </div>
+                        <div class="position-relative ml-auto">
+                            <div class="input-group">
+                                <a href="" class="down position-absolute pos-fixed-left-center pl-2"><i class="far fa-minus"></i></a>
+                                <input type="number" class="number-cart w-90px px-6 text-center h-40px bg-input border-0" value="1">
+                                <a href="" class="up position-absolute pos-fixed-right-center pr-2"><i class="far fa-plus"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer mt-auto border-0 bg-transparent px-6 pb-0 pt-5">
+            <div class="d-flex align-items-center mb-2">
+                <span class="text-secondary fs-15">Total price:</span>
+                <span class="d-block ml-auto fs-24 font-weight-bold text-secondary">$106.00</span>
+            </div>
+            <a href="checkout.html" class="btn btn-secondary btn-block mb-3 bg-hover-primary border-hover-primary">Check
+                Out</a>
+            <a href="shopping-cart.html" class="btn btn-outline-secondary btn-block">View Cart</a>
+        </div>
+    </div>
+</div>
+<div class="mfp-hide search-popup mfp-with-anim" id="search-popup">
+    <form>
+        <div class="input-group position-relative">
+            <div class="input-group-prepend d-none d-md-block">
+                <select class="selectpicker" name="category" id="region-01" data-style="btn-lg letter-spacing-0 border-0 border-bottom border-2x bg-transparent text-white border-white fs-24 pl-0 shadow-none text-capitalize font-weight-normal rounded-0">
+                    <option value="" selected>All Categories</option>
+                    <option value="chairs">Chairs</option>
+                    <option value="stands">Stands</option>
+                    <option value="tables">Tables</option>
+                    <option value="accessory">Accessory</option>
+                </select>
+            </div>
+            <input type="text" id="keyword" name="keyword" class="form-control border-0 border-bottom border-2x bg-transparent text-white border-white fs-24 form-control-lg" placeholder="Search Something...">
+            <div class="input-group-append position-absolute pos-fixed-right-center">
+                <button class="input-group-text bg-transparent border-0 text-white fs-30 px-0 btn-lg" type="submit"><i class="far fa-search"></i></button>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="sidenav canvas-sidebar bg-white">
+    <div class="canvas-overlay">
+    </div>
+    <div class="pt-5 pb-7 card border-0 h-100">
+        <div class="d-flex align-items-center card-header border-0 py-0 pl-8 pr-7 mb-9 bg-transparent">
+            <a href="index.html" class="d-block w-179px">
+                <img src="<?= base_url('images/logo/DP-Retail.png') ?>" alt="Glowing">
+            </a>
+            <span class="canvas-close d-inline-block text-right fs-24 ml-auto lh-1 text-primary"><i class="fal fa-times"></i></span>
+        </div>
+        <div class="overflow-y-auto pb-6 pl-8 pr-7 card-body pt-0">
+            <ul class="navbar-nav main-menu px-0 ">
+                <li aria-haspopup="true" aria-expanded="false" class="nav-item dropdown py-1 px-0">
+                    <a class="nav-link p-0" href="index.html">
+                        Home
+                        <span class="caret"></span>
+                    </a>
 
-    <script src="<?= base_url('js/theme.js') ?>"></script>
-</body>
+                </li>
+                <li aria-haspopup="true" aria-expanded="false" class="nav-item dropdown py-1 px-0">
+                    <a class="nav-link  p-0" href="product.html">
+                        Product
+                        <span class="caret"></span>
+                    </a>
 
-</html>
+                </li>
+                <li aria-haspopup="true" aria-expanded="false" class="nav-item dropdown py-1 px-0">
+                    <a class="nav-link  p-0" href="benifit.html">
+                        Benifits
+                        <span class="caret"></span>
+                    </a>
+
+                </li>
+                <li aria-haspopup="true" aria-expanded="false" class="nav-item dropdown py-1 px-0">
+                    <a class="nav-link  p-0" href="contact-us.html">
+                        Contact
+                        <span class="caret"></span>
+                    </a>
+
+                </li>
+                <li aria-haspopup="true" aria-expanded="false" class="nav-item dropdown py-1 px-0">
+                    <a class="nav-link  p-0" href="" data-toggle="dropdown">
+                        Dashboard
+                        <span class="caret"></span>
+                    </a>
+
+                </li>
+                <li aria-haspopup="true" aria-expanded="false" class="nav-item dropdown py-1 px-0">
+                    <a class="nav-link  p-0" href="" data-toggle="dropdown">
+                        Docs
+                        <span class="caret"></span>
+                    </a>
+
+                </li>
+            </ul>
+        </div>
+        <div class="card-footer bg-transparent border-0 mt-auto pl-8 pr-7 pb-0 pt-4">
+            <ul class="list-inline d-flex align-items-center mb-3">
+                <li class="list-inline-item mr-4"><a href="" class="fs-20 lh-1"><i class="fab fa-pinterest-p"></i></a>
+                </li>
+                <li class="list-inline-item mr-4"><a href="" class="fs-20 lh-1"><i class="fab fa-facebook-f"></i></a></li>
+                <li class="list-inline-item mr-4"><a href="" class="fs-20 lh-1"><i class="fab fa-instagram"></i></a>
+                </li>
+                <li class="list-inline-item"><a href="" class="fs-20 lh-1"><i class="fab fa-twitter"></i></a></li>
+            </ul>
+            <p class="mb-0 text-gray">
+                Copyright © 2023 Dp Jewels. All Rights Reserved
+            </p>
+        </div>
+    </div>
+</div>
+<div class="modal sign-in" id="sign-in" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header border-0 p-6">
+                <nav class="w-100">
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <a class="nav-link active" id="nav-log-in-tab" data-toggle="tab" href="#nav-log-in" role="tab" aria-controls="nav-log-in" aria-selected="true">Log in</a>
+                        <a class="nav-link" id="nav-register-tab" data-toggle="tab" href="#nav-register" role="tab" aria-controls="nav-register" aria-selected="false">Register</a>
+                    </div>
+                </nav>
+                <button type="button" class="close opacity-10 fs-32 pt-1 position-absolute" data-dismiss="modal" aria-label="Close" style="right: 30px">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body px-9 pb-8">
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-log-in" role="tabpanel" aria-labelledby="nav-log-in-tab">
+                        <h4 class="fs-34 text-center mb-6">Sign In</h4>
+                        <p class="text-center fs-16 mb-7">Don’t have an account yet? <a href="" class="text-secondary border-bottom text-decoration-none">Sign up</a> for free</p>
+                        <form>
+                            <input name="email" type="email" class="form-control border-0 mb-3" placeholder="Your email" required>
+                            <input name="password" type="password" class="form-control border-0" placeholder="Password" required>
+                            <div class="d-flex align-items-center justify-content-between mt-5 mb-4">
+                                <div class="custom-control custom-checkbox">
+                                    <input name="stay-signed-in" type="checkbox" class="custom-control-input" id="staySignedIn">
+                                    <label class="custom-control-label text-body" for="staySignedIn">Stay signed
+                                        in</label>
+                                </div>
+                                <a href="" class="text-secondary">Forgot your password?</a>
+                            </div>
+                            <button type="submit" value="Login" class="btn btn-secondary btn-block bg-hover-primary border-hover-primary">Log
+                                In</button>
+                            <div class="border-bottom mt-6"></div>
+                            <div class="text-center mt-n2 lh-1 mb-4">
+                                <span class="fs-14 bg-white lh-1 mt-n2 px-4">or Log-in with</span>
+                            </div>
+                            <div class="d-flex">
+                                <a href="" class="btn btn-outline-secondary btn-block border-2x border mr-5 border-hover-secondary"><i class="fab fa-facebook-f mr-2" style="color: #2E58B2"></i>Facebook</a>
+                                <a href="" class="btn btn-outline-secondary btn-block border-2x border mt-0 border-hover-secondary"><i class="fab fa-google mr-2" style="color: #DD4B39"></i>Google</a>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tab-pane fade" id="nav-register" role="tabpanel" aria-labelledby="nav-register-tab">
+                        <h4 class="fs-34 text-center mb-6">Sign Up</h4>
+                        <p class="text-center fs-16 mb-7">Already have an account? <a href="" class="text-secondary border-bottom text-decoration-none">Log in</a></p>
+                        <form>
+                            <input name="first-name" type="text" class="form-control border-0 mb-3" placeholder="First name" required>
+                            <input name="last-name" type="text" class="form-control border-0 mb-3" placeholder="Last name" required>
+                            <input name="email" type="email" class="form-control border-0 mb-3" placeholder="Your email" required>
+                            <input name="password" type="password" class="form-control border-0" placeholder="Password" required>
+                            <div class="custom-control custom-checkbox mt-4 mb-5 mr-xl-6">
+                                <input name="agree" type="checkbox" class="custom-control-input" id="termsOfUse">
+                                <label class="custom-control-label text-body" for="termsOfUse">
+                                    Yes, I agree with Grace <a href="">Privacy Policy</a> and <a href="">Terms of
+                                        Use</a>
+                                </label>
+                            </div>
+                            <button type="submit" value="Login" class="btn btn-secondary btn-block bg-hover-primary border-hover-primary">Sign
+                                Up</button>
+                            <div class="border-bottom mt-6"></div>
+                            <div class="text-center mt-n2 lh-1 mb-4">
+                                <span class="fs-14 bg-white lh-1 mt-n2 px-4">or Sign Up with</span>
+                            </div>
+                            <div class="d-flex">
+                                <a href="" class="btn btn-outline-secondary btn-block border-2x border mr-5 border-hover-secondary"><i class="fab fa-facebook-f mr-2" style="color: #2E58B2"></i>Facebook</a>
+                                <a href="" class="btn btn-outline-secondary btn-block border-2x border mt-0 border-hover-secondary"><i class="fab fa-google mr-2" style="color: #DD4B39"></i>Google</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade quick-view" id="quick-view" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header border-0 py-0">
+                <button type="button" class="close fs-32" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body pt-0">
+                <div class="row">
+                    <div class="col-md-6 pr-xl-5 mb-8 mb-md-0 pl-xl-8">
+                        <div class="galleries-product product galleries-product-02 position-relative">
+                            <div class="position-absolute pos-fixed-top-right z-index-2">
+                                <div class="content-change-vertical">
+                                    <a href="" data-toggle="tooltip" data-placement="left" title="Add to wishlist" class="add-to-wishlist d-flex align-items-center justify-content-center text-secondary bg-white hover-white bg-hover-secondary w-48px h-48px rounded-circle mt-3 mr-3">
+                                        <svg class="icon icon-star-light fs-24">
+                                            <use xlink:href="#icon-star-light"></use>
+                                        </svg>
+                                    </a>
+                                    <!-- <a href="" data-toggle="tooltip" data-placement="left" title="Compare"
+                                            class="add-to-compare d-flex align-items-center justify-content-center text-secondary bg-white hover-white bg-hover-secondary w-48px h-48px rounded-circle mt-2 mr-3">
+                                            <svg class="icon icon-arrows-left-right-light fs-24">
+                                                <use xlink:href="#icon-arrows-left-right-light"></use>
+                                            </svg>
+                                        </a> -->
+                                </div>
+                            </div>
+                            <div class="view-slider-for mx-0">
+                                <div class="box px-0">
+                                    <div class="card p-0 rounded-0 border-0">
+                                        <a href="<?= base_url('images/rings/IMG_20230220_151206.jpg')?>" class="card-img product-image">
+                                            <img src="<?= base_url('images/rings/IMG_20230220_151206.jpg')?>" alt="product gallery product-image">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="box px-0">
+                                    <div class="card p-0 rounded-0 border-0">
+                                        <a href="<?= base_url('images/Necklaces/1/Necklaces_1_500x500.jpg')?>" class="card-img">
+                                            <img src="<?= base_url('images/Necklaces/1/Necklaces_1_500x500.jpg')?>" alt="product gallery">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="box px-0">
+                                    <div class="card p-0 rounded-0 border-0">
+                                        <a href="<?= base_url('images/bracelet/01/01.jpg" class="card-img')?>">
+                                            <img src="<?= base_url('images/bracelet/01/01.jpg" alt="product gallery')?>">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="box px-0">
+                                    <div class="card p-0 rounded-0 border-0">
+                                        <a href="<?= base_url('images/pendent/1.jpg')?>" class="card-img">
+                                            <img src="<?= base_url('images/pendent/1.jpg')?>" alt="product gallery">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="view-slider-nav mx-n1">
+                                <div class="box py-4 px-1 cursor-pointer">
+                                    <img src="<?= base_url('images/rings/IMG_20230220_151206.jpg')?>" alt="product gallery">
+                                </div>
+                                <div class="box py-4 px-1 cursor-pointer">
+                                    <img src="<?= base_url('images/Necklaces/1/Necklaces_1_500x500.jpg')?>" alt="product gallery">
+                                </div>
+                                <div class="box py-4 px-1 cursor-pointer">
+                                    <img src="<?= base_url('images/bracelet/01/01.jpg" alt="product gallery')?>">
+                                </div>
+                                <div class="box py-4 px-1 cursor-pointer">
+                                    <img src="<?= base_url('images/pendent/1.jpg" alt="product gallery')?>">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 pl-xl-6 pr-xl-8">
+                        <p class="d-flex align-items-center mb-3">
+                            <span class="text-line-through"></span>
+                            <span class="fs-18 text-secondary font-weight-bold ml-3 ProductPrize">₹ 3,58,755</span>
+                            <span class="badge badge-primary fs-16 ml-4 font-weight-600 px-3">20%</span>
+                        </p>
+                        <h2 class="fs-24 mb-2 product-title">Geometric Fleur CZ Diamond Ring</h2>
+                        <p class="test"> 55</p>
+                        <div class="d-flex align-items-center flex-wrap mb-3 lh-12">
+                            <p class="mb-0 font-weight-600 text-secondary">4.86</p>
+                            <ul class="list-inline d-flex mb-0 px-3 rating-result">
+                                <li class="list-inline-item mr-0">
+                                    <span class="text-primary fs-12 lh-2"><i class="fas fa-star"></i></span>
+                                </li>
+                                <li class="list-inline-item mr-0">
+                                    <span class="text-primary fs-12 lh-2"><i class="fas fa-star"></i></span>
+                                </li>
+                                <li class="list-inline-item mr-0">
+                                    <span class="text-primary fs-12 lh-2"><i class="fas fa-star"></i></span>
+                                </li>
+                                <li class="list-inline-item mr-0">
+                                    <span class="text-primary fs-12 lh-2"><i class="fas fa-star"></i></span>
+                                </li>
+                                <li class="list-inline-item mr-0">
+                                    <span class="text-primary fs-12 lh-2"><i class="fas fa-star"></i></span>
+                                </li>
+                            </ul>
+                            <a href="" class="pl-3 border-left border-gray-2 text-body">Read 2947 reviews</a>
+                        </div>
+                        <p class="mb-4 mr-xl-6">A diamond ring is a type of jewelry that features one or more
+                            diamonds mounted onto a band, usually made of precious metals such as gold or platinum.
+                        </p>
+                        <p class="mb-2">
+                        <form>
+                            <div class="form-group shop-swatch mb-4 d-flex align-items-center">
+                                <span class="font-weight-600 text-secondary mr-4">Size: </span>
+                                <ul class="list-inline d-flex justify-content-start mb-0">
+                                    <li class="list-inline-item mr-2 selected font-weight-600">
+                                        <a href="" class="fs-14 p-2 lh-13 d-block swatches-item rounded text-decoration-none border" data-var="full size">Full size</a>
+                                    </li>
+                                    <li class="list-inline-item font-weight-600">
+                                        <a href="" class="fs-14 p-2 lh-13 d-block swatches-item rounded text-decoration-none border" data-var="mini size">Mini size</a>
+                                    </li>
+                                </ul>
+                                <select name="swatches" class="form-select swatches-select d-none" aria-label="Default select example">
+                                    <option selected value="full size">Full size</option>
+                                    <option value="mini size">Mini size</option>
+                                </select>
+                            </div>
+                            <div class="row align-items-end no-gutters mx-n2">
+                                <div class="col-sm-4 form-group px-2 mb-6">
+                                    <label class="text-secondary font-weight-600 mb-3" for="quickview-number">Quantity: </label>
+                                    <div class="input-group position-relative w-100">
+                                        <a href="" class="down position-absolute pos-fixed-left-center pl-4 z-index-2"><i class="far fa-minus"></i></a>
+                                        <input name="number" type="number" id="quickview-number" class="form-control w-100 px-6 text-center input-quality text-secondary h-60 fs-18 font-weight-bold border-0" value="1" required>
+                                        <a href="" class="up position-absolute pos-fixed-right-center pr-4 z-index-2"><i class="far fa-plus"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-sm-8 mb-6 w-100 px-2">
+                                    <!-- Your HTML button -->
+                                    <button type="button" class="btn btn-lg fs-18 btn-secondary btn-block h-60 bg-hover-primary border-0 add-to-bag product-id">Add To Bag</button>
+
+                                </div>
+                            </div>
+                        </form>
+                        <div class="d-flex align-items-center flex-wrap">
+                            <a href="" class="text-decoration-none font-weight-bold fs-16 mr-6 d-flex align-items-center">
+                                <svg class="icon icon-star-light fs-20">
+                                    <use xlink:href="#icon-star-light"></use>
+                                </svg>
+                                <span class="ml-2">Add to wishlist</span>
+                            </a>
+                            <a href="" class="text-decoration-none font-weight-bold fs-16 d-flex align-items-center">
+                                <svg class="icon icon-ShareNetwork">
+                                    <use xlink:href="#icon-ShareNetwork"></use>
+                                </svg>
+                                <span class="ml-2">Share</span>
+                            </a>
+                        </div>
+                        <ul class="list-unstyled border-top pt-5 mt-5">
+                            <li class="row mb-2">
+                                <span class="d-block col-4 col-lg-2 text-secondary font-weight-600 fs-14">Sku:</span>
+                                <span class="d-block col-8 col-lg-10 fs-14">SF09281</span>
+                            </li>
+                            <li class="row mb-2">
+                                <span class="d-block col-4 col-lg-2 text-secondary font-weight-600 fs-14">Categories:</span>
+                                <span class="d-block col-8 col-lg-10 fs-14">Makeup, Skincare</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Include jQuery library -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.css">
+<script>
+    $(document).ready(function() {
+        $('.QuickView').on('click', function(e) {
+            e.preventDefault();
+            var productId = $(this).data('product-id');
+            alert(productId)
+            $.ajax({
+                url: '<?= base_url('/quickview')?>', // The URL mapped in the Routes.php file
+                method: 'POST',
+                data: {
+                    product_id: productId
+                }, // Send the product ID to the server
+                dataType: 'json',
+                success: function(response) {
+                    console.log(response)
+                    $('#quick-view .test').text(response.id);
+                    $('#quick-view .product-title').text(response.product_name);
+                    $('#quick-view .product-image').attr('src', '/uploads/FeatureProduct/' + response.image);
+                    $('#quick-view .view-slider-for img').each(function(index) {
+                        $(this).attr('src', '/uploads/FeatureProduct/' + response.image);
+                    });
+                    $('#quick-view').modal('show');
+                },
+                error: function() {
+                    alert('An error occurred while fetching the product details.');
+                }
+            });
+        });
+    });
+    var productId;
+    $('.add-to-bag').on('click', function(e) {
+        var testElement = document.getElementsByClassName('test')[0]; // Assuming there is only one element with class "test"
+        var productId = testElement ? testElement.textContent : 'No test element found';
+        $.ajax({
+            url: '<?= base_url('add-to-cart')?>', // Route to add a product to the cart
+            method: 'POST',
+            data: {
+                product_id: productId
+            },
+            dataType: 'json',
+            success: function(response) {
+                if (response.status === 'success') {
+                    var message = 'Product added to cart.';
+                    var redirectUrl = 'cart-list';
+                    if (response.alreadyAdded) {
+                        message = 'Product is already in the cart.';
+                        redirectUrl = 'cart-list';
+                    }
+                    Swal.fire({
+                        icon: response.alreadyAdded ? 'info' : 'success',
+                        title: 'Cart',
+                        text: message,
+                        showConfirmButton: false,
+                        timer: 1500
+                    }).then(function() {
+                        // Redirect to the cart list page after adding the product
+                        window.location.href = redirectUrl;
+                    });
+                } else {
+                    // Show an error SweetAlert if the response is not successful
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error',
+                        text: response.message
+                    });
+                }
+            },
+            error: function() {
+                // Show an error SweetAlert if an error occurs during the AJAX request
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'An error occurred while adding the product to the cart.'
+                });
+            }
+        });
+        console.log(productId);
+    });
+
+    $('.add-to-wishlist').on('click', function(e) {
+        e.preventDefault();
+        var productId = $(this).data('product-id');
+        alert(productId)
+        $.ajax({
+            url: '<?= base_url('add-to-cart')?>', // Route to add a product to the cart
+            method: 'POST',
+            data: {
+                product_id: productId
+            },
+            dataType: 'json',
+            success: function(response) {
+                if (response.status === 'success') {
+                    var message = 'Product added to cart.';
+                    var redirectUrl = 'cart-list';
+                    if (response.alreadyAdded) {
+                        message = 'Product is already in the cart.';
+                        redirectUrl = 'cart-list';
+                    }
+                    Swal.fire({
+                        icon: response.alreadyAdded ? 'info' : 'success',
+                        title: 'Cart',
+                        text: message,
+                        showConfirmButton: false,
+                        timer: 1500
+                    }).then(function() {
+                        // Redirect to the cart list page after adding the product
+                        window.location.href = redirectUrl;
+                    });
+                } else {
+                    // Show an error SweetAlert if the response is not successful
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error',
+                        text: response.message
+                    });
+                }
+            },
+            error: function() {
+                // Show an error SweetAlert if an error occurs during the AJAX request
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'An error occurred while adding the product to the cart.'
+                });
+            }
+        });
+    }); 
+</script>
+
+
+<?= $this->endSection() ?>

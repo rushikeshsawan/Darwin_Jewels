@@ -20,15 +20,15 @@
                         $quantity = isset($product['quantity']) ? $product['quantity'] : 1;
                         $productPrice = str_replace(',', '', $product['prize']);
                         $totalProductPrice += floatval($productPrice);
-                        ?> 
+                        ?>
                         <tr class="position-relative">
-                            <th class="d-none"> 
-                            <span class="d-block ml-auto text-secondary fs-24 font-weight-bold total-price TotalPrice">₹<?= number_format($totalProductPrice, 2); ?></span>  
+                            <th class="d-none">
+                                <span class="d-block ml-auto text-secondary fs-24 font-weight-bold total-price TotalPrice">₹<?= number_format($totalProductPrice, 2); ?></span>
                             </th>
-                            <th scope="row" class="w-xl-695 pl-xl-5 py-4 " >
+                            <th scope="row" class="w-xl-695 pl-xl-5 py-4 ">
                                 <div class="media align-items-center">
                                     <input class="checkbox-primary w-15px h-15px" type="checkbox" name="check-product" value="checkbox">
-                                     <div class="ml-3 mr-4  product-image img">
+                                    <div class="ml-3 mr-4  product-image img">
                                         <img src="<?= $product['image']; ?>" alt="<?= $product['image'] ?>" class="mw-75px">
                                     </div>
                                     <div class="media-body w-128px">
@@ -38,8 +38,8 @@
                                             <span class="product-price price"><?= $product['prize']; ?></span>
                                         </p>
                                     </div>
-                                    <div  class="d-none">
-                                    <p class="productid"><?= $product['id']; ?></p>
+                                    <div class="d-none">
+                                        <p class="productid"><?= $product['id']; ?></p>
                                     </div>
                                 </div>
                             </th>
@@ -56,7 +56,7 @@
 
                             <td class="align-middle text-right pr-5">
                                 <a href="#" class="d-block remove-item-btn" data-key="<?= $key ?>"><i class="fal fa-times text-body"></i></a>
-                            </td>  
+                            </td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
@@ -73,7 +73,7 @@
                 <div class="card border-0" style="box-shadow: 0 0 10px 0 rgba(0,0,0,0.1)">
                     <div class="card-body px-6 pt-5">
                         <div class="d-flex align-items-center mb-2">
-                            <span>Subtotal:</span> 
+                            <span>Subtotal:</span>
                             <span class="d-block ml-auto text-secondary font-weight-bold">$<?= number_format($totalProductPrice, 2); ?></span>
                         </div>
                         <div class="d-flex align-items-center">
@@ -83,7 +83,7 @@
                     </div>
                     <div class="card-footer bg-transparent px-0 pb-4 mx-6">
                         <div class="d-flex align-items-center font-weight-bold mb-3">
-                            <span class="text-secondary">Total price:</span> 
+                            <span class="text-secondary">Total price:</span>
                             <span class="d-block ml-auto text-secondary fs-24 font-weight-bold total-price TotalPrice">₹<?= number_format($totalProductPrice, 2); ?></span>
                         </div>
                         <button type="button" class="btn btn-secondary btn-block bg-hover-primary border-hover-primary checkout-btn" onclick="moveToCheckout()">Check Out</button>
@@ -94,7 +94,7 @@
     </div>
 </section>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.17/dist/sweetalert2.all.min.js"></script> 
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.17/dist/sweetalert2.all.min.js"></script>
 <script>
     function moveToCheckout() {
         var cartItems = [];
@@ -103,18 +103,18 @@
             var Qprice = $(this).find('.Qprice').text();
             var price = $(this).find('.price').text();
             var quantity = parseInt($(this).find('.input-quality').val());
-            var image = $(this).find('.product-image img').attr('src');  
-            var TotalPrice = $(this).find('.TotalPrice').text(); 
-            var productid = $(this).find('.productid').text(); 
-            
+            var image = $(this).find('.product-image img').attr('src');
+            var TotalPrice = $(this).find('.TotalPrice').text();
+            var productid = $(this).find('.productid').text();
+
             cartItems.push({
                 image: image,
                 name: productName,
                 quantity: quantity,
                 Qprice: Qprice,
-                price: price, 
-                TotalPrice:TotalPrice,
-                productid:productid
+                price: price,
+                TotalPrice: TotalPrice,
+                productid: productid
             });
         });
 
@@ -143,18 +143,19 @@
         });
     }
 
-     $('.checkout-btn').on('click', function() {
+    $('.checkout-btn').on('click', function() {
         moveToCheckout();
-    }); 
-  
+    });
 </script>
 
+
+<!-- Your PHP and HTML code as before -->
 
 <script>
     $(document).ready(function() {
         function updateProductSubtotal($row) {
             var quantity = parseInt($row.find('.input-quality').val());
-            var price = parseFloat($row.find('.product-price').text().replace('$', '').replace(',', ''));
+            var price = parseFloat($row.find('.product-price').text().replace('₹', '').replace(',', ''));
             var subTotal = quantity * price;
             $row.find('.subtotal-price').text('₹' + subTotal.toFixed(0));
             return subTotal;
@@ -169,12 +170,19 @@
             $('.total-price').text('₹' + totalPrice.toFixed(0));
         }
 
+        $('tbody').on('input', '.input-quality', function() {
+            var $row = $(this).closest('tr');
+            updateProductSubtotal($row);
+            updateTotalPrice();
+        });
+
         $('tbody').on('click', '.up', function(e) {
             e.preventDefault();
             var $row = $(this).closest('tr');
             var $quantityInput = $row.find('.input-quality');
             var quantity = parseInt($quantityInput.val());
-            $quantityInput.val(quantity); // Increase quantity by 1
+            $quantityInput.val(quantity);
+            alert(quantity)
             updateProductSubtotal($row);
             updateTotalPrice();
         });
@@ -206,16 +214,28 @@
                 });
             }
         });
-        $('.remove-item-btn').on('click', function(e) {
-            e.preventDefault();
-            var key = $(this).data('key');
-            removeFromSession(key);
+        function showDeleteConfirmation($row) {
+        Swal.fire({
+            title: 'Delete Item?',
+            text: 'Do you want to remove this item from the cart?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes',
+            cancelButtonText: 'Cancel'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                var key = $row.find('.remove-item-btn').data('key');
+                removeFromSession(key);
+            }
         });
+    }
 
         function removeFromSession(key) {
             $.ajax({
                 type: "POST",
-                url: "/cart/removeFromCart",  
+                url: "/cart/removeFromCart",
                 headers: {
                     'X-Requested-With': 'XMLHttpRequest',
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -232,7 +252,7 @@
                     alert("Failed to remove the item from the cart. Please try again.");
                 }
             });
-        } 
-    }); 
+        }
+    });
 </script>
 <?= $this->endSection() ?>

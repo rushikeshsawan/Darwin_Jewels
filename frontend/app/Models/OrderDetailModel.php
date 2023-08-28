@@ -11,12 +11,13 @@ class OrderDetailModel extends Model
     {
         return $this->insert($data);
     }
-    public function getUserOrders($userId)
+    public function getUserOrders($userId, $perPage)
     {
         return $this->where('user_id', $userId)
-                    ->groupBy('order_id')   
-                    ->findAll();
+                    ->groupBy('order_id')  
+                    ->paginate($perPage);
     }
+    
     public function getOrderDetailsById($orderId)
     {
         $builder = $this->db->table('order_details od');

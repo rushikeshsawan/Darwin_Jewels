@@ -30,8 +30,9 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'HomeController::index');
-$routes->get('home', 'HomeController::index');
+$routes->get('/home', 'HomeController::index');
 $routes->get('products', 'HomeController::product');  
+$routes->add('categoryProduct/(:num)', 'HomeController::categoryProduct/$1');  
 $routes->post('quickview', 'HomeController::QuickView'); 
 $routes->post('add-to-cart', 'HomeController::addToCart');  
 $routes->get('cart-list', 'HomeController::cartList'); 

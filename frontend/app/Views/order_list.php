@@ -29,6 +29,13 @@
             <?php endforeach; ?>
         </tbody>
     </table>
+    <div class="d-flex justify-content-end">
+        <?php if ($pager) :?>
+        <?php $pagi_path='/order_list'; ?>
+        <?php $pager->setPath($pagi_path); ?>
+        <?= $pager->links() ?>
+        <?php endif ?>
+      </div>
 </div>
 <div class="modal fade" id="orderDetailsModal" tabindex="-1" role="dialog" aria-labelledby="orderDetailsModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">

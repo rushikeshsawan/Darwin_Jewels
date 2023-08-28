@@ -8,7 +8,7 @@ use App\Models\ProductModel;
 use App\Models\AddressModel;
 use App\Models\OrderDetailModel;
 use App\Models\SliderModel;
-use CodeIgniter\Controller; 
+use CodeIgniter\Controller;
 
 class HomeController extends Controller
 {
@@ -56,13 +56,17 @@ class HomeController extends Controller
 
         return view('product', $data);
     }
-
+    public function categoryProduct($id = null)
+    {
+        $data['product'] = $this->ProductModel->categoryProduct($id);
+        return view('category_product', $data);
+    }
     public function priceFilter()
     {
         $sort = $this->request->getGet('sort');
         $data['Category'] = $this->CategoryModel->list();
         $data['Collection'] = $this->CollectionModel->list();
-    
+
         if ($sort == 'high_to_low') {
             $data['Product'] = $this->ProductModel->listOrderByPrice('desc');
         } elseif ($sort == 'low_to_high') {
@@ -70,10 +74,10 @@ class HomeController extends Controller
         } else {
             $data['Product'] = $this->ProductModel->list();
         }
-    
+
         return $this->response->setJSON($data);
     }
-    
+
     public function checkout()
     {
         $isLoggedIn = $this->session->get('user');
@@ -130,35 +134,59 @@ class HomeController extends Controller
 
     public function addToCart()
     {
-        if ($this->request->isAJAX()) {
-            $productId = $this->request->getVar('product_id');
-            $this->ProductModel = new ProductModel();
-            $product = $this->ProductModel->find($productId);
+        $productId = $this->request->getVar('product_id');
+        $quantity = $this->request->getVar('quantity');
+        $totalprize = $this->request->getVar('totalprize');
 
-            if (!$product) {
-                return $this->response->setJSON(['status' => 'error', 'message' => 'Product not found.']);
-            }
+        $this->ProductModel = new ProductModel();
+        $product = $this->ProductModel->find($productId);
 
+        if (!$product) {
+            return $this->response->setJSON(['status' => 'error', 'message' => 'Product not found.']);
+        }
+        if (empty($totalprize)) {
             $productData = [
                 'id' => $product['id'],
                 'name' => $product['product_name'],
                 'prize' => $product['prize'],
                 'image' => base_url('/uploads/FeatureProduct/' . $product['image']),
+                'quantity' => $quantity, 
             ];
-            $cartItems = session('cart_items') ?? [];
-            $alreadyAdded = false;
-            foreach ($cartItems as $item) {
-                if ($item['id'] === $productData['id']) {
-                    $alreadyAdded = true;
-                    break;
-                }
-            }
-            if (!$alreadyAdded) {
-                $this->addToCartSession($productData);
-            }
-            return $this->response->setJSON(['status' => 'success', 'message' => 'Product added to cart.', 'alreadyAdded' => $alreadyAdded]);
+        }else{
+            $productData = [
+                'id' => $product['id'],
+                'name' => $product['product_name'],
+                'prize' => $totalprize,
+                'image' => base_url('/uploads/FeatureProduct/' . $product['image']),
+                'quantity' => $quantity, 
+            ];
         }
+        
+
+        $cartItems = session('cart_items') ?? [];
+        $alreadyAdded = false;
+
+        foreach ($cartItems as $key => $item) {
+            if ($item['id'] === $productData['id']) {
+                // If the product is already in the cart, update its quantity and total prize
+                $cartItems[$key]['quantity'] += $quantity;
+                $cartItems[$key]['totalprize'] += $totalprize;
+                $alreadyAdded = true;
+                break;
+            }
+        }
+
+        if (!$alreadyAdded) {
+            $cartItems[] = $productData;
+        }
+
+        // Store the updated cart items back in the session
+        session()->set('cart_items', $cartItems);
+
+        return $this->response->setJSON(['status' => 'success', 'message' => 'Product added to cart.', 'alreadyAdded' => $alreadyAdded]);
     }
+
+
     protected function addToCartSession($product)
     {
         $cartItems = session('cart_items') ?? [];
