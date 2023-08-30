@@ -1,26 +1,26 @@
 <?= $this->extend('main') ?>
-<?= $this->section('content') ?> 
+<?= $this->section('content') ?>
 <main id="content">
     <section class="mx-0 slick-slider dots-inner-center custom-slider-02 slider" data-slick-options='{"slidesToShow": 1,"infinite":true,"autoplay":true,"dots":true,"arrows":false,"fade":true,"cssEase":"ease-in-out","speed":600}'>
-    <?php foreach ($Slider as $row) : ?>
-        <div class="box px-0">
-            <div class="slider-responsive bg-img-cover-center  py-lg-17" style="background-image: url('<?= base_url('/images/banner/' . $row['image']) ?>');">
-                <div class="container container-xl pt-7 pb-9">
-                    <div data-animate="fadeInDown">
-                        <p class="text-white margin-bottom-5 font-weight-600 fs-24 lh-15"><?= $row['main_heading']; ?></p>
-                        <h1 class="text-white font-weight-500 margin-bottom-10 fs-21  fs-md-68 lh-128"> <?= $row['sub_heading']; ?>
-                        </h1>
+        <?php foreach ($Slider as $row) : ?>
+            <div class="box px-0">
+                <div class="slider-responsive bg-img-cover-center  py-lg-17" style="background-image: url('<?= base_url('/images/banner/' . $row['image']) ?>');">
+                    <div class="container container-xl pt-7 pb-9">
+                        <div data-animate="fadeInDown">
+                            <p class="text-white margin-bottom-5 font-weight-600 fs-24 lh-15"><?= $row['main_heading']; ?></p>
+                            <h1 class="text-white font-weight-500 margin-bottom-10 fs-21  fs-md-68 lh-128"> <?= $row['sub_heading']; ?>
+                            </h1>
+                        </div>
+                        <a href="" class="btn btn-link btn-light bg-transparent text-white border-bottom border-0 rounded-0 p-0 fs-16 font-weight-600 border-2x mobile-display" data-animate="fadeInUp">
+                            Discover Now
+                            <svg class="icon icon-arrow-right">
+                                <use xlink:href="#icon-arrow-right"></use>
+                            </svg>
+                        </a>
                     </div>
-                    <a href="" class="btn btn-link btn-light bg-transparent text-white border-bottom border-0 rounded-0 p-0 fs-16 font-weight-600 border-2x mobile-display" data-animate="fadeInUp">
-                        Discover Now
-                        <svg class="icon icon-arrow-right">
-                            <use xlink:href="#icon-arrow-right"></use>
-                        </svg>
-                    </a>
                 </div>
             </div>
-        </div>
-        <?php endforeach; ?> 
+        <?php endforeach; ?>
     </section>
     <section class="pt-lg-13 pt-10">
         <div class="container container-xl">
@@ -35,17 +35,17 @@
             </div>
             <div class="slick-slider mx-n2" data-slick-options='{"slidesToShow": 5,"dots":false,"arrows":true,"responsive":[{"breakpoint": 1368,"settings": {"arrows":false,"dots":true}},{"breakpoint": 1200,"settings": {"slidesToShow":3,"arrows":false,"dots":true}},{"breakpoint": 992,"settings": {"slidesToShow":2,"arrows":false,"dots":true}},{"breakpoint": 768,"settings": {"slidesToShow": 2,"arrows":false,"dots":true}},{"breakpoint": 576,"settings": {"slidesToShow": 1,"arrows":false,"dots":true}}]}'>
                 <?php foreach ($Category as $row) : ?>
-                    <a href="<?php echo base_url('/categoryProduct/'.$row['id']);?>">
-                    <div class="box">
-                        <div class="card border-0 hover-shine hover-zoom-in banner banner-03">
-                            <div class="card-img bg-img-cover-center" style="background-image: url('<?= base_url('/uploads/' . $row['image']) ?>');"></div>
-                            <div class="card-img-overlay d-inline-flex flex-column px-7 pt-7 pb-6 justify-content-end">
-                                <h3 class="card-title center-text-color fs-26"><?= $row['categoryname']; ?></h3>
-                                <div>
+                    <a href="<?php echo base_url('/categoryProduct/' . $row['id']); ?>">
+                        <div class="box">
+                            <div class="card border-0 hover-shine hover-zoom-in banner banner-03">
+                                <div class="card-img bg-img-cover-center" style="background-image: url('<?= base_url('/uploads/' . $row['image']) ?>');"></div>
+                                <div class="card-img-overlay d-inline-flex flex-column px-7 pt-7 pb-6 justify-content-end">
+                                    <h3 class="card-title center-text-color fs-26"><?= $row['categoryname']; ?></h3>
+                                    <div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
                     </a>
                 <?php endforeach; ?>
             </div>
@@ -1232,18 +1232,13 @@
                     <div class="tab-pane fade show active" id="nav-log-in" role="tabpanel" aria-labelledby="nav-log-in-tab">
                         <h4 class="fs-34 text-center mb-6">Sign In</h4>
                         <p class="text-center fs-16 mb-7">Don’t have an account yet? <a href="" class="text-secondary border-bottom text-decoration-none">Sign up</a> for free</p>
-                        <form>
+                        <form id="login-form">
                             <input name="username" type="text" class="form-control border-0 mb-3" placeholder="Your email" required>
-                            <input name="password" type="password" class="form-control border-0" placeholder="Password" required>
+                            <input name="password" type="password" class="form-control border-0  mb-3" placeholder="Password" required>
                             <div class="d-flex align-items-center justify-content-between mt-5 mb-4">
-                                <div class="custom-control custom-checkbox">
-                                    <input name="stay-signed-in" type="checkbox" class="custom-control-input" id="staySignedIn">
-                                    <label class="custom-control-label text-body" for="staySignedIn">Stay signed
-                                        in</label>
-                                </div>
                                 <a href="" class="text-secondary">Forgot your password?</a>
                             </div>
-                            <div class="g-recaptcha" data-sitekey="6Leud3gnAAAAACKlRbRCmwa1-qYZh7xXJeNMwUT8"></div>  
+                            <div class="g-recaptcha  mb-3" data-sitekey="6Leud3gnAAAAACKlRbRCmwa1-qYZh7xXJeNMwUT8"></div>
 
                             <button type="submit" value="Login" class="btn btn-secondary btn-block bg-hover-primary border-hover-primary">Log
                                 In</button>
@@ -1260,18 +1255,10 @@
                     <div class="tab-pane fade" id="nav-register" role="tabpanel" aria-labelledby="nav-register-tab">
                         <h4 class="fs-34 text-center mb-6">Sign Up</h4>
                         <p class="text-center fs-16 mb-7">Already have an account? <a href="" class="text-secondary border-bottom text-decoration-none">Log in</a></p>
-                        <form>
-                            <input name="first-name" type="text" class="form-control border-0 mb-3" placeholder="First name" required>
-                            <input name="last-name" type="text" class="form-control border-0 mb-3" placeholder="Last name" required>
+                        <form id="registration-form">
+                            <input name="username" type="text" class="form-control border-0 mb-3" placeholder="Username" required>
                             <input name="email" type="email" class="form-control border-0 mb-3" placeholder="Your email" required>
-                            <input name="password" type="password" class="form-control border-0" placeholder="Password" required>
-                            <div class="custom-control custom-checkbox mt-4 mb-5 mr-xl-6">
-                                <input name="agree" type="checkbox" class="custom-control-input" id="termsOfUse">
-                                <label class="custom-control-label text-body" for="termsOfUse">
-                                    Yes, I agree with Grace <a href="">Privacy Policy</a> and <a href="">Terms of
-                                        Use</a>
-                                </label>
-                            </div>
+                            <input name="password" type="password" class="form-control border-0  mb-3" placeholder="Password" required>
                             <button type="submit" value="Login" class="btn btn-secondary btn-block bg-hover-primary border-hover-primary">Sign
                                 Up</button>
                             <div class="border-bottom mt-6"></div>
@@ -1462,34 +1449,61 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.css">
-<script src="<?= base_url('/js/home.js') ?>"></script>  
+<script src="<?= base_url('/js/home.js') ?>"></script>
+
 <script>
     $(document).ready(function() {
-        $('#loginForm').submit(function(event) {
-            event.preventDefault();
-
+        $('#registration-form').submit(function(e) {
+            e.preventDefault();
             var formData = $(this).serialize();
-
+            alert(formData)
+            console.log(formData)
             $.ajax({
                 type: 'POST',
-                url: 'userlogin',
+                url: 'registration',
+                data: formData,
+                success: function(response) {
+                    if (response.success) {
+                        alert('Registration successful.');
+                    } else {
+                        alert('Registration failed. Please check your inputs.');
+                    }
+                },
+                error: function() {
+                    alert('An error occurred while processing your request.');
+                }
+            });
+        });
+        $('#login-form').submit(function(e) {
+            e.preventDefault();
+            var formData = $(this).serialize();
+            var recaptchaResponse = grecaptcha.getResponse();
+            console.log(formData)
+            console.log(recaptchaResponse)
+            if (!recaptchaResponse) {
+                alert('Please complete the reCAPTCHA verification.');
+                return;
+            }
+            formData += '&g-recaptcha-response=' + recaptchaResponse;
+            $.ajax({
+                type: 'POST',
+                url: 'login',
                 data: formData,
                 dataType: 'json',
                 success: function(response) {
                     if (response.success) {
-                        window.location.href = response.redirect;
+                        alert('Login successful: ' + response.message);
                     } else {
-                        alert(response.message);
+                        alert('Login failed: ' + response.message);
                     }
                 },
-                error: function(error) {
-                    console.log('Error:', error);
+                error: function() {
+                    alert('An error occurred while processing your request.');
                 }
             });
         });
     });
 </script>
-
 <!-- <script>
     $(document).ready(function() {
         $('.QuickView').on('click', function(e) {
@@ -1640,5 +1654,4 @@
         loadData(); // Load data when the page loads
     });
 </script> -->
-//HI
 <?= $this->endSection() ?>

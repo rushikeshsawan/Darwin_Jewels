@@ -35,20 +35,21 @@ class UserController extends BaseController
         $this->OrderDetailModel = new OrderDetailModel();
         $this->session = \Config\Services::session();
     }
-    public function index() {
+    public function index()
+    {
         if ($this->request->getMethod() == 'post') {
             //  if (! empty($this->request->getPost('honeypot'))) {  
             //     $this->session->setFlashdata('error', 'Oops! Something went wrong. Please try again.');
             //     return redirect()->to('/ '); // Redirect to signup page
             // }
-    
-    
+
+
             //  if (! $this->validate(['csrf' => 'required'])) {
             //     session()->setFlashdata('error', 'Oops! Something went wrong. Please try again.');
             //     $data['validation'] = $this->validator;
             //     return view('signup', $data); 
             // }
-    
+
             // Other validation rules
             $rules = [
                 'username' => 'required|min_length[2]|max_length[50]|is_unique[admin.username]',
@@ -56,7 +57,7 @@ class UserController extends BaseController
                 'password' => 'required|min_length[4]|max_length[50]',
                 'phone' => 'required|exact_length[10]'
             ];
-    
+
             if ($this->validate($rules)) {
                 // Valid form submission
                 $email = $this->request->getPost('email');
@@ -76,9 +77,7 @@ class UserController extends BaseController
             return view('signup', $data);
         }
     }
-    
-    
-    
+
     public function login()
     {
         // Check if the user is already logged in, redirect to home if logged in
@@ -128,6 +127,66 @@ class UserController extends BaseController
         }
         return view('userLogin');
     }
+    public function loginform()
+    { 
+        if ($this->request->isAJAX()) {
+            $response = ['success' => false, 'message' => ''];
+
+            $rules = [
+                'username' => 'required',
+                'password' => 'required',
+                'g-recaptcha-response' => 'required' // Validate reCAPTCHA response
+            ];
+
+            if ($this->validate($rules)) {
+                // Verify the reCAPTCHA response
+                $recaptchaResponse = $this->request->getPost('g-recaptcha-response');
+                $recaptchaSecretKey = '6Leud3gnAAAAANy_HGJn3y_ZHI5sjCgJrpk5v-oG'; // Replace with your reCAPTCHA secret key
+                $recaptchaVerify = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret={$recaptchaSecretKey}&response={$recaptchaResponse}");
+                $recaptchaData = json_decode($recaptchaVerify);
+
+                if ($recaptchaData->success) { 
+                    $response['success'] = true;
+                    $response['message'] = 'Login successful.';
+                } else {
+                    $response['message'] = 'reCAPTCHA verification failed.';
+                }
+            } else {
+                $response['message'] = $this->validator->listErrors();
+            }
+
+            return $this->response->setJSON($response);
+        }
+    }
+    public function registration()
+    {
+        $response = ['success' => false, 'message' => ''];
+        if ($this->request->isAJAX()) {
+            $validation = \Config\Services::validation();
+            $validation->setRules([
+                'username' => 'required|min_length[2]|max_length[50]|is_unique[admin.username]',
+                'email' => 'required|min_length[4]|max_length[100]|valid_email|is_unique[users.email]',
+                'password' => 'required|min_length[4]|max_length[50]'
+            ]);
+            if ($validation->withRequest($this->request)->run()) {
+                $email = $this->request->getVar('email');
+                $username = $this->request->getVar('username');
+                $phone = '982194898';
+                $password = password_hash($this->request->getVar('password'), PASSWORD_DEFAULT);
+                $this->userModel->store($username, $email, $password, $phone);
+
+                $response['success'] = true;
+                $response['message'] = 'User added successfully.';
+            } else {
+                $response['message'] = $validation->getErrors();
+            }
+            return $this->response->setJSON($response);
+        } else {
+            // Handle non-AJAX form submission
+            // ... Your existing code for non-AJAX submission
+        }
+    }
+
     public function address()
     {
         $user_id = $this->request->getPost('user_id');
@@ -203,28 +262,28 @@ class UserController extends BaseController
     {
         // Get the necessary data for payment initiation from the form
         $selectedAddressId = $this->request->getPost('address_id');
-        $totalPrice = $this->request->getPost('total_price'); 
-         $orderId = uniqid(); 
-        $razorpayKeyId = 'rzp_test_GGXHzqc5bmnUdI'; 
-        $razorpayKeySecret = '8kfCJqLqQVqPcMet5NKBqaB2'; 
+        $totalPrice = $this->request->getPost('total_price');
+        $orderId = uniqid();
+        $razorpayKeyId = 'rzp_test_GGXHzqc5bmnUdI';
+        $razorpayKeySecret = '8kfCJqLqQVqPcMet5NKBqaB2';
         $razorpay = new Api($razorpayKeyId, $razorpayKeySecret);
 
         // Create an order
         try {
             $orderData = [
-                'amount' => $totalPrice * 100,  
+                'amount' => $totalPrice * 100,
                 'currency' => 'INR',
-                'receipt' => $orderId,  
-                'payment_capture' => 1,  
-            ]; 
-            $order = $razorpay->order->create($orderData); 
-            $orderId = $order['id']; 
+                'receipt' => $orderId,
+                'payment_capture' => 1,
+            ];
+            $order = $razorpay->order->create($orderData);
+            $orderId = $order['id'];
             $response = [
                 'success' => true,
                 'order_id' => $orderId,
             ];
             return $this->response->setJSON($response);
-        } catch (\Exception $e) { 
+        } catch (\Exception $e) {
             $response = [
                 'success' => false,
                 'message' => 'Error creating Razorpay order.',
@@ -282,18 +341,19 @@ class UserController extends BaseController
             return $this->response->setJSON(['success' => false, 'message' => 'Failed to place order.']);
         }
     }
-   
-    public function update_wallet() {
+
+    public function update_wallet()
+    {
         $wallet = $this->request->getPost('wallet');
         $userId = $this->session->get('user')['id'];
-        
+
         $userModel = new UserModel();
         $userModel->update($userId, ['wallet' => $wallet]);
-        
+
         // You might want to return a JSON response indicating success or failure.
         return $this->response->setJSON(['message' => 'Wallet updated successfully']);
-    }    
-    
+    }
+
 
     // public function getUserOrders()
     // {
@@ -303,18 +363,18 @@ class UserController extends BaseController
     // }
 
     public function getUserOrders()
-    { 
-        $loggedInUserId = $this->session->get('user')['id']; 
+    {
+        $loggedInUserId = $this->session->get('user')['id'];
         $perPage = 10; // Number of orders per page
         $orderList = $this->OrderDetailModel->getUserOrders($loggedInUserId, $perPage);
-        
+
         $data = [
             'orders' => $orderList, // Directly use the paginated result
             'pager' => $this->OrderDetailModel->pager, // Access pager information
         ];
         return view('order_list', $data);
     }
-    
+
     public function getOrderDetails()
     {
         $orderId = $this->request->getVar('order_id');
